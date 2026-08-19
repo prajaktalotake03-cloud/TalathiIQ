@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalathiIQ चालू घडामोडी २०२६ ई-बुक</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --dark: #0f172a;
+            --light-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .action-bar {
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            border: 1px solid var(--border);
+        }
+
+        .action-bar h3 {
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .book-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.05);
+            border: 1px solid var(--border);
+        }
+
+        /* E-Book Cover Page */
+        .cover-page {
+            text-align: center;
+            padding: 5rem 0;
+            min-height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            page-break-after: always;
+        }
+
+        .cover-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cover-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+
+        .cover-footer {
+            border-top: 2px solid var(--border);
+            padding-top: 2rem;
+            margin-top: 3rem;
+        }
+
+        .cover-footer p {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* Table of Contents */
+        .toc-page {
+            padding: 3rem 0;
+            min-height: 600px;
+            page-break-after: always;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .toc-item::after {
+            content: '';
+            flex-grow: 1;
+            border-bottom: 1px dotted var(--text-light);
+            margin: 0 1rem;
+        }
+
+        .toc-title {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .toc-page-num {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Chapter/Articles Styling */
+        .chapter {
+            padding: 2.5rem 0;
+            border-bottom: 1px solid var(--border);
+            page-break-inside: avoid;
+        }
+
+        .chapter:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .chapter-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .chapter-content-mr {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .chapter-content-en {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            text-align: justify;
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--border);
+        }
+
+        /* Print Media Query */
+        @media print {
+            body {
+                background: #fff;
+                color: #000;
+                padding: 0;
+            }
+
+            .action-bar {
+                display: none;
+            }
+
+            .book-container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Action Bar -->
+    <div class="action-bar">
+        <h3><i class="fas fa-file-pdf" style="color: #ef4444;"></i> TalathiIQ Current Affairs Booklet</h3>
+        <button onclick="window.print()" class="btn">
+            <i class="fas fa-print"></i> PDF म्हणून सेव्ह करा (Print / Save PDF)
+        </button>
+    </div>
+
+    <!-- E-Book Container -->
+    <div class="book-container">
+        
+        <!-- COVER PAGE -->
+        <div class="cover-page">
+            <div>
+                <span class="cover-badge">Talathi Bharti 2026</span>
+                <h1 class="cover-title">चालू घडामोडी २०२६<br>ई-बुक (E-Book)</h1>
+                <p class="cover-subtitle">TalathiIQ Premium Study Material</p>
+            </div>
+            <div class="cover-footer">
+                <p>संकलन: प्राजक्ता लोटाके व संघ</p>
+                <span style="font-size: 0.85rem; color: var(--text-light)">TalathiIQ Platform &copy; 2026</span>
+            </div>
+        </div>
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc-page">
+            <h2 class="section-title">अनुक्रमणिका (Table of Contents)</h2>
+            <ul class="toc-list">
+                {% for article in articles %}
+                <li class="toc-item">
+                    <span class="toc-title">{{ article.title_mr }}</span>
+                    <span class="toc-page-num">प्र. {{ loop.index }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- COMPILED CHAPTERS/NEWS -->
+        <h2 class="section-title">चालू घडामोडी विश्लेषण</h2>
+        {% for article in articles %}
+        <div class="chapter">
+            <div class="chapter-meta">
+                <span><i class="fas fa-tag"></i> {{ article.category }}</span>
+                <span><i class="far fa-calendar-alt"></i> {{ article.date }}</span>
+            </div>
+            <h3 class="chapter-title">{{ loop.index }}. {{ article.title_mr }}</h3>
+            <p class="chapter-content-mr">{{ article.content_mr }}</p>
+            <div class="chapter-content-en">
+                <strong>English Summary:</strong> {{ article.content }}
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>

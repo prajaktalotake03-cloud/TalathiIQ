@@ -240,9 +240,88 @@ def parse_pdf_questions(file_stream):
 def index():
     return render_template('index.html')
 
+NEWS_ARTICLES = [
+    {
+        "category": "Maharashtra",
+        "cat_slug": "maharashtra",
+        "date": "August 15, 2026",
+        "title": "Maharashtra launches 'Pramod Mahajan Skill Development Scheme' phase-II",
+        "title_mr": "महाराष्ट्र शासनातर्फे 'प्रमोद महाजन कौशल्य विकास योजना' टप्पा-२ चा शुभारंभ",
+        "content": "Under this phase, the government aims to establish skill centers in more than 500 rural blocks to empower rural youth with employment and self-employment training. This scheme targets the training of over 2 lakh candidates annually with active integration of technology partners.",
+        "content_mr": "या टप्प्यांतर्गत, ग्रामीण तरुणांना रोजगार आणि स्वयंरोजगार प्रशिक्षण देऊन सक्षम करण्यासाठी ५०० हून अधिक ग्रामीण ब्लॉकमध्ये कौशल्य केंद्रे स्थापन करण्याचे शासनाचे उद्दिष्ट आहे. हे अभियान तंत्रज्ञान भागीदारांच्या सक्रिय सहभागासह वर्षाला २ लाख उमेदवारांना प्रशिक्षित करेल."
+    },
+    {
+        "category": "India",
+        "cat_slug": "india",
+        "date": "August 14, 2026",
+        "title": "ISRO launches new earth observation satellite EOS-09",
+        "title_mr": "इस्रोकडून नवीन पृथ्वी निरीक्षण उपग्रह 'EOS-09' चे यशस्वी प्रक्षेपण",
+        "content": "The Indian Space Research Organisation (ISRO) successfully injected the Earth Observation Satellite (EOS-09) into its orbit using the SSLV-D4 launcher from Sriharikota. The satellite will provide high-resolution imagery for agricultural monitoring, forestry, hydrology, and disaster management.",
+        "content_mr": "भारतीय अंतराळ संशोधन संस्थेने (ISRO) श्रीहरीकोटा येथून SSLV-D4 प्रक्षेपकाचा वापर करून पृथ्वी निरीक्षण उपग्रह (EOS-09) त्याच्या कक्षेत यशस्वीरित्या प्रस्थापित केला. हा उपग्रह शेती नियंत्रण, वनीकरण, जलविज्ञान आणि आपत्ती व्यवस्थापनासाठी उच्च-रिझोल्यूशन चित्रे प्रदान करेल."
+    },
+    {
+        "category": "Gov Schemes",
+        "cat_slug": "schemes",
+        "date": "August 12, 2026",
+        "title": "CM Majhi Ladki Bahin Yojana Updates: Over 1.5 Crore Applications Approved",
+        "title_mr": "मुख्यमंत्री माझी लाडकी बहीण योजना अपडेट: १.५ कोटींहून अधिक अर्ज मंजूर",
+        "content": "The Maharashtra state government announced that more than 1.5 crore eligible women have successfully registered under the Majhi Ladki Bahin Yojana. Beneficiaries will receive a direct benefit transfer of 1,500 rupees per month. The verification process has been fully digitized to speed up approvals.",
+        "content_mr": "महाराष्ट्र सरकारने जाहीर केले की माझी लाडकी बहीण योजनेअंतर्गत १.५ कोटींहून अधिक पात्र महिलांची यशस्वी नोंदणी झाली आहे. लाभार्थी महिलांना दरमहा १५०० रुपयांचे थेट बँक हस्तांतरण (DBT) मिळेल. मंजुरी वेगवान करण्यासाठी पडताळणी पूर्णपणे डिजिटल करण्यात आली आहे."
+    },
+    {
+        "category": "Awards",
+        "cat_slug": "awards",
+        "date": "August 10, 2026",
+        "title": "Lata Mangeshkar Award 2026 Announced",
+        "title_mr": "गानकोकिळा लता मंगेशकर पुरस्कार २०२६ ची घोषणा",
+        "content": "The Maharashtra state government has declared the prestigious Lata Mangeshkar Award for Lifetime Achievement in music to a veteran classical vocalist. The award consists of a cash prize of 5 lakh rupees, a citation, and a memento to be presented at a cultural event in Mumbai next month.",
+        "content_mr": "महाराष्ट्र सरकारने शास्त्रीय संगीतातील ज्येष्ठ गायकाला संगीत क्षेत्रातील जीवनगौरव योगदानाबद्दल प्रतिष्ठित लता मंगेशकर पुरस्कार जाहीर केला आहे. या पुरस्कारामध्ये ५ लाख रुपये रोख, सन्मानपत्र आणि स्मृतीचिन्ह यांचा समावेश आहे."
+    },
+    {
+        "category": "Sports",
+        "cat_slug": "sports",
+        "date": "August 08, 2026",
+        "title": "National Games 2026 to be hosted in Maharashtra",
+        "title_mr": "२०२६ च्या राष्ट्रीय क्रीडा स्पर्धांचे यजमानपद महाराष्ट्राला",
+        "content": "The Indian Olympic Association has officially confirmed that the upcoming National Games will take place across Mumbai, Pune, and Nagpur. The state is developing sports infrastructures to match global athletic standards, expecting participation from over 10,000 athletes.",
+        "content_mr": "भारतीय ऑलिम्पिक असोसिएशनने अधिकृतपणे पुष्टी केली आहे की आगामी राष्ट्रीय क्रीडा स्पर्धा मुंबई, पुणे आणि नागपूर येथे आयोजित केल्या जातील. जागतिक क्रीडा मानकांशी सुसंगत क्रीडा पायाभूत सुविधा राज्य विकसित करत आहे."
+    },
+    {
+        "category": "Important Days",
+        "cat_slug": "days",
+        "date": "August 09, 2026",
+        "title": "August Kranti Din observed on 9th August",
+        "title_mr": "९ ऑगस्ट रोजी क्रांती दिन साजरा",
+        "content": "The nation observed August Kranti Din, commemorating the anniversary of the Quit India Movement launched in 1942 under Mahatma Gandhi. Tributes were paid to freedom fighters at Kranti Maidan (Gowalia Tank) in Mumbai, where the historic resolution was passed.",
+        "content_mr": "महात्मा गांधींच्या नेतृत्वाखाली १९४२ मध्ये सुरू झालेल्या भारत छोडो आंदोलनाच्या वर्धापन दिनानिमित्त देशाने ऑगस्ट क्रांती दिन पाळला. मुंबईतील ऑगस्ट क्रांती मैदानावर स्वातंत्र्यसैनिकांना आदरांजली वाहण्यात आली."
+    },
+    {
+        "category": "International",
+        "cat_slug": "international",
+        "date": "August 05, 2026",
+        "title": "UN Climate Summit 2026 sets new net-zero targets",
+        "title_mr": "संयुक्त राष्ट्र हवामान शिखर परिषद २०२६ चे नवीन उद्दिष्ट निश्चित",
+        "content": "World leaders gathered in Geneva for the COP31 preparatory assembly to outline tighter emissions thresholds. Emerging economies requested financial assistance and green tech sharing models from developed countries to meet their sustainability timelines.",
+        "content_mr": "कडक उत्सर्जन मर्यादा निश्चित करण्यासाठी जागतिक नेते जिनिव्हा येथे COP31 च्या तयारी बैठकीसाठी जमले होते. उदयोन्मुख अर्थव्यवस्थांनी विकसित देशांकडून हरित तंत्रज्ञान भागीदारी आणि आर्थिक मदतीची मागणी केली."
+    },
+    {
+        "category": "Economy",
+        "cat_slug": "economy",
+        "date": "August 01, 2026",
+        "title": "RBI monetary policy maintains repo rate at 6.50%",
+        "title_mr": "रिझर्व्ह बँकेचे मौद्रिक धोरण: रेपो दर ६.५०% वर कायम",
+        "content": "The Monetary Policy Committee (MPC) of the Reserve Bank of India decided to keep the policy repo rate unchanged. RBI Governor cited retail inflation stability and robust GDP projection for the quarter as the primary factors for the status quo.",
+        "content_mr": "भारतीय रिझर्व्ह बँकेच्या मौद्रिक धोरण समितीने (MPC) रेपो दर बदल न करता कायम ठेवण्याचा निर्णय घेतला. आरबीआय गव्हर्नर यांनी किरकोळ महागाईतील स्थिरता आणि तिमाहीसाठी मजबूत जीडीपी अंदाजाचे दाखले दिले."
+    }
+]
+
 @app.route('/current-affairs')
 def current_affairs():
-    return render_template('current-affairs.html')
+    return render_template('current-affairs.html', articles=NEWS_ARTICLES)
+
+@app.route('/current-affairs/book')
+def current_affairs_book():
+    return render_template('ca-book.html', articles=NEWS_ARTICLES)
 
 @app.route('/mcq')
 def mcq():

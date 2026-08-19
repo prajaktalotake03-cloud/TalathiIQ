@@ -52,9 +52,14 @@
 
     <!-- Main Container -->
     <main class="container">
-        <div class="ca-header-bar animate-fade-in">
-            <h1 style="font-size: 2.25rem; font-weight: 800;"><i class="far fa-newspaper" style="color: var(--secondary); margin-right: 0.5rem;"></i> Current Affairs</h1>
-            <span class="ca-demo-badge"><i class="fas fa-info-circle"></i> DEMO DATA FOR PRACTICE PURPOSES</span>
+        <div class="ca-header-bar animate-fade-in" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                <h1 style="font-size: 2.25rem; font-weight: 800; margin: 0;"><i class="far fa-newspaper" style="color: var(--secondary); margin-right: 0.5rem;"></i> Current Affairs</h1>
+                <span class="ca-demo-badge" style="margin: 0;"><i class="fas fa-info-circle"></i> DEMO DATA FOR PRACTICE PURPOSES</span>
+            </div>
+            <a href="/current-affairs/book" target="_blank" class="btn btn-primary" style="text-decoration: none; padding: 0.65rem 1.25rem; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow: 0 4px 15px var(--primary-glow); font-size: 0.95rem;">
+                <i class="fas fa-book"></i> E-Book (चालू घडामोडी पुस्तक)
+            </a>
         </div>
 
         <!-- Section Switcher Tabs -->
@@ -89,95 +94,23 @@
 
             <!-- News Cards Area -->
             <section class="ca-content" id="newsContainer">
-                
-                <!-- Demo News 1 -->
-                <div class="ca-card" data-cat="maharashtra">
+                {% for article in articles %}
+                <div class="ca-card" data-cat="{{ article.cat_slug }}">
                     <div class="ca-card-meta">
-                        <span class="ca-card-category">Maharashtra</span>
-                        <span>August 15, 2026</span>
+                        <span class="ca-card-category">{{ article.category }}</span>
+                        <span>{{ article.date }}</span>
                     </div>
-                    <h2>Maharashtra launches 'Pramod Mahajan Skill Development Scheme' phase-II</h2>
-                    <p>Under this phase, the government aims to establish skill centers in more than 500 rural blocks to empower rural youth with employment and self-employment training. This scheme targets the training of over 2 lakh candidates annually with active integration of technology partners.</p>
+                    <h2 style="font-size:1.35rem; line-height:1.4; color:var(--secondary); margin-bottom:0.75rem;">{{ article.title_mr }}</h2>
+                    <p style="font-weight: 500; font-size: 1.05rem; margin-bottom: 0.75rem; color: var(--text-main); line-height:1.5;">{{ article.content_mr }}</p>
+                    
+                    <div class="english-summary-box" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--border-glow); padding: 0.75rem 1rem; border-radius: 4px; margin-bottom: 1.25rem;">
+                        <span style="font-size: 0.75rem; color: var(--primary); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.25rem; letter-spacing: 0.5px;">English Summary</span>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin: 0;">{{ article.content }}</p>
+                    </div>
+                    
                     <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
                 </div>
-
-                <!-- Demo News 2 -->
-                <div class="ca-card" data-cat="india">
-                    <div class="ca-card-meta">
-                        <span class="ca-card-category">India</span>
-                        <span>August 14, 2026</span>
-                    </div>
-                    <h2>ISRO launches new earth observation satellite EOS-09</h2>
-                    <p>The Indian Space Research Organisation (ISRO) successfully injected the Earth Observation Satellite (EOS-09) into its orbit using the SSLV-D4 launcher from Sriharikota. The satellite will provide high-resolution imagery for agricultural monitoring, forestry, hydrology, and disaster management.</p>
-                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
-                </div>
-
-                <!-- Demo News 3 -->
-                <div class="ca-card" data-cat="schemes">
-                    <div class="ca-card-meta">
-                        <span class="ca-card-category">Gov Schemes</span>
-                        <span>August 12, 2026</span>
-                    </div>
-                    <h2>CM Majhi Ladki Bahin Yojana Updates: Over 1.5 Crore Applications Approved</h2>
-                    <p>The Maharashtra state government announced that more than 1.5 crore eligible women have successfully registered under the Majhi Ladki Bahin Yojana. Beneficiaries will receive a direct benefit transfer of 1,500 rupees per month. The verification process has been fully digitized to speed up approvals.</p>
-                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
-                </div>
-
-                <!-- Demo News 4 -->
-                <div class="ca-card" data-cat="awards">
-                    <div class="ca-card-meta">
-                        <span class="ca-card-category">Awards</span>
-                        <span>August 10, 2026</span>
-                    </div>
-                    <h2>Lata Mangeshkar Award 2026 Announced</h2>
-                    <p>The Maharashtra state government has declared the prestigious Lata Mangeshkar Award for Lifetime Achievement in music to a veteran classical vocalist. The award consists of a cash prize of 5 lakh rupees, a citation, and a memento to be presented at a cultural event in Mumbai next month.</p>
-                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
-                </div>
-
-                <!-- Demo News 5 -->
-                <div class="ca-card" data-cat="sports">
-                    <div class="ca-card-meta">
-                        <span class="ca-card-category">Sports</span>
-                        <span>August 08, 2026</span>
-                    </div>
-                    <h2>National Games 2026 to be hosted in Maharashtra</h2>
-                    <p>The Indian Olympic Association has officially confirmed that the upcoming National Games will take place across Mumbai, Pune, and Nagpur. The state is developing sports infrastructures to match global athletic standards, expecting participation from over 10,000 athletes.</p>
-                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
-                </div>
-
-                <!-- Demo News 6 -->
-                <div class="ca-card" data-cat="days">
-                    <div class="ca-card-meta">
-                        <span class="ca-card-category">Important Days</span>
-                        <span>August 09, 2026</span>
-                    </div>
-                    <h2>August Kranti Din observed on 9th August</h2>
-                    <p>The nation observed August Kranti Din, commemorating the anniversary of the Quit India Movement launched in 1942 under Mahatma Gandhi. Tributes were paid to freedom fighters at Kranti Maidan (Gowalia Tank) in Mumbai, where the historic resolution was passed.</p>
-                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
-                </div>
-
-                <!-- Demo News 7 -->
-                <div class="ca-card" data-cat="international">
-                    <div class="ca-card-meta">
-                        <span class="ca-card-category">International</span>
-                        <span>August 05, 2026</span>
-                    </div>
-                    <h2>UN Climate Summit 2026 sets new net-zero targets</h2>
-                    <p>World leaders gathered in Geneva for the COP31 preparatory assembly to outline tighter emissions thresholds. Emerging economies requested financial assistance and green tech sharing models from developed countries to meet their sustainability timelines.</p>
-                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
-                </div>
-
-                <!-- Demo News 8 -->
-                <div class="ca-card" data-cat="economy">
-                    <div class="ca-card-meta">
-                        <span class="ca-card-category">Economy</span>
-                        <span>August 01, 2026</span>
-                    </div>
-                    <h2>RBI monetary policy maintains repo rate at 6.50%</h2>
-                    <p>The Monetary Policy Committee (MPC) of the Reserve Bank of India decided to keep the policy repo rate unchanged. RBI Governor cited retail inflation stability and robust GDP projection for the quarter as the primary factors for the status quo.</p>
-                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
-                </div>
-
+                {% endfor %}
             </section>
         </div>
         </div> <!-- end of #ca-news-section -->
