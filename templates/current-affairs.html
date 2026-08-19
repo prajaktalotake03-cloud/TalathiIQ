@@ -57,7 +57,19 @@
             <span class="ca-demo-badge"><i class="fas fa-info-circle"></i> DEMO DATA FOR PRACTICE PURPOSES</span>
         </div>
 
-        <div class="ca-layout animate-fade-in" style="animation-delay: 0.1s;">
+        <!-- Section Switcher Tabs -->
+        <div class="animate-fade-in" style="display: flex; gap: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 2.5rem; justify-content: center;">
+            <button class="sub-tab-btn active" id="btnShowNews" onclick="switchCaSection('news')" style="background:transparent; color:var(--text-main); font-family:var(--font-sans); font-size:1.25rem; font-weight:700; border:none; outline:none; cursor:pointer; padding-bottom:0.5rem; transition:var(--transition-smooth); border-bottom: 3px solid var(--primary); border-radius: 0;">
+                <i class="far fa-newspaper"></i> Daily News (रोजच्या घडामोडी)
+            </button>
+            <button class="sub-tab-btn" id="btnShowPractice" onclick="switchCaSection('practice')" style="background:transparent; color:var(--text-muted); font-family:var(--font-sans); font-size:1.25rem; font-weight:700; border:none; outline:none; cursor:pointer; padding-bottom:0.5rem; transition:var(--transition-smooth); border-bottom: 3px solid transparent; border-radius: 0;">
+                <i class="fas fa-question-circle"></i> MCQ Practice (सराव प्रश्नसंच - २०००+ प्रश्न)
+            </button>
+        </div>
+
+        <!-- NEWS SECTION CONTAINER -->
+        <div id="ca-news-section" class="stage-syllabus-section">
+            <div class="ca-layout animate-fade-in" style="animation-delay: 0.1s;">
             <!-- Category Sidebar -->
             <aside class="ca-sidebar">
                 <h3 class="ca-sidebar-title">Categories</h3>
@@ -168,6 +180,53 @@
 
             </section>
         </div>
+        </div> <!-- end of #ca-news-section -->
+
+        <!-- PRACTICE MCQ SECTION CONTAINER -->
+        <div id="ca-practice-section" class="stage-syllabus-section" style="display: none;">
+            <div class="materials-layout animate-fade-in" style="grid-template-columns: 1fr; margin-top: 0;">
+                <div class="card" style="padding: 2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                        <h2 class="section-title" style="margin-bottom:0;"><i class="fas fa-check-double"></i> चालू घडामोडी सराव प्रश्नसंच (Current Affairs Practice Engine)</h2>
+                        <div class="ca-demo-badge" style="background: var(--primary-glow); color: #fff; border-color: var(--primary);">Max Limit: 2000 Questions</div>
+                    </div>
+
+                    <!-- MCQ card component inside current affairs -->
+                    <div class="mcq-card-body" id="caMcqContainer">
+                        <div class="mcq-header-meta" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+                            <span class="difficulty-badge easy" id="caSubjectTag" style="background:var(--success-bg); color:var(--success); border:1px solid rgba(16,185,129,0.2); padding:4px 12px; border-radius:50px; font-weight:600; font-size:0.85rem;">Current Affairs</span>
+                            <span id="caProgressText" style="color:var(--text-muted); font-size:0.9rem; font-weight:600;">Question 1 of 10</span>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="progress-bar-container" style="background:rgba(255,255,255,0.05); height:6px; border-radius:3px; margin-bottom:2rem; overflow:hidden;">
+                            <div class="progress-bar-fill" id="caProgressFill" style="background:linear-gradient(90deg, var(--primary), var(--secondary)); width:10%; height:100%; transition:width 0.3s ease;"></div>
+                        </div>
+
+                        <div class="mcq-question-text" id="caQuestionText" style="font-size:1.35rem; font-weight:600; line-height:1.5; margin-bottom:2rem;">
+                            Loading Questions...
+                        </div>
+
+                        <div class="mcq-options" id="caOptionsContainer" style="display:flex; flex-direction:column; gap:1rem; margin-bottom:2.5rem;">
+                            <!-- Options list generated dynamically -->
+                        </div>
+
+                        <!-- Explanation Panel -->
+                        <div class="explanation-box" id="caExplanationPanel" style="display:none; background:rgba(99,102,241,0.06); border-left:4px solid var(--primary); padding:1.25rem 1.5rem; border-radius:0 var(--border-radius-sm) var(--border-radius-sm) 0; margin-bottom:2.5rem; animation:fadeIn 0.3s ease;">
+                            <h4 style="color:var(--primary); font-weight:700; margin-bottom:0.5rem; font-size:1rem; text-transform:uppercase; letter-spacing:0.5px;">स्पष्टीकरण (Explanation)</h4>
+                            <p id="caExplanationText" style="line-height:1.6; font-size:0.95rem; color:var(--text-muted);"></p>
+                        </div>
+
+                        <!-- Control Buttons -->
+                        <div class="mcq-controls" style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border-color); padding-top:1.5rem;">
+                            <button class="btn btn-secondary" id="caPrevBtn" disabled><i class="fas fa-arrow-left"></i> मागचा प्रश्न (Previous)</button>
+                            <button class="btn btn-primary" id="caSubmitBtn" disabled><i class="fas fa-check"></i> उत्तर सबमिट करा (Submit)</button>
+                            <button class="btn btn-secondary" id="caNextBtn" disabled>पुढचा प्रश्न (Next) <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of #ca-practice-section -->
     </main>
 
     <!-- Footer -->
@@ -183,26 +242,200 @@
             const categoryNav = document.getElementById('categoryNav');
             const newsCards = document.querySelectorAll('.ca-card');
 
-            categoryNav.addEventListener('click', (e) => {
-                const target = e.target;
-                if (target.classList.contains('ca-nav-item')) {
-                    // Update active button
-                    document.querySelectorAll('.ca-nav-item').forEach(btn => btn.classList.remove('active'));
-                    target.classList.add('active');
+            if (categoryNav) {
+                categoryNav.addEventListener('click', (e) => {
+                    const target = e.target;
+                    if (target.classList.contains('ca-nav-item')) {
+                        // Update active button
+                        document.querySelectorAll('.ca-nav-item').forEach(btn => btn.classList.remove('active'));
+                        target.classList.add('active');
 
-                    // Filter cards
-                    const category = target.getAttribute('data-category');
-                    newsCards.forEach(card => {
-                        const cardCat = card.getAttribute('data-cat');
-                        if (category === 'all' || cardCat === category) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
+                        // Filter cards
+                        const category = target.getAttribute('data-category');
+                        newsCards.forEach(card => {
+                            const cardCat = card.getAttribute('data-cat');
+                            if (category === 'all' || cardCat === category) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            }
+
+            // Bind MCQ control buttons
+            const caPrevBtn = document.getElementById('caPrevBtn');
+            const caNextBtn = document.getElementById('caNextBtn');
+            const caSubmitBtn = document.getElementById('caSubmitBtn');
+
+            if (caPrevBtn) caPrevBtn.addEventListener('click', () => { caCurrentIndex--; renderCaQuestion(); });
+            if (caNextBtn) caNextBtn.addEventListener('click', () => { caCurrentIndex++; renderCaQuestion(); });
+            if (caSubmitBtn) caSubmitBtn.addEventListener('click', submitCaAnswer);
+        });
+
+        // Current Affairs MCQ Engine
+        let caQuestions = [];
+        let caCurrentIndex = 0;
+        let caAnswered = {}; // { questionId: { selectedIdx, isCorrect } }
+        let caCorrectCount = 0;
+        let caWrongCount = 0;
+
+        async function initCaMcqs() {
+            try {
+                const response = await fetch('/api/questions?subject=Current+Affairs&limit=2000');
+                caQuestions = await response.json();
+                if (caQuestions && caQuestions.length > 0) {
+                    renderCaQuestion();
+                } else {
+                    document.getElementById('caQuestionText').textContent = "सध्या कोणतेही सराव प्रश्न उपलब्ध नाहीत. कृपया नंतर प्रयत्न करा.";
+                }
+            } catch (error) {
+                console.error("Error fetching current affairs questions:", error);
+                document.getElementById('caQuestionText').textContent = "सर्व्हरवरून प्रश्न लोड करण्यात अपयश आले.";
+            }
+        }
+
+        function renderCaQuestion() {
+            if (caQuestions.length === 0) return;
+
+            const q = caQuestions[caCurrentIndex];
+            
+            // Progress
+            const progText = document.getElementById('caProgressText');
+            const progFill = document.getElementById('caProgressFill');
+            if (progText) progText.textContent = `Question ${caCurrentIndex + 1} of ${caQuestions.length}`;
+            if (progFill) progFill.style.width = `${((caCurrentIndex + 1) / caQuestions.length) * 100}%`;
+
+            // Tags
+            const subjTag = document.getElementById('caSubjectTag');
+            if (subjTag) subjTag.textContent = q.topic || "Current Affairs";
+
+            // Text
+            const qText = document.getElementById('caQuestionText');
+            if (qText) qText.textContent = q.question;
+
+            // Options
+            const optContainer = document.getElementById('caOptionsContainer');
+            optContainer.innerHTML = '';
+            
+            q.options.forEach((option, idx) => {
+                const letter = String.fromCharCode(65 + idx);
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerHTML = `
+                    <span class="option-marker">${letter}</span>
+                    <span class="option-label-text">${option}</span>
+                `;
+                btn.addEventListener('click', () => selectCaOption(idx));
+                optContainer.appendChild(btn);
+            });
+
+            // Hide Explanation
+            const explanationPanel = document.getElementById('caExplanationPanel');
+            if (explanationPanel) {
+                explanationPanel.style.display = 'none';
+                document.getElementById('caExplanationText').textContent = '';
+            }
+
+            // Restore answered state or set default
+            const prevAns = caAnswered[q.id];
+            const submitBtn = document.getElementById('caSubmitBtn');
+            if (prevAns !== undefined) {
+                const btns = optContainer.querySelectorAll('.option-btn');
+                btns.forEach((btn, idx) => {
+                    btn.disabled = true;
+                    if (idx === q.answer) {
+                        btn.classList.add('correct');
+                    } else if (idx === prevAns.selectedIdx && prevAns.selectedIdx !== q.answer) {
+                        btn.classList.add('wrong');
+                    }
+                });
+                
+                if (explanationPanel) {
+                    explanationPanel.style.display = 'block';
+                    document.getElementById('caExplanationText').textContent = q.explanation;
+                }
+                if (submitBtn) submitBtn.style.display = 'none';
+            } else {
+                if (submitBtn) {
+                    submitBtn.style.display = 'block';
+                    submitBtn.disabled = true;
+                }
+            }
+
+            // Controls
+            document.getElementById('caPrevBtn').disabled = caCurrentIndex === 0;
+            document.getElementById('caNextBtn').disabled = caCurrentIndex === caQuestions.length - 1;
+        }
+
+        function selectCaOption(index) {
+            const q = caQuestions[caCurrentIndex];
+            if (caAnswered[q.id] !== undefined) return;
+
+            const btns = document.querySelectorAll('#caOptionsContainer .option-btn');
+            btns.forEach((btn, idx) => {
+                if (idx === index) {
+                    btn.classList.add('selected');
+                } else {
+                    btn.classList.remove('selected');
                 }
             });
-        });
+
+            const submitBtn = document.getElementById('caSubmitBtn');
+            if (submitBtn) submitBtn.disabled = false;
+        }
+
+        function submitCaAnswer() {
+            const q = caQuestions[caCurrentIndex];
+            if (caAnswered[q.id] !== undefined) return;
+
+            const selectedBtn = document.querySelector('#caOptionsContainer .option-btn.selected');
+            if (!selectedBtn) return;
+
+            const btns = Array.from(document.querySelectorAll('#caOptionsContainer .option-btn'));
+            const selectedIdx = btns.indexOf(selectedBtn);
+            const isCorrect = (selectedIdx === q.answer);
+
+            caAnswered[q.id] = { selectedIdx, isCorrect };
+
+            if (isCorrect) {
+                caCorrectCount++;
+            } else {
+                caWrongCount++;
+            }
+
+            renderCaQuestion();
+        }
+
+        // Section Toggling
+        function switchCaSection(section) {
+            const btnNews = document.getElementById('btnShowNews');
+            const btnPractice = document.getElementById('btnShowPractice');
+            const sectionNews = document.getElementById('ca-news-section');
+            const sectionPractice = document.getElementById('ca-practice-section');
+
+            if (section === 'news') {
+                btnNews.style.color = 'var(--text-main)';
+                btnNews.style.borderBottomColor = 'var(--primary)';
+                btnPractice.style.color = 'var(--text-muted)';
+                btnPractice.style.borderBottomColor = 'transparent';
+                sectionNews.style.display = 'block';
+                sectionPractice.style.display = 'none';
+            } else {
+                btnNews.style.color = 'var(--text-muted)';
+                btnNews.style.borderBottomColor = 'transparent';
+                btnPractice.style.color = 'var(--text-main)';
+                btnPractice.style.borderBottomColor = 'var(--primary)';
+                sectionNews.style.display = 'none';
+                sectionPractice.style.display = 'block';
+                
+                // Initialize MCQs if not already loaded
+                if (caQuestions.length === 0) {
+                    initCaMcqs();
+                }
+            }
+        }
 
         // Demo AI prompt function
         function triggerAiGen() {
