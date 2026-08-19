@@ -4,6 +4,7 @@ let currentIndex = 0;
 let answeredQuestions = {}; // Format: { questionId: { selectedIndex: X, isCorrect: true/false } }
 let correctCount = 0;
 let wrongCount = 0;
+let currentSubject = '';
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchQuestions();
@@ -15,6 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prevBtn) prevBtn.addEventListener('click', showPreviousQuestion);
     if (nextBtn) nextBtn.addEventListener('click', showNextQuestion);
     if (submitBtn) submitBtn.addEventListener('click', submitAnswer);
+
+    // Subject Filter Selection
+    const subjectSelect = document.getElementById('subjectSelect');
+    if (subjectSelect) {
+        subjectSelect.addEventListener('change', (e) => {
+            currentSubject = e.target.value;
+            currentIndex = 0;
+            answeredQuestions = {};
+            correctCount = 0;
+            wrongCount = 0;
+            updateScorecard();
+            fetchQuestions();
+        });
+    }
 });
 
 async function fetchQuestions() {
@@ -22,8 +37,15 @@ async function fetchQuestions() {
         const urlParams = new URLSearchParams(window.location.search);
         const stage = urlParams.get('stage') || localStorage.getItem('talathi_stage') || '';
         let url = '/api/questions';
+        let params = [];
         if (stage) {
-            url += `?stage=${stage}`;
+            params.push(`stage=${stage}`);
+        }
+        if (currentSubject) {
+            params.push(`subject=${encodeURIComponent(currentSubject)}`);
+        }
+        if (params.length > 0) {
+            url += `?${params.join('&')}`;
         }
         const response = await fetch(url);
         questions = await response.json();
@@ -31,6 +53,14 @@ async function fetchQuestions() {
             renderQuestion();
         } else {
             document.getElementById('questionText').textContent = "No questions found. Please check data source.";
+            document.getElementById('progressText').textContent = "Question 0 of 0";
+            document.getElementById('progressFill').style.width = "0%";
+            document.getElementById('optionsContainer').innerHTML = '';
+            document.getElementById('subjectTag').textContent = "N/A";
+            document.getElementById('difficultyTag').textContent = "N/A";
+            document.getElementById('prevBtn').disabled = true;
+            document.getElementById('nextBtn').disabled = true;
+            document.getElementById('submitBtn').disabled = true;
         }
     } catch (error) {
         console.error("Error fetching questions:", error);

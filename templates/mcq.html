@@ -54,6 +54,19 @@
     <main class="container">
         <div class="quiz-container">
             
+            <!-- Subject Filter Selection -->
+            <div class="animate-fade-in" style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <label for="subjectSelect" style="font-weight: 700; color: var(--text-main); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fas fa-filter" style="color: var(--secondary);"></i> Select Subject (विषय निवडा):</label>
+                <select id="subjectSelect" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); color: var(--text-main); padding: 0.55rem 1.25rem; border-radius: 8px; font-weight: 700; outline: none; transition: var(--transition-smooth); font-family: var(--font-sans); min-width: 250px; cursor: pointer; border-color: var(--primary-glow);">
+                    <option value="">All Subjects (सर्व विषय)</option>
+                    <option value="Marathi">Marathi (मराठी)</option>
+                    <option value="English">English (इंग्रजी)</option>
+                    <option value="Mathematics">Mathematics & Reasoning (अंकगणित व बुद्धिमत्ता)</option>
+                    <option value="General Knowledge">General Knowledge (सामान्य ज्ञान)</option>
+                    <option value="Current Affairs">Current Affairs (चालू घडामोडी)</option>
+                </select>
+            </div>
+            
             <!-- Real-time Scorecard Stats -->
             <div class="perf-header-grid animate-fade-in" style="margin-bottom: 2rem;">
                 <div class="perf-card" style="text-align: center; padding: 1rem;">
