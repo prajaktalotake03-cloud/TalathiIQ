@@ -33,21 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Stage Selector Logic
-    const currentStage = localStorage.getItem('talathi_stage') || 'Prelims';
-    updateStageUI(currentStage);
+    // Force stage to Prelims for now
+    localStorage.setItem('talathi_stage', 'Prelims');
+    updateStageUI('Prelims');
 
     const btnPrelims = document.getElementById('btnPrelims');
-    const btnMains = document.getElementById('btnMains');
-
     if (btnPrelims) {
         btnPrelims.addEventListener('click', () => {
             setExamStage('Prelims');
-        });
-    }
-    if (btnMains) {
-        btnMains.addEventListener('click', () => {
-            setExamStage('Mains');
         });
     }
 });
