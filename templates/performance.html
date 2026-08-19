@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Insights - TalathiIQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">Talathi<span>IQ</span></a>
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/current-affairs" class="nav-item">Current Affairs</a>
+            <a href="/mcq" class="nav-item">AI MCQs</a>
+            <a href="/mock-test" class="nav-item">Mock Tests</a>
+            <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+            <a href="/syllabus" class="nav-item">Syllabus</a>
+            <a href="/study-materials" class="nav-item">Study Notes</a>
+            <a href="/revision" class="nav-item">Smart Revision</a>
+            <a href="/performance" class="nav-item active">Performance</a>
+            <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+            {% if session.get('user_id') %}
+            <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            {% endif %}
+        </nav>
+        <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/current-affairs" class="nav-item">Current Affairs</a>
+        <a href="/mcq" class="nav-item">AI MCQs</a>
+        <a href="/mock-test" class="nav-item">Mock Tests</a>
+        <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+        <a href="/syllabus" class="nav-item">Syllabus</a>
+        <a href="/study-materials" class="nav-item">Study Notes</a>
+        <a href="/revision" class="nav-item">Smart Revision</a>
+        <a href="/performance" class="nav-item active">Performance</a>
+        <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+        {% if session.get('user_id') %}
+        <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        {% endif %}
+    </div>
+
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <div class="ca-header-bar animate-fade-in" style="margin-bottom: 2rem;">
+            <h1 style="font-size: 2.25rem; font-weight: 800;"><i class="fas fa-chart-line" style="color: var(--success); margin-right: 0.5rem;"></i> Performance Analytics</h1>
+            <span class="ca-demo-badge" style="background: rgba(16,185,129,0.1); border-color: var(--success); color: var(--success);"><i class="fas fa-chart-bar"></i> Live Progress Tracking</span>
+        </div>
+
+        <!-- 4 Stat Badges Grid -->
+        <section class="perf-header-grid animate-fade-in" style="animation-delay: 0.1s;">
+            <div class="perf-card">
+                <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary);" id="solvedCount">142</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; margin-top: 0.5rem;">Questions Solved</div>
+            </div>
+            <div class="perf-card">
+                <div style="font-size: 2.25rem; font-weight: 800; color: var(--secondary);" id="accuracyVal">78%</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; margin-top: 0.5rem;">Average Accuracy</div>
+            </div>
+            <div class="perf-card">
+                <div style="font-size: 2.25rem; font-weight: 800; color: var(--accent);" id="mockCount">3</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; margin-top: 0.5rem;">Mock Tests Taken</div>
+            </div>
+            <div class="perf-card">
+                <div style="font-size: 2.25rem; font-weight: 800; color: var(--success);" id="streakDays">5 Days</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; margin-top: 0.5rem;">Daily Practice Streak</div>
+            </div>
+        </section>
+
+        <!-- Dynamic Chart section using CSS bar grids -->
+        <section class="chart-container animate-fade-in" style="animation-delay: 0.2s;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;"><i class="fas fa-book-reader" style="color: var(--primary); margin-right: 0.5rem;"></i> Subject-wise Accuracy Breakdown</h3>
+            
+            <div class="bar-chart">
+                <!-- Row 1 -->
+                <div class="bar-row">
+                    <span class="bar-label">Marathi grammar</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 85%;"></div>
+                    </div>
+                    <span class="bar-value">85%</span>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="bar-row">
+                    <span class="bar-label">English language</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 60%; background: linear-gradient(90deg, var(--danger), var(--warning));"></div>
+                    </div>
+                    <span class="bar-value">60%</span>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="bar-row">
+                    <span class="bar-label">General Knowledge</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 75%; background: linear-gradient(90deg, var(--primary), var(--accent));"></div>
+                    </div>
+                    <span class="bar-value">75%</span>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="bar-row">
+                    <span class="bar-label">Mathematics</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 90%; background: linear-gradient(90deg, var(--secondary), var(--success));"></div>
+                    </div>
+                    <span class="bar-value">90%</span>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="bar-row">
+                    <span class="bar-label">Reasoning skills</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 80%;"></div>
+                    </div>
+                    <span class="bar-value">80%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strong & Weak Topics Grid -->
+        <section class="rev-grid animate-fade-in" style="animation-delay: 0.3s; margin-bottom: 2rem;">
+            
+            <!-- Strong Topics -->
+            <div class="rev-column" style="border-color: rgba(16, 185, 129, 0.2);">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--success); margin-bottom: 1rem;"><i class="fas fa-arrow-circle-up"></i> Strong Subjects / Topics</h3>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <div class="rev-item" style="border-left: 4px solid var(--success); margin-bottom: 0;">
+                        <div class="rev-info">
+                            <span class="rev-q-text">Number Systems (संख्या आणि संख्यांचे प्रकार)</span>
+                            <span class="rev-q-meta">Mathematics - 92% Accuracy</span>
+                        </div>
+                    </div>
+                    <div class="rev-item" style="border-left: 4px solid var(--success); margin-bottom: 0;">
+                        <div class="rev-info">
+                            <span class="rev-q-text">Noun & Agreement rules (नाम व नामाचे प्रकार)</span>
+                            <span class="rev-q-meta">Marathi Grammar - 88% Accuracy</span>
+                        </div>
+                    </div>
+                    <div class="rev-item" style="border-left: 4px solid var(--success); margin-bottom: 0;">
+                        <div class="rev-info">
+                            <span class="rev-q-text">Geography of Maharashtra (महाराष्ट्राचा भूगोल)</span>
+                            <span class="rev-q-meta">General Knowledge - 85% Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weak Topics -->
+            <div class="rev-column" style="border-color: rgba(239, 68, 68, 0.2);">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--danger); margin-bottom: 1rem;"><i class="fas fa-arrow-circle-down"></i> Weak Areas (Needs Practice)</h3>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <div class="rev-item" style="border-left: 4px solid var(--danger); margin-bottom: 0;">
+                        <div class="rev-info">
+                            <span class="rev-q-text">Active & Passive Voice, Prepositions</span>
+                            <span class="rev-q-meta">English - 58% Accuracy</span>
+                        </div>
+                    </div>
+                    <div class="rev-item" style="border-left: 4px solid var(--danger); margin-bottom: 0;">
+                        <div class="rev-info">
+                            <span class="rev-q-text">Social Reformers of Maharashtra</span>
+                            <span class="rev-q-meta">General Knowledge - 62% Accuracy</span>
+                        </div>
+                    </div>
+                    <div class="rev-item" style="border-left: 4px solid var(--danger); margin-bottom: 0;">
+                        <div class="rev-info">
+                            <span class="rev-q-text">Age problems (वयवारी)</span>
+                            <span class="rev-q-meta">Mathematics - 65% Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="tagline">TalathiIQ - Smart Preparation. Smarter Results.</p>
+        <p>&copy; <span id="currentYear"></span> TalathiIQ Exam Platform.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

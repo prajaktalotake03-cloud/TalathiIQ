@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Test Result - TalathiIQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">Talathi<span>IQ</span></a>
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/current-affairs" class="nav-item">Current Affairs</a>
+            <a href="/mcq" class="nav-item">AI MCQs</a>
+            <a href="/mock-test" class="nav-item">Mock Tests</a>
+            <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+            <a href="/syllabus" class="nav-item">Syllabus</a>
+            <a href="/study-materials" class="nav-item">Study Notes</a>
+            <a href="/revision" class="nav-item">Smart Revision</a>
+            <a href="/performance" class="nav-item">Performance</a>
+            <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+            {% if session.get('user_id') %}
+            <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            {% endif %}
+        </nav>
+        <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/current-affairs" class="nav-item">Current Affairs</a>
+        <a href="/mcq" class="nav-item">AI MCQs</a>
+        <a href="/mock-test" class="nav-item">Mock Tests</a>
+        <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+        <a href="/syllabus" class="nav-item">Syllabus</a>
+        <a href="/study-materials" class="nav-item">Study Notes</a>
+        <a href="/revision" class="nav-item">Smart Revision</a>
+        <a href="/performance" class="nav-item">Performance</a>
+        <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+        {% if session.get('user_id') %}
+        <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        {% endif %}
+    </div>
+
+
+    <!-- Main Container -->
+    <main class="container">
+        <div class="result-container animate-fade-in">
+            
+            <div class="result-card">
+                <span class="tagline-en" style="margin-bottom: 1.5rem;">Test Performance Summary</span>
+                
+                <!-- Circular Ring Visual -->
+                <div class="result-ring" style="background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 80%); border: 4px solid var(--border-glow); border-radius: 50%;">
+                    <div class="result-percentage">
+                        <span id="scoreText">0</span><span id="maxScoreText" style="font-size: 1.25rem;">/40</span>
+                    </div>
+                </div>
+
+                <h1 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem;" id="greetingText">Well Done!</h1>
+                <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 2rem auto;" id="summaryPhrase">Here is your performance report card for the Talathi Bharti practice mock test.</p>
+
+                <!-- Statistics Grid -->
+                <div class="result-grid">
+                    <div class="result-item">
+                        <div class="result-val success" id="resCorrect">0</div>
+                        <div class="result-lbl">Correct Answers</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-val danger" id="resIncorrect">0</div>
+                        <div class="result-lbl">Incorrect Answers</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-val warning" id="resUnattempted">0</div>
+                        <div class="result-lbl">Unattempted</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-val primary" id="resAccuracy">0%</div>
+                        <div class="result-lbl">Accuracy Rate</div>
+                    </div>
+                </div>
+
+                <div style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2.5rem;" id="timeTakenBlock">
+                    Time Taken: <span id="resTime" style="color: var(--secondary); font-weight: 700;">00:00</span> minutes
+                </div>
+
+                <!-- Control actions -->
+                <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                    <a href="/mock-test" class="btn btn-primary"><i class="fas fa-redo"></i> Take Another Test</a>
+                    <a href="/revision" class="btn btn-secondary"><i class="fas fa-history"></i> Revise Mistakes</a>
+                    <a href="/" class="btn btn-secondary"><i class="fas fa-home"></i> Back to Dashboard</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="tagline">TalathiIQ - Smart Preparation. Smarter Results.</p>
+        <p>&copy; <span id="currentYear"></span> TalathiIQ Exam Platform.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load from local storage
+            const data = JSON.parse(localStorage.getItem('talathi_last_mock_result'));
+            
+            if (data) {
+                document.getElementById('scoreText').textContent = data.score;
+                document.getElementById('maxScoreText').textContent = '/' + (data.maxScore || (data.totalQuestions * 2 || 40));
+                document.getElementById('resCorrect').textContent = data.correct;
+                document.getElementById('resIncorrect').textContent = data.incorrect;
+                document.getElementById('resUnattempted').textContent = data.unattempted;
+                document.getElementById('resAccuracy').textContent = data.accuracy + '%';
+                
+                // Formatted Time
+                const mins = Math.floor(data.timeTaken / 60);
+                const secs = data.timeTaken % 60;
+                document.getElementById('resTime').textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+
+                // Custom dynamic greetings
+                const greet = document.getElementById('greetingText');
+                const phrase = document.getElementById('summaryPhrase');
+                if (data.accuracy >= 80) {
+                    greet.textContent = "Excellent Score!";
+                    greet.style.color = "var(--success)";
+                    phrase.textContent = "Fantastic preparation! You have a high probability of acing the Talathi exam. Keep practicing.";
+                } else if (data.accuracy >= 50) {
+                    greet.textContent = "Good Attempt!";
+                    greet.style.color = "var(--warning)";
+                    phrase.textContent = "Solid performance. Review your incorrect answers and try raising your score to 80%+ next time.";
+                } else {
+                    greet.textContent = "Keep Practicing!";
+                    greet.style.color = "var(--danger)";
+                    phrase.textContent = "Don't worry. Frequent practice and focusing on wrong topics will improve your speed and accuracy.";
+                }
+            } else {
+                // If direct navigating without giving mock test
+                document.getElementById('summaryPhrase').textContent = "No mock test data was found. Go ahead and start your first mock test to see your score!";
+                document.getElementById('greetingText').textContent = "No Test Data Found";
+            }
+        });
+    </script>
+</body>
+</html>

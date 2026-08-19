@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Year Papers (PYQ) - TalathiIQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .papers-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .papers-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text-main) 30%, var(--primary) 70%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .papers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .paper-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .paper-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .paper-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-glow);
+            box-shadow: 0 12px 30px rgba(99, 102, 241, 0.1);
+        }
+
+        .paper-card:hover::before {
+            opacity: 1;
+        }
+
+        .paper-year-badge {
+            align-self: flex-start;
+            background: var(--primary-glow);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: var(--text-main);
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .paper-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            min-height: 50px;
+        }
+
+        .paper-details {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .paper-details span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .paper-details i {
+            color: var(--secondary);
+        }
+
+        .paper-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .paper-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition-smooth);
+        }
+
+        .paper-btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .paper-btn-primary:hover {
+            box-shadow: 0 0 15px var(--primary-glow);
+            filter: brightness(1.1);
+        }
+
+        .paper-btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .paper-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--text-muted);
+        }
+
+        .section-headline {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">Talathi<span>IQ</span></a>
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/current-affairs" class="nav-item">Current Affairs</a>
+            <a href="/mcq" class="nav-item">AI MCQs</a>
+            <a href="/mock-test" class="nav-item">Mock Tests</a>
+            <a href="/pyq-papers" class="nav-item active">PYQ Papers</a>
+            <a href="/syllabus" class="nav-item">Syllabus</a>
+            <a href="/study-materials" class="nav-item">Study Notes</a>
+            <a href="/revision" class="nav-item">Smart Revision</a>
+            <a href="/performance" class="nav-item">Performance</a>
+            <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+            {% if session.get('user_id') %}
+            <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            {% endif %}
+        </nav>
+        <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/current-affairs" class="nav-item">Current Affairs</a>
+        <a href="/mcq" class="nav-item">AI MCQs</a>
+        <a href="/mock-test" class="nav-item">Mock Tests</a>
+        <a href="/pyq-papers" class="nav-item active">PYQ Papers</a>
+        <a href="/syllabus" class="nav-item">Syllabus</a>
+        <a href="/study-materials" class="nav-item">Study Notes</a>
+        <a href="/revision" class="nav-item">Smart Revision</a>
+        <a href="/performance" class="nav-item">Performance</a>
+        <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+        {% if session.get('user_id') %}
+        <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        {% endif %}
+    </div>
+
+    <!-- Main Container -->
+    <main class="container animate-fade-in">
+        <div class="papers-header">
+            <h1>Previous Year Question Papers</h1>
+            <p style="color: var(--text-muted);">Practice real previous year questions in simulated exam mode or download them as PDFs with full keys.</p>
+        </div>
+
+        <!-- 2023 Papers -->
+        <h2 class="section-headline"><i class="far fa-calendar-alt"></i> Exam Year 2023</h2>
+        <div class="papers-grid">
+            {% for paper in papers %}
+                {% if paper.year == 2023 %}
+                <div class="paper-card">
+                    <div>
+                        <div class="paper-year-badge">{{ paper.year }} Shift Paper</div>
+                        <h3 class="paper-title">{{ paper.title }}</h3>
+                        <div class="paper-details">
+                            <span><i class="far fa-question-circle"></i> {{ paper.questions_count }} MCQs</span>
+                            <span><i class="far fa-clock"></i> {{ paper.duration }} Mins</span>
+                        </div>
+                    </div>
+                    <div class="paper-actions">
+                        <a href="/mock-test?paper={{ paper.id }}" class="paper-btn paper-btn-primary"><i class="fas fa-play"></i> Start Exam</a>
+                        <a href="/download-pyq-pdf/{{ paper.id }}" class="paper-btn paper-btn-secondary"><i class="fas fa-file-pdf" style="color: #ef4444;"></i> PDF Key</a>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- 2022 / 2025 Papers -->
+        <h2 class="section-headline"><i class="far fa-calendar-alt"></i> MPSC & Other Exam Years</h2>
+        <div class="papers-grid">
+            {% for paper in papers %}
+                {% if paper.year != 2023 and paper.year != 2019 %}
+                <div class="paper-card">
+                    <div>
+                        <div class="paper-year-badge">{{ paper.year }} Paper</div>
+                        <h3 class="paper-title">{{ paper.title }}</h3>
+                        <div class="paper-details">
+                            <span><i class="far fa-question-circle"></i> {{ paper.questions_count }} MCQs</span>
+                            <span><i class="far fa-clock"></i> {{ paper.duration }} Mins</span>
+                        </div>
+                    </div>
+                    <div class="paper-actions">
+                        <a href="/mock-test?paper={{ paper.id }}" class="paper-btn paper-btn-primary"><i class="fas fa-play"></i> Start Exam</a>
+                        <a href="/download-pyq-pdf/{{ paper.id }}" class="paper-btn paper-btn-secondary"><i class="fas fa-file-pdf" style="color: #ef4444;"></i> PDF Key</a>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- 2019 Papers -->
+        <h2 class="section-headline"><i class="far fa-calendar-alt"></i> Exam Year 2019</h2>
+        <div class="papers-grid">
+            {% for paper in papers %}
+                {% if paper.year == 2019 %}
+                <div class="paper-card">
+                    <div>
+                        <div class="paper-year-badge">{{ paper.year }} Paper</div>
+                        <h3 class="paper-title">{{ paper.title }}</h3>
+                        <div class="paper-details">
+                            <span><i class="far fa-question-circle"></i> {{ paper.questions_count }} MCQs</span>
+                            <span><i class="far fa-clock"></i> {{ paper.duration }} Mins</span>
+                        </div>
+                    </div>
+                    <div class="paper-actions">
+                        <a href="/mock-test?paper={{ paper.id }}" class="paper-btn paper-btn-primary"><i class="fas fa-play"></i> Start Exam</a>
+                        <a href="/download-pyq-pdf/{{ paper.id }}" class="paper-btn paper-btn-secondary"><i class="fas fa-file-pdf" style="color: #ef4444;"></i> PDF Key</a>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="tagline">TalathiIQ - Smart Preparation. Smarter Results.</p>
+        <p>&copy; 2026 TalathiIQ Exam Platform. Built for Maharashtra Talathi Bharti aspirants.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

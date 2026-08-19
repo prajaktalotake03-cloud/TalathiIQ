@@ -1,0 +1,5031 @@
+[
+  {
+    "id": 1,
+    "question": "खालीलपैकी कोणत्या नामाचे अनेकवचन होत नाही?",
+    "options": [
+      "फूल",
+      "घर",
+      "सोने",
+      "नदी"
+    ],
+    "answer": 2,
+    "explanation": "'सोने' हे पदार्थवाचक नाम आहे. सामान्यतः पदार्थवाचक नामांचे अनेकवचन होत नाही. (उदा. सोने, तांबे, पाणी). इतर नामांचे अनेकवचन होते: फूल-फुले, घर-घरे, नदी-नद्या.",
+    "subject": "Marathi",
+    "topic": "Noun (नाम व नामाचे प्रकार)",
+    "difficulty": "Easy",
+    "stage": "Prelims"
+  },
+  {
+    "id": 2,
+    "question": "'प्रयोग ओळखा' - 'रामाने आंबा खाल्ला.'",
+    "options": [
+      "कर्तरी प्रयोग",
+      "कर्मणी प्रयोग",
+      "भावे प्रयोग",
+      "कर्मकर्तरी प्रयोग"
+    ],
+    "answer": 1,
+    "explanation": "या वाक्यात कर्ता 'राम' याला 'ने' हा विभक्ती प्रत्यय आहे, तर कर्म 'आंबा' प्रथमा विभक्तीत आहे. क्रियापद कर्माच्या लिंग-वचनानुसार बदलते (उदा. रामाने चिंच खाल्ली). म्हणून हा कर्मणी प्रयोग आहे.",
+    "subject": "Marathi",
+    "topic": "Voices (प्रयोग)",
+    "difficulty": "Medium",
+    "stage": "Mains"
+  },
+  {
+    "id": 3,
+    "question": "खालीलपैकी योग्य संधी विग्रह निवडा: 'सज्जन'",
+    "options": [
+      "सज् + जन",
+      "सत + जन",
+      "सत् + जन",
+      "सद् + जन"
+    ],
+    "answer": 2,
+    "explanation": "'सत् + जन' = 'सज्जन'. हा व्यंजन संधीचा नियम आहे. पहिल्या पदातील 'त्' समोर 'ज्' आल्यास 'त्' बद्दल 'ज्' होतो.",
+    "subject": "Marathi",
+    "topic": "Sandhi (संधी)",
+    "difficulty": "Medium",
+    "stage": "Prelims"
+  },
+  {
+    "id": 4,
+    "question": "विरुद्धार्थी शब्द ओळखा: 'कृश'",
+    "options": [
+      "स्थूल",
+      "बारीक",
+      "अशक्त",
+      "दुबळा"
+    ],
+    "answer": 0,
+    "explanation": "'कृश' म्हणजे बारीक किंवा लहान. त्याच्या विरुद्धार्थी शब्द 'स्थूल' (जाड, मोठा) असा होतो.",
+    "subject": "Marathi",
+    "topic": "Antonyms (विरुद्धार्थी शब्द)",
+    "difficulty": "Easy",
+    "stage": "Mains"
+  },
+  {
+    "id": 5,
+    "question": "'डोळ्यावर कातडे ओढणे' या वाक्प्रचाराचा योग्य अर्थ काय?",
+    "options": [
+      "डोळे बंद करणे",
+      "काहीही न दिसणे",
+      "जाणूनबुजून दुर्लक्ष करणे",
+      "खूप रागवणे"
+    ],
+    "answer": 2,
+    "explanation": "'डोळ्यावर कातडे ओढणे' म्हणजे एखादी गोष्ट माहीत असूनही किंवा समोर घडत असूनही जाणूनबुजून त्याकडे दुर्लक्ष करणे.",
+    "subject": "Marathi",
+    "topic": "Idioms (वाक्प्रचार)",
+    "difficulty": "Medium",
+    "stage": "Prelims"
+  },
+  {
+    "id": 6,
+    "question": "Identify the correct synonym for the word: 'ABANDON'",
+    "options": [
+      "Keep",
+      "Forsake",
+      "Support",
+      "Adopt"
+    ],
+    "answer": 1,
+    "explanation": "'Abandon' means to leave completely or give up. 'Forsake' is a direct synonym which means to abandon or desert.",
+    "subject": "English",
+    "topic": "Synonyms",
+    "difficulty": "Easy",
+    "stage": "Mains"
+  },
+  {
+    "id": 7,
+    "question": "Fill in the blank with the appropriate preposition: 'He is proficient ________ English grammar.'",
+    "options": [
+      "in",
+      "at",
+      "with",
+      "for"
+    ],
+    "answer": 0,
+    "explanation": "The adjective 'proficient' is typically followed by the preposition 'in' when referring to a field of study or activity.",
+    "subject": "English",
+    "topic": "Prepositions",
+    "difficulty": "Medium",
+    "stage": "Prelims"
+  },
+  {
+    "id": 8,
+    "question": "Choose the correct spelling from the options below:",
+    "options": [
+      "Committee",
+      "Comitee",
+      "Commitee",
+      "Comitte"
+    ],
+    "answer": 0,
+    "explanation": "The correct spelling is 'Committee' (with double 'm', double 't', and double 'e').",
+    "subject": "English",
+    "topic": "Spelling Test",
+    "difficulty": "Easy",
+    "stage": "Mains"
+  },
+  {
+    "id": 9,
+    "question": "Change the voice: 'The mechanic repaired the car.'",
+    "options": [
+      "The car is repaired by the mechanic.",
+      "The car repaired by the mechanic.",
+      "The car was repaired by the mechanic.",
+      "The car has repaired by the mechanic."
+    ],
+    "answer": 2,
+    "explanation": "The active sentence is in the simple past tense. Thus, in passive voice, we use 'was/were + past participle (V3)'. So: 'The car was repaired by the mechanic.'",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "difficulty": "Medium",
+    "stage": "Prelims"
+  },
+  {
+    "id": 10,
+    "question": "Identify the type of clause: 'Although he was tired, he completed his work.'",
+    "options": [
+      "Noun Clause",
+      "Adjective Clause",
+      "Adverb Clause of Concession",
+      "Adverb Clause of Time"
+    ],
+    "answer": 2,
+    "explanation": "The subclause 'Although he was tired' shows concession/contrast and modifies the main verb by expressing a condition. It is an Adverb Clause of Concession.",
+    "subject": "English",
+    "topic": "Clauses",
+    "difficulty": "Hard",
+    "stage": "Mains"
+  },
+  {
+    "id": 11,
+    "question": "महाराष्ट्रातील खालीलपैकी कोणत्या जिल्ह्याला 'तांदळाचे कोठार' असे म्हटले जाते?",
+    "options": [
+      "रत्नागिरी",
+      "रायगड",
+      "ठाणे",
+      "सिंधुदुर्ग"
+    ],
+    "answer": 1,
+    "explanation": "महाराष्ट्रातील रायगड जिल्ह्यामध्ये भाताचे (तांदळाचे) पीक मोठ्या प्रमाणावर घेतले जात असल्याने त्याला 'तांदळाचे कोठार' असे संबोधले जाते.",
+    "subject": "General Knowledge",
+    "topic": "Geography of Maharashtra",
+    "difficulty": "Easy",
+    "stage": "Prelims"
+  },
+  {
+    "id": 12,
+    "question": "महात्मा ज्योतिराव फुले यांनी 'सत्यशोधक समाज' ची स्थापना कोणत्या वर्षी केली?",
+    "options": [
+      "१८७३",
+      "१८८५",
+      "१८६७",
+      "१८९३"
+    ],
+    "answer": 0,
+    "explanation": "महात्मा ज्योतिराव फुले यांनी २४ सप्टेंबर १८७३ रोजी पुणे येथे सत्यशोधक समाजाची स्थापना केली. याचा उद्देश शूद्र व अतिशूद्र समाजाचे शोषण थांबवणे हा होता.",
+    "subject": "General Knowledge",
+    "topic": "Social Reformers of Maharashtra",
+    "difficulty": "Medium",
+    "stage": "Mains"
+  },
+  {
+    "id": 13,
+    "question": "भारतीय राज्यघटनेतील कलम ७६ हे कोणत्या पदाशी संबंधित आहे?",
+    "options": [
+      "निवडणूक आयुक्त",
+      "भारताचा महान्यायवादी (Attorney General)",
+      "नियंत्रक व महालेखापरीक्षक (CAG)",
+      "केंद्रीय लोकसेवा आयोग अध्यक्ष"
+    ],
+    "answer": 1,
+    "explanation": "भारतीय राज्यघटनेतील कलम ७६ नुसार भारताचे राष्ट्रपती देशाच्या महान्यायवादीची (Attorney General for India) नियुक्ती करतात. हे भारताचे सर्वोच्च कायदेविषयक अधिकारी असतात.",
+    "subject": "General Knowledge",
+    "topic": "Indian Polity",
+    "difficulty": "Medium",
+    "stage": "Prelims"
+  },
+  {
+    "id": 14,
+    "question": "लोणावळा आणि खंडाळा ही थंड हवेची ठिकाणे कोणत्या घाटात वसलेली आहेत?",
+    "options": [
+      "थळ घाट",
+      "फोंडा घाट",
+      "बोर घाट (पुणे-मुंबई मार्ग)",
+      "वरंधा घाट"
+    ],
+    "answer": 2,
+    "explanation": "लोणावळा आणि खंडाळा ही प्रसिद्ध थंड हवेची ठिकाणे बोर घाटात (ज्याला खंडाळा घाट असेही म्हणतात) मुंबई-पुणे राष्ट्रीय महामार्गावर वसलेली आहेत.",
+    "subject": "General Knowledge",
+    "topic": "Geography of Maharashtra",
+    "difficulty": "Easy",
+    "stage": "Mains"
+  },
+  {
+    "id": 15,
+    "question": "महाराष्ट्र शासनाने सुरू केलेली 'मुख्यमंत्री लाडकी बहीण योजना' खालीलपैकी कशाशी संबंधित आहे?",
+    "options": [
+      "महिलांना मोफत शिक्षण देणे",
+      "महिलांना आर्थिक सहाय्य प्रदान करणे",
+      "ग्रामीण मुलींना सायकल वाटप करणे",
+      "महिलांचे मोफत आरोग्य तपासणी"
+    ],
+    "answer": 1,
+    "explanation": "महाराष्ट्र शासनाची 'मुख्यमंत्री माझी लाडकी बहीण योजना' ही पात्र महिलांना दरमहा आर्थिक सहाय्य (१,५०० रुपये) देऊन त्यांचे सक्षमीकरण करण्यासाठी सुरू करण्यात आली आहे.",
+    "subject": "General Knowledge",
+    "topic": "Government Schemes (current)",
+    "difficulty": "Easy",
+    "stage": "Prelims"
+  },
+  {
+    "id": 16,
+    "question": "एका रांगेत अमरचा डावीकडून १० वा आणि उजवीकडून १५ वा क्रमांक आहे, तर त्या रांगेत एकूण किती मुले आहेत?",
+    "options": [
+      "२५",
+      "२४",
+      "२६",
+      "२३"
+    ],
+    "answer": 1,
+    "explanation": "एकूण मुले = (डावीकडून क्रमांक + उजवीकडून क्रमांक) - १ = (१० + १५) - १ = २५ - १ = २४. म्हणून रांगेत २४ मुले आहेत.",
+    "subject": "Mathematics",
+    "topic": "Ranking Test (बुद्धिमत्ता)",
+    "difficulty": "Easy",
+    "stage": "Mains"
+  },
+  {
+    "id": 17,
+    "question": "जर 543X2 या संख्येला 9 ने पूर्ण भाग जात असेल, तर 'X' च्या जागी कोणता अंक येईल?",
+    "options": [
+      "३",
+      "४",
+      "५",
+      "६"
+    ],
+    "answer": 1,
+    "explanation": "९ च्या कसोटीनुसार, संख्येतील सर्व अंकांच्या बेरजेला ९ ने भाग गेला पाहिजे. बेरीज = ५ + ४ + ३ + X + २ = १४ + X. जर X = ४ ठेवले, तर बेरीज १८ होईल (जी ९ ने विभाज्य आहे). म्हणून X = ४.",
+    "subject": "Mathematics",
+    "topic": "Number System (अंकगणित)",
+    "difficulty": "Medium",
+    "stage": "Prelims"
+  },
+  {
+    "id": 18,
+    "question": "राम आणि श्याम यांच्या आजच्या वयाचे गुणोत्तर ३:४ आहे. ५ वर्षांनंतर त्यांच्या वयाचे गुणोत्तर ४:५ होईल, तर रामचे आजचे वय किती?",
+    "options": [
+      "१२ वर्षे",
+      "१५ वर्षे",
+      "२० वर्षे",
+      "२५ वर्षे"
+    ],
+    "answer": 1,
+    "explanation": "समजा रामचे आजचे वय ३x आणि श्यामचे ४x आहे. ५ वर्षांनंतर: (३x + ५)/(४x + ५) = ४/५. तिरकस गुणाकार करू: ५(३x + ५) = ४(४x + ५) => १५x + २५ = १६x + २० => x = ५. म्हणून रामचे आजचे वय = ३ * ५ = १५ वर्षे.",
+    "subject": "Mathematics",
+    "topic": "Ages (वयवारी)",
+    "difficulty": "Medium",
+    "stage": "Mains"
+  },
+  {
+    "id": 19,
+    "question": "मालिका पूर्ण करा: 2, 6, 12, 20, 30, ?",
+    "options": [
+      "३६",
+      "४०",
+      "४२",
+      "४८"
+    ],
+    "answer": 2,
+    "explanation": "फरक पहा: २ (+४) ६ (+६) १२ (+८) २० (+१०) ३० (+१२) ४२. फरक हा क्रमवार सम संख्यांचा आहे (+४, +६, +८, +१०, +१२). म्हणून पुढील संख्या ३० + १२ = ४२ असेल.",
+    "subject": "Mathematics",
+    "topic": "Number Series",
+    "difficulty": "Easy",
+    "stage": "Prelims"
+  },
+  {
+    "id": 20,
+    "question": "जर एका सांकेतिक भाषेत 'TEACHER' हा शब्द 'VGCEJGT' असा लिहिला जातो, तर त्याच भाषेत 'STUDENT' हा शब्द कसा लिहिला जाईल?",
+    "options": [
+      "UVVFGPU",
+      "UVWGHPG",
+      "UVWFGPV",
+      "UVWGfPV"
+    ],
+    "answer": 2,
+    "explanation": "येथे प्रत्येक अक्षरामध्ये २ मिळवून पुढील अक्षर लिहिले आहे (T+2=V, E+2=G, A+2=C, इ.). त्याचप्रमाणे 'STUDENT' साठी: S+2=U, T+2=V, U+2=W, D+2=F, E+2=G, N+2=P, T+2=V. म्हणजेच 'UVWFGPV' हे योग्य उत्तर आहे.",
+    "subject": "Mathematics",
+    "topic": "Coding-Decoding (सांकेतिक भाषा)",
+    "difficulty": "Medium",
+    "stage": "Mains"
+  },
+  {
+    "question": "",
+    "options": [
+      "माथेरान हे थं ड हवेचे ठिकाण कोणत्या जजल्ह्यात स्थित आहे ?",
+      "SO Mains Oct. 2023)",
+      "िाणे",
+      "रायगड"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 21,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील 1960 आजण 2020 मधील एक ू ण प्रशासकीय ठवभाग अनुक्रमे ........ व .......... आहेत. (स ं युक्त गट ब पूवव - फ े ब्रुवारी 2025)",
+    "options": [
+      "4 आजण 8",
+      "4 आजण 6",
+      "5 आजण 7",
+      "5 आजण 8"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 22,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्राच्या उत्तर सीमेलगत खालीलपैकी कोणती पववतरांग आहे ? (Combine B Mains-June 2025)",
+    "options": [
+      "सातपुडा पववतरांग",
+      "शंभू महादेव पववतरांग",
+      "ठवंध्य पववतरांग",
+      "बालाघाट पववतरांग"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 23,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी महाराष्ट्राच्या कोणत्या जजल्ह्यात गाठवलगड टेकड्ांचे िान आहे ? (स ं युक्त गट क मुख्य ठडसें. 2023) अ. िाणे ब. अमरावती क. कोल्हापूर ड. बीड पयावयी उत्तरे :",
+    "options": [
+      "फक्त ड",
+      "अ आजण ब",
+      "क आजण ड",
+      "फक्त ब"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 24,
+    "stage": "Mains"
+  },
+  {
+    "question": "कळसूबाई हे महाराष्ट्रातील सवोच्च पववत जशखर खालीलपैकी कोणत्या पववत रांगेत स्थित आहे? (राज्यसेवा पूवव, नोव्हेंबर",
+    "options": [
+      "025)",
+      "सह्याद्री",
+      "शंभू महादेव",
+      "सातपुडा"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 25,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील ठकती जजल्ह्यांच्या सीमा शेजारील मध्य प्रदेश राज्याला जभडलेल्या आहेत ? (SR Mains Oct. 2023)",
+    "options": [
+      "10",
+      "06",
+      "08",
+      "04"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 26,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील घाट व त्यावरील रस्ते यांच्या योग्य जोड्ा लावा. (स ं युक्त गट ब पूवव - फ े ब्रुवारी 2025) घाट — रस्ते अ. फोंडा — i. मु ं बई - नाजशक ब. माळशेज — ii. कोल्हापूर - क ु डाळ क. हनुम ं ते — iii. िाणे - अहमदनगर ड. थळ — iv. कोल्हापूर - पणजी पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "ii iii iv i",
+      "iv i iii ii",
+      "iii i iv ii",
+      "iv iii ii i"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 27,
+    "stage": "Prelims"
+  },
+  {
+    "question": "दख्खनचे पिार बेसॉल्ट व ग्र ॅ नाईट खडकांनी बनलेले आहे, कारण (स ं युक्त गट ब मुख्य नोव्हें. 2023) अ. या ठिकाणी जास्त उष्णता आहे. ब. ज्ऱालामुखी प्रठक्रया क. भूक ं प क्षेत्र ड. समुद्र साठिध्य पयावयी उत्तरे :",
+    "options": [
+      "ब आजण क",
+      "फक्त ब",
+      "अ आजण ड",
+      "फक्त क"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 28,
+    "stage": "Mains"
+  },
+  {
+    "question": "",
+    "options": [
+      "0) 'ररया' ठकनारे क े व्हा तयार होतात ? (राज्यसेवा मुख्य, जाने",
+      "024)",
+      "मुहाने पाण्याखाली जातात तेव्हा",
+      "डेल्टा पाण्याखाली बुडल्यावर"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 29,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील जशखरे आजण त्यांचे िान यांच्या योग्य जोड्ा लावा. (Excise Dept. Sept 2025) जशखरे — जजल्हे i. हररश्च ं द्रगड — अ. नाजशक ii. अस्तंभा डोंगर — ब. अहमदनगर iii. सप्तश ं गी — क. नंदुरबार iv. तोरणा — ड. पुणे पयावयी उत्तरे :",
+    "options": [
+      "i - ड   ii - अ   iii - ब   iv - क",
+      "i - ब   ii - क   iii - अ   iv - ड",
+      "i - अ   ii - ब   iii - क   iv - ड",
+      "i - अ   ii - क   iii - ड   iv - ब"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 30,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्र राज्याचा भाग भूशास्त्रीय दृष्ट्या अठतशय भक्कम आहे कारण (STI मुख्य, ऑक्टो. 2023)",
+    "options": [
+      "हा भूभाग ठवठवध खडकांपासून बनलेला आहे",
+      "या भूभागात रूपांतररत खडक मोठ्या प्रमाणात आढळतात.",
+      "हा भूभाग प्राचीन खडकांपासून बनलेला आहे",
+      "या भूभागाचे स ं तुलन समान आहे."
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 31,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा जुळवा. (राज्यसेवा मुख्य मे 2025) ठकल्ला — जजल्हा a. मलंगगड — i. रायगड b. जलंगाणा — ii. जसंधुदुगव c. रामगड — iii. अकोला d. नारनाळा — iv. िाणे अ ब क ड",
+    "options": [
+      "iii iv ii i",
+      "iv ii i iii",
+      "iv i ii iii",
+      "iii ii iv i"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 32,
+    "stage": "Mains"
+  },
+  {
+    "question": "योग्य जोड्ा जुळवा : (महा.अराजपठत्रत पूवव , 2023) जशखर, ठिकाण — उ ं ची (मीटर) अ. मांगी-तुंगी — i. 1567 ब. त्र्य ं बक े र्श्र — ii. 1416 क. सप्तश ं गी — iii. 1304 ड. साल्हेर — iv. 1100 पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "iv iii ii i",
+      "iii ii i iv",
+      "ii i iii iv",
+      "i ii iii iv"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 33,
+    "stage": "Prelims"
+  },
+  {
+    "question": "जोड्ा जुळवा. (राज्यसेवा मुख्य, जाने 2024) ठकल्ले — अक्षवृत्त",
+    "options": [
+      "प्रतापगड — i) 15° 75'",
+      "दौलताबाद — ii) 19° 94'",
+      "नळदुगव — iii) 17° 93'",
+      "यशव ं तगड — iv) 17° 81'"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 34,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधानांचा ठवचार करा : (Group B Pre, Jan 2026) (a) रायरेर्श्रपासून जशंगणापूरपयंत पसरलेल्या रांगेला शंभू महादेव डोंगररांग असे म्हणतात. (b) सातपुडा पववतरांगेमुळे नमवदा व तापी नदीचे खोरे अलग झालेले आहे. (c) हररश्च ं द्र - बालाघाट डोंगररांगेमुळे गोदावरी व भीमा नदीचे खोरे अलग झालेले आहे. (d) गोदावरी व तापी नदीच्या खोऱ्यांना वेगळी करणारी सातमाळा-अजजंिा डोंगररांग आहे. वरीलपैकी कोणते ठवधान/ठवधाने बरोबर आहे/आहेत ?",
+    "options": [
+      "फक्त (a) ठवधान बरोबर आहे.",
+      "(a) आजण (b) दोन्ही बरोबर आहेत.",
+      "ठवधान (a), (b) आजण (c) बरोबर आहेत.",
+      "वरील सवव ठवधाने बरोबर आहेत."
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 35,
+    "stage": "Prelims"
+  },
+  {
+    "question": "",
+    "options": [
+      "7) खालीलपैकी कोणती जोडी योग्य नाही? (PSI Mains Oct.",
+      "023)",
+      "तोरणमाळ-अस्तंभा",
+      "गावीलगड-जचखलदरा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 36,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधानांचे ठनरीक्षण करून योग्य पयावय ठनवडा . (स ं युक्त गट ब पूवव - फ े ब्रुवारी 2025) अ. अठिजन्य खडकात - लोह, सोने, तांबे आढळते. ब. स्तररत खडकात चुनखडक आजण जजप्सम सारखी खठनजे आढळतात. क. रूपांतररत खडकात अभ्रक, गानेट सारखी खठनजे आढळत नाहीत.",
+    "options": [
+      "अ आजण क बरोबर आहेत",
+      "अ, ब आजण क बरोबर आहेत",
+      "अ आजण ब बरोबर आहेत",
+      "फक्त ब बरोबर आहे"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 37,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणते/कोणती ठवधान /ने बरोबर आहेत? (राज्यसेवा पूवव परीक्षा, 2023) महाराष्ट्रात उत्तरेकडून क्रमाने पिारावरील प्रमुख डोंगररांगा व त्यांच्या दजक्षणेकडील नद्ांची खोरी खालीलप्रमाणे आहेत : अ. सातपुडा पववत रांगेच्या दजक्षणेकडे तापी-पूणाव खोरे. ब. सातमाळा अजजंिा डोंगराच्या दजक्षणेस गोदावरी नदीचे खोरे. क. हररश्चं द्र बालाघाट डोंगर व त्याच्या दजक्षणेस जभमा नदीचे खोरे. ड. शंभू महादेवाचे डोंगर व त्याच्या दजक्षणेस कृ ष्णा नदीचे खोरे. पयावयी उत्तरे :",
+    "options": [
+      "फक्त अ",
+      "वरील सवव बरोबर",
+      "फक्त अ व ब",
+      "फक्त अ व क"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 38,
+    "stage": "Mains"
+  },
+  {
+    "question": "अ. सालसेत ब. खांदेरी क. उ ं देरी ड. साल्हेर [अस्पष्ट्]",
+    "options": [
+      "0) खालीलपैकी कोणते बेट नाही? (स ं युक्त गट ब मुख्य नोव्हें.",
+      "023)",
+      "पर्याय",
+      "पर्याय"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 39,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणते/ती ठवधान/ने बरोबर आहेत ? (राज्यसेवा मुख्य मे 2025) a. पूवव-पजश्चम ठदशेने पसरलेल्या सातपुडा पववतरांगेमुळे पूणाव व तापी नदी खोरे वेगळे झाले आहे. b. पूवव-पजश्चम ठदशेने पसरलेल्या सातपुडा पववतरांगेमुळे नमवदा व तापी नदी खोरे वेगळे झाले आहे. c. उत्तर-दजक्षण ठदशेने पसरलेल्या सातपुडा पववतरांगेमुळे पूणाव व तापी नदी खोरे वेगळे झाले মাতৃ आहे. d. पूवव-पजश्चम ठदशेने पसरलेल्या सातपुडा पववतरांगेमुळे पूणाव व पांझरा नदी खोरे वेगळे झाले आहे.",
+    "options": [
+      "a आजण b",
+      "फक्त b",
+      "c आजण d",
+      "फक्त d"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 40,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील उं च जशखरे व त्यांची उं ची यांच्या योग्य जोड्ा लावा. (SR Mains Oct. 2023) उ ं च जशखरे — उ ं ची (मीटर) अ. हररश्च ं द्रगड — i) 1438 ब. तोरणा — ii) 1567 क. महाबळेर्श्र — iii) 1404 ड. साल्हेर — iv) 1424 पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "iv iii i ii",
+      "iii iv i ii",
+      "ii i iv iii",
+      "i ii iii iv"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 41,
+    "stage": "Prelims"
+  },
+  {
+    "question": "जोड्ा जुळवा. (Dept. PSI Pre Dec, 2023) जजल्हे — िापना वषव a) पालघर — i) 2014 b) गोंठदया — ii) 1998 c) नंदुरबार — iii) 1999 d) गडजचरोली — iv) 1982 पयावयी उत्तरे :",
+    "options": [
+      "a - iv, b - iii, c - ii, d - i",
+      "a - i, b - iii, c - ii, d - iv",
+      "a - iv, b - ii, c - iii, d - i",
+      "a - i, b - ii, c - iii, d - iv"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 42,
+    "stage": "Mains"
+  },
+  {
+    "question": "कोकण ठकनारा हा खालीलपैकी कोणत्या प्रकारामध्ये मोडतो ? (Combine B Mains-June 2025)",
+    "options": [
+      "ररया",
+      "फजजओडव",
+      "डाल्मेजशयन",
+      "वरीलपैकी कोणतेही नाही"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 43,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील ठकती जजल्ह्यांच्या सीमा कनावटक राज्याला जभडलेल्या आहेत? (ASO Mains Oct. 2023)",
+    "options": [
+      "05",
+      "07",
+      "06",
+      "08"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 44,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधानांचा ठवचार करा : (स ं युक्त गट क मुख्य ठडसें. 2023) अ. सह्याद्री पववत व अरबी समुद्र यांच्या दरम्यान असलेल्या लांबट जचंचोळ्या सखल भागाला कोकण असे म्हणतात. ब. महाराष्ट्राच्या पजश्चमेला व अरबी समुद्राला लागून असलेल्या सह्याद्री पववताचा प्रस्तरभ ं ग/भ्र ं श होऊन कोकण ठकनारपट्टी तयार झाली. क. कोकण ठकनारपट्टीची दजक्षणोत्तर लांबी 700 ठक.मी. पेक्षा जास्त आहे. ड. कोकणचे भौगोजलक क्षेत्रफळ 30000 चौ.ठक.मी. पेक्षा जास्त आहे. वरीलपैकी कोणते ठवधान/ठवधाने बरोबर आहे/आहेत ?",
+    "options": [
+      "अ फक्त",
+      "अ आजण ब फक्त",
+      "अ, ब आजण क",
+      "वरील सवव"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 45,
+    "stage": "Prelims"
+  },
+  {
+    "question": "शंभू महादेवाचे डोंगर रांग ........ नद्ांच्या दरम्यान आहेत. (स ं युक्त गट ब पूवव - फ े ब्रुवारी 2025)",
+    "options": [
+      "तापी - गोदावरी",
+      "गोदावरी - जभमा",
+      "जभमा - क ृ ष्णा",
+      "कोयना - क ृ ष्णा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 46,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्राच्या दख्खन पिारावर ग्रामीण भागामध्ये घर बांधणीसािी या िाठनक दगडाचा वापर क े ला जातो. (महा.अराजपठत्रत पूवव , 2023)",
+    "options": [
+      "जांभा दगड",
+      "स ं गमरवरी दगड",
+      "ग्रानाईट दगड",
+      "बेसॉल्ट दगड"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 47,
+    "stage": "Prelims"
+  },
+  {
+    "question": "सह्याद्री पववताची एक शाखा सोलापूर जजल्ह्याकडे जाते . ती शाखा या नावाने ओळखली जाते. (स ं युक्त गट ब मुख्य नोव्हें.",
+    "options": [
+      "023)",
+      "हररश्चं द्र डोंगर",
+      "महादेव डोंगर",
+      "सातमाळा डोंगर"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 48,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणते/ती ठवधान/ने बरोबर आहे/त ? (राज्यसेवा मुख्य, जाने 2024) a. पाचगणी येथे सापडणारा जांभा दगड हा बेसॉल्टच्या रासायठनक ठवदारणापासून तयार झालेला आहे. b. महाबळेर्श्र येथे जांभा दगड आढळतो कारण तेथे 3000 जम.जम पेक्षा जास्त पाऊस पडतो. c. कोकण ठकनार पट्टीच्या प्रदेशात आढळणारा जांभा दगड दुय्यम स्वरुपाचा आहे. पयावयी उत्तरे :",
+    "options": [
+      "a",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 49,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील पिारावर अनेक डोंगर रांगा पसरल्या आहेत त्यांचा उत्तरेकडून दजक्षणेकडे असा क्रम लावा . (Combine B Mains-June 2025) अ. सातपुडा रांग ब. हररश्च ं द्र बालाघाट रांग क. महादेव डोंगर रांग ड. सातमाळा-अजजंिा डोंगर रांग",
+    "options": [
+      "अ, ब, क आजण ड",
+      "अ, ड, ब आजण क",
+      "ड, क, अ आजण ब",
+      "ब, अ, क आजण ड"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 50,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील घाट व त्यांचे िान असलेले मागव यांच्या योग्य जोड्ा लावा : (PSI Mains Oct. 2023) घाट — मागव अ. आंबेनळी — i) पुणे - सातारा ब. आंबोली — ii) कोल्हापूर - क ु डाळ क. خंंबाटकी — iii) महाबळेर्श्र - महाड ड. हनुम ं ते — iv) बेळगावी - साव ं तवाडी पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "iv ii iii i",
+      "iv i ii iii",
+      "iii iv i ii",
+      "iii ii i iv"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 51,
+    "stage": "Prelims"
+  },
+  {
+    "question": "भारताच्या प्राकृ ठतक नकाशात महाराष्ट्र पिार खालीलपैकी कोणत्या रंगाने दशवठवले आहे? (राज्यसेवा पूवव परीक्षा, 2023)",
+    "options": [
+      "गडद ठहरवा",
+      "ठहरवा",
+      "ठपवळा",
+      "तपठकरी"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 52,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील सह्याद्री पववतातील जशखरांचा उं चीनुसार कोणता उतरता क्रम बरोबर आहे ? (STI मुख्य, ऑक्टो. 2023)",
+    "options": [
+      "महाबळेर्श्र - हररश्च ं द्रगड - साल्हेर - सप्तश ं गी",
+      "महाबळेर्श्र - साल्हेर - सप्तश ं गी - हररश्च ं द्रगड",
+      "साल्हेर - महाबळेर्श्र - सप्तश ं गी - हररश्च ं द्रगड",
+      "साल्हेर - महाबळेर्श्र - हररश्च ं द्रगड - सप्तश ं गी"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 53,
+    "stage": "Prelims"
+  },
+  {
+    "question": "थं ड हवेची ठिकाणे व ते कोणत्या जजल्ह्यात आहेत हे खाली ठदले आहे. त्यांच्या योग्य जोड्ा लावा : (PSI Mains Oct. 2023) जजल्हा — थंड हवेचे ठिकाण अ. सातारा — i) जव्हार ब. नंदुरबार — ii) ख ं डाळा क. पुणे — iii) महाबळेर्श्र ड. पालघर — iv) तोरणमाळ पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "i ii iii iv",
+      "iii ii iv i",
+      "ii i iii iv",
+      "iii iv ii i"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 54,
+    "stage": "Mains"
+  },
+  {
+    "question": "",
+    "options": [
+      "7) अस्तंभा जशखर महाराष्ट्राच्या कोणत्या जजल्ह्यात आहे?",
+      "SO मुख्य 2019)",
+      "नाजशक",
+      "अमरावती"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 55,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील उष्ण पाण्याचे झरे व त्यांची ठिकाणे असलेले जजल्हे यांच्या योग्य जोड्ा लावा : (स ं युक्त गट 'क' पूवव, नोव्हें., 2022) उष्ण पाण्याचे झरे - जजल्हे अ) सालबडी - 1) जळगाव ब) साव - 2) िाणे क) वज्रेर्श्री - 3) रायगड ड) चांगदेव - 4) अमरावती पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "1 2 3 4",
+      "2 1 4 3",
+      "3 4 2 1",
+      "4 3 2 1"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 56,
+    "stage": "Mains"
+  },
+  {
+    "question": "1 मे 1960 रोजी 'मुं बईसह नवमहाराष्ट्र' ठनमावण झाला त्यावेळी महाराष्ट्र राज्यात एकू ण ठकती जजल्हे व तालुके होते? (राज्यसेवा पूवव 2021) अ) 26 जजल्हे ब) 28 जजल्हे क) 239 तालुक े ड) 229 तालुक े पयावयी उत्तरे :",
+    "options": [
+      "अ आजण क बरोबर",
+      "ब आजण ड बरोबर",
+      "ड आजण अ बरोबर",
+      "क आजण ब बरोबर"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 57,
+    "stage": "Prelims"
+  },
+  {
+    "question": "जोड्ा लावा . (राज्य सेवा (मुख्य) जाने 2023) (a) रायगड - I. जभलमा (b) पुरंदर - II. तानाजी मालुसरे (c) दौलताबाद - III. सवाई माधवराव (d) जसंहगड - IV. ठहरोजी इंदुलकर पयावयी उत्तरे :",
+    "options": [
+      "(b) (c) (d)",
+      "IV III II I",
+      "III IV I II",
+      "IV III I II"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 58,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधाने पहा. (ASO Mains Oct. 2022) अ) जालना जजल्हा ठहंगोली जजल्ह्याच्या पूवेस आहे. ब) धुळे आजण नंदूरबार जजल्ह्यास दोन राज्यांच्या जसमा आहेत. क) महाराष्ट्र राज्याचे भौगोजलक क्षेत्रफळ 307713 चौ.ठक.मी. आहे. पयावयी उत्तरे :",
+    "options": [
+      "फक्त ठवधान अ बरोबर नाही",
+      "फक्त ठवधान ब बरोबर नाही",
+      "फक्त ठवधान क बरोबर नाही",
+      "ठवधान अ आजण ब बरोबर नाहीत"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 59,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्राचे पिार मुख्यत्वेकरून खालीलपैकी कोणत्या खडकांपासून ठनमावण झाले आहे? (राज्यसेवा मुख्य 2019)",
+    "options": [
+      "धारवार",
+      "कडप्पा",
+      "अजसताश्म",
+      "क ृ ष्णप्रस्तर"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 60,
+    "stage": "Mains"
+  },
+  {
+    "question": "अरबी समुद्र आजण सह्याद्री पववत यांच्या दरम्यान ........... हा प्राक ृ ठतक ठवभाग आढळतो. (राज्य सेवा (मुख्य) जाने 2023)",
+    "options": [
+      "महाराष्ट्र पिार",
+      "पजश्चम घाट",
+      "सातपुडा डोंगर",
+      "कोकण ठकनारपट्टी"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 61,
+    "stage": "Prelims"
+  },
+  {
+    "question": "तरंगघषीत चबुतरा महाराष्ट्रामध्ये ............चा ठकनाऱ्यावर आढळतो. (राज्यसेवा मुख्य मे 2022)",
+    "options": [
+      "आढे",
+      "बामनोली",
+      "नागांव",
+      "हरर हरेर्श्र"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 62,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील घाटांचा कोणता क्रम उत्तरेकडून दजक्षणेकडे बरोबर आहे? (Combine 'B' 2020)",
+    "options": [
+      "थळघाट, क ुं भालीघाट, आंबाघाट, आंबोलीघाट",
+      "आंबोलीघाट, अंबाघाट, क ुं भालीघाट, थळघाट",
+      "थळघाट, क ुं भालीघाट, आंबोलीघाट, आंबाघाट",
+      "थळघाट, आंबाघाट, आंबोलीघाट, क ुं भालीघाट"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 63,
+    "stage": "Prelims"
+  },
+  {
+    "question": "नाजशक ठवभागामध्ये ठकती तालुक े आहेत? (ASO Mains July 2022)",
+    "options": [
+      "54",
+      "52",
+      "56",
+      "51"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 64,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी पुणे ठवभागात सवावत उत्तरेकडील तालुका कोणता? (स ं युक्त गट 'ब' पूवव, 2019)",
+    "options": [
+      "जुिर",
+      "मावळ",
+      "मेढा",
+      "च ं दनगड"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 65,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील घाटांचा उत्तरेकडून दजक्षणेकडे कोणता क्रम बरोबर आहे? (ASO Mains Oct. 2022)",
+    "options": [
+      "क ुं भाली, आंबा, आंबोली, फोंडा",
+      "क ुं भाली, आंबा, फोंडा, आंबोली",
+      "आंबा, क ुं भाली, फोंडा, आंबोली",
+      "आंबोली, फोंडा, क ुं भाली, आंबा"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 66,
+    "stage": "Mains"
+  },
+  {
+    "question": "'अस्तंभा' हे उं च जशखर महाराष्ट्रातील कोणत्या पववतरांगेत आढळते? (स ं युक्त गट 'क' पूवव, नोव्हें., 2022)",
+    "options": [
+      "महादेव",
+      "हररश्च ं द्र",
+      "सातपुडा",
+      "सह्याद्री"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 67,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील कोणत्या प्रशासकीय ठवभागात सवावत जास्त जजल्हे आहेत? (STI मुख्य 2019)",
+    "options": [
+      "अमरावती",
+      "नाजशक",
+      "औरंगाबाद",
+      "नागपूर"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 68,
+    "stage": "Mains"
+  },
+  {
+    "question": "बीड जजल्हा महाराष्ट्रातील ......... प्रशासकीय ठवभागात आहे. (PSI Mains July 2022)",
+    "options": [
+      "औरंगाबाद",
+      "नाजशक",
+      "अमरावती",
+      "पुणे"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 69,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणता गरम पाण्याचा झरा जळगाव जजल्ह्यामध्ये स्थित नाही? (राज्य सेवा (मुख्य) जाने 2023)",
+    "options": [
+      "साव",
+      "अडावद",
+      "उनपदेव",
+      "चांगदेव"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 70,
+    "stage": "Mains"
+  },
+  {
+    "question": "भारताच्या कोणत्या औद्ोठगक प्रदेशास 'भारताचे ऱ्हूर' म्हणून ओळखतात? (क ं बाईन गट 'क' पूवव - 2021)",
+    "options": [
+      "कोलकत्ता - हुगळी औद्ोठगक प्रदेश",
+      "अहमदाबाद - वडोदरा औद्ोठगक प्रदेश",
+      "मदुराई - कोईम्बतूर - बेंगळूर औद्ोठगक प्रदेश",
+      "छोटा नागपूर पिारी औद्ोठगक प्रदेश"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 71,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्राच्या पजश्चमेस उत्तर-दजक्षण ठदशेत कोणता पववत/डोंगर आहे? (Combine 'B' पूवव 2022)",
+    "options": [
+      "सातपुडा",
+      "शंभूमहादेव",
+      "सातमाळा",
+      "सह्याद्री"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 72,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील नमूद सह्याद्रीतील प्राक ृ ठतक भूरचनांचे उत्तर-दजक्षण अजभमुखता करून क्रम जलहा : (STI मुख्य 2019) अ) क ुं भाली घाट ब) वरंध घाट क) रायगड ठकल्ला ड) प्रतापगड ठकल्ला पयावयी उत्तरे :",
+    "options": [
+      "ड, क, ब, अ",
+      "क, ब, ड, अ",
+      "ब, अ, ड, क",
+      "अ, ड, क, ब"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 73,
+    "stage": "Prelims"
+  },
+  {
+    "question": "कोणत्या प्रशासकीय ठवभागात जजल्ह्यांची स ं ख्या अजधक आहे? (STI Mains Oct. 2022)",
+    "options": [
+      "पुणे ठवभाग",
+      "नागपूर ठवभाग",
+      "कोकण ठवभाग",
+      "औरंगाबाद ठवभाग"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 74,
+    "stage": "Mains"
+  },
+  {
+    "question": "नंदुरबार जजल्ह्यातील तालुक्ांचा उत्तरेकडून दजक्षणेकडे असा योग्य क्रम ओळखा. (राज्यसेवा पूवव, 2020)",
+    "options": [
+      "शहादा, धडगाव, अक्कलक ु वा",
+      "धडगाव, तळोदा, नंदुरबार",
+      "नवापूर, नंदुरबार, धडगाव",
+      "अक्कलक ु वा, धडगाव, नंदुरबार"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 75,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील पववत जशखरांच्या उं चीनुसार खालीलपैकी अचूक उतरता क्रम कोणता? (स ं युक्त गट 'क' पूवव, नोव्हें.,",
+    "options": [
+      "022)",
+      "कळसूबाई, साल्हेर, महाबळेर्श्र, त्र्य ं बक े र्श्र",
+      "साल्हेर, कळसूबाई, महाबळेर्श्र, त्र्य ं बक े र्श्र",
+      "कळसूबाई, महाबळेर्श्र, साल्हेर, त्र्य ं बक े र्श्र"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 76,
+    "stage": "Mains"
+  },
+  {
+    "question": "सह्याद्री पववतातील सवावत उ ं च जशखर 'कळसूबाई' हे महाराष्ट्रातील कोणत्या जजल्ह्यात आहे? (राज्यसेवा मुख्य मे",
+    "options": [
+      "022)",
+      "िाणे",
+      "नंदूरबार",
+      "नाजशक"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 77,
+    "stage": "Prelims"
+  },
+  {
+    "question": "लातूर जजल्ह्याला महाराष्ट्रातील ठकती जजल्ह्यांच्या जसमा आहेत? (PSI मुख्य 2019)",
+    "options": [
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 78,
+    "stage": "Mains"
+  },
+  {
+    "question": "कोणत्या जजल्ह्यांची सीमा ही कनावटक व तेलंगणा या दोन राज्यांना लागून आहे/आहेत? (PSI Mains Sept. 2022)",
+    "options": [
+      "लातूर",
+      "नांदेड आजण लातूर",
+      "गडजचरोली आजण नांदेड",
+      "नांदेड"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 79,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील घाटांच्या सं दभावत खालील ठवधानांवर ठवचार करा. (PSI Mains July 2022) अ) पुणे-बारामती मागाववर ठदवा घाट आहे. ब) कोल्हापूर-रत्नाठगरी मागाववर आंबोली घाट आहे. पयावयी उत्तरे :",
+    "options": [
+      "अ बरोबर, ब चूक",
+      "अ चूक, ब बरोबर",
+      "दोन्हीही चूक",
+      "दोन्हीही बरोबर"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 80,
+    "stage": "Mains"
+  },
+  {
+    "question": "अरबी समुद्र व ब ं गालच्या उपसागराला जमळणाऱ्या नद्ांचा ........... प्रमुख जलठवभाजक आहे. (राज्य सेवा (मुख्य) जाने",
+    "options": [
+      "023)",
+      "पूवव घाट",
+      "पजश्चम घाट",
+      "ठहमालय पववत"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 81,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील नमूद महाराष्ट्रातील प्रशासकीय ठवभागांना त्यांच्या क्षेत्रफळानुसार उतरत्या क्रम लावा : (STI मुख्य 2019) अ) नागपूर ब) नाजशक क) अमरावती ड) औरंगाबाद य) पुणे पयावयी उत्तरे :",
+    "options": [
+      "य, ब, ड, अ, क",
+      "ड, य, ब, क, अ",
+      "ब, ड, क, य, अ",
+      "ड, ब, य, अ, क"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 82,
+    "stage": "Mains"
+  },
+  {
+    "question": "............ या ठकल्ल्याला ठब्रटीश लोक पूवेकडील जजब्राल्टर म्हणत असत. (Combine 'C' 2019)",
+    "options": [
+      "ज ं जीरा",
+      "कनावळा",
+      "रायगड",
+      "जलंगाणा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 83,
+    "stage": "Prelims"
+  },
+  {
+    "question": "औरंगाबाद प्रशासकीय ठवभागामध्ये भौगोजलक क्षेत्रफळाच्या दृष्ट्ीने सवावत मोिा व सवावत लहान असणारे जजल्हे कोणते? (स ं युक्त गट 'क' पूवव, नोव्हें., 2022)",
+    "options": [
+      "औरंगाबाद आजण परभणी",
+      "बीड आजण ठहंगोली",
+      "नांदेड आजण ठहंगोली",
+      "उस्मानाबाद आजण जालना"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 84,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणता ठकनाऱ्याचा प्रकार कोकणात आढळतो? (राज्यसेवा मुख्य, 2020)",
+    "options": [
+      "ररया",
+      "ठफयॉडव",
+      "डाल्मेजशयन",
+      "वरीलपैकी कोणतेही नाही"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 85,
+    "stage": "Prelims"
+  },
+  {
+    "question": "जोड्ा जुळवा. : (ASO Mains Oct. 2022) जजल्हा - तालुका अ) गडजचरोली - 1) जजवती ब) च ं द्रपूर - 2) देवरी क) गोंठदया - 3) मुलचेरा ड) भ ं डारा - 4) लाखणी पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "2 3 4 1",
+      "3 1 2 4",
+      "4 3 1 2",
+      "2 4 3 1"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 86,
+    "stage": "Mains"
+  },
+  {
+    "question": "भारतातील एकू ण खेड्ांपैकी ठकती टक्के खेडे महाराष्ट्रात आहेत? (ASO Mains July 2022)",
+    "options": [
+      "7.00%",
+      "7.28%",
+      "7.20%",
+      "7.22%"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 87,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील दुसरे सवावत उं च जशखर कोणते? (क ं बाईन गट 'क' पूवव - 2021)",
+    "options": [
+      "कळसूबाई",
+      "तोरणा",
+      "साल्हेर",
+      "घोडब"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 88,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणते ठवधान चूक आहे? (राज्य सेवा (मुख्य) जाने 2023) (a) ठकनाऱ्यालगत समुद्रतळ उथळ असल्यास लाटांचा वेग म ं दावतो. (b) ठकनाऱ्यालगत समुद्रतळ खोल असल्यास लाटांचा वेग म ं दावतो. (c) ठकनाऱ्यालगत समुद्रतळ उथळ असल्यास लाटांचा वेग वाढतो. पयावयी उत्तरे :",
+    "options": [
+      "फक्त (a)",
+      "फक्त (b)",
+      "(b) आजण (c)",
+      "(a) आजण (c)"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 89,
+    "stage": "Prelims"
+  },
+  {
+    "question": "'अस्तंभा जशखर' स ं दभावत खालीलपैकी कोणता पयावय योग्य आहे? (PSI Mains July 2022)",
+    "options": [
+      "नंदुरबार - तोरणमाळ",
+      "अमरावती - गाठवलगड",
+      "धुळे - गाळणा डोंगर",
+      "नाजशक - सह्याद्री"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 90,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील गरम पाण्याचे झरे व त्यांचे ठिकाण असलेले जजल्हे यांच्या जोड्ा लावा. (Forest (Mains) Oct 2022) गरम पाण्याचे झरे - ठिकाण (जजल्हा) अ. साव - i. जळगांव ब. सालबडी - ii. पालघर क. सातीवली - iii. रायगड ड. उपनदेव - iv. अमरावती पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "iv iii ii i",
+      "i ii iv iii",
+      "ii i iii iv",
+      "iii iv ii i"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 91,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (STI मुख्य 2019) डोंगर - जजल्हा अ) जचकोडी - 1) नंदुरबार ब) मढोशी - 2) जळगांव क) तोरणमाळ - 3) सातारा ड) हस्ती - 4) कोल्हापूर पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "3 4 2 1",
+      "2 1 4 3",
+      "4 3 1 2",
+      "1 2 3 4"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 92,
+    "stage": "Mains"
+  },
+  {
+    "question": "'कडप्पा' प्रकारचा खडक महाराष्ट्राच्या कोणत्या जजल्ह्यांमध्ये आढळतो? (ASO Mains July 2022)",
+    "options": [
+      "च ं द्रपूर-नागपूर",
+      "नांदेड-भ ं डारा",
+      "कोल्हापूर-जसंधुदुगव",
+      "अमरावती-नागपूर"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 93,
+    "stage": "Prelims"
+  },
+  {
+    "question": "पुढील ठवधाने ठवचारात घ्या : (राज्यसेवा पूवव, 2020) अ) कडप्पा खडक श्रेणी ही पेनग ं गा आजण गोदावरी नदी खोऱ्यात आढळते. ब) धारवाड खडक श्रेणीमध्ये लोहखठनज, म ँ गठनज सापडते. क) गोंडवना खडक श्रेणीमध्ये दगडी कोळसा मुबलक प्रमाणात आढळतो. पयावयी उत्तरे :",
+    "options": [
+      "फक्त ठवधान अ बरोबर आहे",
+      "फक्त ठवधान ब बरोबर आहे",
+      "ठवधान ब आजण क बरोबर आहेत",
+      "ठवधान अ, ब आजण क बरोबर आहेत"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 94,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील ठकती जजल्ह्यांच्या सीमा कनावटक राज्यास लागून आहेत? (स ं युक्त गट 'क' पूवव, नोव्हें., 2022)",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 95,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील खालील ठकल्ल्यांचा दजक्षणेकडून उत्तरेकडे क्रम लावा. (राज्यसेवा मुख्य 2019) अ) जसंहगड ब) पुरंदर क) दौलताबाद ड) प्रतापगड पयावयी उत्तरे :",
+    "options": [
+      "ड, अ, ब, क",
+      "ब, अ, ड, क",
+      "ड, ब, अ, क",
+      "क, ब, अ, ड"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 96,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठिकाणांचा त्यांच्या उ ं चीप्रमाणे उतरता योग्य क्रम लावा: (PSI Mains Sept. 2022) अ) हररश्च ं द्रगड ब) क ुं भाली क) कळसूबाई ड) साल्हेर इ) रामटेक पयावयी उत्तरे :",
+    "options": [
+      "क, ब, ड, अ, इ",
+      "क, ड, अ, ब, इ",
+      "क, अ, ड, ब, इ",
+      "ड, अ, ब, क, इ"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 97,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्राच्या उत्तरेस ............ पववतरांगा आजण त्याच्या पूवेस ............ टेकड्ा आहेत. (Combine 'C' 2019)",
+    "options": [
+      "सह्याद्री आजण नंदूरबार",
+      "सातपुडा आजण गावीलगड",
+      "बालाघाट आजण भामरागड",
+      "गावीलगड आजण महादेव"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 98,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रात ............ खडक पूवव ठवदभव व कोकण खेरीज सववत्र आढळतो. (PSI Mains July 2022)",
+    "options": [
+      "जलजन्य",
+      "बेसॉल्ट",
+      "रुपांतरीत",
+      "यापैकी नाही"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 99,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या कारणाने कोकणचा सखल भाग ठनमावण झाला आहे ? (राज्यसेवा मुख्य, 2020)",
+    "options": [
+      "अरबी समुद्र ठकनारा उ ं चावल्याने",
+      "महाराष्ट्र पिाराचा पजश्चमेकडील भाग खाली खचल्याने",
+      "सह्याद्री पववताच्या ठनजमवतीमुळे",
+      "समुद्र लाटांच्या खनन कायावमुळे"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 100,
+    "stage": "Mains"
+  },
+  {
+    "question": "जोड्ा जुळवा : (ASO Mains Oct. 2022) प्रशासकीय ठवभाग - तालुका अ) अमरावती - 1) खालापूर ब) नागपूर - 2) सेनगाव क) औरंगाबाद - 3) जभवापूर ड) कोकण - 4) घाटंजी पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "4 3 2 1",
+      "1 2 3 4",
+      "3 1 2 4",
+      "4 3 1 2"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 101,
+    "stage": "Prelims"
+  },
+  {
+    "question": "सह्याद्री पववताची महाराष्ट्रातील लांबी ठकती ठक.मी. आहे?",
+    "options": [
+      "SO मुख्य 2019)",
+      "420",
+      "440",
+      "470"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 102,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रात अरबी समुद्र व सह्याद्री पववत यांच्या दरम्यान उत्तर-दजक्षण ठदशेस पसरलेल्या ठकनारपट्टीच्या प्रदेशाला ......... असे म्हणतात. (राज्यसेवा मुख्य मे 2022) अ) कारवार आजण मलबार ब) कोरोम ं डल क) कोकण पयावयी उत्तरे :",
+    "options": [
+      "फक्त क बरोबर आहे",
+      "फक्त अ बरोबर आहे",
+      "फक्त अ आजण क बरोबर आहेत",
+      "अ, ब आजण क बरोबर आहेत"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 103,
+    "stage": "Prelims"
+  },
+  {
+    "question": "दरके सा टेकड्ा महाराष्ट्राच्या कोणत्या जजल्ह्यात आढळतात? (Combine 'B' 2020)",
+    "options": [
+      "नागपूर",
+      "च ं द्रपूर",
+      "गोंठदया",
+      "गडजचरोली"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 104,
+    "stage": "Mains"
+  },
+  {
+    "question": "औरंगाबाद ठवभागातील सवावत कमी व सवावत जास्त क्षेत्रफळ असलेले जजल्हे कोणते? (STI Mains july 2022)",
+    "options": [
+      "जालना, औरंगाबाद",
+      "परभणी, उस्मानाबाद",
+      "ठहंगोली, बीड",
+      "लातूर, नांदेड"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 105,
+    "stage": "Prelims"
+  },
+  {
+    "question": "कोल्हापूर जजल्ह्यातील जोतीबा डोंगर ....... नावाने ओळखला जातो. (स ं युक्त गट 'क' पूवव, नोव्हें., 2022) अ) वाडी रत्नाठगरी ब) करवीर क) पन्हाळा ड) क े दारेर्श्राची टेकडी पयावयी उत्तरे :",
+    "options": [
+      "फक्त अ",
+      "फक्त ब",
+      "क आजण ड",
+      "अ आजण ब"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 106,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्राच्या नैसठगवक सरहद्ींच्या बाबतीत खालीलपैकी कोणती जोडी चुकीची आहे? (Agri पूवव 2018)",
+    "options": [
+      "ईशान्येस - दरक े सा टेकड्ा",
+      "वायव्येस - सातमाळा, गाळणा आजण अक्राणी टेकड्ा",
+      "नैऋत्येस - तेरेखोल नदी",
+      "आिेयेस - गाठवलगड टेकड्ा"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 107,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्राचा प्रमुख जलठवभाजक कोणता? (स ं युक्त गट 'ब' पूवव, 2018)",
+    "options": [
+      "सह्याद्री पववत",
+      "सातपुडा पववत",
+      "ठनलठगरी पववत",
+      "अरवली पववत"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 108,
+    "stage": "Mains"
+  },
+  {
+    "question": "प्रश्न 93. योग्य जोड्ा लावा. (स ं युक्त गट 'ब' पूवव, 2019) स्तंभ-I (जलठवद्ुत कें द्र) - स्तंभ-II (जजल्हा) अ) जभरा - 1) अहमदनगर ब) ठवर - 2) रायगड क) भ ं डारदरा - 3) सोलापूर ड) उजनी - 4) पुणे पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "2 4 3 1",
+      "2 4 1 3",
+      "2 1 4 3",
+      "3 4 1 2"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 109,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (स ं युक्त गट 'ब' पूवव, 2018) जजल्हा - तालुका अ) नांदेड - 1) भोकर ब) जालना - 2) भोकरदन क) बुलढाणा - 3) उमरखेड ड) यवतमाळ - 4) स ं ग्रामपूर पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "3 2 1 4",
+      "4 3 1 2",
+      "2 1 4 3",
+      "1 2 4 3"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 110,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील खालीलपैकी कोणती नदी खचदरीतून वाहते ? (स ं युक्त गट 'ब' पूवव, 2019)",
+    "options": [
+      "घटप्रभा",
+      "क ृ ष्णा",
+      "गोदावरी",
+      "तापी"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 111,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील खालीलपैकी सवावत मोिा जलठवद्ुत प्रकल्प कोणता ? (स ं युक्त गट 'ब' पूवव, 2019)",
+    "options": [
+      "खोपोली",
+      "कोयना",
+      "वैतरणा",
+      "वरीलपैकी नाही"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 112,
+    "stage": "Mains"
+  },
+  {
+    "question": "उत्तरेकडून दजक्षणेकडे खालीलपैकी पववत रांगांचा कोणता क्रम बरोबर आहे? (राज्यसेवा मुख्य, 2018)",
+    "options": [
+      "सातपुडा, हररश्च ं द्रगड, सातमाळा, शंभूमहादेव",
+      "सातपुडा, सातमाळ, हररश्च ं द्रगड, शंभूमहादेव",
+      "शंभूमहादेव, सातमाळ, सातपुडा, हररश्च ं द्रगड",
+      "सातपुडा, सातमाळ, शंभूमहादेव, हररश्च ं द्रगड"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 113,
+    "stage": "Prelims"
+  },
+  {
+    "question": "मालवण, वेंगुलाव आजण गोव्याकडे जाण्यासािी ............ हा घाट अत्य ं त उपयुक्त आहे. (राज्यसेवा मुख्य, 2018) अ) फोंडा आजण आंबोली ब) थळघाट व बोरघाट क) आंबा घाट ड) आंबेनळी पयावयी उत्तरे :",
+    "options": [
+      "फक्त अ बरोबर",
+      "फक्त ब बरोबर",
+      "ब आजण क बरोबर",
+      "क आजण ड बरोबर"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 114,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधानांची सत्यता तपासा, आजण खालीलपैकी कोणते ठवधान बरोबर आहे ते ओळखा . (राज्यसेवा पूवव, 2019) ठवधान 'अ' : दख्खनचे पिार हे बेसॉल्ट खडकापासून बनलेले आहे. ठवधान 'ब' : दख्खनच्या पिारावरील बेसॉल्ट खडकाची ठनजमवती ज्ऱालामुखीच्या उद्रेकातून झालेल्या लाव्हारसाच्या स ं चयनाने झालेली आहे. पयावयी उत्तरे :",
+    "options": [
+      "ठवधान 'अ' आजण 'ब' दोन्ही बरोबर आहेत.",
+      "ठवधान 'अ' आजण 'ब' दोन्ही चूक आहेत.",
+      "ठवधान 'अ' बरोबर असून ठवधान 'ब' चूक आहे.",
+      "ठवधान 'अ' चूक असून ठवधान 'ब' बरोबर आहे."
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 115,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील ठवधाने पहा. (वनसेवा मुख्य, 2018) अ) जचखलदरा हे थ ंड हवेचे ठिकाण सातपुडा पववत रांगेत असून त्याची उ ं ची 1115 मी. आहे. ब) साल्हेर जशखर हे नाजशक जजल्ह्यात असून त्याची उ ं ची 1667 मी. आहे. क) हररश्च ं द्रगड जशखर अहमदनगर जजल्ह्यात आहे. ड) शंभू महादेव डोंगर रांग गोदावरी व भीमा नदी खोऱ्यांना ठवभागते. वरीलपैकी कोणती ठवधाने चुकीची आहेत?",
+    "options": [
+      "ठवधान अ आजण ठवधान ब",
+      "ठवधान ब आजण ठवधान क",
+      "ठवधान ब आजण ठवधान ड",
+      "ठवधान क आजण ठवधान ड"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 116,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणते शहर महाराष्ट्राची सांस्कृ ठतक राजधानी म्हणून ओळखले जाते? (राज्यसेवा मुख्य, 2017)",
+    "options": [
+      "मु ं बई",
+      "कोल्हापूर",
+      "पुणे",
+      "नागपूर"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 117,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील जशखरे त्यांची उ ं ची प्रमाणे उतरत्या क्रमाने लावा. (STI मुख्य, 2018) अ) प्रतापगड ब) त्र्य ं बक े र्श्र क) साल्हेर ड) जसरसाळा पयावयी उत्तरे :",
+    "options": [
+      "अ, ब, क, ड",
+      "क, ब, अ, ड",
+      "ब, क, अ, ड",
+      "ड, अ, ब, क"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 118,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठिकाणांचा त्यांच्या उ ं ची प्रमाणे चढता क्रम लावा (STI मुख्य, 2016) अ) कळसूबाई ब) हररश्च ं द्रगड क) क ुं भाली ड) फोंडाघाट पयावयी उत्तरे :",
+    "options": [
+      "क, ब, अ, ड",
+      "ड, क, ब, अ",
+      "क, ड, ब, अ",
+      "ब, क, ड, अ"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 119,
+    "stage": "Prelims"
+  },
+  {
+    "question": "पुणे जजल्ह्यास ठकती जजल्ह्यांच्या सीमा लागून आहेत? (Excise पूवव, 2017)",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 120,
+    "stage": "Mains"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (राज्यसेवा मुख्य, 2017) जजल्हे - धबधबे अ) सातारा - 1) रंधा ब) अहमदनगर - 2) जचंचोली क) िाणे - 3) आंबोली ड) जसंधुदुगव - 4) जलंगमळा पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "1 4 3 2",
+      "4 1 2 3",
+      "3 2 1 4",
+      "4 2 1 3"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 121,
+    "stage": "Prelims"
+  },
+  {
+    "question": "जालना जजल्ह्यांच्या सीमा खालीलपैकी कोणत्याकोणत्या जजल्ह्यांशी जोडल्या आहेत ? (स ं युक्त गट 'ब' पूवव, 2018) अ) बुलढाणा, परभणी, बीड, औरंगाबाद ब) बुलढाणा, वाजशम, परभणी, नांदेड, बीड, औरंगाबाद, जळगाव क) औरंगाबाद, जळगाव, उस्मानाबाद, परभणी, ठहंगोली, बुलढाणा पयावयी उत्तरे :",
+    "options": [
+      "फक्त ठवधान अ बरोबर आहे.",
+      "फक्त ठवधान ब बरोबर आहे.",
+      "फक्त ठवधान क बरोबर आहे.",
+      "वरील सवव ठवधाने चूक आहेत."
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 122,
+    "stage": "Mains"
+  },
+  {
+    "question": "लाव्हाच्या उद्रेकाच्या वेळी जे वायु बाहेर पाडतात, त्या ठिकाणी पोकळ्या ठनमावण होतात. अशा पोकळ्यांनी युक्त खडकास ........... खडक म्हणतात. (STI मुख्य, 2017)",
+    "options": [
+      "जभत्तीखडक",
+      "जशलापट्ट",
+      "क ु हरी",
+      "ब ॅ थोजलथ"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 123,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (Excise पूवव, 2017) घाट - रस्ता अ) थळ घाट - 1) वेंगुलाव-साव ं तवाडी- ठनपाणी ब) बोर घाट - 2) मु ं बई - कल्याण - ओतूर क) माळशेज घाट - 3) मु ं बई - पूणे ड) आंबोली घाट - 4) मु ं बई - नाजशक पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "4 3 2 1",
+      "1 2 3 4",
+      "3 2 1 4",
+      "2 3 4 1"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 124,
+    "stage": "Mains"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (Excise मुख्य, 2017) स्तंभ अ (जजल्हा) - स्तंभ ब (तालुका) अ) रत्नाठगरी - 1) लांजा ब) रायगड - 2) मालवण क) पालघर - 3) मोखाडा ड) जसंधूदुगव - 4) पोलादपूर पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "1 2 3 4",
+      "1 4 3 2",
+      "1 3 4 2",
+      "2 1 3 4"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 125,
+    "stage": "Prelims"
+  },
+  {
+    "question": "कोल्हापूर आजण क ु डाळ यांच्या मधे ........... घाट आहे. (STI मुख्य, 2018)",
+    "options": [
+      "आंबेनळी",
+      "आंबोली",
+      "हनुम ं ते",
+      "अंबा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 126,
+    "stage": "Mains"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (राज्यसेवा मुख्य, 2017) जशखर - उ ं ची (मी.) अ) राजगड - 1) 1376 ब) जशंगी - 2) 1293 क) त्र्य ं बक े र्श्र - 3) 1304 ड) तोरणा - 4) 1404 पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "2 1 3 4",
+      "4 2 1 3",
+      "1 2 3 4",
+      "4 3 2 1"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 127,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (वनसेवा मुख्य, 2018) स्तंभ-I (घाटमागव) - स्तंभ-II (जोडलेली शहरे) अ) आंबेनळी - 1) िाणे - अहमदनगर ब) हनुम ं ते - 2) पुणे - सातारा क) माळशेज - 3) कोल्हापूर - क ु डाळ ड) ख ं बाटकी - 4) महाबळेर्श्र - महाड पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "4 3 1 2",
+      "3 2 4 1",
+      "1 3 4 2",
+      "2 4 1 3"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 128,
+    "stage": "Mains"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (राज्यसेवा मुख्य, 2017) घाट - मागव अ) ख ं बाटकी - 1) कोल्हापूर - रत्नाठगरी ब) अंबा - 2) कराड - जचपळूण क) आंबोली - 3) पुणे - सातारा ड) क ुं भाली - 4) साव ं तवाडी - बेळगांव पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "4 2 3 1",
+      "1 3 4 2",
+      "3 2 4 1",
+      "3 1 4 2"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 129,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या जजल्ह्यांचे भौगोजलक क्षेत्र 10 हजार चौ. ठक.मी. पेक्षा कमी आहे? (Excise मुख्य, 2017) अ) औरंगाबाद ब) बीड क) उस्मानाबाद ड) लातूर इ) बुलढाणा पयावयी उत्तरे :",
+    "options": [
+      "अ आजण ब",
+      "ब आजण क",
+      "ब, क आजण इ",
+      "क, ड आजण इ"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 130,
+    "stage": "Mains"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (ASO. मुख्य, 2017) जजल्हा - तालूका अ) च ं द्रपूर - 1) चामोशी ब) गडजचरोली - 2) गोंड ठपंपरी क) भ ं डारा - 3) मोहाडी ड) वधाव - 4) देवळी पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "4 3 2 1",
+      "3 2 1 4",
+      "1 2 4 3",
+      "2 1 3 4"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 131,
+    "stage": "Prelims"
+  },
+  {
+    "question": "ठदलेल्या जजल्ह्यांच्या भौगोजलक क्षेत्राचा ठवचार करून लहान ते मोिा अशा क्रमाने जो पयावय ठदला आहे, तो ओळखून योग्य पयावय ठनवडा. (Tax. Asst. मुख्य 2017)",
+    "options": [
+      "ठहंगोली - जसंधुदुगव - गोंठदया - नंदुरबार",
+      "ठहंगोली - गोंठदया - जसंधुदुगव - नंदुरबार",
+      "जसंधुदुगव - ठहंगोली - नंदुरबार - गोंठदया",
+      "जसंधुदुगव - गोंठदया - ठहंगोली - नंदुरबार"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 132,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्राच्या सह्याद्री भागातील जशखर व जजल्हा यांच्या जोड्ा लावा. (ASO मुख्य, 2016) जशखर - जजल्हा अ) मांगी - तुंगी - 1) सातारा ब) तोरणा - 2) नाजशक क) कळसुबाई - 3) अहमदनगर ड) महाबळेर्श्र - 4) पुणे पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "1 4 3 2",
+      "2 4 3 1",
+      "4 2 1 3",
+      "2 3 4 1"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 133,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या जजल्ह्याची सीमा ही तेलंगाना राज्याच्या सीमेशी कमीत कमी लागून आहे? (STI मुख्य, 2018)",
+    "options": [
+      "नांदेड",
+      "यवतमाळ",
+      "गडजचरोली",
+      "च ं द्रपूर"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 134,
+    "stage": "Mains"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (Clerk/Typist मुख्य, 2017) घाट - िान अ) फोंडा घाट - 1) बेळगाव - साव ं तवाडी ब) ख ं बाटकी घाट - 2) कोल्हापूर - पणजी क) आंबोली घाट - 3) पुणे - सातारा ड) माळशेज घाट - 4) िाणे - अहमदनगर पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "2 3 1 4",
+      "3 2 1 4",
+      "1 2 4 3",
+      "3 4 1 2"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 135,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील खालील घाटांचा दजक्षणेकडून उत्तरेकडे कोणता क्रम बरोबर आहे? (ASO मुख्य, 2018)",
+    "options": [
+      "बोर, क ुं भाली, आंबा, फोंडा",
+      "फोंडा, आंबा, क ुं भाली, बोर",
+      "क ुं भाली, फोंडा, बोर, आंबा",
+      "आंबा, बोर, फोंडा, क ुं भाली"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 136,
+    "stage": "Mains"
+  },
+  {
+    "question": "सह्याद्री पववताच्या पूवेस ठवशाल असा पिारी प्रदेश पसरलेला आहे त्यास ........... पिारी प्रदेश असे म्हटले जाते (Tax. Asst, 2016) अ) महाराष्ट्र पिार ठकं वा दख्खन पिार ब) बुलढाणा पिार आजण औंध पिार क) सासवड आजण खानापूर पिार ड) अठिजन्य पिार पयावयी उत्तरे :",
+    "options": [
+      "अ फक्त",
+      "ब आजण क",
+      "क आजण ड",
+      "ड फक्त"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 137,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणती जजल्हे थं ड हवेची ठिकाणे बरोबर आहे? (राज्यसेवा मुख्य, 2017) अ) िाणे - जव्हार ब) अमरावती - तोरणमाळ क) औरंगाबाद - म्हैसमाळ ड) कोल्हापूर - आंबोली पयावयी उत्तरे :",
+    "options": [
+      "अ, ब व ड बरोबर आहेत",
+      "अ, ब व क बरोबर आहेत",
+      "अ आजण क बरोबर आहेत",
+      "ब आजण ड बरोबर आहेत"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 138,
+    "stage": "Mains"
+  },
+  {
+    "question": "अकोला जजल्ह्याच्या दजक्षणेस कोणता जजल्हा आहे? (STI मुख्य, 2018)",
+    "options": [
+      "बुलढाणा",
+      "अमरावती",
+      "वधाव",
+      "वाजशम"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 139,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणते/कोणती ठवधान/ठवधाने बरोबर नाही/नाहीत? (Excise मुख्य, 2017) अ) सुवणवदुगव हा सागरी ठकल्ला आहे. ब) कळसूबाई जशखराची उ ं ची 1646 मी. आहे. क) वैतरणा नदी पूवव वाहीनी आहे पयावयी उत्तरे :",
+    "options": [
+      "अ",
+      "अ, ब",
+      "क",
+      "ब, क"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 140,
+    "stage": "Mains"
+  },
+  {
+    "question": "खाली महाराष्ट्रातील महत्वाची जशखरांची यादी ठदली आहे. खालीलपैकी कोणता चढता क्रम (कमी उ ं ची कडून जास्त उ ं ची) बरोबर आहे? (राज्यसेवा मुख्य, 2017)",
+    "options": [
+      "साल्हेर, सप्तश ं गी, त्र्य ं बक े र्श्र, कळसूबाई",
+      "त्र्य ं बक े र्श्र, सप्तश ं गी, साल्हेर, कळसूबाई",
+      "कळसूबाई, सप्तश ं गी, साल्हेर, त्र्य ं बक े र्श्र",
+      "सप्तश ं गी, साल्हेर, कळसूबाई, त्र्य ं बक े र्श्र"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 141,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्र राज्याच्या उत्तरेकडील सातपुडा पववत रांगेतील ........ हे सवावत उ ं च जशखर आहे. (Tax. Asst. पूवव 2017)",
+    "options": [
+      "कळसुबाई",
+      "महाबळेर्श्र",
+      "अस्तंभा",
+      "साल्हेर"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 142,
+    "stage": "Mains"
+  },
+  {
+    "question": "ठहंगोली जजल्ह्याला कोणत्या जजल्ह्याची सीमा नाही? (STI मुख्य, 2017)",
+    "options": [
+      "बीड",
+      "परभणी",
+      "नांदेड",
+      "वाजशम"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 143,
+    "stage": "Prelims"
+  },
+  {
+    "question": "घड्ाळाचे काटे ज्या ठदशेने ठफरतात त्याप्रमाणे च ं द्रपूर जजल्ह्याच्या सभोवती कोणते जजल्हे आहेत ते ओळखा . (Excise मुख्य, 2017)",
+    "options": [
+      "वधाव, यवतमाळ, गडजचरोली, भ ं डारा, नागपूर",
+      "यवतमाळ, गडजचरोली, वधाव, नागपूर, भ ं डारा",
+      "भ ं डारा, यवतमाळ, वधाव, नागपूर, गडजचरोली",
+      "नागपूर, भ ं डारा, गडजचरोली, यवतमाळ, वधाव"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 144,
+    "stage": "Mains"
+  },
+  {
+    "question": "मानवत, सेलू, पुणाव आजण ........... हे परभणी जजल्ह्यातील तालुक े आहेत. (STI मुख्य, 2018)",
+    "options": [
+      "सोनपेि",
+      "वसमत",
+      "क ं धार",
+      "उमरी"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 145,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील खालीलपैकी कोणत्या जजल्ह्यात सवावत कमी तालुक े आहेत? (राज्यसेवा मुख्य, 2017)",
+    "options": [
+      "जसंधुदुगव",
+      "रायगड",
+      "धुळे",
+      "नंदूरबार"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 146,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील खालील सागरी ठकल्ले दजक्षणेकडून-उत्तरेकडे क्रमाने लावा. (Tax. Asst, 2016)",
+    "options": [
+      "ठवजयदुगव, ज ं जजरा, जसंधुदुगव",
+      "ज ं जजरा, जसंधुदुगव, ठवजयदुगव",
+      "जसंधुदुगव, ठवजयदुगव, ज ं जजरा",
+      "जसंधुदुगव, ज ं जजरा, ठवजयदुगव"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 147,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील थं ड हवेची ठिकाणे व त्यांचे िान असलेले जजल्हे यांच्या योग्य जोड्ा लावा. (Tax. Asst. मुख्य 2017) थंड हवेचे ठिकाण - जजल्हा अ) माथेरान - 1) जसंधुदुगव ब) जचखलदरा - 2) नंदुरबार क) तोरणमाळ - 3) रायगड ड) आंबोली - 4) अमरावती पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "3 1 2 4",
+      "3 4 2 1",
+      "1 2 3 4",
+      "2 4 1 3"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 148,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणती पववतरांग तापी आजण गोदावरी नद्ांमधील जलठवभाजक आहे? (वनसेवा मुख्य, 2017)",
+    "options": [
+      "हररश्च ं द्र - बालाघाट रांग",
+      "सातमाळ - अज ं िा रांग",
+      "महादेव रांग",
+      "सह्याद्री रांग"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 149,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील ठवधानांची सत्यता तपासा : (स ं युक्त गट 'क' पूवव, 2018) अ) महाराष्ट्र पिाराचा बहुतांशी भाग बेसॉल्ट खडकाने व्यापलेला आहे. ब) महाराष्ट्र पिाराची ठनजमवती लाव्हारसाच्या सं चयनाने झालेली आहे. पयावयी उत्तरे :",
+    "options": [
+      "ठवधान अ आजण ब दोन्ही सत्य आहेत.",
+      "ठवधान अ सत्य असून ठवधान ब असत्य आहे.",
+      "ठवधान अ असत्य असून ठवधान ब सत्य आहे.",
+      "ठवधान अ आजण ब दोन्ही असत्य आहेत."
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 150,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्राची ठकनारपट्टी ........... म्हणून ओळखली जाते. (राज्यसेवा मुख्य, 2017)",
+    "options": [
+      "कारवार ठकनारा",
+      "मलबार ठकनारा",
+      "कोकण ठकनारा",
+      "उत्कल ठकनारा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 151,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्राच्या पूवेस तेलंगणा राज्याबरोबर खालीलपैकी कोणत्या एका जजल्ह्याची सरहद् लागत नाही? (Tax. Asst,",
+    "options": [
+      "016)",
+      "च ं द्रपूर",
+      "यवतमाळ",
+      "गोंठदया"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 152,
+    "stage": "Mains"
+  },
+  {
+    "question": "मध्य व दजक्षण सह्याद्री यांच्या दरम्यान ........... स्थखंड आहे. (स ं युक्त गट 'ब' पूवव, 2017)",
+    "options": [
+      "थळघाट",
+      "फोंडाघाट",
+      "पालघाट",
+      "क ुं भालीघाट"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 153,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (Excise मुख्य, 2017) स्तंभ अ (घाट) - स्तंभ ब (िान) अ) माळशेज - 1) कोल्हापूर - क ु डाळ ब) आंबोली - 2) बेळगाव - साव ं तवाडी क) हनुम ं ते - 3) िाणे - अहमदनगर ड) ख ं बाटकी - 4) पुणे - सातारा पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "4 3 1 2",
+      "1 2 3 4",
+      "2 3 4 1",
+      "3 2 1 4"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 154,
+    "stage": "Mains"
+  },
+  {
+    "question": "भौगोलीक क्षेत्रफळाप्रमाणे खालील जजल्ह्यांचा चढता क्रम लावा. (PSI मुख्य, 2017) अ) धुळे ब) जळगाव क) अमरावती ड) नागपूर इ) लातूर पयावयी उत्तरे :",
+    "options": [
+      "अ, इ, ब, क, ड",
+      "इ, अ, ड, ब, क",
+      "ब, इ, अ, क, ड",
+      "ड, क, इ, ब, अ"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 155,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (STI मुख्य, 2018) स्तंभ अ (जजल्हा) - स्तंभ ब (तालुका) अ) सोलापूर - 1) गेवराई ब) लातूर - 2) म ं िा क) जालना - 3) जशरूर अनंतपाळ ड) बीड - 4) माळजशरस पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "4 3 2 1",
+      "1 2 3 4",
+      "3 4 2 1",
+      "2 1 4 3"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 156,
+    "stage": "Mains"
+  },
+  {
+    "question": "",
+    "options": [
+      "39) सातपुडा दोन भागात ........... मुळे ठवभागला जातो",
+      "SO मुख्य, 2017)",
+      "अजजंिा फट",
+      "नमवदा फट"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 157,
+    "stage": "Prelims"
+  },
+  {
+    "question": "अहेरी, कोरची, मुलचेरा व ........... हे गडजचरोली जजल्ह्यातील तालुक े आहेत. (STI मुख्य, 2017)",
+    "options": [
+      "धानोरा",
+      "पवनी",
+      "जजवती",
+      "गोरेगाव"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 158,
+    "stage": "Mains"
+  },
+  {
+    "question": "",
+    "options": [
+      "41) परभणी जजल्ह्याला कोणत्या जजल्ह्याची सीमा नाही?",
+      "lerk/Typist मुख्य, 2017)",
+      "ठहंगोली",
+      "जालना"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 159,
+    "stage": "Prelims"
+  },
+  {
+    "question": "यवतमाळ जजल्ह्याच्या पूवेस कोणते जजल्हे आहेत? (वनसेवा मुख्य, 2018) अ) गडजचरोली ब) च ं द्रपूर क) अमरावती ड) वाजशम पयावयी उत्तरे :",
+    "options": [
+      "अ, ब, क",
+      "ब, क, ड",
+      "अ, ब",
+      "अ आजण ड"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 160,
+    "stage": "Mains"
+  },
+  {
+    "question": "तोरणमाळ हे थं ड हवेचे ठिकाण खालीलपैकी कोणत्या जजल्ह्यात आहे? (राज्यसेवा मुख्य, 2017)",
+    "options": [
+      "धुळे",
+      "जळगाव",
+      "नंदूरबार",
+      "नाजशक"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 161,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील पववतजशखरांचा समुद्रसपाटीपासून असलेल्या त्यांच्या उ ं चीनुसार उतरता क्रम लावा : (Excise पूवव, 2017) अ) साल्हेर ब) सप्तश ं गी क) महाबळेर्श्र ड) कळसूबाई पयावयी उत्तरे :",
+    "options": [
+      "अ, ब, क, ड",
+      "ड, अ, क, ब",
+      "ड, क, अ, ब",
+      "ब, क, ड, अ"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 162,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणती पववतरांग नमवदा व तापी खोरे यामधील जलठवभाजक आहे? (STI मुख्य, ऑक्टो. 2023)",
+    "options": [
+      "अरवली",
+      "ठवंध्य",
+      "सह्याद्री",
+      "सातपुडा"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 163,
+    "stage": "Prelims"
+  },
+  {
+    "question": "कोकणातील जजल्हे आजण त्या मधे वाहणाऱ्या नद्ा याबाबत अयोग्य पयावय ठनवडा. (राज्यसेवा मुख्य, जाने 2024)",
+    "options": [
+      "रायगड - पाताळग ं गा, अंबा, क ुं डजलका, बाव",
+      "रत्नाठगरी - वजशष्ठी, काजळी, जोग, भारजा",
+      "जसंधूदुगव - गड, कली, तेरेखोल, आचरा",
+      "पालघर - वैतरणा, ठपंजाळ, सुयाव, देहरजा"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 164,
+    "stage": "Mains"
+  },
+  {
+    "question": "वधाव नदी व वैनग ं गा नदी यांचा स ं गम झाल्यानंतर त्या नदीस कोणत्या नावाने ओळखले जाते ? (राज्य सेवा (मुख्य) जाने 2023)",
+    "options": [
+      "वधाव",
+      "वैनग ं गा",
+      "प्राणठहता",
+      "च ं द्रभागा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 165,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील महाराष्ट्रातील नदी खोऱ्यांना उत्तरेकडून तर दजक्षणेकडे अशा क्रमाने मांडा. (Group C Mains, Sep 2025) अ. क ृ ष्णा नदी खोरे ब. जभमा नदी खोरे क. तापी नदी खोरे ड. प्रवरा नदी खोरे",
+    "options": [
+      "अ, ब, क, ड",
+      "ड, अ, ब, क",
+      "ड, क, ब, अ",
+      "क, ड, ब, अ"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 166,
+    "stage": "Mains"
+  },
+  {
+    "question": "'म ं धार आजण दडी' हे प्रजसद्ध धबधबे कोणत्या दोन नद्ांच्या स ं गमावर आढळतात ? (Forest (Main) April 2023)",
+    "options": [
+      "छोटी - तवा",
+      "पूणाव - ठगरणा",
+      "भीमा - इंद्रायणी",
+      "म ं दावी - ठतराकोल"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 167,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणती नदी/नद्ा महाराष्ट्राच्या कोकण मैदानी प्रदेशातून वाहते नाही? (स ं युक्त गट ब मुख्य नोव्हें. 2023) अ. वैतरणा ब. माही क. उल्हास ड. अंबा पयावयी उत्तरे :",
+    "options": [
+      "फक्त अ बरोबर आहे.",
+      "फक्त ब बरोबर आहे.",
+      "फक्त अ आजण ब बरोबर आहेत.",
+      "फक्त क आजण ड बरोबर आहेत."
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 168,
+    "stage": "Mains"
+  },
+  {
+    "question": "उत्तरेकडून दजक्षणे कडे महाराष्ट्रातील खाड्ांचे िान दशववा. (राज्यसेवा मुख्य, जाने 2024) a. राजापुरीची खाडी b. दाभोळची खाडी c. ठवजयदुगवची खाडी d. तेरेखोलची खाडी पयावयी उत्तरे :",
+    "options": [
+      "a, b, c, d",
+      "a, c, b, d",
+      "a, b, d, c",
+      "b, a, c, d"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 169,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खाली ठदलेल्यांच्या योग्य जोड्ा लावा : (Forest (Mains) Oct 2022) नद्ा - उगमिाने अ. क ृ ष्णा - i. ब्रम्हठगरी डोंगर ब. गोदावरी - ii. महादेव डोंगर क. तापी - iii. मैकल डोंगर ड. नमवदा - iv. सह्याद्री पववत पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "iv ii iii i",
+      "iv i ii iii",
+      "iii iv ii i",
+      "i iv ii iii"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 170,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणते ठवधान / ने बरोबर आहे/त ? (स ं युक्त गट ब पूवव - फ े ब्रुवारी 2025) अ. महाराष्ट्रात जभमा नदीचे स्वतंत्र खोरे आहे. ब. पैनगं गा नदी अजजंिा रांगेत उगम पावते. क. मांजरा नदी ही क ृ ष्णेची उपनदी आहे. ड. जसंदफना नदी ही गोदावरीची उत्तरेकडील उपनदी आहे.",
+    "options": [
+      "फक्त अ आजण ब",
+      "फक्त ब",
+      "क आजण ड",
+      "अ, ब आजण क"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 171,
+    "stage": "Prelims"
+  },
+  {
+    "question": "",
+    "options": [
+      "54) तापी जलप्रणालीची लांबी ठकती आहे ? (तांठत्रक सेवा पूवव,",
+      "ec. 2022)",
+      "540 ठकमी",
+      "762 ठकमी"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 172,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणती भीमा नदीची उपनदी नाही ? (Dept. PSI Pre Dec, 2023)",
+    "options": [
+      "सीना",
+      "माण",
+      "भामा",
+      "तेरणा"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 173,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील खाड्ांच्या सं दभावत खालील ठवधानांवर ठवचार करा. (STI मुख्य, ऑक्टो. 2023) अ. पाताळग ं गा नदीवर धरमतर खाडी आहे. ब. शुक नदीवर बाणकोट खाडी आहे. पयावयी उत्तरे :",
+    "options": [
+      "अ बरोबर ब चूक",
+      "अ चूक ब बरोबर",
+      "दोन्हीही बरोबर",
+      "दोन्हीही चूक"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 174,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी पुणाव नदीच्या उजव्या ठतरावरील कोणत्या उपनद्ा आहेत? (STI Mains Oct. 2022) अ) काटेपुणाव ब) ठबसवा क) भुलेर्श्र ड) शहानूर पयावयी उत्तरे :",
+    "options": [
+      "अ आजण ब",
+      "ब आजण क",
+      "क आजण ड",
+      "अ, ब आजण क"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 175,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा जुळवा. (राज्यसेवा पूवव, नोव्हेंबर 2025) नदी स ं गमिळ - नद्ा अ. प्रकाशे - I. तापी - पांझरा ब. मुडावद - II. तापी - गोमती क. माहुली - III. भीमा-इंद्रायणी ड. तुळापूर - IV. क ृ ष्णा-वेण्णा पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "I II III IV",
+      "II I IV III",
+      "III IV II I",
+      "IV III II I"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 176,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी क ृ ष्णा नदीच्या उपनद्ांची योग्य जोडी कोणती आहे ? (Dept. PSI Pre Dec, 2023)",
+    "options": [
+      "अकाववती - भवानी",
+      "कोयना - प्राणठहता",
+      "मुसी - हेमावती",
+      "मलप्रभा - तुंगभद्रा"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 177,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील मुख्य नदी व तीची उपनदी यांच्या योग्य जोड्ा लावा : (Forest (Main) April 2023) नदी - उपनदी (a) भीमा - i. दुधना (b) क ृ ष्णा - ii. बोरी (c) गोदावरी - iii. कऱ्हा (d) तापी - iv. भीमा पयावयी उत्तरे :",
+    "options": [
+      "(b) (c) (d)",
+      "iii i iv ii",
+      "iv ii iii i",
+      "iii iv i ii"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 178,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रात कोणत्या प्रकारच्या जलप्रणाली आढळतात ? (राज्यसेवा पूवव ठडसेंबर 2024) a) वृक्षाकार b) समांतर c) अठनजश्चत d) जाळीदार पयावयी उत्तरे :",
+    "options": [
+      "(a), (b) आजण (c)",
+      "(b), (c) आजण (d)",
+      "(a), (c) आजण (d)",
+      "वरील सवव"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 179,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या पववत रांगा /टेकड्ा गोदावरी नदी खोरे व भीमा नदी खोरे यांना एकमेकांपासुन वेगळी करतात . (Forest (Main) April 2023) अ. महादेव डोंगर ब. सातमाळा डोंगर क. बालाघाट डोंगर ड. अजजंिा डोंगर पयावयी उत्तरे :",
+    "options": [
+      "फक्त अ आजण ड",
+      "फक्त ब",
+      "फक्त क",
+      "फक्त अ"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 180,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील प्रमुख नद्ा व त्यांच्या उपनद्ा यांच्या योग्य जोड्ा लावा : (PSI Mains Oct. 2023) नदी - उपनदी अ. तापी - i) कन्हान ब. वैनग ं गा - ii) कारंजा क. मांजरा - iii) बोरी ड. जसंधफणा - iv) ठबंदुसरा पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "ii iii iv i",
+      "iii i iv ii",
+      "iv iii ii i",
+      "iii i ii iv"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 181,
+    "stage": "Prelims"
+  },
+  {
+    "question": "जभमा आजण गोदावरी नद्ांच्या दरम्यान ........... डोंगर रांग स्थित आहे. (तांठत्रक सेवा पूवव, Dec. 2022)",
+    "options": [
+      "महादेव डोंगर",
+      "सातमाळा अज ं िा",
+      "हररश्च ं द्र बालाघाट",
+      "सातपुडा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 182,
+    "stage": "Mains"
+  },
+  {
+    "question": "जशवना नदीचा उगम कोणत्या भागात होतो ? (स ं युक्त गट क मुख्य ठडसें. 2023)",
+    "options": [
+      "अजजंिा डोंगर",
+      "भोर गड",
+      "वणी डोंगर",
+      "सातपुडा पववत रांग"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 183,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील पजश्चमेकडे तडा व्यविेतून (Rift System) वाहणारी सवावत मोिी नदी कोणती ? (Forest (Main) April",
+    "options": [
+      "023)",
+      "तापी",
+      "नमवदा",
+      "उल्हास"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 184,
+    "stage": "Mains"
+  },
+  {
+    "question": "गोदावरी नदी ने महाराष्ट्राच्या एकू ण भौगोजलक क्षेत्रापैकी ........... क्षेत्र व्यापले आहे. (STI मुख्य, ऑक्टो. 2023)",
+    "options": [
+      "25%",
+      "80%",
+      "49%",
+      "60%"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 185,
+    "stage": "Prelims"
+  },
+  {
+    "question": "(Excise पूवव, 2017) अ) उत्तर महाराष्ट्रातील तापी नदीच्या खोऱ्यात उताराची ठदशा पूवेकडे आहे. ब) वधाव-वैनग ं गा नद्ांनी व्यापलेल्या क्षेत्राचा उतार दजक्षणेकडे आहे. क) उरलेल्या पिारावरील नद्ांनी व्यापलेल्या क्षेत्राचा उतार पूवेकडे आहे वरील ठवधानांपैकी कोणते ठवधान चुकीचे आहे?",
+    "options": [
+      "फक्त अ",
+      "फक्त ब",
+      "फक्त क",
+      "फक्त ब आजण क"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 186,
+    "stage": "Mains"
+  },
+  {
+    "question": "सुधागड जजल्ह्याचे पाली हे मुख्यालय खालीलपैकी कोणत्या नदीच्या कािावर वसले आहे ? (राज्यसेवा मुख्य, 2017)",
+    "options": [
+      "आंबा",
+      "साठवत्री",
+      "उल्हास",
+      "भोगावती"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 187,
+    "stage": "Prelims"
+  },
+  {
+    "question": "कोळशांच्या साठ्याकररता ओळखले जाणारे नदी खोरे ............ (राज्यसेवा मुख्य, 2018)",
+    "options": [
+      "क ृ ष्णा खोरे",
+      "वैनग ं गा आजण वधाव खोरे",
+      "पूणाव खोरे",
+      "वैतरणा खोरे"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 188,
+    "stage": "Mains"
+  },
+  {
+    "question": "येरला नदी खोऱ्यातील खालीलपैकी कोणते जलजसंचन प्रकल्प आहेत ? (ASO मुख्य, 2016)",
+    "options": [
+      "वरुज, मायणी, भाक ू चीवाडी",
+      "वानगाव, वालूज, भांबरडे",
+      "टाक, काक ू रडे, अंतरी",
+      "येळीव, शाळगाव, करडवळी"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 189,
+    "stage": "Prelims"
+  },
+  {
+    "question": "",
+    "options": [
+      "73) ........... ही मुळा नदीची उपनदी आहे. (PSI मुख्य",
+      "018)",
+      "पवना",
+      "वेळ"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 190,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील खालीलपैकी कोणती नदी पूवेकडून पजश्चमेकडे वाहते ? (वनसेवा मुख्य, 2017)",
+    "options": [
+      "वैनग ं गा",
+      "गोदावरी",
+      "तापी",
+      "पूणाव"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 191,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणते उदाहरण/उदाहरणे खच दरीची आहे/आहेत ? (राज्यसेवा मुख्य, 2017) अ) पूवव आठिक े ची दरी आजण ऱ्हाईनची दरी ब) नमवदा आजण तापीची दरी क) ग ं गा आजण यमुनेची दरी ड) ब्रह्मपुत्रेची दरी पयावयी उत्तरे :",
+    "options": [
+      "फक्त अ",
+      "फक्त ब",
+      "फक्त अ आजण ब",
+      "फक्त ड"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 192,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील कोणती महत्वाची शहरे तापी -पूणाव खोऱ्यात वसलेली आहेत? (Agri पूवव 2018) अ) अमरावती, अकोला, भुसावळ ब) बुलढाणा, वधाव, जळगाव क) धुळे, जळगाव ड) भ ं डारा, अमरावती, धुळे वरीलपैकी कोणते ठवधान/ठवधाने बरोबर आहे/त?",
+    "options": [
+      "अ फक्त",
+      "अ आजण क फक्त",
+      "अ, ब आजण ड फक्त",
+      "ब, क आजण ड फक्त"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 193,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (Tax. Asst. पूवव 2017) नदी - शहर अ) पांझरा - 1) ग ं गाखेड ब) कयाधू - 2) पवनार क) धाम - 3) ठहंगोली ड) गोदावरी - 4) धुळे पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "1 2 4 3",
+      "2 4 3 1",
+      "4 3 1 2",
+      "4 3 2 1"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 194,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातून वाहणाऱ्या खालील नद्ांचा दजक्षणेकडून उत्तरेकडे कोणता क्रम बरोबर आहे ? (वनसेवा मुख्य, 2017)",
+    "options": [
+      "भीमा, क ृ ष्णा, तापी, गोदावरी",
+      "क ृ ष्णा, भीमा, गोदावरी, तापी",
+      "गोदावरी, तापी, भीमा, क ृ ष्णा",
+      "तापी, गोदावरी, भीमा, क ृ ष्णा"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 195,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणती नदी गोदावरी खोऱ्याचा भाग नाही ? (स ं युक्त गट 'ब' पूवव, 2018)",
+    "options": [
+      "तेरणा",
+      "प्रवरा",
+      "मांजरा",
+      "भातसा"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 196,
+    "stage": "Mains"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (Excise मुख्य, 2017) नदी - धरण अ) दुधगं गा - 1) राधानगरी ब) वेळव ं डी - 2) धोम क) क ृ ष्णा - 3) काळम्मावाडी ड) भोगावती - 4) भाटघर पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "1 3 2 4",
+      "3 2 4 1",
+      "2 4 3 1",
+      "3 4 2 1"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 197,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील कोयना प्रकल्पाच्या जलाशयास ........... म्हणतात. (Tax. Asst. मुख्य 2017)",
+    "options": [
+      "नाथसागर",
+      "जशवसागर",
+      "यशव ं तसागर",
+      "नलदमय ं तीसागर"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 198,
+    "stage": "Mains"
+  },
+  {
+    "question": "",
+    "options": [
+      "83) ........... ही उल्हास नदीची उपनदी आहे ? (STI मुख्य,",
+      "016)",
+      "काळू",
+      "वैतरणा"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 199,
+    "stage": "Prelims"
+  },
+  {
+    "question": "74° पूवव रेखांशावर महाराष्ट्रातील नद्ांचा उत्तरेकडून दजक्षणेकडे क्रम ठनवडा. (ASO मुख्य 2018) अ) ठगरना ब) नीरा क) क ु कडी ड) कोयना पयावयी उत्तरे :",
+    "options": [
+      "अ, ब, क, ड",
+      "ड, क, ब, अ",
+      "अ, क, ब, ड",
+      "अ, क, ड, ब"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 200,
+    "stage": "Mains"
+  },
+  {
+    "question": "धरमतरची खाडी खालीलपैकी कोणत्या नदीच्या मुखात आहे ? (राज्यसेवा मुख्य, 2017)",
+    "options": [
+      "उल्हास",
+      "आंबा",
+      "क ुं डजलका",
+      "साठवत्री"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 201,
+    "stage": "Prelims"
+  },
+  {
+    "question": "दजक्षणेकडून उत्तरेकडे खालील नद्ांचा कोणता क्रम बरोबर आहे? (राज्यसेवा मुख्य, 2018)",
+    "options": [
+      "जभमा, ठनरा, क ृ ष्णा, वारणा",
+      "वारणा, क ृ ष्णा, जभमा, ठनरा",
+      "क ृ ष्णा, वारणा, जभमा, ठनरा",
+      "वारणा, क ृ ष्णा, ठनरा, जभमा"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 202,
+    "stage": "Mains"
+  },
+  {
+    "question": "",
+    "options": [
+      "87) खालील कोणती तापीची उपनदी नाही? (ASO पूवव,",
+      "016)",
+      "पुणाव",
+      "पांझरा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 203,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणती वधाव नदीची उपनदी आहे? (Excise पूवव, 2017)",
+    "options": [
+      "ठनरगुडा",
+      "मन्याड",
+      "जसंदफणा",
+      "ठगरजा"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 204,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणता जजल्हा/कोणत्या जजल्ह्यांचे 100% भौगोजलक क्षेत्र गोदावरी नदी खोऱ्यात येत नाही? (MES पूवव",
+    "options": [
+      "018)",
+      "औरंगाबाद आजण बीड",
+      "लातूर",
+      "जालना आजण परभणी"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 205,
+    "stage": "Prelims"
+  },
+  {
+    "question": "कोणत्या नद्ांच्या स ं युक्त प्रवाहास प्राणठहता नदी म्हणतात ? (Tax. Asst, 2016) अ) वधाव, वैनग ं गा, पैनग ं गा ब) अंजना, ठगरजा, मांजरा क) प्रवरा, मुळा, जशवना ड) पूणाव, दुधना, दारणा पयावयी उत्तरे :",
+    "options": [
+      "अ फक्त",
+      "ब आजण ड",
+      "क आजण अ",
+      "फक्त ड"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 206,
+    "stage": "Mains"
+  },
+  {
+    "question": "खाली ठदलेल्या प्रमुख नद्ा त्यांच्या उपनदीशी जुळवा आजण खाली ठदलेल्यांमधून योग्य पयावय ठनवडा . (Tax. Asst. मुख्य 2017) प्रमुख नदी - ठतची उपनदी अ) गोदावरी - 1) ठनरा ब) नमवदा - 2) जगबुडी क) जभमा - 3) येरला ड) वजशष्ठी - 4) आसना 5) उदाई पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "4 2 3 1",
+      "2 3 4 1",
+      "2 4 3 1",
+      "4 5 1 2"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 207,
+    "stage": "Prelims"
+  },
+  {
+    "question": "तापी नदी कोणत्या जजल्ह्यातून गुजरात राज्यात प्रवेश करते ? (ASO मुख्य, 2017)",
+    "options": [
+      "जळगाव",
+      "नाजशक",
+      "नंदूरबार",
+      "धुळे"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 208,
+    "stage": "Mains"
+  },
+  {
+    "question": "",
+    "options": [
+      "93) महाराष्ट्रातील ........... ही सवावत लांब नदी आहे.",
+      "lerk/Typist मुख्य, 2017)",
+      "क ृ ष्णा",
+      "तापी"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 209,
+    "stage": "Prelims"
+  },
+  {
+    "question": "",
+    "options": [
+      "94) येरळा ही ......... नदीची उपनदी आहे. (ASO मुख्य",
+      "018)",
+      "क ृ ष्णा",
+      "भीमा"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 210,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील खालील खाड्ांचा दजक्षणेकडून उत्तरेकडे योग्य क्रम जलहा. (STI पूवव, 2016)",
+    "options": [
+      "तेरेखोल, ठवजयदुगव, दाभोळ, राजापूरी",
+      "दाभोळ, राजापूरी, तेरेखोल, ठवजयदुगव",
+      "ठवजयदुगव, दाभोळ, राजापूरी, तेरेखोल",
+      "राजापूरी, तेरेखोल, ठवजयदुगव, दाभोळ"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 211,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील नद्ांच्या कािावरील शहरे व नद्ा यांच्या योग्य जोड्ा लावा. (Tax. Asst. मुख्य 2017) शहर - नदी अ) प ं ढरपूर - 1) पांझरा ब) कोल्हापूर - 2) कयाधू क) धुळे - 3) भीमा ड) ठहंगोली - 4) प ं चग ं गा पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "1 3 4 2",
+      "3 2 1 4",
+      "2 1 3 4",
+      "3 4 1 2"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 212,
+    "stage": "Mains"
+  },
+  {
+    "question": "......... व ......... या नद्ांचा स ं युक्त प्रवाह नेवासा येथे गोदावरी नदीस जमळतो. (Clerk/Typist मुख्य, 2017) अ) मुळा व मुिा ब) मुळा व प्रवरा क) प्रवरा व वैनग ं गा ड) इंद्रायणी व ठनरा पयावयी उत्तरे :",
+    "options": [
+      "अ फक्त बरोबर",
+      "अ आजण क बरोबर",
+      "ब फक्त बरोबर",
+      "ड फक्त बरोबर"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 213,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रात तापी नदीचे खोरे कोणत्या डोंगररांगा दरम्यान आढळते ? (ASO मुख्य, 2016)",
+    "options": [
+      "सातमाळा अजजंिा आजण हररश्चं द्र बालाघाट रांगा",
+      "सातपुडा आजण सातमाळा अजजंिा रांगा",
+      "सातपुडा आजण सह्याद्री रांगा",
+      "हररश्च ं द्र बालाघाट आजण महादेव रांगा"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 214,
+    "stage": "Mains"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (स ं युक्त गट 'क', 2018) मुख्य नद्ा - उपनद्ा अ) तापी - 1) प ं चग ं गा ब) गोदावरी - 2) इंद्रायणी क) भीमा - 3) पांझरा ड) क ृ ष्णा - 4) प्रवरा पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "3 4 2 1",
+      "2 3 1 4",
+      "4 2 1 3",
+      "1 2 3 4"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 215,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्र शासनाने गोदावरी मरािवाडा पाटबं धारे ठवकास महाम ं डळाची िापना कोणत्या वषी क े ली ? (वनसेवा मुख्य,",
+    "options": [
+      "017)",
+      "1996",
+      "1997",
+      "1998"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 216,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या नदीचे खोरे महाराष्ट्रातील सवावत मोिे खोरे आहे? (राज्यसेवा मुख्य, 2017)",
+    "options": [
+      "गोदावरी खोरे",
+      "भीमा खोरे",
+      "क ृ ष्णा खोरे",
+      "तापी - पूणाव खोरे"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 217,
+    "stage": "Prelims"
+  },
+  {
+    "question": "स्तंभ 'अ' मध्ये 'मुख्य नद्ा' ठदलेल्या आहेत आजण स्तंभ 'ब' मध्ये 'उपनद्ा' ठदलेल्या आहेत. त्यांच्या योग्य जोड्ा लावा. (वनसेवा मुख्य, 2018) स्तंभ अ - स्तंभ ब अ) तापी - 1) भीमा ब) यमुना - 2) इन्द्रावती क) गोदावरी - 3) चम्बल ड) क ृ ष्णा - 4) ठगरणा पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "3 4 2 1",
+      "4 3 1 2",
+      "4 3 2 1",
+      "2 3 1 4"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 218,
+    "stage": "Mains"
+  },
+  {
+    "question": "क ृ ष्णा नदी प्रणालीसािी खालीलपैकी उपनद्ांचा योग्य पयावय ठनवडा : (वनसेवा मुख्य, 2017)",
+    "options": [
+      "जभमा, कोयना, प ं चग ं गा, वैनग ं गा",
+      "पैनग ं गा, वैनग ं गा, प ं चग ं गा, जभमा",
+      "जभमा, घटप्रभा, प ं चग ं गा, कोयना",
+      "कोयना, घटप्रभा, वैनग ं गा, पैनग ं गा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 219,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील ठवधाने पहा. (स ं युक्त गट 'ब', 2017) अ) प ं चग ं गा व क ृ ष्णा नद्ांच्या स ं गमाजवळ नरसोबाची वाडी आहे. ब) कृ ष्णा व जभमा नद्ांची खोरी महादेव डोंगरामुळे वेगळी होतात. क) वधाव व वैनग ं गा नद्ांच्या एकठत्रत प्रवाहास 'प्राणठहता' म्हणतात. पयावयी उत्तरे :",
+    "options": [
+      "फक्त ठवधान अ बरोबर आहे.",
+      "फक्त ठवधान ब बरोबर आहे.",
+      "ठवधाने अ आजण ब बरोबर आहेत.",
+      "ठवधाने अ, ब आजण क बरोबर आहेत."
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 220,
+    "stage": "Mains"
+  },
+  {
+    "question": "कोकण ठवभागातील नद्ांचा उत्तरेकडून दजक्षणेकडे असणारा क्रम लावा. (Excise पूवव, 2017) अ) वैतरणा ब) साठवत्री क) उल्हास ड) वजशष्ठी पयावयी उत्तरे :",
+    "options": [
+      "क, अ, ब, ड",
+      "अ, क, ड, ब",
+      "ब, ड, अ, क",
+      "अ, क, ब, ड"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 221,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रातील कोकण प्रादेजशक ठवभागातील 'मध्य कोकण' मध्ये समाठवष्ट् होणाऱ्या खाड्ा कोणत्या ? (Combine 'B'",
+    "options": [
+      "021)",
+      "देवगड, आचरा आजण कली खाडी",
+      "राजापूरी, बाणकोट आजण क े ळशी खाडी",
+      "धरमतर, कालावल आजण तेरेखोल खाडी"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 222,
+    "stage": "Mains"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (राज्यसेवा मुख्य 2019) स्तंभ अ (नदी) - स्तंभ ब (उगम) अ) पेनग ं गा - 1) गोम ं तक जशखर ब) क ृ ष्णा - 2) बुलढाणा रांग क) तुंगभद्रा - 3) ब्रह्मठगरी ड) कावेरी - 4) महाबळेर्श्र पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "4 2 1 3",
+      "2 4 1 3",
+      "2 4 3 1",
+      "2 3 1 4"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 223,
+    "stage": "Prelims"
+  },
+  {
+    "question": "गुजरात राज्यातील 'उकाई' हा बहुउद्ेशीय प्रकल्प कोणत्या नदीवर वसलेला आहे? (Combine 'B' पूवव 2022)",
+    "options": [
+      "साबरमती",
+      "तापी",
+      "माही",
+      "नमवदा"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 224,
+    "stage": "Mains"
+  },
+  {
+    "question": "नदीकािावरील शहरे व नदी यांच्या जोड्ा जुळवून योग्य पयावय ठनवडा. (राज्यसेवा पूवव, 2019) नदी - कािावरील शहरे अ) पांझरा - 1) स ं गमनेर ब) धाम - 2) भुसावळ क) प्रवरा - 3) धुळे ड) तापी - 4) पवनार पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "3 4 1 2",
+      "3 2 1 4",
+      "3 1 2 4",
+      "4 1 3 2"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 225,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील ठवधाने पहा : (राज्यसेवा पूवव, 2022) अ) प्रवरा व कु कडी या नद्ांदरम्यान स्थित डोंगरांना हररश्चं द्र डोंगर म्हणतात. ब) बालाघाट पिारावरून मांजरा नदी वाहते. क) तापी व गोदावरी नदी खोऱ्यादरम्यान सातमाळा आजण अजजंिा डोंगर रांगा आहेत. पयावयी उत्तरे :",
+    "options": [
+      "ठवधान अ आजण ब बरोबर आहेत",
+      "ठवधान ब आजण क बरोबर आहेत",
+      "ठवधान अ आजण क बरोबर आहेत",
+      "वरील सवव ठवधाने बरोबर आहेत"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 226,
+    "stage": "Mains"
+  },
+  {
+    "question": "बालाघाट पिाराच्या उत्तरेस व दजक्षणेस अनुक्रमे कोणत्या नद्ांची खोरी आहेत ? (ASO मुख्य 2019)",
+    "options": [
+      "गोदावरी व भीमा",
+      "नमवदा व तापी",
+      "प ं चग ं गा व घटप्रभा",
+      "वैनग ं गा व पैनग ं गा"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 227,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील ठवधाने पहा. (ASO Mains Oct. 2022) अ) गडजचरोली जजल्ह्याची दजक्षण सीमा ही इंद्रावती व प्राणठहता नद्ांनी बनलेली आहे. ब) इंद्रावती नदी ही छत्तीसगड राज्याच्या सीमेवर असून, प्राणठहता नदी ही तेलंगणा राज्याशी असलेल्या जसमेवर आहे. पयावयी उत्तरे :",
+    "options": [
+      "अ आजण ब बरोबर",
+      "अ बरोबर ब चूक",
+      "अ चूक ब बरोबर",
+      "अ आजण ब चूक"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 228,
+    "stage": "Mains"
+  },
+  {
+    "question": "कोकणातील नद्ा अठत वेगाने वाहतात, त्याची काही कारणे ठदली आहेत, योग्य ती ओळखा. (PSI Mains July 2022) अ) पूवेस सह्याद्री पववत आहे. ब) ठकनारपट्टीची रु ं दी 30 ते 60 ठक.मी. आहे. क) नद्ा लांबीने अखूड टप्प्ांच्या आहेत. ड) नद्ाचे पात्र रु ं द व ठवस्तीणव/ठवस्तृत आहेत. वरीलपैकी कोणते ठवधाने बरोबर आहेत?",
+    "options": [
+      "अ आजण ब",
+      "ब आजण क",
+      "फक्त ड",
+      "अ, ब आजण क"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 229,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणती भीमा नदीची उपनदी नाही? (PSI Mains 2020)",
+    "options": [
+      "इंद्रायणी",
+      "नीरा",
+      "इंद्रावती",
+      "सीना"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 230,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणती नदी गोदावरीच्या उजव्या बाजूची उपनदी आहे? (ASO मुख्य 2019)",
+    "options": [
+      "मांजरा",
+      "जशवना",
+      "दुधना",
+      "साबरी"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 231,
+    "stage": "Prelims"
+  },
+  {
+    "question": "रांजणखळग्यांसािी प्रजसद्ध असणारे ठनघोज हे ठिकाण महाराष्ट्रातील ........... तालुक्ात आहे. (राज्यसेवा मुख्य,",
+    "options": [
+      "020)",
+      "जशरूर",
+      "स ं गमनेर",
+      "पारनेर"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 232,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधानांची सत्यता तपासा : (Combine 'C' 2019) ठवधान अ : सातमाळा अजजंिा डोंगर रांगामुळे गोदावरी नदीचे खोरे हे तापी नदीच्या खोऱ्यापासून अलग झालेले आहे. ठवधान ब : गोदावरी नदीचे खोरे आजण भीमा नदीचे खोरे हे शंभू महादेव डोंगर रांगामुळे अलग झालेले आहे. पयावयी उत्तरे :",
+    "options": [
+      "ठवधान अ आजण ब दोन्ही सत्य आहेत.",
+      "ठवधान अ आजण ब दोन्ही असत्य आहेत.",
+      "ठवधान अ सत्य असून ब असत्य आहे.",
+      "ठवधान अ असत्य असून ब सत्य आहे"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 233,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील ठवधाने पहा. (ASO Mains Oct. 2022) अ) प्रवरा नदी ही गोदावरीची उपनदी असून ती हररश्च ं द्र डोंगराच्या उत्तरेस स्थित आहे. ब) वधाव आजण वैनग ं गा या गोदावरी नदीच्या उपनद्ा आहेत. पयावयी उत्तरे :",
+    "options": [
+      "ठवधान अ बरोबर आहे.",
+      "ठवधान ब बरोबर आहे",
+      "ठवधाने अ आजण ब बरोबर आहेत",
+      "ठवधान अ आजण ब बरोबर नाहीत"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 234,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या नदीच्या खोऱ्यात येलदरी व जसद्धेर्श्र धरणे बांधली आहेत? (PSI मुख्य 2019)",
+    "options": [
+      "तापी",
+      "मांजरा",
+      "पूणाव",
+      "ठगरणा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 235,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील ठवधाने पहा. (PSI Mains 2020) अ) प्रवरा नदी ही गोदावरीची उपनदी असून ती हररश्च ं द्र डोंगराच्या उत्तरेस स्थित आहे. ब) वधाव आजण वैनग ं गा या गोदावरी नदीच्या उपनद्ा आहेत. पयावयी उत्तरे :",
+    "options": [
+      "ठवधान अ बरोबर आहे.",
+      "ठवधान ब बरोबर आहे.",
+      "ठवधाने अ आजण ब बरोबर आहेत.",
+      "ठवधाने अ आजण ब बरोबर नाहीत."
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 236,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधाने पहा आजण योग्य ठवधानाची ठनवड करा . (STI मुख्य 2019) अ) पूणाव ही तापी नदीची उपनदी आहे. ब) तापी नदी पजश्चमवाठहनी नदी म्हणून ओळखली जाते. क) तापी नदी पूवे ठदशेकडे वाहत जाते. ड) तापी नदीचे खोरे हे तापी-पूणाव खोरे म्हणून ओळखले जाते. पयावयी उत्तरे :",
+    "options": [
+      "अ, ब, ड",
+      "अ, ब, क",
+      "ब, क, ड",
+      "ड, ब, क"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 237,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणता पयावय गोदावरी नदीच्या उपनद्ांचा लांबीनुसार चढता क्रम दशवठवतो ? (Combine 'B' 2021)",
+    "options": [
+      "प्राणठहता, प्रवरा, वधाव, मांजरा",
+      "मांजरा, वधाव, प्रवरा, प्राणठहता",
+      "प्राणठहता, वधाव, प्रवरा, मांजरा",
+      "मांजरा, प्रवरा, वधाव, प्राणठहता"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 238,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या नद्ा खचदरीतून वाहतात? (राज्यसेवा मुख्य 2019)",
+    "options": [
+      "भीमा-कोयना",
+      "वधाव-वैनग ं गा",
+      "तापी-नमवदा",
+      "गोदावरी-क ृ ष्णा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 239,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (STI पूवव, 2016) नदी - उपनदी अ) तापी - 1) तावरजा ब) मांजरा - 2) घोड क) प्रवरा - 3) मुळा ड) भीमा - 4) अनेर पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "4 2 1 3",
+      "4 1 3 2",
+      "4 3 1 2",
+      "2 4 3 1"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 240,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधाने पहा : (वनसेवा मुख्य, 2016) अ) गोदावरी नदी परभणी शहराच्या दजक्षणेकडे आहे. ब) पूणाव ही गोदावरी नदीची उपनदी नाही. क) हररश्च ं द्रगडाची उ ं ची 1404 मी. आहे पयावयी उत्तरे :",
+    "options": [
+      "फक्त ठवधान अ बरोबर आहे.",
+      "फक्त ठवधान ब बरोबर आहे.",
+      "ठवधाने अ आजण ब बरोबर आहेत.",
+      "ठवधाने ब आजण क बरोबर आहेत."
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 241,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या नदीच्या खोऱ्यात ज्ऱारीचे क्षेत्र क ें द्रीत झालेले आहे? (राज्यसेवा मुख्य, 2016) अ) गोदावरी ब) जभमा क) क ृ ष्णा ड) प ं चग ं गा पयावयी उत्तरे :",
+    "options": [
+      "फक्त अ ठवधान बरोबर आहे.",
+      "अ आजण ब ठवधाने बरोबर आहेत.",
+      "फक्त क ठवधान बरोबर आहे.",
+      "अ आजण क ठवधाने बरोबर आहेत."
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 242,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या दरीतून धोम धरणाचा सु ं दर देखावा ठदसतो? (राज्यसेवा मुख्य, 2016) अ) क ृ ष्णा व्ह ॅ ली ब) वेण्णा व्ह ॅ ली क) टेहरी गढवाल व्ह ॅ ली ड) सायलेंट व्ह ॅ ली पयावयी उत्तरे :",
+    "options": [
+      "अ ठवधान बरोबर आहे.",
+      "ब ठवधान बरोबर आहे.",
+      "पर्याय",
+      "पर्याय"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 243,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील नदीचे नाव ओळखा : (राज्यसेवा मुख्य, 2016) अ) मध्य प्रदेशात उगम. ब) वधाव नदीशी स ं गम झाल्यावर प्राणठहता म्हणून ओळख. क) च ं द्रपूर-गडजचरोली जजल्ह्यांच्या उत्तर-दजक्षण सीमांची ठनजमवती ड) पेंच व बाघ ह्या उपनद्ा पयावयी उत्तरे :",
+    "options": [
+      "प्राणठहता",
+      "इंद्रावती",
+      "वधाव",
+      "वैनग ं गा"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 244,
+    "stage": "Mains"
+  },
+  {
+    "question": "",
+    "options": [
+      "29) खालीलपैकी कोणत्या नदीखोऱ्यात दख्खन लाव्हा",
+      "eccan Trap) बेसॉल्टचे अजधक् नाही? (Agri पूवव, 2016)",
+      "तापी",
+      "पूणाव"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 245,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील धरण प्रकल्पांचा क्रम त्यांच्या असलेल्या द.ल.घ.मी. क्षमते प्रमाणे चढत्या क्रमाने लावा : (PSI पूवव, 2016) अ) धारणा ब) भाटघर क) जायकवाडी ड) पेंच तोतलाडोह इ) भ ं डारदरा पयावयी उत्तरे :",
+    "options": [
+      "इ, ब, अ, क, ड",
+      "ब, इ, अ, ड, क",
+      "क, ड, अ, ब, इ",
+      "इ, ब, अ, ड, क"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 246,
+    "stage": "Mains"
+  },
+  {
+    "question": "नदीचे खोरे ओळखा. (PSI पूवव, 2016) अ) मध्य प्रदेशातील बैतुल जजल्ह्यात उगम. ब) ठतच्या पूवेकडे वाहणाऱ्या पूणाव नदीपासून वेगळे करणारा तकलादू जलठवभाजक आहे. क) वेमला, ठनगुडा, बोर आजण नंद ह्या काही उपनद्ा. ड) वधाव-अमरावती आजण यवतमाळ जजल्ह्यांतील सरहद् ठनमावण करते. पयावयी उत्तरे :",
+    "options": [
+      "प्राणठहता",
+      "वैनग ं गा",
+      "पैनग ं गा",
+      "वधाव"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 247,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (Tech. Asst., 2016) जलठवद्ुत प्रकल्प - नदी अ) येलदरी - 1) येळव ं डी ब) वरसगांव - 2) प्रवरा क) घाटघर - 3) पूणाव ड) भाटघर - 4) मोसे पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "1 2 3 4",
+      "4 3 2 1",
+      "3 4 2 1",
+      "4 2 3 1"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 248,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणते ठवधान बरोबर आहेत? (Tech. Asst., 2016) अ) गोदावरी नदीच्या खोऱ्याने महाराष्ट्रातील 49% क्षेत्र व्यापलेले आहे. ब) तापी नदीच्या खोऱ्याने महाराष्ट्रातील 16.96% क्षेत्र व्यापलेले आहे. क) भीमा नदीला च ं द्रभागा असेही म्हणतात. ड) घोड, इंद्रायणी आजण नीरा ह्या भीमा नदीच्या प्रमुख उपनद्ा आहेत पयावयी उत्तरे :",
+    "options": [
+      "फक्त अ आजण ब",
+      "फक्त अ, ब आजण ड",
+      "फक्त क आजण ड",
+      "अ, ब, क आजण ड"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 249,
+    "stage": "Prelims"
+  },
+  {
+    "question": "तापी आजण गोदावरी नद्ांचे खोरे कोणत्या डोंगर रांगामुळे वेगळी झालेली आहेत? (Tech. Asst., 2016)",
+    "options": [
+      "सातपुडा",
+      "सुरजागड",
+      "महादेव",
+      "अजजंिा"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 250,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या नदीला कोल्हापूर जजल्ह्याची जीवनदायीनी म्हणतात? (ASO पूवव, 2016)",
+    "options": [
+      "क ृ ष्णा",
+      "वारणा",
+      "प ं चग ं गा",
+      "वेदग ं गा"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 251,
+    "stage": "Prelims"
+  },
+  {
+    "question": "योग्य जोड्ा लावा. (Tech. Asst., 2016) नदी खोरे - सरासरी वाठषवक पजवन्य अ) प्रवरा - 1) 932 जममी ब) पूणाव - 2) 846 जममी क) मांजरा - 3) 797 जममी ड) मानेर - 4) 606 जममी पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "3 2 1 4",
+      "3 4 2 1",
+      "4 2 1 3",
+      "1 4 3 2"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 252,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधाने पहा : (ASO मुख्य 2015) अ) जभमा ही क ृ ष्णेची उपनदी आहे. ब) इंद्रायणी ही जभमेची उजव्या तीरावरील उपनदी आहे. क) भोगावती ही जसना नदीची उपनदी आहे पयावयी उत्तरे :",
+    "options": [
+      "ठवधान अ आजण ब बरोबर आहेत.",
+      "ठवधान अ आजण क बरोबर आहेत.",
+      "ठवधान ब आजण क बरोबर आहेत.",
+      "सवव ठवधाने बरोबर आहेत"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 253,
+    "stage": "Prelims"
+  },
+  {
+    "question": "उजनी धरण जलाशय व कोयना धरण जलाशय यांना अनुक्रमे .......... व .......... या नावांनीही स ं बोधले जाते.",
+    "options": [
+      "lerk मुख्य 2015)",
+      "यशव ं त सागर व स ं भाजी सागर",
+      "स ं भाजी सागर व जशवाजी सागर",
+      "अमृत सागर व स ं भाजी सागर"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 254,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या पाच नद्ांनी जमळून प ं चग ं गा नदी बनली आहे? (Clerk मुख्य 2015) अ) क ुं भी, कासारी ब) वारणा, येरळा, कडवी क) दुधगं गा, वेदग ं गा ड) भोगावती, तुळशी, सरस्वती पयावयी उत्तरे :",
+    "options": [
+      "अ आजण ड",
+      "ब आजण क",
+      "क आजण ड",
+      "अ आजण क"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 255,
+    "stage": "Prelims"
+  },
+  {
+    "question": "जोड्ा लावा. (MES मुख्य 2015) नद्ा - त्यांच्या उपनद्ा अ) तापी - 1) घटप्रभा ब) गोदावरी - 2) पवना क) भीमा - 3) अनेर ड) क ृ ष्णा - 4) इंद्रावती पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "3 2 1 4",
+      "3 4 2 1",
+      "4 2 1 3",
+      "1 4 3 2"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 256,
+    "stage": "Mains"
+  },
+  {
+    "question": "तापी - पूणावखोऱ्यातील नद्ांचा खालीलपैकी कोणता क्रम उत्तरेकडून दजक्षणेकडे बरोबर आहे ? (Combine 'B' 2020)",
+    "options": [
+      "ठगरणा, बोरी, पांझरा, बुराई, गोमती",
+      "गोमती, बुराई, पांझरा, बोरी, ठगरणा",
+      "गोमती, बुराई, ठगरणा, बोरी, पांझरा",
+      "गोमती, पांझरा, ठगरणा, बुराई, बोरी"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 257,
+    "stage": "Prelims"
+  },
+  {
+    "question": "",
+    "options": [
+      "43) कोकणातील ........... या नद्ा जास्त लांबीच्या आहेत.",
+      "SO Mains July 2022)",
+      "साठवत्री व वजशष्ठी",
+      "वैतरणा व उल्हास"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 258,
+    "stage": "Mains"
+  },
+  {
+    "question": "एक इंच वायुभार म्हणजे ठकती ? (स ं युक्त गट 'क' पूवव, नोव्हें., 2022)",
+    "options": [
+      "3.4 जमजलबार",
+      "4.3 जमजलबार",
+      "34 जमजलबार",
+      "12 जमजलबार"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 259,
+    "stage": "Prelims"
+  },
+  {
+    "question": "स्तंभ-I मध्ये कोपेन यांच्या वगीकरणावर आधाररत महाराष्ट्राचे हवामान प्रकार ठदलेले आहेत व स्तंभ-II मध्ये जजल्ह्यांचे गट ठदलेले आहेत. जोड्ा जुळवा आजण योग्य पयावय ठनवडा. (राज्यसेवा मुख्य, जाने 2024) स्तंभ-I (हवामान प्रकार) - स्तंभ-II (जजल्हे)",
+    "options": [
+      "Am - i) अहमदनगर, धुळे, जळगाव, सोलापूर",
+      "Bsh - ii) परभणी, अमरावती, वाजशम, ठहंगोली",
+      "Aw - iii) रायगड, रत्नाठगरी, जसंधुदुगव",
+      "b c"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 260,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या ठिकाणी उन्हाळ्यात दैठनक तापमान-कक्षा सवावत कमी असेल? (PSI Mains 2020)",
+    "options": [
+      "पुणे",
+      "सोलापूर",
+      "रत्नाठगरी",
+      "अमरावती"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 261,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणते/कोणती ठवधान/ठवधाने महाराष्ट्राच्या पजवन्याबाबत अचुक आहे/आहेत ? (Group B Pre, Jan 2026) (a) महाराष्ट्रात पावसाळ्याच्या आरंभी पजश्चमेकडून पूवेकडे वायुभार कमी होत जातो. (b) राज्यातील पजवन्याचे ठवतरण प्रामुख्याने नैसठगवक वनस्पतीच्या ठवतरणावर अवलंबून असल्याचे आढळते. (c) नैऋत्य मोसमी वारे घाट माथ्यावरून पूवेकडे जातात तेंव्हा त्यांची बाष्पधारणशक्ती वाढते. (d) ठवदभावमध्ये पजश्चमेकडून पूवेकडे पावसाचे प्रमाण वाढत जाते. पयावयी उत्तरे :",
+    "options": [
+      "फक्त (a)",
+      "(a) आजण (b)",
+      "(b) आजण (c)",
+      "(a), (c) आजण (d)"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 262,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रात 'मे' मठहन्यात सरासरी तापमान सवावत जास्त ....... या प्रदेशात असते. (Combine 'B' पूवव 2022)",
+    "options": [
+      "ठकनारपट्टीचा प्रदेश",
+      "पजश्चम महाराष्ट्र",
+      "मरािवाडा",
+      "पूवव ठवदभव"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 263,
+    "stage": "Prelims"
+  },
+  {
+    "question": "कोकणात एठप्रल - मे मठहन्यात साय ं काळी पडणाऱ्या पावसाला ........... म्हणतात. (STI Mains July 2022)",
+    "options": [
+      "आम्रसरी",
+      "कोकणसरी",
+      "प्रठतरोध पजवन्य",
+      "सह्याद्री सरी"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 264,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रातील वाठषवक पजवन्य व प्रादेजशक ठवभाग यांच्या योग्य जोड्ा लावा. (STI मुख्य, ऑक्टो. 2023) यादी - I (प्रादेजशक ठवभाग) - यादी - II (वाठषवक पजवन्य (से.मी.)) अ. कोकण - i. 77 ब. मध्य महाराष्ट्र - ii. 100 क. मरािवाडा - iii. 92 ड. ठवदभव - iv. 287 पयावयी उत्तरे : अ ब क ड",
+    "options": [
+      "i ii iii iv",
+      "iv iii i ii",
+      "iv iii ii i",
+      "iii iv ii i"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 265,
+    "stage": "Prelims"
+  },
+  {
+    "question": "कोपेन यांनी क े लेल्या हवामान वगीकरण ठवभागानुसार भारताच्या पजश्चम ठकनारी प्रदेशात कोणत्या प्रकारचे हवामान आढळते ? (मु ं बईच्या दजक्षणेकडे) (Group C Pre, Jan",
+    "options": [
+      "026)",
+      "Aw (उष्णकठटब ं धीय सव्हाना प्रकार)",
+      "As (कोरड्ा उन्हाळ्यासह मान्सूनचा प्रकार)",
+      "Amw (कमी कोरड्ा ठहवाळ्यासह मान्सून प्रकार)"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 266,
+    "stage": "Mains"
+  },
+  {
+    "question": "कोणते चक्रीवादळ 17-05-2021 दरम्यान महाराष्ट्राच्या ठकनारपट्टीवर पररणाम करून गेले? (ASO Mains Oct.",
+    "options": [
+      "022)",
+      "ठनसगव",
+      "गुलाब",
+      "तौक्ते"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 267,
+    "stage": "Prelims"
+  },
+  {
+    "question": "जून ते सप्टेंबर या काळात महाराष्ट्रात ............ मोसमी वारे वाहतात. (राज्यसेवा पूवव, नोव्हेंबर 2025)",
+    "options": [
+      "आिेय",
+      "वायव्य",
+      "नैऋत्य",
+      "ईशान्य"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 268,
+    "stage": "Mains"
+  },
+  {
+    "question": "फयान चक्रीवादळ महाराष्ट्राच्या समुद्र ठकनाऱ्यावर ........ दरम्यान आढळले. (PSI Mains 2020)",
+    "options": [
+      "11 नोव्हेंबर, 2009",
+      "12 ठडसेंबर, 2007",
+      "01 नोव्हेंबर, 2006",
+      "वरीलपैकी नाही"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 269,
+    "stage": "Prelims"
+  },
+  {
+    "question": "भारतीय हवामानशास्त्र ठवभागाने महाराष्ट्र राज्याच्या स ं दभावत क े लेल्या पुढील ठवधानांपैकी कोणते/कोणती ठवधान/ठवधाने सत्य आहेत? (PSI Mains Oct. 2023) अ. कोकण, मध्य-महाराष्ट्र, मरािवाडा व ठवदभव असे महाराष्ट्राचे चार हवामान उपठवभाग आहेत. ब. एक ू ण वाठषवक पजवन्यमानापैकी कोकणात 95 टक्क े व ठवदभावत 88 टक्क े पाऊस नैऋत्य-मोसमी ऋतूमध्ये पडतो. क. एक ू ण वाठषवक पजवन्यमानापैकी मध्य-महाराष्ट्रात आजण मरािवाड्ात सुमारे 83 टक्क े पाऊस नैऋत्य-मोसमी ऋतूमध्ये पडतो. ड. एक ू ण वाठषवक पजवन्यमानापैकी मध्य-महाराष्ट्रात आजण मरािवाड्ात सुमारे 75 टक्क े पाऊस नैऋत्य-मोसमी ऋतूमध्ये पडतो. वरीलपैकी कोणते ठवधान/ठवधाने सत्य आहेत ?",
+    "options": [
+      "अ फक्त",
+      "अ आजण ब फक्त",
+      "अ, ब आजण क",
+      "अ, ब आजण ड"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 270,
+    "stage": "Mains"
+  },
+  {
+    "question": "जोड्ा जुळवा. (Group B Pre, Jan 2026) स्तंभ A (कोपेन हवामान) - स्तंभ B (हवामान प्रकार) (a) Cwg - (i) उष्ण वाळव ं ट (b) BWhw - (ii) थंड आजण आद्रव ठहवाळा (c) Dfc - (iii) उष्ण कठटब ं धीय मोसमी (d) Amw - (iv) मेसोथमवल पयावयी उत्तरे :",
+    "options": [
+      "(b) (c) (d)",
+      "(iv) (i) (ii) (iii)",
+      "(i) (iv) (iii) (ii)",
+      "(ii) (iii) (i) (iv)"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 271,
+    "stage": "Prelims"
+  },
+  {
+    "question": "........ हे दजक्षण कोकणातील जास्त पावसाचे ठिकाण आहे. (तांठत्रक सेवा पूवव, Dec. 2022)",
+    "options": [
+      "इगतपुरी",
+      "माथेरान",
+      "आंबोली",
+      "महाबळेर्श्र"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 272,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्राच्या हवामानावर खालीलपैकी कोणत्या प्राकृ ठतक रचनेचा सवावत जास्त पररणाम झाला आहे? (Combine 'B' पूवव",
+    "options": [
+      "022)",
+      "महाराष्ट्रातील दख्खनचे पिार",
+      "सह्याद्री पववत आजण सातपुडा डोंगर रांग",
+      "ठकनार पट्टीचे मैदान"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 273,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या ठिकाणची तापमान कक्षा सवावत कमी असते? (STI Mains July 2022)",
+    "options": [
+      "नागपूर",
+      "बीड",
+      "सोलापूर",
+      "मु ं बई"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 274,
+    "stage": "Mains"
+  },
+  {
+    "question": "कोणत्या वषी पानशेत धरण फ ु टल्याने पुणे शहरात महापूर आला होता? (STI Mains July 2022)",
+    "options": [
+      "1951",
+      "1960",
+      "1961",
+      "1950"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 275,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणत्या जजल्ह्यांचा गरजेपेक्षा जास्त पाऊस आजण तपठकरी तांबड्ा मृदा ठवभागात समावेश होतो? (राज्यसेवा मुख्य मे 2022)",
+    "options": [
+      "गडजचरोली, धुळे, िाणे",
+      "भ ं डारा, गडजचरोली, रत्नाठगरी",
+      "भ ं डारा, गडजचरोली, च ं द्रपूर",
+      "जसंधुदुगव, रत्नाठगरी, िाणे"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 276,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्रात नैऋत्य मान्सूनच्या दोन्ही शाखांमुळे प्रामुख्याने ............ येथे पाऊस पडतो. (राज्यसेवा मुख्य मे 2022)",
+    "options": [
+      "पजश्चम महाराष्ट्र",
+      "मरािवाडा",
+      "ठवदभव",
+      "कोकण"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 277,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी महाराष्ट्रातील ठिकाणांचा वाठषवक पजवन्यमानानुसार अचूक उतरता क्रम कोणता? (क ं बाईन गट 'क' पूवव - 2021)",
+    "options": [
+      "आंबोली, लोणावळा, महाबळेर्श्र, माथेरान",
+      "आंबोली, महाबळेर्श्र, माथेरान, लोणावळा",
+      "लोणावळा, आंबोली, महाबळेर्श्र, माथेरान",
+      "आंबोली, लोणावळा, माथेरान, महाबळेर्श्र"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 278,
+    "stage": "Mains"
+  },
+  {
+    "question": "जी. टी. ठत्रवाथाव यांच्या हवामान वगीकरणानुसार, पजश्चम ठकनारपट्टीवरील मैदानी भाग आजण ठत्रपुरा राज्यात खालीलपैकी कोणत्या प्रकारचे हवामान आहे ? (Combine 'B' 2021)",
+    "options": [
+      "पववतीय आद्रव हवामान",
+      "उष्ण कठटब ं धीय शुष्क हवामान",
+      "उष्ण कठटब ं धीय पावसाळी (मान्सून) हवामान",
+      "उपोष्ण कठटब ं धीय आद्रव हवामान"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 279,
+    "stage": "Prelims"
+  },
+  {
+    "question": "महाराष्ट्रात नैऋत्य मोसमी वाऱ्यापासून जमळणाऱ्या पावसाची टक्क े वारी खालीलपैकी ठकती आहे ? (Combine 'B'",
+    "options": [
+      "021)",
+      "58%",
+      "65%",
+      "85%"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 280,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधाने पहा : (राज्यसेवा मुख्य, 2020) अ) तंतुमय मेघ हे भूपृष्ठापासून 2000 मीटरच्या खाली ठनमावण होतात. ब) स्तरमेघ हे जास्त उ ं चीवरील मेघ आहेत. क) कोकणातील पजवन्य हे आरोह प्रकारचे आहे. पयावयी उत्तरे :",
+    "options": [
+      "ठवधान अ आजण ब बरोबर आहेत.",
+      "ठवधान ब आजण क बरोबर आहेत.",
+      "ठवधान अ, ब आजण क बरोबर नाहीत.",
+      "ठवधान अ आजण ब बरोबर नाहीत."
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 281,
+    "stage": "Prelims"
+  },
+  {
+    "question": "डॉ. प ं जाबराव देशमुख व्याज सवलत योजने स ं दभावत खालीलपैकी कोणती ठवधाने बरोबर आहेत ? (राज्यसेवा मुख्य मे 2025) a. महाराष्ट्र राज्यातील शेतकऱ्यांना अल्प मुदतीच्या पीक कजावची ठनयजमत परतफ े ड करण्यासािी प्रोत्साहन देणे. b. या योजने अंतगवत शेतकऱ्यांना रू. 6 लाखापयंतच्या कजावस 3 टक्क े व्याज सवलत अनुदान देण्यात येते. c. ठनयजमत पीक कजावची परतफ े ड क े ल्यास स ं पूणव व्याज रक्कम सवलत अनुदान ठदले जाते. d. घेतलेल्या कजावच्या स ं पूणव रकमेची परतफ े ड 30 जूनपयंत क े ल्यास रू. 3 लाखापयंतच्या कजावस 3 टक्क े व्याज सवलत अनुदान देण्यात येते.",
+    "options": [
+      "फक्त a आजण b",
+      "फक्त b, c आजण d",
+      "फक्त a आजण c",
+      "फक्त a आजण d"
+    ],
+    "answer": 3,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 282,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधाने ठवचारात घ्या. (राज्यसेवा मुख्य मे 2025) i. माचव 2022 पयंत अस्थखल भारतीय स्तरावर वीज ठनजमवतीमध्ये िाठपत क्षमतेचा महाराष्ट्र राज्याचा सवावजधक वाटा आहे. ii. महाराष्ट्रातील खाजगी क्षेत्राकडे साववजठनक क्षेत्रापेक्षा वीज ठनजमवतीची अजधक िाठपत क्षमता आहे.",
+    "options": [
+      "फक्त i बरोबर आहे व ii चूक आहे",
+      "फक्त ii बरोबर आहे व i चूक आहे",
+      "i आजण ii दोन्ही बरोबर आहेत",
+      "दोन्ही i आजण ii चूक आहेत"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 283,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील ठवधाने पहा. (Group B Pre, Jan 2026) (a) महात्मा फु ले कृ ठष ठवद्ाठपिाचे डाजळंब तंत्रज्ञान सं शोधन क ें द्र लखमापूर येथे आहे. (b) फ ु ले यशोदा गव्हाचे वाण महात्मा फ ु ले क ृ ठष ठवद्ाठपिाने 1998 मधे ठवकजसत क े ले. (c) महाराष्ट्र कृ ठष ठवद्ाठपिाचे कायावलय मुं बई येथे होते. पयावयी उत्तरे :",
+    "options": [
+      "ठवधान (a) आजण (b) बरोबर आहेत.",
+      "ठवधान (a) आजण (c) बरोबर आहेत.",
+      "ठवधान (b) आजण (c) बरोबर आहेत.",
+      "ठवधान (a), (b) आजण (c) बरोबर आहेत."
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 284,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालील ठवधाने पहा : (गट क पूवव परीक्षा जून 2025) (a) फ ॅ मीन कजमशनच्या जशफारशीनुसार क ृ ठष खात्याची िापना जून 1881 मधे क े ली गेली. (b) महाराष्ट्र कृ षी आयुक्त कायावलय मुकुं दनगर, पुणे येथे आहे. (c) क ृ षीभूषण पुरस्कार माजी मुख्यम ं त्र्यांच्या नावाने ठदला जातो. पयावयी उत्तरे :",
+    "options": [
+      "फक्त ठवधान (a) बरोबर आहे.",
+      "फक्त ठवधान (c) बरोबर आहे.",
+      "ठवधान (a) आजण (c) बरोबर आहेत.",
+      "ठवधान (b) आजण (c) बरोबर आहेत."
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 285,
+    "stage": "Prelims"
+  },
+  {
+    "question": "जोड्ा लावा : (गट क पूवव परीक्षा जून 2025) मासेमारी ब ं दर - जजल्हे (a) डहाणू - (i) मु ं बई (b) माठहम - (ii) पालघर (c) दाभोळ - (iii) जसंधुदुगव (d) ठवजयदुगव - (iv) रत्नाठगरी पयावयी उत्तरे :",
+    "options": [
+      "(ii) (i) (iv) (iii)",
+      "(i) (ii) (iii) (iv)",
+      "(ii) (iv) (i) (iii)",
+      "(iii) (ii) (i) (iv)"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 286,
+    "stage": "Mains"
+  },
+  {
+    "question": "1990 मध्ये, पुणे येथे पठहल्या तीन सॉफ्टवेअर टेक्नॉलॉजी पाक व (STPs) पैकी एक असून त्यासोबत ........ येथे इतर दोन STPs िापन करण्यात आले. (राज्यसेवा मुख्य मे 2025)",
+    "options": [
+      "ब ं गळुरू व भुवनेर्श्र",
+      "ब ं गळूरू व हैदराबाद",
+      "भुवनेर्श्र व हैदराबाद",
+      "चेिई व हैदराबाद"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 287,
+    "stage": "Prelims"
+  },
+  {
+    "question": "पद्मा, जया, ठवजया आजण रत्ना ही ........... ची भरघोस उत्पि देणारी ठबयाणे आहेत. (राज्यसेवा मुख्य, जाने 2024)",
+    "options": [
+      "गहू",
+      "तांदूळ",
+      "मका",
+      "बाजरी"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 288,
+    "stage": "Mains"
+  },
+  {
+    "question": "खालीलपैकी कोणती ठवधाने बरोबर आहेत ? (राज्यसेवा मुख्य, जाने 2024) a. कोकणात ओळी शेती क े ली जाते. b. कोकणात जलजसंचन उपलब्ध असल्यामुळे ओळी शेती के ली जाते. c. जांभा दगडाच्या अस्थस्तत्वामुळे दजक्षण कोकणात लागवडीखालील क्षेत्र कमी आहे. पयावयी उत्तरे :",
+    "options": [
+      "ठवधान a आजण c",
+      "ठवधान b आजण c",
+      "ठवधान a आजण b",
+      "ठवधान a, b आजण c"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 289,
+    "stage": "Prelims"
+  },
+  {
+    "question": "युनोच्या सववसाधारण सभेने 2023 हे वषव आंतरराष्ट्रीय अिधान्य (मीलेट) वषव म्हणून ........ मध्ये घोठषत क े ले. (राज्यसेवा मुख्य, जाने 2024)",
+    "options": [
+      "माचव 2021",
+      "ऑक्टोबर 2022",
+      "माचव 2023",
+      "जानेवारी 2023"
+    ],
+    "answer": 0,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 290,
+    "stage": "Mains"
+  },
+  {
+    "question": "महाराष्ट्र राज्याच्या मं त्रीमं डळाने 'प ं तप्रधान ठपक ठवमा योजना' राबठवण्याचा ठनणवय क े व्हा घेतला ? (राज्यसेवा मुख्य, जाने 2024)",
+    "options": [
+      "जानेवारी 2016",
+      "फ े ब्रुवारी 2016",
+      "एठप्रल 2016",
+      "मे 2016"
+    ],
+    "answer": 2,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 291,
+    "stage": "Prelims"
+  },
+  {
+    "question": "पाणलोट क्षेत्र ठवकास कायवक्रमाचे खालीलपैकी कोणते उठद्ष्ट्य आहेत ? (Group B Pre, Jan 2026) (a) भूमी उपयोजन आजण उत्पादनात पयावप्त वाढ करणे. (b) वाहत्या पाण्याला ठनय ं ठत्रत करून भूमीचे क्षरण थांबवणे. (c) गु ं तवणूक कमी, उत्पादन खचावत वाढ करणे. पयावयी उत्तरे :",
+    "options": [
+      "फक्त (a)",
+      "(a) आजण (b)",
+      "फक्त (b)",
+      "(c) आजण (b)"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 292,
+    "stage": "Mains"
+  },
+  {
+    "question": "एक जजल्हा एक उत्पादन उपक्रम अंतगवत जजल्ह्यांसह उत्पादनांची जोडी जुळवा. (राज्यसेवा मुख्य मे 2025) जजल्हा - उत्पादन a. रायगड - i. डाजळंब b. पुणे - ii. पांढरा कांदा c. अहमदनगर - iii. अंजीर d. अमरावती - iv. स ं त्री पयावयी उत्तरे :",
+    "options": [
+      "i ii iii iv",
+      "ii iii i iv",
+      "iii i ii iv",
+      "i iii iv ii"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 293,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालील ठवधाने ठवचारात घ्या आजण खालीलपैकी योग्य पयावय ठनवडा. (राज्यसेवा मुख्य मे 2025) i. PMMSY 20 मे 2020 रोजी दहा वषांच्या कालावधीसािी सुरू करण्यात आले. ii. महाराष्ट्र राज्यात मत्स्य उत्पादन वाढवण्यासािी PMMSY अंतगवत क े ज कल्चर फाजमंग राबठवण्यात येत आहे.",
+    "options": [
+      "फक्त i बरोबर आहे",
+      "फक्त ii बरोबर आहे",
+      "i आजण ii बरोबर आहेत",
+      "i आजण ii दोन्ही चूकीचे आहेत"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 294,
+    "stage": "Mains"
+  },
+  {
+    "question": "जोड्ा जुळवा. (राज्यसेवा मुख्य, जाने 2024) शेती साधने - सुधारीत वाण a) ठवळा - i) अंक ु र b) आंबा काढणी य ं त्र - ii) नुतन c) भुईमुग क ु दळ - iii) वैभव d) दाताळी फावडा - iv) स्वस्तीक पयावयी उत्तरे :",
+    "options": [
+      "iv iii i ii",
+      "iii ii iv i",
+      "iii iv i ii",
+      "ii i iii iv"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 295,
+    "stage": "Prelims"
+  },
+  {
+    "question": "खालीलपैकी कोणती ठवधाने बरोबर आहेत ? (PSI Mains Oct. 2023) अ. चुठनलाल मेहता यांनी सहकारी तत्वावर साखर कारखाना सुरू करण्याचा प्रयत्न क े ला. ब. डॉ. धनंजय गाडगीळ यांच्या मागवदशवनाखाली महाराष्ट्रात सहकारी साखर कारखानदारीचा शुभारंभ झाला. क. सन 1905 नंतर मु ं बई कापड कारखानदारीमध्ये तेजी आली. पयावयी उत्तरे :",
+    "options": [
+      "अ आजण ब बरोबर आहेत",
+      "अ, ब आजण क बरोबर आहेत",
+      "अ आजण क बरोबर आहेत",
+      "फक्त क बरोबर आहे"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 296,
+    "stage": "Mains"
+  },
+  {
+    "question": "क ृ षीस ं दभावत योग्य जोड्ा जुळवा. (राज्यसेवा मुख्य मे 2025) क्रांती - उत्पादन a. गुलाबी क्रांती - i. कातडी ठकं वा चामडी b. गोल क्रांती - ii. कांदा c. च ं देरी क्रांती - iii. बटाटा d. तपठकरी क्रांती - iv. क ु क ु टपालन पयावयी उत्तरे :",
+    "options": [
+      "ii iii i iv",
+      "ii iii iv i",
+      "iv ii iii i",
+      "iv iii i ii"
+    ],
+    "answer": 1,
+    "explanation": "मागील वर्षांतील प्रश्न (PYQ).",
+    "subject": "General Knowledge",
+    "topic": "Geography (भूगोल)",
+    "difficulty": "Hard",
+    "source": "PYQ",
+    "id": 297,
+    "stage": "Prelims"
+  }
+]

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Revision - TalathiIQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">Talathi<span>IQ</span></a>
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/current-affairs" class="nav-item">Current Affairs</a>
+            <a href="/mcq" class="nav-item">AI MCQs</a>
+            <a href="/mock-test" class="nav-item">Mock Tests</a>
+            <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+            <a href="/syllabus" class="nav-item">Syllabus</a>
+            <a href="/study-materials" class="nav-item">Study Notes</a>
+            <a href="/revision" class="nav-item active">Smart Revision</a>
+            <a href="/performance" class="nav-item">Performance</a>
+            <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+            {% if session.get('user_id') %}
+            <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            {% endif %}
+        </nav>
+        <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/current-affairs" class="nav-item">Current Affairs</a>
+        <a href="/mcq" class="nav-item">AI MCQs</a>
+        <a href="/mock-test" class="nav-item">Mock Tests</a>
+        <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+        <a href="/syllabus" class="nav-item">Syllabus</a>
+        <a href="/study-materials" class="nav-item">Study Notes</a>
+        <a href="/revision" class="nav-item active">Smart Revision</a>
+        <a href="/performance" class="nav-item">Performance</a>
+        <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+        {% if session.get('user_id') %}
+        <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        {% endif %}
+    </div>
+
+
+    <!-- Main Container -->
+    <main class="container">
+        <div class="ca-header-bar animate-fade-in" style="margin-bottom: 2rem;">
+            <h1 style="font-size: 2.25rem; font-weight: 800;"><i class="fas fa-history" style="color: var(--warning); margin-right: 0.5rem;"></i> Smart Revision Hub</h1>
+            <span class="ca-demo-badge" style="background: var(--warning-bg); border-color: var(--warning); color: var(--warning);"><i class="fas fa-sync-alt"></i> Dynamic Revision Tracker</span>
+        </div>
+
+        <!-- Start Revision Bar -->
+        <section class="card animate-fade-in" style="margin-bottom: 2rem; flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; padding: 1.5rem 2rem;">
+            <div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Start Adaptive Revision Session</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Review and re-attempt all questions you previously answered incorrectly.</p>
+            </div>
+            <button class="btn btn-primary" onclick="startMistakesRevision()"><i class="fas fa-play"></i> Start Revision</button>
+        </section>
+
+        <!-- Columns Layout -->
+        <div class="rev-grid animate-fade-in" style="animation-delay: 0.1s;">
+            
+            <!-- Left Column: Wrong Questions Tracker -->
+            <div class="rev-column">
+                <h2><i class="fas fa-times-circle" style="color: var(--danger);"></i> Previously Wrong Questions</h2>
+                <div id="wrongQuestionsList">
+                    <!-- Dynamic wrong questions -->
+                    <div style="color: var(--text-dark); text-align: center; padding: 2rem;">
+                        No incorrect questions logged. Give a mock test or practice MCQs to populate this panel!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Saved/Bookmarked & Frequently Mistaken Topics -->
+            <div class="rev-column" style="display: flex; flex-direction: column; gap: 2rem;">
+                
+                <!-- Saved Questions Card -->
+                <div>
+                    <h2><i class="fas fa-bookmark" style="color: var(--secondary);"></i> Saved Questions</h2>
+                    <div id="savedQuestionsList">
+                        <!-- Bookmarked list -->
+                        <div class="rev-item">
+                            <div class="rev-info">
+                                <span class="rev-q-text">रामाने आंबा खाल्ला या वाक्यातील प्रयोग ओळखा.</span>
+                                <span class="rev-q-meta">Marathi | Voices (प्रयोग)</span>
+                            </div>
+                            <span class="ca-demo-badge" style="color: var(--secondary); background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.2);">Saved</span>
+                        </div>
+                        <div class="rev-item">
+                            <div class="rev-info">
+                                <span class="rev-q-text">Which preposition is used after the adjective 'proficient'?</span>
+                                <span class="rev-q-meta">English | Prepositions</span>
+                            </div>
+                            <span class="ca-demo-badge" style="color: var(--secondary); background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.2);">Saved</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frequently Mistaken Topics Tracker -->
+                <div>
+                    <h2><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Frequently Mistaken Topics</h2>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
+                        
+                        <div class="subject-badge" style="flex-direction: row; justify-content: space-between; padding: 0.85rem 1.25rem; font-weight: 500; font-size: 0.95rem; text-align: left;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-spell-check" style="color: var(--danger);"></i>
+                                <span>Spelling Test & Grammar</span>
+                            </div>
+                            <span class="ca-demo-badge" style="background:var(--danger-bg); border-color:var(--danger); color:var(--danger);">3 Errors</span>
+                        </div>
+
+                        <div class="subject-badge" style="flex-direction: row; justify-content: space-between; padding: 0.85rem 1.25rem; font-weight: 500; font-size: 0.95rem; text-align: left;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-monument" style="color: var(--danger);"></i>
+                                <span>Geography & Social Reformers</span>
+                            </div>
+                            <span class="ca-demo-badge" style="background:var(--danger-bg); border-color:var(--danger); color:var(--danger);">2 Errors</span>
+                        </div>
+
+                        <div class="subject-badge" style="flex-direction: row; justify-content: space-between; padding: 0.85rem 1.25rem; font-weight: 500; font-size: 0.95rem; text-align: left;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-divide" style="color: var(--danger);"></i>
+                                <span>Aptitude, Age problems & Numbers</span>
+                            </div>
+                            <span class="ca-demo-badge" style="background:var(--danger-bg); border-color:var(--danger); color:var(--danger);">2 Errors</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="tagline">TalathiIQ - Smart Preparation. Smarter Results.</p>
+        <p>&copy; <span id="currentYear"></span> TalathiIQ Exam Platform.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderWrongQuestions();
+        });
+
+        function renderWrongQuestions() {
+            const listContainer = document.getElementById('wrongQuestionsList');
+            const wrongList = JSON.parse(localStorage.getItem('talathi_wrong_questions')) || [];
+
+            if (wrongList.length > 0) {
+                listContainer.innerHTML = '';
+                wrongList.forEach(q => {
+                    const item = document.createElement('div');
+                    item.className = 'rev-item';
+                    item.innerHTML = `
+                        <div class="rev-info">
+                            <span class="rev-q-text">${q.question}</span>
+                            <span class="rev-q-meta">${q.subject} | ${q.topic}</span>
+                        </div>
+                        <button class="btn btn-secondary btn-sm" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; border-color: var(--danger); color: var(--danger);" onclick="deleteWrongQuestion(${q.id})">
+                            <i class="far fa-trash-alt"></i> Remove
+                        </button>
+                    `;
+                    listContainer.appendChild(item);
+                });
+            }
+        }
+
+        function deleteWrongQuestion(id) {
+            let wrongList = JSON.parse(localStorage.getItem('talathi_wrong_questions')) || [];
+            wrongList = wrongList.filter(q => q.id !== id);
+            localStorage.setItem('talathi_wrong_questions', JSON.stringify(wrongList));
+            renderWrongQuestions();
+            
+            // Adjust statistics counts
+            let stats = JSON.parse(localStorage.getItem('talathi_stats')) || {};
+            if (stats.wrongCount > 0) stats.wrongCount -= 1;
+            localStorage.setItem('talathi_stats', JSON.stringify(stats));
+        }
+
+        function startMistakesRevision() {
+            const wrongList = JSON.parse(localStorage.getItem('talathi_wrong_questions')) || [];
+            if (wrongList.length === 0) {
+                alert("You don't have any logged mistakes to revise. Practice MCQs or Mock Tests to log wrong answers!");
+            } else {
+                window.location.href = '/mcq';
+            }
+        }
+    </script>
+</body>
+</html>

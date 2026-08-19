@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Mentor - TalathiIQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">Talathi<span>IQ</span></a>
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/current-affairs" class="nav-item">Current Affairs</a>
+            <a href="/mcq" class="nav-item">AI MCQs</a>
+            <a href="/mock-test" class="nav-item">Mock Tests</a>
+            <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+            <a href="/syllabus" class="nav-item">Syllabus</a>
+            <a href="/study-materials" class="nav-item">Study Notes</a>
+            <a href="/revision" class="nav-item">Smart Revision</a>
+            <a href="/performance" class="nav-item">Performance</a>
+            <a href="/ai-assistant" class="nav-item active"><i class="fas fa-robot"></i> AI Mentor</a>
+            {% if session.get('user_id') %}
+            <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            {% endif %}
+        </nav>
+        <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/current-affairs" class="nav-item">Current Affairs</a>
+        <a href="/mcq" class="nav-item">AI MCQs</a>
+        <a href="/mock-test" class="nav-item">Mock Tests</a>
+        <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+        <a href="/syllabus" class="nav-item">Syllabus</a>
+        <a href="/study-materials" class="nav-item">Study Notes</a>
+        <a href="/revision" class="nav-item">Smart Revision</a>
+        <a href="/performance" class="nav-item">Performance</a>
+        <a href="/ai-assistant" class="nav-item active"><i class="fas fa-robot"></i> AI Mentor</a>
+        {% if session.get('user_id') %}
+        <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        {% endif %}
+    </div>
+
+
+    <!-- Main Container -->
+    <main class="container">
+        <div class="chat-layout animate-fade-in">
+            
+            <!-- Left Side: Prompt suggestions -->
+            <aside class="chat-sidebar">
+                <h3 class="ca-sidebar-title" style="margin-bottom: 0.5rem;"><i class="fas fa-magic"></i> Suggested Prompts</h3>
+                <p style="color: var(--text-dark); font-size: 0.8rem; margin-bottom: 1rem; line-height: 1.4;">Click any suggested topic below to ask your AI study mentor immediately:</p>
+                
+                <div class="chat-prompts-grid">
+                    <button class="prompt-btn" onclick="usePrompt('Explain Fundamental Rights')">
+                        Explain Fundamental Rights (मूलभूत हक्क स्पष्ट करा)
+                    </button>
+                    <button class="prompt-btn" onclick="usePrompt('Give me 20 Geography MCQs')">
+                        Give me 20 Geography MCQs
+                    </button>
+                    <button class="prompt-btn" onclick="usePrompt('Revise Maharashtra History')">
+                        Revise Maharashtra History (महाराष्ट्राचा इतिहास)
+                    </button>
+                    <button class="prompt-btn" onclick="usePrompt('Explain my wrong answer')">
+                        Explain my wrong answer (माझे चुकलेले उत्तर स्पष्ट करा)
+                    </button>
+                    <button class="prompt-btn" onclick="usePrompt('Create a 7-day study plan')">
+                        Create a 7-day study plan (७ दिवसांचे अभ्यास नियोजन)
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Right Side: Chat Window -->
+            <section class="chat-container-main">
+                <!-- Header details -->
+                <div class="chat-header">
+                    <div class="chat-bot-avatar">
+                        <i class="fas fa-robot" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="chat-bot-details">
+                        <h3>TalathiIQ AI Mentor</h3>
+                        <span><i class="fas fa-circle" style="font-size: 0.55rem;"></i> Active & Ready</span>
+                    </div>
+                </div>
+
+                <!-- Chat history bubbles -->
+                <div class="chat-messages" id="chatHistory">
+                    
+                    <!-- Bot welcome message -->
+                    <div class="chat-msg bot">
+                        <div class="chat-msg-bubble">
+                            नमस्कार! मी तुमचा <strong>TalathiIQ AI Mentor</strong> आहे. <br><br>
+                            मी तुम्हाला तलाठी भरतीशी संबंधित मराठी व्याकरण, इंग्रजी व्याकरण, इतिहास, भूगोल, अंकगणित आणि चालू घडामोडींवर मार्गदर्शन करू शकतो. तुम्ही मला शंका विचारू शकता किंवा डावीकडील सुचवलेले प्रश्न निवडू शकता.
+                        </div>
+                        <span class="chat-msg-time" id="welcomeTime">08:30 PM</span>
+                    </div>
+
+                </div>
+
+                <!-- Input area -->
+                <form class="chat-input-area" id="chatForm">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="Type your doubt here (उदा. महाराष्ट्राचे समाजसुधारक सांगा)..." autocomplete="off">
+                    <button type="submit" class="btn btn-primary" style="padding: 0 1.5rem;">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="tagline">TalathiIQ - Smart Preparation. Smarter Results.</p>
+        <p>&copy; <span id="currentYear"></span> TalathiIQ Exam Platform.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set timestamp on welcome message
+            const welcomeTime = document.getElementById('welcomeTime');
+            if (welcomeTime) {
+                const now = new Date();
+                welcomeTime.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+
+            const form = document.getElementById('chatForm');
+            if (form) {
+                form.addEventListener('submit', handleChatSubmit);
+            }
+        });
+
+        function usePrompt(text) {
+            const input = document.getElementById('chatInput');
+            if (input) {
+                input.value = text;
+                input.focus();
+            }
+        }
+
+        function handleChatSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('chatInput');
+            const history = document.getElementById('chatHistory');
+            
+            if (!input || !input.value.trim()) return;
+
+            const userText = input.value.trim();
+            input.value = '';
+
+            // 1. Append User Bubble
+            appendMessage('user', userText);
+
+            // Scroll to bottom
+            history.scrollTop = history.scrollHeight;
+
+            // 2. Append Bot Response (Demo API integration warning/notice)
+            // Prepare for future python API integration
+            setTimeout(() => {
+                const botText = `<strong>TalathiIQ AI Mentor Note:</strong><br><br>
+                Thank you for asking! The backend API integration for the AI Mentor is currently in development. <br><br>
+                In the next development phase, this prompt will be sent directly to our <em>Python Flask AI endpoint</em> (integrating Gemini / LLM models) to generate a fully customized explanation, revision notes, or practice sheets.`;
+                
+                appendMessage('bot', botText);
+                history.scrollTop = history.scrollHeight;
+            }, 1000);
+        }
+
+        function appendMessage(sender, text) {
+            const history = document.getElementById('chatHistory');
+            const msg = document.createElement('div');
+            msg.className = `chat-msg ${sender}`;
+
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+            msg.innerHTML = `
+                <div class="chat-msg-bubble">${text}</div>
+                <span class="chat-msg-time">${timeStr}</span>
+            `;
+            history.appendChild(msg);
+        }
+    </script>
+</body>
+</html>

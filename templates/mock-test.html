@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Test Portal - TalathiIQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">Talathi<span>IQ</span></a>
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/current-affairs" class="nav-item">Current Affairs</a>
+            <a href="/mcq" class="nav-item">AI MCQs</a>
+            <a href="/mock-test" class="nav-item active">Mock Tests</a>
+            <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+            <a href="/syllabus" class="nav-item">Syllabus</a>
+            <a href="/study-materials" class="nav-item">Study Notes</a>
+            <a href="/revision" class="nav-item">Smart Revision</a>
+            <a href="/performance" class="nav-item">Performance</a>
+            <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+            {% if session.get('user_id') %}
+            <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            {% endif %}
+        </nav>
+        <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/current-affairs" class="nav-item">Current Affairs</a>
+        <a href="/mcq" class="nav-item">AI MCQs</a>
+        <a href="/mock-test" class="nav-item active">Mock Tests</a>
+        <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+        <a href="/syllabus" class="nav-item">Syllabus</a>
+        <a href="/study-materials" class="nav-item">Study Notes</a>
+        <a href="/revision" class="nav-item">Smart Revision</a>
+        <a href="/performance" class="nav-item">Performance</a>
+        <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+        {% if session.get('user_id') %}
+        <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        {% endif %}
+    </div>
+
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Configuration Panel -->
+        <div id="configContainer" class="mock-config-container animate-fade-in">
+            <h2 class="section-title"><i class="fas fa-sliders-h"></i> Mock Test Setup</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Configure your custom Talathi Exam practice session below.</p>
+            
+            <div class="config-grid">
+                <!-- Database Source -->
+                <div class="config-card">
+                    <h3><i class="fas fa-database"></i> Database Option</h3>
+                    <p class="config-card-desc">Select the pool of questions for the test.</p>
+                    <div class="config-options-group">
+                        <label class="config-radio-label active" id="lblSourceStandard">
+                            <input type="radio" name="dbSource" value="Standard" checked style="display:none;">
+                            <span class="radio-title">Standard Database</span>
+                            <span class="radio-subtitle">Curated preparation syllabus</span>
+                        </label>
+                        <label class="config-radio-label" id="lblSourcePYQ">
+                            <input type="radio" name="dbSource" value="PYQ" style="display:none;">
+                            <span class="radio-title">PYQ Database</span>
+                            <span class="radio-subtitle">Previous Year Questions</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Difficulty Level -->
+                <div class="config-card">
+                    <h3><i class="fas fa-bolt"></i> Difficulty Level</h3>
+                    <p class="config-card-desc">Choose the target challenge rating.</p>
+                    <div class="config-options-group">
+                        <label class="config-radio-label" id="lblDiffEasy">
+                            <input type="radio" name="difficulty" value="Easy" style="display:none;">
+                            <span class="radio-title">Easy</span>
+                            <span class="radio-subtitle">Basic concepts</span>
+                        </label>
+                        <label class="config-radio-label active" id="lblDiffMedium">
+                            <input type="radio" name="difficulty" value="Medium" checked style="display:none;">
+                            <span class="radio-title">Medium</span>
+                            <span class="radio-subtitle">Standard exam standard</span>
+                        </label>
+                        <label class="config-radio-label" id="lblDiffHardest">
+                            <input type="radio" name="difficulty" value="Hardest" style="display:none;">
+                            <span class="radio-title">Hardest Test</span>
+                            <span class="radio-subtitle">Highly challenging PYQs & tough topics</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question Limit -->
+                <div class="config-card">
+                    <h3><i class="fas fa-list-ol"></i> Question Count</h3>
+                    <p class="config-card-desc">Choose how many questions to attempt.</p>
+                    <div class="config-options-group">
+                        <label class="config-radio-label active" id="lblLimit20">
+                            <input type="radio" name="qLimit" value="20" checked style="display:none;">
+                            <span class="radio-title">20 Questions</span>
+                            <span class="radio-subtitle">Quick practice (12 Mins)</span>
+                        </label>
+                        <label class="config-radio-label" id="lblLimit50">
+                            <input type="radio" name="qLimit" value="50" style="display:none;">
+                            <span class="radio-title">50 Questions</span>
+                            <span class="radio-subtitle">Standard quiz (30 Mins)</span>
+                        </label>
+                        <label class="config-radio-label" id="lblLimit100">
+                            <input type="radio" name="qLimit" value="100" style="display:none;">
+                            <span class="radio-title">100 Questions</span>
+                            <span class="radio-subtitle">Full Mock Exam (60 Mins)</span>
+                        </label>
+                        <label class="config-radio-label" id="lblLimitMax">
+                            <input type="radio" name="qLimit" value="1000" style="display:none;">
+                            <span class="radio-title">Hardest 1000 Test</span>
+                            <span class="radio-subtitle">Maximum Questions (600 Mins)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Subject Selection -->
+                <div class="config-card">
+                    <h3><i class="fas fa-book"></i> Select Subject</h3>
+                    <p class="config-card-desc">Choose a specific topic or all subjects.</p>
+                    <div style="margin-top: 1rem;">
+                        <select name="testSubject" class="config-select" style="width:100%; background:rgba(255,255,255,0.05); color:var(--text-main); border:1px solid var(--border-color); border-radius:var(--border-radius-sm); padding:1rem; font-family:var(--font-sans); font-size:1rem; font-weight:600; outline:none; transition:var(--transition-smooth); cursor:pointer;">
+                            <option value="All" style="background:#090d16; color:var(--text-main);">All Subjects (सर्व विषय)</option>
+                            <option value="Marathi" style="background:#090d16; color:var(--text-main);">Marathi (मराठी)</option>
+                            <option value="English" style="background:#090d16; color:var(--text-main);">English (इंग्रजी)</option>
+                            <option value="Geography" style="background:#090d16; color:var(--text-main);">Geography (भूगोल)</option>
+                            <option value="History" style="background:#090d16; color:var(--text-main);">History & Polity (इतिहास व राज्यशास्त्र)</option>
+                            <option value="Science" style="background:#090d16; color:var(--text-main);">General Science (सामान्य विज्ञान)</option>
+                            <option value="Math" style="background:#090d16; color:var(--text-main);">Mathematics (अंकगणित)</option>
+                            <option value="Reasoning" style="background:#090d16; color:var(--text-main);">Reasoning (बुद्धिमत्ता)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Button -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn btn-primary" id="startTestBtn" style="font-size: 1.2rem; padding: 1rem 3rem;">
+                    <i class="fas fa-play"></i> Start Practice Session
+                </button>
+            </div>
+        </div>
+
+        <!-- Test Interface Container -->
+        <div id="testContainer" class="mock-layout" style="display: none;">
+            
+            <!-- Left Pane: Quiz Panel -->
+            <section class="mock-quiz-pane animate-fade-in">
+                
+                <div class="question-block" style="box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+                    <!-- Meta -->
+                    <div class="question-meta">
+                        <span id="mockSubjectTag" class="subject-tag">Loading Subject...</span>
+                        <span id="mockQuestionNum" class="subject-tag" style="color: var(--text-muted);">Question 1 of 20</span>
+                    </div>
+
+                    <!-- Question text -->
+                    <h3 id="mockQuestionText" class="question-text" style="min-height: 80px;">
+                        Loading question content...
+                    </h3>
+
+                    <!-- Options Container -->
+                    <div id="mockOptionsContainer" class="options-list">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="quiz-controls">
+                    <button class="btn btn-secondary" id="prevMockBtn" disabled>
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    
+                    <button class="btn btn-secondary" id="markReviewBtn" style="color: var(--warning); border-color: rgba(245, 158, 11, 0.2);">
+                        <i class="far fa-flag"></i> Mark for Review
+                    </button>
+
+                    <button class="btn btn-primary" id="nextMockBtn">
+                        Next <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- Right Pane: Status & Navigation Grid -->
+            <aside class="navigation-panel animate-fade-in" style="animation-delay: 0.1s;">
+                <!-- Countdown Timer -->
+                <div class="timer-box" id="mockTimer">
+                    <i class="far fa-clock"></i> 20:00
+                </div>
+
+                <!-- Nav Title -->
+                <h3 class="nav-grid-title">Question Grid</h3>
+
+                <!-- Grid Numbers -->
+                <div class="questions-nav-grid" id="questionsNavGrid">
+                    <!-- Numbers 1 to 20 loaded dynamically -->
+                </div>
+
+                <!-- Legend of Status Indicators -->
+                <div class="nav-legend">
+                    <div class="legend-item">
+                        <div class="legend-dot unattempted"></div>
+                        <span>Unattempted (अनुत्तरित)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot answered"></div>
+                        <span>Answered (उत्तरित)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot flagged"></div>
+                        <span>Marked for Review (चिन्हांकित)</span>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button class="btn btn-success" id="submitTestBtn" style="width: 100%; margin-top: 2rem;">
+                    <i class="fas fa-check-double"></i> Submit Test
+                </button>
+            </aside>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="tagline">TalathiIQ - Smart Preparation. Smarter Results.</p>
+        <p>&copy; <span id="currentYear"></span> TalathiIQ Exam Platform.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/mock-test.js') }}"></script>
+</body>
+</html>

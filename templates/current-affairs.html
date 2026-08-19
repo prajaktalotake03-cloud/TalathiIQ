@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Affairs - TalathiIQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">Talathi<span>IQ</span></a>
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/current-affairs" class="nav-item active">Current Affairs</a>
+            <a href="/mcq" class="nav-item">AI MCQs</a>
+            <a href="/mock-test" class="nav-item">Mock Tests</a>
+            <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+            <a href="/syllabus" class="nav-item">Syllabus</a>
+            <a href="/study-materials" class="nav-item">Study Notes</a>
+            <a href="/revision" class="nav-item">Smart Revision</a>
+            <a href="/performance" class="nav-item">Performance</a>
+            <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+            {% if session.get('user_id') %}
+            <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            {% endif %}
+        </nav>
+        <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/current-affairs" class="nav-item active">Current Affairs</a>
+        <a href="/mcq" class="nav-item">AI MCQs</a>
+        <a href="/mock-test" class="nav-item">Mock Tests</a>
+        <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+        <a href="/syllabus" class="nav-item">Syllabus</a>
+        <a href="/study-materials" class="nav-item">Study Notes</a>
+        <a href="/revision" class="nav-item">Smart Revision</a>
+        <a href="/performance" class="nav-item">Performance</a>
+        <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+        {% if session.get('user_id') %}
+        <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        {% endif %}
+    </div>
+
+
+    <!-- Main Container -->
+    <main class="container">
+        <div class="ca-header-bar animate-fade-in">
+            <h1 style="font-size: 2.25rem; font-weight: 800;"><i class="far fa-newspaper" style="color: var(--secondary); margin-right: 0.5rem;"></i> Current Affairs</h1>
+            <span class="ca-demo-badge"><i class="fas fa-info-circle"></i> DEMO DATA FOR PRACTICE PURPOSES</span>
+        </div>
+
+        <div class="ca-layout animate-fade-in" style="animation-delay: 0.1s;">
+            <!-- Category Sidebar -->
+            <aside class="ca-sidebar">
+                <h3 class="ca-sidebar-title">Categories</h3>
+                <nav class="ca-nav" id="categoryNav">
+                    <button class="ca-nav-item active" data-category="all">All News</button>
+                    <button class="ca-nav-item" data-category="maharashtra">Maharashtra</button>
+                    <button class="ca-nav-item" data-category="india">India</button>
+                    <button class="ca-nav-item" data-category="international">International</button>
+                    <button class="ca-nav-item" data-category="schemes">Gov Schemes</button>
+                    <button class="ca-nav-item" data-category="awards">Awards</button>
+                    <button class="ca-nav-item" data-category="sports">Sports</button>
+                    <button class="ca-nav-item" data-category="economy">Economy</button>
+                    <button class="ca-nav-item" data-category="science">Sci & Tech</button>
+                    <button class="ca-nav-item" data-category="days">Important Days</button>
+                </nav>
+            </aside>
+
+            <!-- News Cards Area -->
+            <section class="ca-content" id="newsContainer">
+                
+                <!-- Demo News 1 -->
+                <div class="ca-card" data-cat="maharashtra">
+                    <div class="ca-card-meta">
+                        <span class="ca-card-category">Maharashtra</span>
+                        <span>August 15, 2026</span>
+                    </div>
+                    <h2>Maharashtra launches 'Pramod Mahajan Skill Development Scheme' phase-II</h2>
+                    <p>Under this phase, the government aims to establish skill centers in more than 500 rural blocks to empower rural youth with employment and self-employment training. This scheme targets the training of over 2 lakh candidates annually with active integration of technology partners.</p>
+                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
+                </div>
+
+                <!-- Demo News 2 -->
+                <div class="ca-card" data-cat="india">
+                    <div class="ca-card-meta">
+                        <span class="ca-card-category">India</span>
+                        <span>August 14, 2026</span>
+                    </div>
+                    <h2>ISRO launches new earth observation satellite EOS-09</h2>
+                    <p>The Indian Space Research Organisation (ISRO) successfully injected the Earth Observation Satellite (EOS-09) into its orbit using the SSLV-D4 launcher from Sriharikota. The satellite will provide high-resolution imagery for agricultural monitoring, forestry, hydrology, and disaster management.</p>
+                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
+                </div>
+
+                <!-- Demo News 3 -->
+                <div class="ca-card" data-cat="schemes">
+                    <div class="ca-card-meta">
+                        <span class="ca-card-category">Gov Schemes</span>
+                        <span>August 12, 2026</span>
+                    </div>
+                    <h2>CM Majhi Ladki Bahin Yojana Updates: Over 1.5 Crore Applications Approved</h2>
+                    <p>The Maharashtra state government announced that more than 1.5 crore eligible women have successfully registered under the Majhi Ladki Bahin Yojana. Beneficiaries will receive a direct benefit transfer of 1,500 rupees per month. The verification process has been fully digitized to speed up approvals.</p>
+                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
+                </div>
+
+                <!-- Demo News 4 -->
+                <div class="ca-card" data-cat="awards">
+                    <div class="ca-card-meta">
+                        <span class="ca-card-category">Awards</span>
+                        <span>August 10, 2026</span>
+                    </div>
+                    <h2>Lata Mangeshkar Award 2026 Announced</h2>
+                    <p>The Maharashtra state government has declared the prestigious Lata Mangeshkar Award for Lifetime Achievement in music to a veteran classical vocalist. The award consists of a cash prize of 5 lakh rupees, a citation, and a memento to be presented at a cultural event in Mumbai next month.</p>
+                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
+                </div>
+
+                <!-- Demo News 5 -->
+                <div class="ca-card" data-cat="sports">
+                    <div class="ca-card-meta">
+                        <span class="ca-card-category">Sports</span>
+                        <span>August 08, 2026</span>
+                    </div>
+                    <h2>National Games 2026 to be hosted in Maharashtra</h2>
+                    <p>The Indian Olympic Association has officially confirmed that the upcoming National Games will take place across Mumbai, Pune, and Nagpur. The state is developing sports infrastructures to match global athletic standards, expecting participation from over 10,000 athletes.</p>
+                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
+                </div>
+
+                <!-- Demo News 6 -->
+                <div class="ca-card" data-cat="days">
+                    <div class="ca-card-meta">
+                        <span class="ca-card-category">Important Days</span>
+                        <span>August 09, 2026</span>
+                    </div>
+                    <h2>August Kranti Din observed on 9th August</h2>
+                    <p>The nation observed August Kranti Din, commemorating the anniversary of the Quit India Movement launched in 1942 under Mahatma Gandhi. Tributes were paid to freedom fighters at Kranti Maidan (Gowalia Tank) in Mumbai, where the historic resolution was passed.</p>
+                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
+                </div>
+
+                <!-- Demo News 7 -->
+                <div class="ca-card" data-cat="international">
+                    <div class="ca-card-meta">
+                        <span class="ca-card-category">International</span>
+                        <span>August 05, 2026</span>
+                    </div>
+                    <h2>UN Climate Summit 2026 sets new net-zero targets</h2>
+                    <p>World leaders gathered in Geneva for the COP31 preparatory assembly to outline tighter emissions thresholds. Emerging economies requested financial assistance and green tech sharing models from developed countries to meet their sustainability timelines.</p>
+                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
+                </div>
+
+                <!-- Demo News 8 -->
+                <div class="ca-card" data-cat="economy">
+                    <div class="ca-card-meta">
+                        <span class="ca-card-category">Economy</span>
+                        <span>August 01, 2026</span>
+                    </div>
+                    <h2>RBI monetary policy maintains repo rate at 6.50%</h2>
+                    <p>The Monetary Policy Committee (MPC) of the Reserve Bank of India decided to keep the policy repo rate unchanged. RBI Governor cited retail inflation stability and robust GDP projection for the quarter as the primary factors for the status quo.</p>
+                    <button class="btn btn-secondary btn-sm ai-gen-btn" onclick="triggerAiGen()"><i class="fas fa-bolt"></i> Generate MCQs with AI</button>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="tagline">TalathiIQ - Smart Preparation. Smarter Results.</p>
+        <p>&copy; <span id="currentYear"></span> TalathiIQ Exam Platform.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        // Category filtering logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const categoryNav = document.getElementById('categoryNav');
+            const newsCards = document.querySelectorAll('.ca-card');
+
+            categoryNav.addEventListener('click', (e) => {
+                const target = e.target;
+                if (target.classList.contains('ca-nav-item')) {
+                    // Update active button
+                    document.querySelectorAll('.ca-nav-item').forEach(btn => btn.classList.remove('active'));
+                    target.classList.add('active');
+
+                    // Filter cards
+                    const category = target.getAttribute('data-category');
+                    newsCards.forEach(card => {
+                        const cardCat = card.getAttribute('data-cat');
+                        if (category === 'all' || cardCat === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+
+        // Demo AI prompt function
+        function triggerAiGen() {
+            alert("This feature will be connected to the Python AI API in the next development step. It will generate 5 practice MCQs based on this specific current affairs article!");
+        }
+    </script>
+</body>
+</html>

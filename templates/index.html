@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalathiIQ - Smart Preparation. Smarter Results.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">Talathi<span>IQ</span></a>
+        <nav class="nav-links">
+            <a href="/" class="nav-item active">Home</a>
+            <a href="/current-affairs" class="nav-item">Current Affairs</a>
+            <a href="/mcq" class="nav-item">AI MCQs</a>
+            <a href="/mock-test" class="nav-item">Mock Tests</a>
+            <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+            <a href="/syllabus" class="nav-item">Syllabus</a>
+            <a href="/study-materials" class="nav-item">Study Notes</a>
+            <a href="/revision" class="nav-item">Smart Revision</a>
+            <a href="/performance" class="nav-item">Performance</a>
+            <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+            {% if session.get('user_id') %}
+            <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            {% endif %}
+        </nav>
+        <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="nav-item active">Home</a>
+        <a href="/current-affairs" class="nav-item">Current Affairs</a>
+        <a href="/mcq" class="nav-item">AI MCQs</a>
+        <a href="/mock-test" class="nav-item">Mock Tests</a>
+        <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
+        <a href="/syllabus" class="nav-item">Syllabus</a>
+        <a href="/study-materials" class="nav-item">Study Notes</a>
+        <a href="/revision" class="nav-item">Smart Revision</a>
+        <a href="/performance" class="nav-item">Performance</a>
+        <a href="/ai-assistant" class="nav-item"><i class="fas fa-robot"></i> AI Mentor</a>
+        {% if session.get('user_id') %}
+        <a href="/logout" class="nav-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        {% endif %}
+    </div>
+
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero animate-fade-in">
+            <div class="hero-taglines">
+                <span class="tagline-en">Smart Preparation. Smarter Results.</span>
+                <span class="tagline-mr">तलाठी भरतीची स्मार्ट तयारी</span>
+            </div>
+            <h1>Prepare Smarter.<br>Crack Talathi Bharti.</h1>
+            <p>AI-powered questions, current affairs, mock tests, and personalized preparation — all in one place. Your ultimate tool to ace the Maharashtra Talathi Exam.</p>
+            <div class="stage-toggle-container" style="align-items: center;">
+                <button class="stage-toggle-btn active" id="btnPrelims">
+                    <i class="fas fa-graduation-cap"></i> Prelims
+                </button>
+                <button class="stage-toggle-btn" id="btnMains">
+                    <i class="fas fa-award"></i> Mains
+                </button>
+                <span style="font-size: 0.75rem; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.15); color: var(--success); padding: 0.35rem 0.75rem; border-radius: 50px; font-weight: 700; margin-left: 0.25rem; margin-right: 0.25rem; display: inline-flex; align-items: center; gap: 0.25rem; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">
+                    <i class="fas fa-check-circle" style="font-size: 0.7rem;"></i> No Interview (मुलाखत नाही)
+                </span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="/mcq" class="btn btn-primary"><i class="fas fa-play"></i> Start Practice</a>
+                <a href="/mock-test" class="btn btn-secondary"><i class="fas fa-file-alt"></i> Take Mock Test</a>
+            </div>
+
+            <!-- Attractive Statistics -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-value" id="solvedCountHero">1000+</div>
+                    <div class="stat-label">Practice Questions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Daily</div>
+                    <div class="stat-label">Current Affairs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">AI-Powered</div>
+                    <div class="stat-label">Mentor & Learning</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Smart</div>
+                    <div class="stat-label">Performance Analytics</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard-section animate-fade-in" style="animation-delay: 0.2s;">
+            <h2 class="section-title"><i class="fas fa-th-large"></i> Dashboard</h2>
+            <div class="dashboard-grid">
+                
+                <!-- Current Affairs Card -->
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(6, 182, 212, 0.1); color: var(--secondary);">
+                        <i class="far fa-newspaper"></i>
+                    </div>
+                    <h3 class="card-title">Latest Current Affairs</h3>
+                    <p class="card-description">Stay updated with current affairs across Maharashtra, India, and globally. Categorized precisely for the Talathi exam syllabus.</p>
+                    <div class="card-footer">
+                        <span class="ca-demo-badge">Updated Today</span>
+                        <a href="/current-affairs" class="card-action">Read News <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Today's MCQs Card -->
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3 class="card-title">Today's MCQs</h3>
+                    <p class="card-description">Practice custom Talathi-oriented multiple choice questions. Filter by subjects, view instant scoring, and explanations.</p>
+                    <div class="card-footer">
+                        <span class="ca-demo-badge" style="background:var(--success-bg); border-color:var(--success); color:var(--success);">Active Now</span>
+                        <a href="/mcq" class="card-action">Start MCQs <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mock Tests Card -->
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(239, 68, 68, 0.1); color: var(--danger);">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="card-title">Mock Tests</h3>
+                    <p class="card-description">Challenge yourself with a full-length 20-question simulated mock exam complete with active timers and progress trackers.</p>
+                    <div class="card-footer">
+                        <span class="ca-demo-badge" style="background:var(--danger-bg); border-color:var(--danger); color:var(--danger);">20 Mins</span>
+                        <a href="/mock-test" class="card-action">Take Test <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Smart Revision Card -->
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(245, 158, 11, 0.1); color: var(--warning);">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3 class="card-title">Smart Revision</h3>
+                    <p class="card-description">Target weak concepts. Practice questions you previously got wrong and review saved custom bookmarked items.</p>
+                    <div class="card-footer">
+                        <span class="ca-demo-badge" style="background:var(--warning-bg); border-color:var(--warning); color:var(--warning);">Personalized</span>
+                        <a href="/revision" class="card-action">Revise Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Performance Card -->
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="card-title">Performance Analytics</h3>
+                    <p class="card-description">View detailed insights on questions solved, average accuracy, learning streaks, and subject strengths/weaknesses.</p>
+                    <div class="card-footer">
+                        <span class="ca-demo-badge" style="background:rgba(99,102,241,0.1); border-color:var(--primary); color:var(--primary);">Real-time</span>
+                        <a href="/performance" class="card-action">Analyze Stats <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- AI Study Assistant Card -->
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(139, 92, 246, 0.1); color: var(--accent);">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="card-title">AI Study Assistant</h3>
+                    <p class="card-description">Chat with your personal TalathiIQ AI Mentor. Ask doubts, request custom summaries, and plan schedules.</p>
+                    <div class="card-footer">
+                        <span class="ca-demo-badge" style="background:rgba(139,92,246,0.1); border-color:var(--accent); color:var(--accent);">AI Coach</span>
+                        <a href="/ai-assistant" class="card-action">Ask AI <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Study Materials Card -->
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="card-title">Study Notes & PDFs</h3>
+                    <p class="card-description">Access and download high-quality, subject-wise study materials, PDF notes, and syllabus helpers stored in our database.</p>
+                    <div class="card-footer">
+                        <span class="ca-demo-badge" style="background:rgba(6,182,212,0.1); border-color:var(--secondary); color:var(--secondary);">PDF Notes</span>
+                        <a href="/study-materials" class="card-action">Explore Notes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- PYQ Papers Card -->
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3 class="card-title">Previous Year Papers</h3>
+                    <p class="card-description">Practice official year-wise previous year question papers in active exam simulation or download PDF keys.</p>
+                    <div class="card-footer">
+                        <span class="ca-demo-badge" style="background:rgba(99,102,241,0.1); border-color:var(--primary); color:var(--primary);">Year-wise</span>
+                        <a href="/pyq-papers" class="card-action">Solve Papers <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Subjects Grid -->
+        <section class="subjects-section animate-fade-in" style="animation-delay: 0.3s;">
+            <h2 class="section-title"><i class="fas fa-book"></i> Exam Subjects</h2>
+            <div class="subjects-grid">
+                <div class="subject-badge"><i class="fas fa-feather-alt"></i>Marathi</div>
+                <div class="subject-badge"><i class="fas fa-language"></i>English</div>
+                <div class="subject-badge"><i class="fas fa-globe"></i>General Knowledge</div>
+                <div class="subject-badge"><i class="fas fa-bullhorn"></i>Current Affairs</div>
+                <div class="subject-badge"><i class="fas fa-university"></i>History</div>
+                <div class="subject-badge"><i class="fas fa-mountain"></i>Geography</div>
+                <div class="subject-badge"><i class="fas fa-gavel"></i>Polity</div>
+                <div class="subject-badge"><i class="fas fa-coins"></i>Economics</div>
+                <div class="subject-badge"><i class="fas fa-flask"></i>General Science</div>
+                <div class="subject-badge"><i class="fas fa-calculator"></i>Mathematics</div>
+                <div class="subject-badge"><i class="fas fa-brain"></i>Reasoning</div>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section class="founder-section animate-fade-in" style="animation-delay: 0.4s;">
+            <h2 class="section-title"><i class="fas fa-user-tie"></i> Meet the Founder</h2>
+            <div class="founder-card">
+                <div class="founder-img-container">
+                    <img src="{{ url_for('static', filename='images/founder.jpg') }}" alt="Prajakta Lotake" class="founder-img">
+                </div>
+                <div class="founder-info">
+                    <h3 class="founder-name">Prajakta Lotake</h3>
+                    <p class="founder-role">Founder & Lead Developer, TalathiIQ</p>
+                    <p class="founder-bio">Empowering Maharashtra's Talathi Bharti aspirants with modern, AI-powered preparation tools. Our mission is to make learning interactive, accessible, and structured to help you achieve your career goals.</p>
+                    <div class="founder-socials">
+                        <a href="https://linkedin.com/in/prajakta-lotake-38187b30a" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="mailto:prajaktalotake03@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="tagline">TalathiIQ - Smart Preparation. Smarter Results.</p>
+        <p>&copy; <span id="currentYear"></span> TalathiIQ Exam Platform. Built for Maharashtra Talathi Bharti aspirants.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
