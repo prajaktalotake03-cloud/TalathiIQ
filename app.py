@@ -158,19 +158,17 @@ def init_db():
 
 
 def seed_pdf_notes():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
     data_dir = os.path.join(app.root_path, 'data')
     if not os.path.exists(data_dir):
+        conn.close()
         return
         
-    conn = get_db_connection()
+    seeded_count = 0
+    updated_count = 0
     for filename in os.listdir(data_dir):
-        if filename.lower().endswith('.pdf'):
-            existing = conn.execute(
-                'SELECT id FROM study_materials WHERE file_name = ?',
-                (filename,)
-            ).fetchone()
-            
-            if not existing:
                 filepath = os.path.join(data_dir, filename)
                 try:
                     with open(filepath, 'rb') as f:
@@ -224,12 +222,24 @@ def seed_pdf_notes():
                     else:
                         stage = "Prelims"
                         
-                    conn.execute(
-                        'INSERT INTO study_materials (title, subject, file_name, file_data, academy, stage) VALUES (?, ?, ?, ?, ?, ?)',
-                        (title, subject, filename, file_data, academy, stage)
-                    )
+                    existing = conn.execute(
+                        'SELECT id FROM study_materials WHERE file_name = ?',
+                        (filename,)
+                    ).fetchone()
+                    
+                    if existing:
+                        conn.execute(
+                            'UPDATE study_materials SET title = ?, subject = ?, academy = ?, stage = ? WHERE file_name = ?',
+                            (title, subject, academy, stage, filename)
+                        )
+                        print(f"Successfully updated note category: {filename}")
+                    else:
+                        conn.execute(
+                            'INSERT INTO study_materials (title, subject, file_name, file_data, academy, stage) VALUES (?, ?, ?, ?, ?, ?)',
+                            (title, subject, filename, file_data, academy, stage)
+                        )
+                        print(f"Successfully seeded new note: {filename}")
                     conn.commit()
-                    print(f"Successfully seeded note: {filename}")
                 except Exception as e:
                     print(f"Error seeding note {filename}: {e}")
     conn.close()
