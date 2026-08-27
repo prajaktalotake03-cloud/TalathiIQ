@@ -190,11 +190,11 @@ def seed_pdf_notes():
                         "phy-che book notes final.pdf"
                     }
                     prajakta_files = {
-                        "prajakta_lotake_constitution_notes.pdf",
                         "economics_notes_logo_added.pdf",
                         "geography_notes_final_bold_border.pdf",
                         "इतिहास_notes_economics_style_border.pdf",
-                        "भारतीय_संविधान_final_no_stars (1).pdf"
+                        "भारतीय_संविधान_final_no_stars (1).pdf",
+                        "science.pdf"
                     }
                     if "ignite" in fn_lower or fn_lower in ignite_files:
                         academy = "Ignite Academy Notes"
@@ -206,20 +206,26 @@ def seed_pdf_notes():
                         academy = "Standard Academy"
                         
                     # Determine Subject
-                    if "science" in fn_lower or "विज्ञान" in fn_lower or "biology" in fn_lower or "physics" in fn_lower or "chemistry" in fn_lower or "phy" in fn_lower or "che" in fn_lower:
-                        subject = "General Science"
+                    if "history" in fn_lower or "इतिहास" in fn_lower or "प्राचीन" in fn_lower:
+                        subject = "History"
+                    elif "geography" in fn_lower or "भूगोल" in fn_lower or "geo" in fn_lower:
+                        if academy == "Prajakta Lotake Notes":
+                            subject = "Geography & General Science"
+                        else:
+                            subject = "Geography"
+                    elif "science" in fn_lower or "विज्ञान" in fn_lower or "biology" in fn_lower or "physics" in fn_lower or "chemistry" in fn_lower or "phy" in fn_lower or "che" in fn_lower:
+                        if academy == "Prajakta Lotake Notes":
+                            subject = "Geography & General Science"
+                        else:
+                            subject = "General Science"
                     elif "economics" in fn_lower or "अर्थशास्त्र" in fn_lower or "eco" in fn_lower:
                         subject = "Economics"
-                    elif "geography" in fn_lower or "भूगोल" in fn_lower or "geo" in fn_lower:
-                        subject = "Geography"
                     elif "constitution" in fn_lower or "polity" in fn_lower or "संविधान" in fn_lower or "राज्यशास्त्र" in fn_lower:
                         subject = "Polity"
                     elif "marathi" in fn_lower or "मराठी" in fn_lower:
                         subject = "Marathi"
                     elif "english" in fn_lower or "eng" in fn_lower or "इंग्रजी" in fn_lower:
                         subject = "English"
-                    elif "history" in fn_lower or "इतिहास" in fn_lower or "प्राचीन" in fn_lower:
-                        subject = "History"
                     elif "math" in fn_lower or "reasoning" in fn_lower or "बुद्धिमत्ता" in fn_lower or "गणित" in fn_lower:
                         subject = "Mathematics"
                     elif "current" in fn_lower or "चालू घडामोडी" in fn_lower or "ca" in fn_lower:
