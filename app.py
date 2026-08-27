@@ -1,6 +1,10 @@
 import os
+import sys
 import json
 import sqlite3
+
+# Reconfigure stdout for Unicode support on Windows console
+sys.stdout.reconfigure(encoding='utf-8')
 import io
 from flask import Flask, render_template, jsonify, request, redirect, url_for, send_file, session
 from werkzeug.security import generate_password_hash, check_password_hash
