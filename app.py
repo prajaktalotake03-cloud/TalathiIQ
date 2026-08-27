@@ -157,8 +157,59 @@ def init_db():
     conn.close()
 
 
+def seed_pdf_notes():
+    data_dir = os.path.join(app.root_path, 'data')
+    if not os.path.exists(data_dir):
+        return
+        
+    conn = get_db_connection()
+    for filename in os.listdir(data_dir):
+        if filename.lower().endswith('.pdf'):
+            existing = conn.execute(
+                'SELECT id FROM study_materials WHERE file_name = ?',
+                (filename,)
+            ).fetchone()
+            
+            if not existing:
+                filepath = os.path.join(data_dir, filename)
+                try:
+                    with open(filepath, 'rb') as f:
+                        file_data = f.read()
+                        
+                    title = filename.replace('_', ' ').replace('.pdf', '')
+                    academy = "Prajakta Lotake"
+                    subject = "Polity"
+                    
+                    fn_lower = filename.lower()
+                    if "constitution" in fn_lower or "polity" in fn_lower:
+                        subject = "Polity"
+                    elif "history" in fn_lower:
+                        subject = "History"
+                    elif "geography" in fn_lower:
+                        subject = "Geography"
+                    elif "science" in fn_lower:
+                        subject = "General Science"
+                    elif "economics" in fn_lower:
+                        subject = "Economics"
+                    elif "marathi" in fn_lower:
+                        subject = "Marathi"
+                    elif "english" in fn_lower:
+                        subject = "English"
+                        
+                    conn.execute(
+                        'INSERT INTO study_materials (title, subject, file_name, file_data, academy, stage) VALUES (?, ?, ?, ?, ?, ?)',
+                        (title, subject, filename, file_data, academy, 'Prelims')
+                    )
+                    conn.commit()
+                    print(f"Successfully seeded note: {filename}")
+                except Exception as e:
+                    print(f"Error seeding note {filename}: {e}")
+    conn.close()
+
+
 # Initialize DB on startup
 init_db()
+seed_pdf_notes()
 
 # Helper to read questions database
 def load_questions():
