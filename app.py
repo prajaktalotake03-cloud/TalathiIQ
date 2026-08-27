@@ -180,7 +180,14 @@ def seed_pdf_notes():
                     fn_lower = filename.lower()
                     
                     # Determine Academy
-                    if "ignite" in fn_lower:
+                    ignite_files = {
+                        "indian polity notes.pdf",
+                        "maharashtra geography notes (1).pdf",
+                        "maharashtra history notes.pdf",
+                        "mpsc maths reasoning marathi book.pdf",
+                        "phy-che book notes final.pdf"
+                    }
+                    if "ignite" in fn_lower or fn_lower in ignite_files:
                         academy = "Ignite Academy Notes"
                     elif "prajakta" in fn_lower:
                         academy = "Prajakta Lotake Notes"
