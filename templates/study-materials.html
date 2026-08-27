@@ -484,26 +484,7 @@
                                     <i class="fas fa-folder-open"></i> {{ subject }}
                                 </h2>
                                 <div class="materials-grid">
-                                    {% for item in items %}
-                                        <div class="pdf-card">
-                                            <div class="pdf-header">
-                                                <div class="pdf-icon">
-                                                    <i class="fas fa-file-pdf"></i>
-                                                </div>
-                                                <div class="pdf-title-container">
-                                                    <h3 class="pdf-title">{{ item.title }}</h3>
-                                                    <div class="pdf-filename">{{ item.file_name }}</div>
-                                                    <div class="pdf-source" style="font-size: 0.85rem; color: var(--secondary); font-weight: 600; margin-top: 0.25rem;"><i class="fas fa-university"></i> {{ item.academy or 'Standard Academy' }}</div>
-                                                </div>
-                                            </div>
-                                            <div class="pdf-meta">
-                                                <span><i class="far fa-calendar-alt"></i> {{ item.uploaded_at.split(' ')[0] if item.uploaded_at else 'Recent' }}</span>
-                                                <a href="/download-pdf/{{ item.id }}" target="_blank" class="btn btn-secondary download-prajakta-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem; background: rgba(6, 182, 212, 0.1); border-color: var(--secondary); color: var(--secondary);">
-                                                    <i class="far fa-eye"></i> View PDF
-                                                </a>
-                                            </div>
-                                        </div>
-                                    {% endfor %}
+                                    <!-- Notes list blanked out, folder name only -->
                                 </div>
                             </div>
                         {% endfor %}
@@ -566,26 +547,7 @@
                                     <i class="fas fa-folder-open"></i> {{ subject }}
                                 </h2>
                                 <div class="materials-grid">
-                                    {% for item in items %}
-                                        <div class="pdf-card">
-                                            <div class="pdf-header">
-                                                <div class="pdf-icon">
-                                                    <i class="fas fa-file-pdf"></i>
-                                                </div>
-                                                <div class="pdf-title-container">
-                                                    <h3 class="pdf-title">{{ item.title }}</h3>
-                                                    <div class="pdf-filename">{{ item.file_name }}</div>
-                                                    <div class="pdf-source" style="font-size: 0.85rem; color: var(--secondary); font-weight: 600; margin-top: 0.25rem;"><i class="fas fa-university"></i> {{ item.academy or 'Standard Academy' }}</div>
-                                                </div>
-                                            </div>
-                                            <div class="pdf-meta">
-                                                <span><i class="far fa-calendar-alt"></i> {{ item.uploaded_at.split(' ')[0] if item.uploaded_at else 'Recent' }}</span>
-                                                <a href="/download-pdf/{{ item.id }}" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
-                                                    <i class="fas fa-download"></i> Download
-                                                </a>
-                                            </div>
-                                        </div>
-                                    {% endfor %}
+                                    <!-- Notes list blanked out, folder name only -->
                                 </div>
                             </div>
                         {% endfor %}
