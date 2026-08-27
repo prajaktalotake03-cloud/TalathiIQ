@@ -1081,5 +1081,5 @@ def current_affairs_book_download():
 
 
 if __name__ == '__main__':
-    # Running Flask app on port 5000
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
