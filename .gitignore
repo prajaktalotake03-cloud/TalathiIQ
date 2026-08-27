@@ -11,3 +11,4 @@ ENV/
 .DS_Store
 .idea/
 .vscode/
+.git.zip

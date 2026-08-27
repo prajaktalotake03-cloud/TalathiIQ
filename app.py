@@ -173,11 +173,11 @@ def seed_pdf_notes():
     seeded_count = 0
     updated_count = 0
     for filename in os.listdir(data_dir):
-                filepath = os.path.join(data_dir, filename)
-                try:
-                    with open(filepath, 'rb') as f:
-                        file_data = f.read()
-                        
+        if filename.lower().endswith('.pdf'):
+            filepath = os.path.join(data_dir, filename)
+            try:
+                with open(filepath, 'rb') as f:
+                    file_data = f.read()
                     title = filename.replace('_', ' ').replace('.pdf', '')
                     fn_lower = filename.lower()
                     
@@ -189,9 +189,16 @@ def seed_pdf_notes():
                         "mpsc maths reasoning marathi book.pdf",
                         "phy-che book notes final.pdf"
                     }
+                    prajakta_files = {
+                        "prajakta_lotake_constitution_notes.pdf",
+                        "economics_notes_logo_added.pdf",
+                        "geography_notes_final_bold_border.pdf",
+                        "इतिहास_notes_economics_style_border.pdf",
+                        "भारतीय_संविधान_final_no_stars (1).pdf"
+                    }
                     if "ignite" in fn_lower or fn_lower in ignite_files:
                         academy = "Ignite Academy Notes"
-                    elif "prajakta" in fn_lower:
+                    elif "prajakta" in fn_lower or fn_lower in prajakta_files:
                         academy = "Prajakta Lotake Notes"
                     elif "pyq" in fn_lower or "analysis" in fn_lower:
                         academy = "PYQ"
@@ -244,8 +251,8 @@ def seed_pdf_notes():
                         )
                         print(f"Successfully seeded new note: {filename}")
                     conn.commit()
-                except Exception as e:
-                    print(f"Error seeding note {filename}: {e}")
+            except Exception as e:
+                print(f"Error seeding note {filename}: {e}")
     conn.close()
 
 
