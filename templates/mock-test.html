@@ -17,7 +17,6 @@
             <a href="/current-affairs" class="nav-item">Current Affairs</a>
             <a href="/mcq" class="nav-item">AI MCQs</a>
             <a href="/mock-test" class="nav-item active">Mock Tests</a>
-            <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
             <a href="/syllabus" class="nav-item">Syllabus</a>
             <a href="/study-materials" class="nav-item">Study Notes</a>
             <a href="/revision" class="nav-item">Smart Revision</a>
@@ -38,7 +37,6 @@
         <a href="/current-affairs" class="nav-item">Current Affairs</a>
         <a href="/mcq" class="nav-item">AI MCQs</a>
         <a href="/mock-test" class="nav-item active">Mock Tests</a>
-        <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
         <a href="/syllabus" class="nav-item">Syllabus</a>
         <a href="/study-materials" class="nav-item">Study Notes</a>
         <a href="/revision" class="nav-item">Smart Revision</a>
@@ -73,6 +71,11 @@
                             <span class="radio-title">PYQ Database</span>
                             <span class="radio-subtitle">Previous Year Questions</span>
                         </label>
+                        <label class="config-radio-label" id="lblSourceAll">
+                            <input type="radio" name="dbSource" value="All" style="display:none;">
+                            <span class="radio-title">Combined Database (सर्व)</span>
+                            <span class="radio-subtitle">Standard + PYQ (1000+ Questions)</span>
+                        </label>
                     </div>
                 </div>
 
@@ -95,6 +98,11 @@
                             <input type="radio" name="difficulty" value="Hardest" style="display:none;">
                             <span class="radio-title">Hardest Test</span>
                             <span class="radio-subtitle">Highly challenging PYQs & tough topics</span>
+                        </label>
+                        <label class="config-radio-label" id="lblDiffAll">
+                            <input type="radio" name="difficulty" value="All" style="display:none;">
+                            <span class="radio-title">All Levels (सर्व स्तर)</span>
+                            <span class="radio-subtitle">Easy + Medium + Hard</span>
                         </label>
                     </div>
                 </div>
@@ -120,9 +128,14 @@
                             <span class="radio-subtitle">Full Mock Exam (60 Mins)</span>
                         </label>
                         <label class="config-radio-label" id="lblLimitMax">
-                            <input type="radio" name="qLimit" value="1000" style="display:none;">
-                            <span class="radio-title">Hardest 1000 Test</span>
-                            <span class="radio-subtitle">Maximum Questions (600 Mins)</span>
+                            <input type="radio" name="qLimit" value="1200" style="display:none;">
+                            <span class="radio-title">1000+ Questions (सर्व प्रश्न)</span>
+                            <span class="radio-subtitle">Full Question Pool (600+ Mins)</span>
+                        </label>
+                        <label class="config-radio-label" id="lblLimit20000">
+                            <input type="radio" name="qLimit" value="20000" style="display:none;">
+                            <span class="radio-title">20,000 Questions (MPSC Mode)</span>
+                            <span class="radio-subtitle">MPSC High Yield Question Pool</span>
                         </label>
                     </div>
                 </div>
@@ -137,6 +150,11 @@
                             <option value="Marathi" style="background:#090d16; color:var(--text-main);">Marathi (मराठी)</option>
                             <option value="English" style="background:#090d16; color:var(--text-main);">English (इंग्रजी)</option>
                             <option value="Mathematics" style="background:#090d16; color:var(--text-main);">Mathematics & Reasoning (अंकगणित व बुद्धिमत्ता)</option>
+                            <option value="History" style="background:#090d16; color:var(--text-main);">History (इतिहास)</option>
+                            <option value="Geography" style="background:#090d16; color:var(--text-main);">Geography (भूगोल)</option>
+                            <option value="Polity" style="background:#090d16; color:var(--text-main);">Polity (राज्यशास्त्र)</option>
+                            <option value="RTI" style="background:#090d16; color:var(--text-main);">RTI & RTS (माहिती व सेवा हक्क) [Mains]</option>
+                            <option value="Economics" style="background:#090d16; color:var(--text-main);">Economics (अर्थशास्त्र)</option>
                             <option value="General Knowledge" style="background:#090d16; color:var(--text-main);">General Knowledge (सामान्य ज्ञान)</option>
                             <option value="Current Affairs" style="background:#090d16; color:var(--text-main);">Current Affairs (चालू घडामोडी)</option>
                         </select>
@@ -150,6 +168,106 @@
                     <i class="fas fa-play"></i> Start Practice Session
                 </button>
             </div>
+        </div>
+
+        <!-- Quick Subject Tests Section -->
+        <div class="mock-config-container animate-fade-in" style="margin-top: 2rem; padding: 2rem;" id="quickTestsSection">
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem;"><i class="fas fa-bolt"></i> Mains Exam - Quick Subject Tests (मुख्य परीक्षा विषयनिहाय चाचण्या)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Select any subject to launch a direct 20-question practice test matching the Mains syllabus.</p>
+            
+            <div class="rev-grid" style="gap: 1rem; flex-wrap: wrap;">
+                <!-- Marathi -->
+                <a href="/mock-test?subject=Marathi&limit=20&stage=Mains" class="card" style="padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; text-decoration: none; border-color: rgba(99, 102, 241, 0.15); transition: var(--transition-smooth); flex: 1; min-width: 250px;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="background: rgba(99, 102, 241, 0.1); color: var(--primary); padding: 0.5rem; border-radius: 6px;"><i class="fas fa-feather-alt"></i></div>
+                        <div>
+                            <div style="font-weight: 700; color: var(--text-main);">मराठी भाषा (Marathi)</div>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">20 Qs | 12 Mins</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right" style="color: var(--text-dark);"></i>
+                </a>
+
+                <!-- English -->
+                <a href="/mock-test?subject=English&limit=20&stage=Mains" class="card" style="padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; text-decoration: none; border-color: rgba(99, 102, 241, 0.15); transition: var(--transition-smooth); flex: 1; min-width: 250px;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="background: rgba(6, 182, 212, 0.1); color: var(--secondary); padding: 0.5rem; border-radius: 6px;"><i class="fas fa-language"></i></div>
+                        <div>
+                            <div style="font-weight: 700; color: var(--text-main);">English Language</div>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">20 Qs | 12 Mins</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right" style="color: var(--text-dark);"></i>
+                </a>
+
+                <!-- Aptitude & Reasoning -->
+                <a href="/mock-test?subject=Reasoning&limit=20&stage=Mains" class="card" style="padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; text-decoration: none; border-color: rgba(99, 102, 241, 0.15); transition: var(--transition-smooth); flex: 1; min-width: 250px;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 0.5rem; border-radius: 6px;"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <div style="font-weight: 700; color: var(--text-main);">बुद्धिमापन व अंकगणित</div>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">20 Qs | 12 Mins</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right" style="color: var(--text-dark);"></i>
+                </a>
+
+                <!-- RTI & RTS -->
+                <a href="/mock-test?subject=RTI&limit=5&stage=Mains" class="card" style="padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; text-decoration: none; border-color: rgba(245, 158, 11, 0.15); transition: var(--transition-smooth); flex: 1; min-width: 250px;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="background: rgba(245, 158, 11, 0.1); color: var(--warning); padding: 0.5rem; border-radius: 6px;"><i class="fas fa-gavel"></i></div>
+                        <div>
+                            <div style="font-weight: 700; color: var(--text-main);">माहिती व सेवा हक्क (RTI)</div>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">5 Qs | 3 Mins</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right" style="color: var(--text-dark);"></i>
+                </a>
+
+                <!-- Polity -->
+                <a href="/mock-test?subject=Polity&limit=20&stage=Mains" class="card" style="padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; text-decoration: none; border-color: rgba(99, 102, 241, 0.15); transition: var(--transition-smooth); flex: 1; min-width: 250px;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="background: rgba(139, 92, 246, 0.1); color: var(--accent); padding: 0.5rem; border-radius: 6px;"><i class="fas fa-balance-scale"></i></div>
+                        <div>
+                            <div style="font-weight: 700; color: var(--text-main);">भारतीय राज्यघटना (Polity)</div>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">20 Qs | 12 Mins</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right" style="color: var(--text-dark);"></i>
+                </a>
+
+                <!-- Geography -->
+                <a href="/mock-test?subject=Geography&limit=20&stage=Mains" class="card" style="padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; text-decoration: none; border-color: rgba(99, 102, 241, 0.15); transition: var(--transition-smooth); flex: 1; min-width: 250px;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 0.5rem; border-radius: 6px;"><i class="fas fa-mountain"></i></div>
+                        <div>
+                            <div style="font-weight: 700; color: var(--text-main);">भूगोल (Geography)</div>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">20 Qs | 12 Mins</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right" style="color: var(--text-dark);"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- MPSC PDF Question Importer Form -->
+        <div class="mock-config-container animate-fade-in" style="margin-top: 2rem; padding: 2rem;" id="mpscImporterSection">
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--secondary); margin-bottom: 1.5rem;"><i class="fas fa-file-upload"></i> MPSC & Talathi PDF Question Importer (प्रश्नपत्रिका आयात करा)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Upload official MPSC or Talathi question paper PDFs. Our AI engine will parse, extract, and index all questions by subject to expand your practice database up to 20,000 questions.
+            </p>
+            
+            <form id="pyqUploadForm" enctype="multipart/form-data" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 250px; position: relative;">
+                        <input type="file" id="pyqFile" name="file" accept=".pdf" required style="width: 100%; padding: 0.85rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); color: var(--text-main); font-family: var(--font-sans); outline: none; cursor: pointer;">
+                    </div>
+                    <button type="submit" class="btn btn-secondary" id="pyqUploadBtn" style="padding: 0.95rem 2rem; font-weight: 700;">
+                        <i class="fas fa-file-import"></i> Extract & Import Questions
+                    </button>
+                </div>
+                <div id="uploadStatus" style="font-size: 0.9rem; font-weight: 600; display: none;"></div>
+            </form>
         </div>
 
         <!-- Test Interface Container -->

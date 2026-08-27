@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const paper = urlParams.get('paper');
         if (paper) {
             startPaperMockTest(paper);
+        } else {
+            // Auto-start direct subject test if specified in URL
+            const subject = urlParams.get('subject');
+            if (subject) {
+                const limit = parseInt(urlParams.get('limit') || '20', 10);
+                const stage = urlParams.get('stage') || 'Mains';
+                const difficulty = urlParams.get('difficulty') || 'Medium';
+                const source = urlParams.get('source') || 'Standard';
+                startDirectMockTest(source, difficulty, limit, subject, stage);
+            }
         }
     }
 });
@@ -98,6 +108,57 @@ function setupConfigPanel() {
     if (startBtn) {
         startBtn.addEventListener('click', startConfiguredMockTest);
     }
+
+    // MPSC PDF Question Importer Form submit handler
+    const pyqForm = document.getElementById('pyqUploadForm');
+    if (pyqForm) {
+        pyqForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const fileInput = document.getElementById('pyqFile');
+            const statusDiv = document.getElementById('uploadStatus');
+            const uploadBtn = document.getElementById('pyqUploadBtn');
+
+            if (!fileInput.files || fileInput.files.length === 0) {
+                alert("Please select a PDF file first.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            uploadBtn.disabled = true;
+            uploadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Parsing PDF...';
+            statusDiv.style.display = 'block';
+            statusDiv.style.color = 'var(--text-muted)';
+            statusDiv.textContent = 'Uploading and processing PDF question paper...';
+
+            try {
+                const response = await fetch('/admin/upload-pyq', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    statusDiv.style.color = 'var(--success)';
+                    statusDiv.innerHTML = `<i class="fas fa-check-circle"></i> Success: ${data.message}`;
+                    alert(data.message);
+                    window.location.reload();
+                } else {
+                    const errText = await response.text();
+                    statusDiv.style.color = 'var(--danger)';
+                    statusDiv.textContent = `Error: ${errText}`;
+                }
+            } catch (error) {
+                console.error("Error uploading PYQ:", error);
+                statusDiv.style.color = 'var(--danger)';
+                statusDiv.textContent = 'Server communication error. Check console.';
+            } finally {
+                uploadBtn.disabled = false;
+                uploadBtn.innerHTML = '<i class="fas fa-file-import"></i> Extract & Import Questions';
+            }
+        });
+    }
 }
 
 async function startConfiguredMockTest() {
@@ -105,14 +166,19 @@ async function startConfiguredMockTest() {
     const difficulty = document.querySelector('input[name="difficulty"]:checked').value;
     const limit = parseInt(document.querySelector('input[name="qLimit"]:checked').value, 10);
     const subject = document.querySelector('select[name="testSubject"]').value;
+    const stage = localStorage.getItem('talathi_stage') || 'Prelims';
 
+    await startDirectMockTest(source, difficulty, limit, subject, stage);
+}
+
+async function startDirectMockTest(source, difficulty, limit, subject, stage) {
     const startBtn = document.getElementById('startTestBtn');
-    startBtn.disabled = true;
-    startBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Initializing Test...';
+    if (startBtn) {
+        startBtn.disabled = true;
+        startBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Initializing Test...';
+    }
 
     try {
-        const urlParams = new URLSearchParams(window.location.search);
-        const stage = urlParams.get('stage') || localStorage.getItem('talathi_stage') || '';
         let url = `/api/questions?source=${source}&difficulty=${difficulty}&limit=${limit}&subject=${subject}`;
         if (stage) {
             url += `&stage=${stage}`;
@@ -122,12 +188,14 @@ async function startConfiguredMockTest() {
 
         if (mockQuestions.length === 0) {
             alert(`No questions found in the ${source} Database for ${subject} subject with ${difficulty} difficulty. Please select a different configuration.`);
-            startBtn.disabled = false;
-            startBtn.innerHTML = '<i class="fas fa-play"></i> Start Practice Session';
+            if (startBtn) {
+                startBtn.disabled = false;
+                startBtn.innerHTML = '<i class="fas fa-play"></i> Start Practice Session';
+            }
             return;
         }
 
-        // Initialize state variables (36 seconds per question, making 100 questions = 60 minutes)
+        // Initialize state variables (36 seconds per question)
         totalTime = mockQuestions.length * 36;
         timeRemaining = totalTime;
         userAnswers = Array(mockQuestions.length).fill(null);
@@ -135,8 +203,17 @@ async function startConfiguredMockTest() {
         currentQuestionIndex = 0;
 
         // Hide config, show test container
-        document.getElementById('configContainer').style.display = 'none';
-        document.getElementById('testContainer').style.display = 'grid';
+        const configContainer = document.getElementById('configContainer');
+        if (configContainer) configContainer.style.display = 'none';
+        
+        const quickTests = document.getElementById('quickTestsSection');
+        if (quickTests) quickTests.style.display = 'none';
+
+        const mpscImporter = document.getElementById('mpscImporterSection');
+        if (mpscImporter) mpscImporter.style.display = 'none';
+
+        const testContainer = document.getElementById('testContainer');
+        if (testContainer) testContainer.style.display = 'grid';
 
         // Render controls and initial questions
         renderNavGrid();
@@ -168,8 +245,10 @@ async function startConfiguredMockTest() {
     } catch (error) {
         console.error("Error starting mock test:", error);
         alert("Failed to start mock test. Please check server logs.");
-        startBtn.disabled = false;
-        startBtn.innerHTML = '<i class="fas fa-play"></i> Start Practice Session';
+        if (startBtn) {
+            startBtn.disabled = false;
+            startBtn.innerHTML = '<i class="fas fa-play"></i> Start Practice Session';
+        }
     }
 }
 
@@ -358,7 +437,8 @@ function submitMockTest() {
         unattempted: unattempted,
         accuracy: accuracy,
         timeTaken: timeTaken,
-        totalQuestions: totalQuestions
+        totalQuestions: totalQuestions,
+        questionIds: mockQuestions.map(q => q.id)
     };
 
     localStorage.setItem('talathi_last_mock_result', JSON.stringify(mockResult));
@@ -376,6 +456,12 @@ function submitMockTest() {
     // Recalculate global average accuracy
     stats.accuracy = Math.round(((stats.accuracy * (stats.mockTestsTaken - 1)) + accuracy) / stats.mockTestsTaken);
     localStorage.setItem('talathi_stats', JSON.stringify(stats));
+
+    // Update Daily target progress
+    if (typeof incrementDailyStat === 'function') {
+        incrementDailyStat('mockTestsTaken', 1);
+        incrementDailyStat('questionsSolved', correct + incorrect);
+    }
 
     // Redirect to results page
     window.location.href = '/result';

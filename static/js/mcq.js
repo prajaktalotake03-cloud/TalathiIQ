@@ -217,6 +217,11 @@ function submitAnswer() {
     globalStats.accuracy = Math.round((correctCount / (correctCount + wrongCount)) * 100);
     localStorage.setItem('talathi_stats', JSON.stringify(globalStats));
 
+    // Update Daily target progress
+    if (typeof incrementDailyStat === 'function') {
+        incrementDailyStat('questionsSolved', 1);
+    }
+
     updateScorecard();
 
     // Render Answer Styles

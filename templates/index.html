@@ -17,7 +17,6 @@
             <a href="/current-affairs" class="nav-item">Current Affairs</a>
             <a href="/mcq" class="nav-item">AI MCQs</a>
             <a href="/mock-test" class="nav-item">Mock Tests</a>
-            <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
             <a href="/syllabus" class="nav-item">Syllabus</a>
             <a href="/study-materials" class="nav-item">Study Notes</a>
             <a href="/revision" class="nav-item">Smart Revision</a>
@@ -38,7 +37,6 @@
         <a href="/current-affairs" class="nav-item">Current Affairs</a>
         <a href="/mcq" class="nav-item">AI MCQs</a>
         <a href="/mock-test" class="nav-item">Mock Tests</a>
-        <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
         <a href="/syllabus" class="nav-item">Syllabus</a>
         <a href="/study-materials" class="nav-item">Study Notes</a>
         <a href="/revision" class="nav-item">Smart Revision</a>
@@ -64,8 +62,8 @@
                 <button class="stage-toggle-btn active" id="btnPrelims">
                     <i class="fas fa-graduation-cap"></i> Prelims
                 </button>
-                <button class="stage-toggle-btn" id="btnMains" disabled style="opacity: 0.5; cursor: not-allowed;" title="Mains preparation is coming soon!">
-                    <i class="fas fa-award"></i> Mains <span style="font-size: 0.6rem; background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 10px; margin-left: 5px; font-weight: 700; text-transform: uppercase;">Soon</span>
+                <button class="stage-toggle-btn" id="btnMains">
+                    <i class="fas fa-award"></i> Mains
                 </button>
                 <span style="font-size: 0.75rem; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.15); color: var(--success); padding: 0.35rem 0.75rem; border-radius: 50px; font-weight: 700; margin-left: 0.25rem; margin-right: 0.25rem; display: inline-flex; align-items: center; gap: 0.25rem; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">
                     <i class="fas fa-check-circle" style="font-size: 0.7rem;"></i> No Interview (मुलाखत नाही)
@@ -98,9 +96,69 @@
             </div>
         </section>
 
+        <!-- Daily Motivation & Study Streak Widget -->
+        <section class="motivation-section animate-fade-in" style="animation-delay: 0.15s; margin-bottom: 2.5rem;">
+            <div class="motivation-container" style="background: rgba(22, 28, 45, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--border-radius-md); padding: 1.5rem; display: grid; gap: 1.5rem; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+                <!-- Left: Daily Quote & Streak -->
+                <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 1.25rem;">
+                    <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
+                        <div id="streakBadge" style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; color: #f59e0b; font-weight: 700; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); padding: 0.35rem 0.75rem; border-radius: 50px;" title="तुम्ही सतत अभ्यास करत आहात!">
+                            <i class="fas fa-fire" style="font-size: 0.95rem; filter: drop-shadow(0 0 5px #f59e0b);"></i>
+                            <span id="streakDaysCount">5</span> दिवसांची अभ्यास श्रृंखला!
+                        </div>
+                    </div>
+                    <blockquote style="margin: 0; padding-left: 0;">
+                        <p id="motivationalQuoteText" style="font-size: 1.15rem; color: var(--text-main); font-weight: 600; line-height: 1.5; font-style: italic; margin-bottom: 0.5rem;">
+                            "नवीन ध्येय ठरवण्यासाठी किंवा नवीन स्वप्न पाहण्यासाठी तुमचे वय कधीही जास्त नसते."
+                        </p>
+                        <cite style="font-size: 0.85rem; color: var(--text-muted); font-style: normal; font-weight: 500;">— परीक्षा मार्गदर्शन</cite>
+                    </blockquote>
+                </div>
+
+                <!-- Right: Daily Checklist for Motivation -->
+                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 1.25rem; border-radius: var(--border-radius-sm); display: flex; flex-direction: column; gap: 0.85rem;">
+                    <h3 style="margin: 0; font-size: 0.9rem; font-weight: 700; color: var(--text-main); display: flex; align-items: center; gap: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                        <i class="fas fa-tasks" style="color: var(--secondary);"></i> आजचे अभ्यास ध्येय (Daily Checklists)
+                    </h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="motivation-task">
+                            <div style="display: flex; align-items: center; gap: 0.6rem; color: var(--text-main);">
+                                <span id="chkMcqIcon"><i class="far fa-circle"></i></span>
+                                <span>१० सराव प्रश्न सोडवा (Solve 10 MCQs)</span>
+                            </div>
+                            <span id="chkMcqProgress" style="font-weight: 700;">0 / 10</span>
+                        </div>
+                        <div class="motivation-task">
+                            <div style="display: flex; align-items: center; gap: 0.6rem; color: var(--text-main);">
+                                <span id="chkMockIcon"><i class="far fa-circle"></i></span>
+                                <span>१ मॉक टेस्ट पूर्ण करा (Take 1 Mock Test)</span>
+                            </div>
+                            <span id="chkMockProgress" style="font-weight: 700;">0 / 1</span>
+                        </div>
+                        <div class="motivation-task">
+                            <div style="display: flex; align-items: center; gap: 0.6rem; color: var(--text-main);">
+                                <span id="chkTimeIcon"><i class="far fa-circle"></i></span>
+                                <span>१० मिनिटे अभ्यास वेळ (Study for 10 Mins)</span>
+                            </div>
+                            <span id="chkTimeProgress" style="font-weight: 700;">0.0m / 10.0m</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Goal Status message -->
+                    <div id="motivationStatusMessage" style="margin-top: 0.5rem; padding: 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; text-align: center; display: none;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Dashboard Cards -->
         <section class="dashboard-section animate-fade-in" style="animation-delay: 0.2s;">
-            <h2 class="section-title"><i class="fas fa-th-large"></i> Dashboard</h2>
+            <div class="dashboard-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                <h2 class="section-title" style="margin-bottom: 0;"><i class="fas fa-th-large"></i> Dashboard</h2>
+                <button id="targetBtn" class="btn btn-primary" style="padding: 0.65rem 1.25rem; font-size: 0.95rem; background: linear-gradient(135deg, var(--secondary), var(--primary)); border: none;">
+                    <i class="fas fa-bullseye"></i> Daily Target (रोजचे ध्येय)
+                </button>
+            </div>
             <div class="dashboard-grid">
                 
                 <!-- Current Affairs Card -->
@@ -203,7 +261,6 @@
                     <p class="card-description">Practice official year-wise previous year question papers in active exam simulation or download PDF keys.</p>
                     <div class="card-footer">
                         <span class="ca-demo-badge" style="background:rgba(99,102,241,0.1); border-color:var(--primary); color:var(--primary);">Year-wise</span>
-                        <a href="/pyq-papers" class="card-action">Solve Papers <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -213,19 +270,54 @@
 
         <!-- Subjects Grid -->
         <section class="subjects-section animate-fade-in" style="animation-delay: 0.3s;">
-            <h2 class="section-title"><i class="fas fa-book"></i> Exam Subjects</h2>
-            <div class="subjects-grid">
-                <div class="subject-badge"><i class="fas fa-feather-alt"></i>Marathi</div>
-                <div class="subject-badge"><i class="fas fa-language"></i>English</div>
-                <div class="subject-badge"><i class="fas fa-globe"></i>General Knowledge</div>
-                <div class="subject-badge"><i class="fas fa-bullhorn"></i>Current Affairs</div>
-                <div class="subject-badge"><i class="fas fa-university"></i>History</div>
-                <div class="subject-badge"><i class="fas fa-mountain"></i>Geography</div>
-                <div class="subject-badge"><i class="fas fa-gavel"></i>Polity</div>
-                <div class="subject-badge"><i class="fas fa-coins"></i>Economics</div>
-                <div class="subject-badge"><i class="fas fa-flask"></i>General Science</div>
-                <div class="subject-badge"><i class="fas fa-calculator"></i>Mathematics</div>
-                <div class="subject-badge"><i class="fas fa-brain"></i>Reasoning</div>
+            <h2 class="section-title"><i class="fas fa-book"></i> Exam Subjects & Syllabus</h2>
+            
+            <div class="rev-grid" style="gap: 1.5rem; margin-top: 1rem;">
+                <div style="flex: 1; min-width: 280px;">
+                    <h4 style="color: var(--text-main); margin-bottom: 1rem; font-size: 1.1rem; font-weight: 700;">Subject List</h4>
+                    
+                    <!-- Prelims Subjects Grid -->
+                    <div class="subjects-grid" id="subjects-grid-prelims">
+                        <div class="subject-badge"><i class="fas fa-university"></i>History (इतिहास)</div>
+                        <div class="subject-badge"><i class="fas fa-mountain"></i>Geography (भूगोल)</div>
+                        <div class="subject-badge"><i class="fas fa-gavel"></i>Polity (राज्यघटना)</div>
+                        <div class="subject-badge"><i class="fas fa-coins"></i>Economics (अर्थशास्त्र)</div>
+                        <div class="subject-badge"><i class="fas fa-flask"></i>General Science (सामान्य विज्ञान)</div>
+                        <div class="subject-badge"><i class="fas fa-bullhorn"></i>Current Affairs (चालू घडामोडी)</div>
+                        <div class="subject-badge"><i class="fas fa-calculator"></i>Mathematics (अंकगणित)</div>
+                        <div class="subject-badge"><i class="fas fa-brain"></i>Reasoning (बुद्धिमत्ता)</div>
+                    </div>
+
+                    <!-- Mains Subjects Grid -->
+                    <div class="subjects-grid" id="subjects-grid-mains" style="display: none;">
+                        <div class="subject-badge"><i class="fas fa-feather-alt"></i>Marathi (मराठी)</div>
+                        <div class="subject-badge"><i class="fas fa-language"></i>English (इंग्रजी)</div>
+                        <div class="subject-badge"><i class="fas fa-brain"></i>Reasoning (बुद्धिमापन व आकलन)</div>
+                        <div class="subject-badge"><i class="fas fa-bullhorn"></i>Current Affairs (चालू घडामोडी)</div>
+                        <div class="subject-badge"><i class="fas fa-calculator"></i>Aptitude & Stats (अंकगणित व सांख्यिकी)</div>
+                        <div class="subject-badge"><i class="fas fa-gavel"></i>RTI & RTS Acts (माहितीचा व सेवा हक्क)</div>
+                        <div class="subject-badge"><i class="fas fa-balance-scale"></i>Polity (भारतीय राज्यघटना)</div>
+                        <div class="subject-badge"><i class="fas fa-university"></i>History (महाराष्ट्राचा इतिहास)</div>
+                        <div class="subject-badge"><i class="fas fa-mountain"></i>Geography (महाराष्ट्राचा भूगोल)</div>
+                    </div>
+                </div>
+
+                <div class="card" style="flex: 1.2; min-width: 280px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
+                    <div id="syllabus-overview-prelims">
+                        <h4 style="color: var(--secondary); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;"><i class="fas fa-list-ol"></i> Prelims Syllabus Scheme</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                            The Combined Group-C Prelims Exam is of <strong>100 Marks</strong> comprising 100 objective questions with 1-hour duration. There is a negative marking of <strong>1/4th (25%)</strong> for incorrect responses.
+                        </p>
+                        <a href="/syllabus?stage=Prelims" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><i class="fas fa-external-link-alt"></i> View Full Prelims Syllabus</a>
+                    </div>
+                    <div id="syllabus-overview-mains" style="display: none;">
+                        <h4 style="color: var(--primary); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;"><i class="fas fa-award"></i> Mains Syllabus Scheme</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                            The Mains Exam consists of <strong>2 Papers</strong> (200 marks each, 400 marks total). Paper 1 covers Marathi & English (100 Qs), while Paper 2 covers General Studies & Reasoning (100 Qs).
+                        </p>
+                        <a href="/syllabus?stage=Mains" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><i class="fas fa-external-link-alt"></i> View Full Mains Syllabus</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -255,6 +347,55 @@
         <p class="tagline">TalathiIQ - Smart Preparation. Smarter Results.</p>
         <p>&copy; <span id="currentYear"></span> TalathiIQ Exam Platform. Built for Maharashtra Talathi Bharti aspirants.</p>
     </footer>
+
+    <!-- Daily Target Modal -->
+    <div id="targetModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fas fa-bullseye"></i> Daily Target (रोजचे ध्येय)</h3>
+                <button id="targetClose" class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="modal-body modal-grid">
+                <!-- Left Panel: Profile and Motivation -->
+                <div class="target-profile-section">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="background: linear-gradient(135deg, var(--accent), var(--primary)); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">PL</div>
+                        <div>
+                            <h4 style="margin: 0; color: var(--text-main); font-size: 1.05rem; font-weight: 700;">Prajakta Lotake</h4>
+                            <span style="font-size: 0.75rem; color: var(--secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">MPSC Aspirant</span>
+                        </div>
+                    </div>
+                    
+                    <div class="target-poster-wrapper" style="border-radius: var(--border-radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                        <img src="{{ url_for('static', filename='images/target_poster.jpg') }}" alt="Target Poster" style="width: 100%; display: block; object-fit: cover;">
+                    </div>
+                    
+                    <div class="emotional-quote" style="background: rgba(239, 68, 68, 0.05); border-left: 3px solid var(--danger); padding: 0.65rem 0.85rem; border-radius: 0 8px 8px 0; margin-bottom: 1rem;">
+                        <p style="margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--text-main); font-weight: 500; font-style: italic;">
+                            “हे फक्त माझं स्वप्न नाही…<br>हे त्या आई-बाबांचं स्वप्न आहे…” ❤️
+                        </p>
+                    </div>
+                    
+                    <div class="goal-checklist" style="margin-bottom: 1rem;">
+                        <h5 style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 700; letter-spacing: 0.5px;">माझे ध्येय व वैशिष्ट्ये</h5>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; font-size: 0.8rem; color: var(--text-main);">
+                            <div style="display: flex; align-items: center; gap: 0.35rem;"><span style="color: var(--success);"><i class="fas fa-check-circle"></i></span> 📚 अभ्यास साहित्य</div>
+                            <div style="display: flex; align-items: center; gap: 0.35rem;"><span style="color: var(--success);"><i class="fas fa-check-circle"></i></span> 📝 महत्त्वाचे विषय</div>
+                            <div style="display: flex; align-items: center; gap: 0.35rem;"><span style="color: var(--success);"><i class="fas fa-check-circle"></i></span> 🎯 MCQ प्रॅक्टिस</div>
+                            <div style="display: flex; align-items: center; gap: 0.35rem;"><span style="color: var(--success);"><i class="fas fa-check-circle"></i></span> 📖 मुख्य परीक्षा</div>
+                            <div style="display: flex; align-items: center; gap: 0.35rem;"><span style="color: var(--success);"><i class="fas fa-check-circle"></i></span> 🔄 टेस्ट व रिव्हिजन</div>
+                            <div style="display: flex; align-items: center; gap: 0.35rem;"><span style="color: var(--success);"><i class="fas fa-check-circle"></i></span> 🤖 सोपा प्लॅटफॉर्म</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ultimate-goal" style="background: rgba(16, 185, 129, 0.05); border: 1px dashed rgba(16, 185, 129, 0.2); padding: 0.65rem; border-radius: 8px; text-align: center;">
+                        <span style="font-size: 0.7rem; color: var(--success); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.2rem;">🏆 अंतिम ध्येय</span>
+                        <p style="margin: 0; font-size: 0.8rem; color: var(--text-main); font-weight: 600; line-height: 1.3;">एक व्यासपीठ. संपूर्ण तयारी. यशाच्या दिशेने एक पाऊल. 🎯</p>
+                    </div>
+                </div>
+            </div>
+    </div>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>

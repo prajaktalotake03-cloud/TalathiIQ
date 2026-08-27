@@ -98,6 +98,7 @@ def init_db():
             file_name TEXT NOT NULL,
             file_data BLOB NOT NULL,
             academy TEXT DEFAULT 'Standard Academy',
+            stage TEXT DEFAULT 'Prelims',
             uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     ''')
@@ -106,6 +107,13 @@ def init_db():
         conn.execute('SELECT academy FROM study_materials LIMIT 1')
     except sqlite3.OperationalError:
         conn.execute('ALTER TABLE study_materials ADD COLUMN academy TEXT DEFAULT "Standard Academy"')
+        conn.commit()
+
+    # Check if 'stage' column exists, otherwise alter table
+    try:
+        conn.execute('SELECT stage FROM study_materials LIMIT 1')
+    except sqlite3.OperationalError:
+        conn.execute("ALTER TABLE study_materials ADD COLUMN stage TEXT DEFAULT 'Prelims'")
         conn.commit()
 
     conn.execute('''
@@ -125,8 +133,29 @@ def init_db():
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     ''')
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS download_info (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            mobile TEXT NOT NULL,
+            district TEXT NOT NULL,
+            submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS imp_topics (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            subject TEXT NOT NULL,
+            file_name TEXT NOT NULL,
+            file_data BLOB NOT NULL,
+            description TEXT,
+            uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
     conn.commit()
     conn.close()
+
 
 # Initialize DB on startup
 init_db()
@@ -377,22 +406,30 @@ def api_questions():
     
     # Filter by source
     if source:
-        questions = [q for q in questions if q.get('source', 'Standard').lower() == source.lower()]
+        if source.lower() != 'all':
+            questions = [q for q in questions if q.get('source', 'Standard').lower() == source.lower()]
     else:
         questions = [q for q in questions if q.get('source', 'Standard').lower() == 'standard']
         
     # Filter by difficulty
     if difficulty:
-        diff_val = 'Hard' if difficulty.lower() == 'hardest' else difficulty.capitalize()
-        questions = [q for q in questions if q.get('difficulty', 'Medium').capitalize() == diff_val]
+        if difficulty.lower() != 'all':
+            diff_val = 'Hard' if difficulty.lower() == 'hardest' else difficulty.capitalize()
+            questions = [q for q in questions if q.get('difficulty', 'Medium').capitalize() == diff_val]
         
     # Filter by subject
     if subject and subject.lower() != 'all':
         subj_lower = subject.lower()
         if 'geography' in subj_lower or 'भूगोल' in subj_lower:
             questions = [q for q in questions if q.get('subject', '').lower() == 'geography' or 'geography' in q.get('topic', '').lower() or 'भूगोल' in q.get('topic', '').lower()]
-        elif 'history' in subj_lower or 'polity' in subj_lower:
-            questions = [q for q in questions if q.get('subject', '').lower() in ['history', 'polity'] or 'history' in q.get('topic', '').lower() or 'polity' in q.get('topic', '').lower() or 'इतिहास' in q.get('topic', '').lower() or 'राज्यशास्त्र' in q.get('topic', '').lower()]
+        elif 'history' in subj_lower or 'इतिहास' in subj_lower:
+            questions = [q for q in questions if q.get('subject', '').lower() == 'history' or 'history' in q.get('topic', '').lower() or 'इतिहास' in q.get('topic', '').lower() or 'सुधारक' in q.get('topic', '').lower()]
+        elif 'polity' in subj_lower or 'राज्यशास्त्र' in subj_lower or 'संविधान' in subj_lower:
+            questions = [q for q in questions if q.get('subject', '').lower() == 'polity' or 'polity' in q.get('topic', '').lower() or 'राज्यशास्त्र' in q.get('topic', '').lower() or 'संविधान' in q.get('topic', '').lower() or 'न्यायव्यवस्था' in q.get('topic', '').lower() or 'संसद' in q.get('topic', '').lower() or 'पंचायतराज' in q.get('topic', '').lower()]
+        elif 'rti' in subj_lower or 'service' in subj_lower or 'हक्क' in subj_lower:
+            questions = [q for q in questions if 'rti' in q.get('topic', '').lower() or 'rts' in q.get('topic', '').lower() or 'हक्क' in q.get('topic', '').lower() or 'माहिती' in q.get('topic', '').lower()]
+        elif 'economics' in subj_lower or 'अर्थशास्त्र' in subj_lower:
+            questions = [q for q in questions if q.get('subject', '').lower() == 'economics' or 'economics' in q.get('topic', '').lower() or 'अर्थशास्त्र' in q.get('topic', '').lower() or 'योजना' in q.get('topic', '').lower() or 'वित्त' in q.get('topic', '').lower()]
         elif 'science' in subj_lower or 'विज्ञान' in subj_lower:
             questions = [q for q in questions if q.get('subject', '').lower() in ['science', 'general science'] or 'science' in q.get('topic', '').lower() or 'विज्ञान' in q.get('topic', '').lower()]
         elif 'math' in subj_lower or 'गणित' in subj_lower:
@@ -428,6 +465,7 @@ def upload_pyq():
         max_id = max([q.get('id', 0) for q in existing_questions]) if existing_questions else 0
         for i, q in enumerate(new_questions):
             q["id"] = max_id + 1 + i
+            q["source"] = "PYQ"
             # Assign subjects based on simple heuristics in question text
             text = q["question"].lower()
             if "marathi" in text or "मराठी" in text:
@@ -456,37 +494,78 @@ def upload_pyq():
 
 @app.route('/study-materials')
 def study_materials():
+    stage = request.args.get('stage', 'Prelims')
     conn = get_db_connection()
     materials = conn.execute(
-        'SELECT id, title, subject, file_name, uploaded_at, academy FROM study_materials ORDER BY uploaded_at DESC'
+        'SELECT id, title, subject, file_name, uploaded_at, academy, stage FROM study_materials WHERE stage = ? ORDER BY uploaded_at DESC',
+        (stage,)
     ).fetchall()
     requests_list = conn.execute(
         'SELECT name, request_text, submitted_at FROM material_requests ORDER BY submitted_at DESC'
     ).fetchall()
+    
+    # Fetch IMP topics
+    imp_topics_db = []
+    try:
+        imp_topics_db = conn.execute(
+            'SELECT id, title, subject, file_name, description, uploaded_at FROM imp_topics ORDER BY uploaded_at DESC'
+        ).fetchall()
+    except sqlite3.OperationalError:
+        # Table might not be created yet if startup hasn't run the updated init_db()
+        pass
+        
     conn.close()
     
-    # Split into Prajakta Lotake Notes and Other Notes
-    prajakta_subjects = ['Geography', 'Economics', 'History', 'Polity']
+    # Group all materials into Prajakta Lotake notes vs other notes vs PYQs vs Ignite Notes
     prajakta_notes = {}
     other_notes = {}
-    
+    pyq_notes = {}
+    ignite_notes = {}
     for item in materials:
         subject = item['subject']
-        if subject in prajakta_subjects:
+        academy_name = item['academy'] or ''
+        title_lower = item['title'].lower()
+        file_name_lower = item['file_name'].lower()
+        academy_lower = academy_name.lower()
+        
+        is_pyq = (stage == 'Mains') or ('pyq' in title_lower or 'pyq' in file_name_lower or 'pyq' in academy_lower)
+        
+        if is_pyq:
+            if subject not in pyq_notes:
+                pyq_notes[subject] = []
+            pyq_notes[subject].append(item)
+        elif 'prajakta' in academy_lower:
             if subject not in prajakta_notes:
                 prajakta_notes[subject] = []
             prajakta_notes[subject].append(item)
+        elif 'ignite' in academy_lower or 'ignite' in title_lower or 'ignite' in file_name_lower:
+            if subject not in ignite_notes:
+                ignite_notes[subject] = []
+            ignite_notes[subject].append(item)
         else:
             if subject not in other_notes:
                 other_notes[subject] = []
             other_notes[subject].append(item)
+        
+    # Group all IMP topics by subject
+    imp_topics = {}
+    for item in imp_topics_db:
+        subject = item['subject']
+        if subject not in imp_topics:
+            imp_topics[subject] = []
+        imp_topics[subject].append(item)
             
     return render_template(
         'study-materials.html', 
-        prajakta_notes=prajakta_notes, 
-        other_notes=other_notes, 
-        requests_list=requests_list
+        prajakta_notes=prajakta_notes,
+        other_notes=other_notes,
+        pyq_notes=pyq_notes,
+        ignite_notes=ignite_notes,
+        imp_topics=imp_topics,
+        requests_list=requests_list,
+        active_stage=stage
     )
+
 
 
 @app.route('/submit-request', methods=['POST'])
@@ -516,6 +595,7 @@ def upload_pdf():
         
     title = request.form.get('title')
     subject = request.form.get('subject')
+    stage = request.form.get('stage') or 'Prelims'
     academy = request.form.get('academy') or 'Standard Academy'
     file = request.files.get('file')
     
@@ -530,13 +610,117 @@ def upload_pdf():
     
     conn = get_db_connection()
     conn.execute(
-        'INSERT INTO study_materials (title, subject, file_name, file_data, academy) VALUES (?, ?, ?, ?, ?)',
-        (title, subject, file_name, file_data, academy)
+        'INSERT INTO study_materials (title, subject, file_name, file_data, academy, stage) VALUES (?, ?, ?, ?, ?, ?)',
+        (title, subject, file_name, file_data, academy, stage)
     )
     conn.commit()
     conn.close()
     
-    return redirect(url_for('study_materials'))
+    return redirect(url_for('study_materials', stage=stage))
+
+
+@app.route('/admin/upload-imp-topic', methods=['POST'])
+def upload_imp_topic():
+    passcode = request.form.get('passcode')
+    if passcode != 'admin123':
+        return "Unauthorized: Invalid Passcode", 401
+        
+    title = request.form.get('title')
+    subject = request.form.get('subject')
+    description = request.form.get('description') or ''
+    file = request.files.get('file')
+    
+    if not title or not subject or not file or file.filename == '':
+        return "Bad Request: Missing fields or file", 400
+        
+    allowed_extensions = {'.png', '.jpg', '.jpeg', '.webp', '.gif'}
+    ext = os.path.splitext(file.filename.lower())[1]
+    if ext not in allowed_extensions:
+        return "Bad Request: Only image files are allowed", 400
+        
+    file_name = file.filename
+    file_data = file.read()
+    
+    conn = get_db_connection()
+    conn.execute(
+        'INSERT INTO imp_topics (title, subject, file_name, file_data, description) VALUES (?, ?, ?, ?, ?)',
+        (title, subject, file_name, file_data, description)
+    )
+    conn.commit()
+    conn.close()
+    
+    return redirect(url_for('study_materials') + '?tab=imp')
+
+
+@app.route('/view-imp-image/<int:topic_id>')
+def view_imp_image(topic_id):
+    conn = get_db_connection()
+    topic = conn.execute(
+        'SELECT file_name, file_data FROM imp_topics WHERE id = ?',
+        (topic_id,)
+    ).fetchone()
+    conn.close()
+    
+    if topic is None:
+        return "Not Found", 404
+        
+    ext = os.path.splitext(topic['file_name'].lower())[1]
+    mimetype = 'image/png'
+    if ext in ['.jpg', '.jpeg']:
+        mimetype = 'image/jpeg'
+    elif ext == '.webp':
+        mimetype = 'image/webp'
+    elif ext == '.gif':
+        mimetype = 'image/gif'
+        
+    return send_file(
+        io.BytesIO(topic['file_data']),
+        mimetype=mimetype,
+        download_name=topic['file_name']
+    )
+
+
+@app.route('/download-imp-image/<int:topic_id>')
+def download_imp_image(topic_id):
+    conn = get_db_connection()
+    topic = conn.execute(
+        'SELECT file_name, file_data FROM imp_topics WHERE id = ?',
+        (topic_id,)
+    ).fetchone()
+    conn.close()
+    
+    if topic is None:
+        return "Not Found", 404
+        
+    return send_file(
+        io.BytesIO(topic['file_data']),
+        mimetype='application/octet-stream',
+        as_attachment=True,
+        download_name=topic['file_name']
+    )
+
+
+
+@app.route('/submit-download-info', methods=['POST'])
+def submit_download_info():
+    data = request.get_json() or {}
+    name = data.get('name')
+    mobile = data.get('mobile')
+    district = data.get('district')
+    
+    if not name or not mobile or not district:
+        return jsonify({"success": False, "error": "All fields are required"}), 400
+        
+    conn = get_db_connection()
+    conn.execute(
+        'INSERT INTO download_info (name, mobile, district) VALUES (?, ?, ?)',
+        (name, mobile, district)
+    )
+    conn.commit()
+    conn.close()
+    
+    session['download_info_submitted'] = True
+    return jsonify({"success": True})
 
 
 @app.route('/download-pdf/<int:material_id>')
@@ -554,9 +738,49 @@ def download_pdf(material_id):
     return send_file(
         io.BytesIO(material['file_data']),
         mimetype='application/pdf',
-        as_attachment=True,
+        as_attachment=False,
         download_name=material['file_name']
     )
+
+
+@app.route('/download-all-pdfs')
+def download_all_pdfs():
+    import zipfile
+    conn = get_db_connection()
+    materials = conn.execute(
+        'SELECT file_name, file_data FROM study_materials'
+    ).fetchall()
+    conn.close()
+    
+    if not materials:
+        return "No study notes found to download", 404
+        
+    zip_buffer = io.BytesIO()
+    with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
+        used_names = set()
+        for item in materials:
+            orig_name = item['file_name'] or "untitled.pdf"
+            file_data = item['file_data']
+            
+            # De-duplicate filename in ZIP
+            name, ext = os.path.splitext(orig_name)
+            counter = 1
+            unique_name = orig_name
+            while unique_name in used_names:
+                unique_name = f"{name} ({counter}){ext}"
+                counter += 1
+                
+            used_names.add(unique_name)
+            zip_file.writestr(unique_name, file_data)
+            
+    zip_buffer.seek(0)
+    return send_file(
+        zip_buffer,
+        mimetype='application/zip',
+        as_attachment=True,
+        download_name='TalathiIQ_All_Study_Notes.zip'
+    )
+
 
 
 # --- Authentication and PYQ Pages Implementation ---
@@ -646,9 +870,7 @@ def logout():
     session.clear()
     return redirect(url_for('login'))
 
-@app.route('/pyq-papers')
-def pyq_papers():
-    return render_template('pyq-papers.html', papers=PYQ_PAPERS)
+
 
 def generate_paper_pdf(paper_title, questions):
     buffer = io.BytesIO()
@@ -740,26 +962,121 @@ def generate_paper_pdf(paper_title, questions):
     buffer.seek(0)
     return buffer
 
-@app.route('/download-pyq-pdf/<paper_id>')
-def download_pyq_pdf(paper_id):
-    paper = next((p for p in PYQ_PAPERS if p['id'] == paper_id), None)
-    if not paper:
-        return "Paper Not Found", 404
+
+
+
+@app.route('/download-custom-pdf')
+def download_custom_pdf():
+    ids_str = request.args.get('ids')
+    title = request.args.get('title', 'Custom_Test_Paper')
+    if not ids_str:
+        return "Missing question IDs", 400
+        
+    try:
+        ids = [int(x) for x in ids_str.split(',')]
+    except ValueError:
+        return "Invalid question IDs format", 400
         
     questions = load_questions()
-    pyq_questions = [q for q in questions if q.get('source') == 'PYQ']
-    paper_qs = pyq_questions[paper['slice_start']:paper['slice_end']]
+    selected_qs = [q for q in questions if q.get('id') in ids]
     
-    if not paper_qs:
-        return "No questions found for this paper", 404
+    # Sort them in the order of requested ids to preserve test layout
+    selected_qs.sort(key=lambda q: ids.index(q.get('id')))
+    
+    if not selected_qs:
+        return "No questions found for the provided IDs", 404
         
-    pdf_buffer = generate_paper_pdf(paper['title'], paper_qs)
-    filename = f"{paper['title'].replace(' ', '_')}.pdf"
+    pdf_buffer = generate_paper_pdf("Talathi Bharti Mock Test - Answer Key", selected_qs)
+    filename = f"{title}.pdf"
     return send_file(
         pdf_buffer,
         mimetype='application/pdf',
-        as_attachment=True,
+        as_attachment=False,
         download_name=filename
+    )
+
+
+@app.route('/current-affairs/book/download')
+def current_affairs_book_download():
+    buffer = io.BytesIO()
+    doc = SimpleDocTemplate(buffer, pagesize=letter, rightMargin=54, leftMargin=54, topMargin=54, bottomMargin=54)
+    
+    styles = getSampleStyleSheet()
+    font_name = 'Nirmala' if HAS_NIRMALA else 'Helvetica'
+    
+    title_style = ParagraphStyle(
+        'BookTitle',
+        parent=styles['Heading1'],
+        fontName=font_name,
+        fontSize=22,
+        leading=26,
+        textColor=colors.HexColor('#6366f1'),
+        alignment=1,
+        spaceAfter=10
+    )
+    
+    meta_style = ParagraphStyle(
+        'BookMeta',
+        parent=styles['Normal'],
+        fontName=font_name,
+        fontSize=11,
+        leading=15,
+        textColor=colors.HexColor('#64748b'),
+        alignment=1,
+        spaceAfter=30
+    )
+    
+    heading_style = ParagraphStyle(
+        'ArticleHeading',
+        parent=styles['Heading2'],
+        fontName=font_name,
+        fontSize=14,
+        leading=18,
+        textColor=colors.HexColor('#0f172a'),
+        spaceBefore=15,
+        spaceAfter=10
+    )
+    
+    content_mr_style = ParagraphStyle(
+        'ContentMr',
+        parent=styles['Normal'],
+        fontName=font_name,
+        fontSize=10,
+        leading=15,
+        textColor=colors.HexColor('#334155'),
+        spaceAfter=8
+    )
+    
+    content_en_style = ParagraphStyle(
+        'ContentEn',
+        parent=styles['Normal'],
+        fontName=font_name,
+        fontSize=9,
+        leading=13,
+        textColor=colors.HexColor('#475569'),
+        leftIndent=15,
+        spaceAfter=20
+    )
+    
+    story = []
+    story.append(Paragraph("चालू घडामोडी २०२६ ई-बुक", title_style))
+    story.append(Paragraph("TalathiIQ Premium Current Affairs Booklet<br/>संकलन: प्राजक्ता लोटाके व संघ", meta_style))
+    story.append(Spacer(1, 10))
+    
+    for article in NEWS_ARTICLES:
+        story.append(Paragraph(article.get('title_mr', ''), heading_style))
+        story.append(Paragraph(article.get('content_mr', ''), content_mr_style))
+        story.append(Paragraph(f"<b>English Summary:</b> {article.get('content', '')}", content_en_style))
+        story.append(Spacer(1, 10))
+        
+    doc.build(story)
+    buffer.seek(0)
+    
+    return send_file(
+        buffer,
+        mimetype='application/pdf',
+        as_attachment=False,
+        download_name='TalathiIQ_Current_Affairs_Booklet.pdf'
     )
 
 

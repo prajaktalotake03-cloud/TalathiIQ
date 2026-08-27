@@ -315,8 +315,8 @@
                 <button class="stage-toggle-btn active" id="syllabusPrelimsBtn" onclick="switchSyllabusStage('Prelims')">
                     <i class="fas fa-graduation-cap"></i> Prelims Syllabus
                 </button>
-                <button class="stage-toggle-btn" id="syllabusMainsBtn" disabled style="opacity: 0.5; cursor: not-allowed;" title="Mains syllabus is coming soon!">
-                    <i class="fas fa-award"></i> Mains Syllabus <span style="font-size: 0.6rem; background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 10px; margin-left: 5px; font-weight: 700; text-transform: uppercase;">Soon</span>
+                <button class="stage-toggle-btn" id="syllabusMainsBtn" onclick="switchSyllabusStage('Mains')">
+                    <i class="fas fa-award"></i> Mains Syllabus
                 </button>
             </div>
         </div>
@@ -330,6 +330,8 @@
                 <button class="sub-tab-btn" onclick="switchSubject('geography')">Geography (भूगोल)</button>
                 <button class="sub-tab-btn" onclick="switchSubject('history')">History (इतिहास)</button>
                 <button class="sub-tab-btn" onclick="switchSubject('polity')">Indian Polity (राज्यघटना)</button>
+                <button class="sub-tab-btn" onclick="switchSubject('economics')">Economics (अर्थशास्त्र)</button>
+                <button class="sub-tab-btn" onclick="switchSubject('science')">General Science (सामान्य विज्ञान)</button>
             </div>
 
             <!-- Search box -->
@@ -466,572 +468,638 @@
         <!-- SUBJECT 1: GEOGRAPHY PANE -->
         <div id="pane-geography" class="syllabus-pane animate-fade-in">
             
-            <!-- Accordion items (Geography) -->
             <!-- 1 -->
-            <div class="accordion-item" data-search="महाराष्ट्राचे स्थान व सीमा अरबी समुद्र गुजरात मध्य प्रदेश छत्तीसगड तेलंगणा कर्नाटक गोवा राजधानी मुंबई उपराजधानी कोकण किनारपट्टी">
+            <div class="accordion-item" data-search="महाराष्ट्राचा प्राकृतिक भूगोल स्थान सीमा शेजारील राज्ये लांबी रुंदी क्षेत्रफळ प्रशासकीय विभाग कोकण सह्याद्री दख्खन पठार कळसूबाई">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
                         <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-1')">
-                        <span class="accordion-title">1. महाराष्ट्राचे स्थान व सीमा (Location & Boundaries)</span>
+                        <span class="accordion-title">1. महाराष्ट्राचा प्राकृतिक भूगोल (Physical Geography)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
+                    <h4>स्थान व क्षेत्रफळ</h4>
                     <ul>
-                        <li>महाराष्ट्र भारताच्या <strong>पश्चिम व मध्य भागात</strong> स्थित आहे.</li>
-                        <li>महाराष्ट्राच्या पश्चिमेला <strong>अरबी समुद्र</strong> आहे.</li>
-                        <li>महाराष्ट्राच्या उत्तरेस <strong>गुजरात व मध्य प्रदेश</strong> आहेत.</li>
-                        <li>पूर्वेस <strong>छत्तीसगड</strong> आहे.</li>
-                        <li>आग्नेयेस <strong>तेलंगणा</strong> आहे.</li>
-                        <li>दक्षिणेस <strong>कर्नाटक व गोवा</strong> आहेत.</li>
-                        <li>महाराष्ट्राची राजधानी — <strong>मुंबई</strong></li>
-                        <li>उपराजधानी — <strong>नागपूर</strong></li>
-                        <li>महाराष्ट्राचा पश्चिम किनारा — <strong>कोकण किनारपट्टी</strong></li>
+                        <li>महाराष्ट्र भारताच्या <strong>पश्चिम व मध्य भागात</strong> स्थित असून त्याचे क्षेत्रफळ <strong>३,०७,७१३ चौ. किमी.</strong> आहे (क्षेत्रफळानुसार भारतात ३ रा क्रमांक).</li>
+                        <li><strong>लांबी-रुंदी:</strong> पूर्व-पश्चिम लांबी सुमारे ८०० किमी आणि उत्तर-दक्षिण रुंदी सुमारे ७२० किमी आहे.</li>
+                    </ul>
+                    <h4>प्राकृतिक विभाग</h4>
+                    <ul>
+                        <li><strong>कोकण किनारपट्टी:</strong> पश्चिमेकडील अरुंद किनारपट्टी.</li>
+                        <li><strong>सह्याद्री पर्वतरांग (पश्चिम घाट):</strong> उत्तर-दक्षिण पसरलेला मुख्य जलविभाजक. सर्वोच्च शिखर <strong>कळसूबाई (१६४६ मीटर)</strong> अहमदनगर जिल्ह्यात आहे.</li>
+                        <li><strong>महाराष्ट्र पठार (दख्खन पठार):</strong> बेसाल्ट खडकापासून बनलेले विस्तीर्ण पठार.</li>
                     </ul>
                     <div class="trick-box">
-                        <div class="trick-title">लक्षात ठेवा</div>
-                        <p>पश्चिम &rarr; अरबी समुद्र<br>उत्तर &rarr; गुजरात + मध्य प्रदेश<br>पूर्व &rarr; छत्तीसगड<br>आग्नेय &rarr; तेलंगणा<br>दक्षिण &rarr; कर्नाटक + गोवा</p>
+                        <div class="trick-title">प्रशासकीय विभाग</div>
+                        <p>महाराष्ट्रात एकूण <strong>६ प्रशासकीय विभाग</strong> (कोकण, पुणे, नाशिक, छत्रपती संभाजीनगर, अमरावती, नागपूर) आणि <strong>३६ जिल्हे</strong> आहेत.</p>
                     </div>
                 </div>
             </div>
 
             <!-- 2 -->
-            <div class="accordion-item" data-search="महाराष्ट्राचे भौगोलिक विभाग कोकण सह्याद्री महाराष्ट्र पठार विदर्भ काळी माती कापूस सोयाबीन खनिजे">
+            <div class="accordion-item" data-search="महाराष्ट्रातील हवामान ऋतू तापमान पर्जन्यमान मान्सून वारे कोकण विदर्भ अवर्षण प्रवण क्षेत्र पर्जन्यछाया प्रदेश">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
                         <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-2')">
-                        <span class="accordion-title">2. महाराष्ट्राचे भौगोलिक विभाग (Physical Divisions)</span>
+                        <span class="accordion-title">2. महाराष्ट्रातील हवामान (Climate of Maharashtra)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <h4>1. कोकण</h4>
+                    <h4>हवामानाचे स्वरूप</h4>
                     <ul>
-                        <li>अरबी समुद्र आणि सह्याद्री यांच्या दरम्यानचा अरुंद प्रदेश.</li>
-                        <li>जास्त पर्जन्यमान.</li>
-                        <li>नारळ, सुपारी, भात यांसारखी पिके.</li>
-                        <li>मुंबई, ठाणे, पालघर, रायगड, रत्नागिरी, सिंधुदुर्ग या भागांचा समावेश.</li>
+                        <li>महाराष्ट्राचे हवामान प्रामुख्याने <strong>उष्णकटिबंधीय मान्सून</strong> प्रकारचे आहे.</li>
+                        <li><strong>पर्जन्यमान:</strong> नैऋत्य मान्सून वाऱ्यांपासून (जून ते सप्टेंबर) सुमारे ८५% पाऊस पडतो. कोकण व सह्याद्रीच्या घाटमाथ्यावर सर्वाधिक पाऊस (उदा. आंबोली येथे सुमारे ७५० सेमी) पडतो.</li>
+                        <li><strong>पर्जन्यछाया प्रदेश:</strong> सह्याद्री ओलांडून वारे पूर्वेकडे जात असताना पर्जन्यमान वेगाने घटते, ज्यामुळे सोलापूर, अहमदनगर व पुणे जिल्ह्यांचा पूर्व भाग अवर्षण प्रवण बनतो.</li>
                     </ul>
-                    <h4>2. सह्याद्री</h4>
-                    <ul>
-                        <li>महाराष्ट्राच्या पश्चिम भागात स्थित.</li>
-                        <li>पश्चिम घाटाचा प्रमुख भाग.</li>
-                        <li>अरबी समुद्रातून येणाऱ्या बाष्पीभूत वाऱ्यांना अडवून पश्चिम बाजूस जास्त पाऊस पाडतो.</li>
-                    </ul>
-                    <h4>3. महाराष्ट्र पठार (दख्खन पठार)</h4>
-                    <ul>
-                        <li>सह्याद्रीच्या पूर्वेस पसरलेला विस्तृत पठारी प्रदेश.</li>
-                        <li><strong>काळी माती (रेगूर माती)</strong> मोठ्या प्रमाणात आढळते, जी शेतीसाठी अत्यंत सुपीक आहे.</li>
-                    </ul>
-                    <h4>4. विदर्भ</h4>
-                    <ul>
-                        <li>महाराष्ट्राचा पूर्व भाग.</li>
-                        <li>पूर्व विदर्भात जंगले (वने) मोठ्या प्रमाणात आहेत.</li>
-                        <li>कापूस, सोयाबीन, तांदूळ इत्यादी पिके.</li>
-                        <li>खनिज संपत्तीच्या दृष्टीने अत्यंत समृद्ध व महत्त्वाचा प्रदेश.</li>
-                    </ul>
-                    <div class="trick-box">
-                        <div class="trick-title">Trick</div>
-                        <p>कोकण &rarr; समुद्र | सह्याद्री &rarr; पर्वत | पठार &rarr; काळी माती | विदर्भ &rarr; कापूस + खनिजे</p>
-                    </div>
                 </div>
             </div>
 
             <!-- 3 -->
-            <div class="accordion-item" data-search="सह्याद्री पर्वतरांग पश्चिम घाट सर्वोच्च शिखर कळसूबाई 1646 मीटर अहमदनगर बारी गाव">
+            <div class="accordion-item" data-search="महाराष्ट्रातील खडक प्रणाली आर्कियन धारवाड कडप्पा विंध्यन गोंडवाना डेक्कन ट्रॅप बेसाल्ट">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
                         <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-3')">
-                        <span class="accordion-title">3. सह्याद्री पर्वतरांग (Sahyadri Range)</span>
+                        <span class="accordion-title">3. महाराष्ट्रातील खडक प्रणाली (Rock Systems)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
+                    <h4>प्रमुख खडक प्रकार व वितरण</h4>
                     <ul>
-                        <li>सह्याद्रीला <strong>पश्चिम घाट</strong> असेही म्हणतात.</li>
-                        <li>महाराष्ट्राच्या पश्चिम भागात उत्तर-दक्षिण दिशेने पसरलेली आहे.</li>
-                        <li>महाराष्ट्राच्या हवामानावर व पर्जन्यमानावर याचा मोठा प्रभाव आहे.</li>
-                        <li>नैऋत्य मान्सूनच्या वाऱ्यांना अडवल्यामुळे पश्चिम उतारावर अतिवृष्टी तर पूर्व उतारावर पर्जन्यछायेचा प्रदेश निर्माण होतो.</li>
-                    </ul>
-                    <h4>सर्वात उंच शिखर</h4>
-                    <p><strong>कळसूबाई — 1646 मीटर</strong></p>
-                    <ul>
-                        <li>स्थान — अहमदनगर जिल्ह्यातील अकोले तालुक्यातील बारी गावाजवळ.</li>
-                        <li>महाराष्ट्रातील सर्वात उंच शिखर.</li>
+                        <li><strong>डेक्कन ट्रॅप (बेसाल्ट):</strong> महाराष्ट्राच्या सुमारे ९०% भूभागावर आढळणारा ज्वालामुखीजन्य लाव्हारसापासून बनलेला खडक.</li>
+                        <li><strong>आर्कियन खडक:</strong> सर्वात जुना खडक, पूर्व विदर्भ (भंडारा, चंद्रपूर) आणि दक्षिण कोकणात (सिंधुदुर्ग) आढळतो.</li>
+                        <li><strong>धारवाड खडक:</strong> खनिज समृद्ध खडक, कोल्हापूर व सिंधुदुर्ग जिल्ह्यात आढळतो.</li>
+                        <li><strong>गोंडवाना खडक:</strong> दगडी कोळशाचे साठे असणारा खडक, यवतमाळ, चंद्रपूर व नागपूर जिल्ह्यांत आढळतो.</li>
                     </ul>
                 </div>
             </div>
 
             <!-- 4 -->
-            <div class="accordion-item" data-search="महाराष्ट्रातील प्रमुख पर्वतरांगा सातपुडा नर्मदा तापी अजिंठा सातमाळा नाशिक महादेव डोंगररांग सातारा">
+            <div class="accordion-item" data-search="महाराष्ट्रातील खनिज संपत्ती कोळसा लोहखनिज मँगनीज बॉक्साइट चुनखडी चंद्रपूर गडचिरोली सिंधुदुर्ग रत्नागिरी नागपूर भंडारा">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
                         <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-4')">
-                        <span class="accordion-title">4. प्रमुख पर्वतरांगा (Major Mountain Ranges)</span>
+                        <span class="accordion-title">4. महाराष्ट्रातील खनिज संपत्ती (Mineral Wealth)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
+                    <h4>खनिजांचे प्रमुख साठे</h4>
                     <ul>
-                        <li><strong>सह्याद्री:</strong> पश्चिम महाराष्ट्र, पश्चिम घाटाचा मुख्य भाग.</li>
-                        <li><strong>सातपुडा:</strong> महाराष्ट्राच्या उत्तरेकडील सीमेवर. नर्मदा व तापी नद्यांच्या खोऱ्यांना विभागते.</li>
-                        <li><strong>अजिंठा रांग:</strong> उत्तर महाराष्ट्र व मराठवाड्याच्या भागात पसरलेली.</li>
-                        <li><strong>सातमाळा रांग:</strong> नाशिक परिसरात असून सह्याद्रीच्या पूर्वेकडील विस्ताराशी संबंधित.</li>
-                        <li><strong>महादेव डोंगररांग:</strong> सातारा व दक्षिण महाराष्ट्रातील भागात पसरलेली.</li>
+                        <li><strong>दगडी कोळसा (Coal):</strong> चंद्रपूर, नागपूर व यवतमाळ जिल्हे (विद्युत निर्मितीसाठी मुख्य स्रोत).</li>
+                        <li><strong>लोहखनिज (Iron Ore):</strong> गडचिरोली (सुरजागड), चंद्रपूर आणि सिंधुदुर्ग जिल्हे.</li>
+                        <li><strong>मँगनीज (Manganese):</strong> भंडारा व नागपूर जिल्ह्यात देशातील सर्वोत्तम दर्जाचे साठे आहेत.</li>
+                        <li><strong>बॉक्साइट (Bauxite):</strong> कोल्हापूर, रत्नागिरी व रायगड जिल्ह्यांत ॲल्युमिनियम निर्मितीसाठी आढळते.</li>
                     </ul>
                 </div>
             </div>
 
             <!-- 5 -->
-            <div class="accordion-item" data-search="महाराष्ट्रातील प्रमुख घाट भोर घाट मुंबई पुणे थळ घाट मुंबई नाशिक माळशेज घाट ठाणे पुणे नाणेघाट प्राचीन व्यापारी मार्ग आंबा घाट कोल्हापूर रत्नागिरी आंबोली घाट कोल्हापूर सिंधुदुर्ग">
+            <div class="accordion-item" data-search="महाराष्ट्रातील मृदा संपत्ती काळी माती रेगूर कापूस तांबडी माती जांभा माती कोकण गाळाची माती पिके">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
                         <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-5')">
-                        <span class="accordion-title">5. प्रमुख घाट (Major Mountain Passes)</span>
+                        <span class="accordion-title">5. महाराष्ट्रातील मृदा संपत्ती (Soils of Maharashtra)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <table class="syllabus-table">
-                        <thead>
-                            <tr>
-                                <th>घाट (Pass)</th>
-                                <th>महत्त्व (Routes Joined)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>भोर घाट</strong></td>
-                                <td>मुंबई – पुणे मार्ग</td>
-                            </tr>
-                            <tr>
-                                <td><strong>थळ घाट (कसारा घाट)</strong></td>
-                                <td>मुंबई – नाशिक मार्ग</td>
-                            </tr>
-                            <tr>
-                                <td><strong>माळशेज घाट</strong></td>
-                                <td>ठाणे – पुणे परिसराला जोडणारा घाट</td>
-                            </tr>
-                            <tr>
-                                <td><strong>नाणेघाट</strong></td>
-                                <td>जुन्नर - कल्याण जोडणारा प्राचीन व्यापारी मार्ग</td>
-                            </tr>
-                            <tr>
-                                <td><strong>आंबा घाट</strong></td>
-                                <td>कोल्हापूर – रत्नागिरी मार्ग</td>
-                            </tr>
-                            <tr>
-                                <td><strong>आंबोली घाट</strong></td>
-                                <td>कोल्हापूर – सावंतवाडी (सिंधुदुर्ग) मार्ग</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="trick-box">
-                        <div class="trick-title">लक्षात ठेवा</div>
-                        <p>भोर &rarr; पुणे | थळ &rarr; नाशिक | आंबोली &rarr; सिंधुदुर्ग</p>
-                    </div>
+                    <h4>मृदा प्रकार व वैशिष्ट्ये</h4>
+                    <ul>
+                        <li><strong>काळी मृदा (रेगूर):</strong> दख्खन पठारावर सर्वाधिक आढळणारी, ओलावा टिकवून ठेवणारी माती. कापूस, सोयाबीन, ज्वारी व ऊस यासाठी उत्तम.</li>
+                        <li><strong>जांभा मृदा (Laterite):</strong> अतिपावसाच्या दक्षिण कोकणात आढळणारी तांबूस रंगाची माती, काजू व आंबा बागांसाठी प्रसिद्ध.</li>
+                        <li><strong>तांबडी व पिवळसर मृदा:</strong> पूर्व विदर्भातील टेकड्यांवर आढळणारी लोहयुक्त माती, तांदूळ लागवडीसाठी उपयुक्त.</li>
+                        <li><strong>गाळाची मृदा:</strong> नद्यांच्या खोऱ्यात व किनारपट्टीवर आढळणारी अत्यंत सुपीक मृदा.</li>
+                    </ul>
                 </div>
             </div>
 
             <!-- 6 -->
-            <div class="accordion-item" data-search="महाराष्ट्रातील प्रमुख शिखरे कळसूबाई 1646 अहमदनगर साल्हेर 1567 नाशिक महाबळेश्वर 1438 सातारा हरिश्चंद्रगड 1424 सप्तशृंगी 1416 तोरणा 1404">
+            <div class="accordion-item" data-search="महाराष्ट्रातील वन संपत्ती सदाहरित वने पानझडी वने काटेरी वने मँग्रोव्ह खाजण वने राष्ट्रीय उद्याने व्याघ्र प्रकल्प ताडोबा मेळघाट संजय गांधी पेंच">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
                         <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-6')">
-                        <span class="accordion-title">6. प्रमुख शिखरे (Major Peaks)</span>
+                        <span class="accordion-title">6. महाराष्ट्रातील वन संपत्ती (Forest Wealth & Parks)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
+                    <h4>वनांचे प्रकार व अभयारण्ये</h4>
                     <ul>
-                        <li><strong>कळसूबाई:</strong> उंची — 1646 मीटर (अहमदनगर जिल्हा), सह्याद्रीतील व महाराष्ट्रातील सर्वोच्च शिखर.</li>
-                        <li><strong>साल्हेर:</strong> उंची — 1567 मीटर (नाशिक जिल्हा), दुसऱ्या क्रमांकाचे सर्वोच्च शिखर/किल्ला परिसर.</li>
-                        <li><strong>महाबळेश्वर:</strong> उंची — 1438 मीटर (सातारा जिल्हा).</li>
-                        <li><strong>हरिश्चंद्रगड:</strong> उंची — 1424 मीटर (अहमदनगर जिल्हा).</li>
-                        <li><strong>सप्तशृंगी:</strong> उंची — 1416 मीटर (नाशिक जिल्हा).</li>
-                        <li><strong>तोरणा:</strong> उंची — 1404 मीटर (पुणे जिल्हा).</li>
+                        <li><strong>उष्णकटिबंधीय सदाहरित वने:</strong> महाबळेश्वर, आंबोली व कोकणातील अतिवृष्टीच्या भागात.</li>
+                        <li><strong>आद्र व शुष्क पानझडी वने:</strong> विदर्भ व सातपुडा पर्वतीय भागात (सागवान, बांबू मुबलक).</li>
+                        <li><strong>राष्ट्रीय उद्याने:</strong> ताडोबा (चंद्रपूर - पहिले राष्ट्रीय उद्यान), नवेगाव (गोंदिया), पेंच (नागपूर), मेळघाट (अमरावती - व्याघ्र प्रकल्प), संजय गांधी राष्ट्रीय उद्यान (मुंबई).</li>
                     </ul>
                 </div>
             </div>
 
             <!-- 7 -->
-            <div class="accordion-item" data-search="महाराष्ट्रातील नद्या पूर्ववाहिनी बंगालचा उपसागर गोदावरी कृष्णा भीमा वर्धा वैनगंगा पश्चिमवाहिनी अरबी समुद्र उल्हास वैतरणा सावित्री वशिष्टी कुंडलिका शास्त्री">
+            <div class="accordion-item" data-search="महाराष्ट्राची लोकसंख्या जनगणना २०११ घनता लिंगगुणोत्तर साक्षरता दर सर्वाधिक कमी ठाणे मुंबई उपनगर सिंधुदुर्ग गडचिरोली">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
                         <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-7')">
-                        <span class="accordion-title">7. प्रमुख नद्यांचे वर्गीकरण (River Systems)</span>
+                        <span class="accordion-title">7. महाराष्ट्राची लोकसंख्या (Demography - Census 2011)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <h4>पूर्ववाहिनी नद्या (बंगालच्या उपसागराकडे जाणाऱ्या)</h4>
+                    <h4>२०११ ची महत्त्वाची आकडेवारी</h4>
                     <ul>
-                        <li><strong>गोदावरी:</strong> महाराष्ट्रातील सर्वात मोठे खोरे.</li>
-                        <li><strong>कृष्णा:</strong> दक्षिण महाराष्ट्रातील प्रमुख नदी.</li>
-                        <li><strong>भीमा:</strong> कृष्णा नदीची प्रमुख उपनदी (भीमाशंकर उगम).</li>
-                        <li><strong>वर्धा व वैनगंगा:</strong> विदर्भातील दक्षिणवाहिनी नद्या ज्या एकत्रितपणे प्राणहिता बनतात.</li>
-                    </ul>
-                    <h4>पश्चिमवाहिनी नद्या (अरबी समुद्राकडे जाणाऱ्या)</h4>
-                    <ul>
-                        <li>कोकणातील आखूड व वेगवान नद्या: <strong>उल्हास, वैतरणा, सावित्री, वशिष्टी, कुंडलिका, शास्त्री, तेरेखोल.</strong></li>
-                        <li>खचदरीतून वाहणाऱ्या उत्तर सीमेवरील नद्या: <strong>नर्मदा व तापी.</strong></li>
+                        <li><strong>एकूण लोकसंख्या:</strong> ११.२४ कोटी (भारतात २ रा क्रमांक).</li>
+                        <li><strong>घनता:</strong> ३६५ प्रति चौ. किमी. (सर्वाधिक: मुंबई उपनगर | सर्वात कमी: गडचिरोली - ७४).</li>
+                        <li><strong>लिंगगुणोत्तर:</strong> ९२९ (सर्वाधिक: रत्नागिरी - ११२२ | सर्वात कमी: मुंबई शहर - ८३२).</li>
+                        <li><strong>साक्षरता:</strong> ८२.३% (सर्वाधिक: मुंबई उपनगर | सर्वात कमी: नंदुरबार - ६४.४%).</li>
                     </ul>
                 </div>
             </div>
 
             <!-- 8 -->
-            <div class="accordion-item" data-search="गोदावरी नदी उगम त्र्यंबकेश्वर नाशिक प्रमुख उपनद्या प्रवरा मुळा मांजरा पूर्णा प्राणहिता जायकवाडी धरण">
+            <div class="accordion-item" data-search="महाराष्ट्रातील आदिवासी जमाती भिल्ल गोंड वारली कातकरी कोलाम माडिया गोंड ठाकूर महादेव कोळी नंदुरबार गडचिरोली ठाणे रायगड">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
                         <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-8')">
-                        <span class="accordion-title">8. गोदावरी नदी (Godavari River)</span>
+                        <span class="accordion-title">8. महाराष्ट्रातील आदिवासी जमाती (Tribes of Maharashtra)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
+                    <h4>प्रमुख आदिवासी जमाती व त्यांचे प्रदेश</h4>
                     <ul>
-                        <li><strong>उगम:</strong> त्र्यंबकेश्वर, नाशिक जिल्हा (ब्रह्मगिरी टेकड्या).</li>
-                        <li>महाराष्ट्रातील सर्वात लांब व प्रमुख नदी खोरे (महाराष्ट्राचे 'गंगा' म्हणून ओळखले जाते).</li>
-                        <li>पूर्वेकडे वाहत जाऊन तेलंगणा व आंध्र प्रदेशातून बंगालच्या उपसागराला मिळते.</li>
+                        <li><strong>भिल्ल:</strong> खानदेश व सातपुडा पर्वतीय क्षेत्र (नंदुरबार, धुळे, जळगाव). नंदुरबार हा आदिवासींचा जिल्हा म्हणून ओळखला जातो.</li>
+                        <li><strong>गोंड व माडिया गोंड:</strong> पूर्व विदर्भ (गडचिरोली, चंद्रपूर, भंडारा).</li>
+                        <li><strong>वारली व ठाकूर:</strong> पालघर, ठाणे व नाशिक जिल्ह्यांचे डोंगराळ भाग. (वारली चित्रकला जागतिक स्तरावर प्रसिद्ध).</li>
+                        <li><strong>कातकरी & कोलाम:</strong> प्रामुख्याने रायगड व यवतमाळ जिल्हे (केंद्र सरकारने 'अतिसंवेदनशील आदिवासी गट' (PVTG) म्हणून घोषित केलेले).</li>
                     </ul>
-                    <h4>प्रमुख उपनद्या</h4>
-                    <p>प्रवरा, मुळा, मांजरा, पूर्णा, प्राणहिता (वर्धा+वैनगंगा+पेनगंगा यांचा एकत्रित प्रवाह).</p>
-                    <h4>प्रमुख धरण</h4>
-                    <p><strong>जायकवाडी धरण:</strong> पैठण, छत्रपती संभाजीनगर जिल्हा. या जलाशयाला 'नाथसागर' म्हणतात.</p>
                 </div>
             </div>
 
-            <!-- 9-12 (Summary of key rivers) -->
-            <div class="accordion-item" data-search="कृष्णा भीमा तापी कोयना नद्या उगम महाबळेश्वर भीमाशंकर मुलताई सह्याद्री उजनी धरण कोयना धरण नर्मदा पश्चिमवाहिनी">
+            <!-- 9 -->
+            <div class="accordion-item" data-search="महाराष्ट्रातील स्थलांतर ओढ कारणे ढकल कारणे ग्रामीण नागरी रोजगारासाठी स्थलांतर ऊस तोडणी कामगार">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
                         <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-9')">
-                        <span class="accordion-title">9 - 12. कृष्णा, भीमा, तापी व कोयना नद्या</span>
+                        <span class="accordion-title">9. महाराष्ट्रातील स्थलांतर (Migration in Maharashtra)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <h4>कृष्णा नदी</h4>
+                    <h4>स्थलांतराची कारणे व दिशा</h4>
                     <ul>
-                        <li><strong>उगम:</strong> महाबळेश्वर परिसर (सातारा जिल्हा).</li>
-                        <li>महाराष्ट्र, कर्नाटक व आंध्र प्रदेशातून प्रवास करते.</li>
-                        <li>प्रमुख उपनद्या: कोयना, भीमा (कृष्णेची उपनदी असली तरी स्वतंत्र खोरे मानले जाते), पंचगंगा, वारणा.</li>
-                        <li>महत्त्व: शेती व सिंचनासाठी दक्षिण महाराष्ट्रात अतिशय महत्त्वाची.</li>
+                        <li><strong>ग्रामीण-नागरी स्थलांतर:</strong> शिक्षण, आरोग्य व रोजगाराच्या शोधात ग्रामीण भागातून मुंबई, पुणे, ठाणे यांसारख्या शहरांकडे होणारे स्थलांतर.</li>
+                        <li><strong>तात्पुरते/हंगामी स्थलांतर:</strong> पश्चिम महाराष्ट्रात ऊस तोडणी हंगामात होणारे कामगारांचे स्थलांतर (विशेषतः मराठवाड्यातून).</li>
                     </ul>
-                    <h4>भीमा नदी</h4>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="accordion-item" data-search="वाहतूक व दळणवळण राष्ट्रीय महामार्ग NH4 NH17 मुंबई पुणे एक्सप्रेसवे रेल्वे मध्य रेल्वे पश्चिम रेल्वे विमानतळ बंदरे">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-10')">
+                        <span class="accordion-title">10. वाहतूक व दळणवळण (Transportation)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>रस्ते, रेल्वे व हवाई वाहतूक</h4>
                     <ul>
-                        <li><strong>उगम:</strong> भीमाशंकर परिसर (पुणे जिल्हा).</li>
-                        <li>महाराष्ट्र व कर्नाटकातून वाहत जाऊन रायचूर जवळ कृष्णेला मिळते.</li>
-                        <li>प्रमुख धरण: <strong>उजनी धरण</strong> (सोलापूर जिल्हा), ज्याच्या जलाशयाला 'यशवंतसागर' म्हणतात.</li>
+                        <li><strong>रस्ते:</strong> मुंबई-पुणे एक्सप्रेसवे हा देशातील पहिला ६ पदरी जलदगती मार्ग आहे. **हिंदू हृदयसम्राट बाळासाहेब ठाकरे महाराष्ट्र समृद्धी महामार्ग** (मुंबई ते नागपूर - ७०१ किमी) हा महत्त्वाचा प्रकल्प आहे.</li>
+                        <li><strong>रेल्वे:</strong> भारतात पहिली रेल्वे **१६ एप्रिल १८५३** रोजी बोरीबंदर (मुंबई) ते ठाणे दरम्यान धावली. मुंबईत मेट्रो रेल्वे प्रकल्पांचा वेगाने विस्तार होत आहे.</li>
+                        <li><strong>बंदरे:</strong> मुंबई बंदर (मुख्य नैसर्गिक बंदर) आणि **जवाहरलाल नेहरू बंदर (JNPT)** (देशातील सर्वात मोठे कंटेनर हाताळणारे कृत्रिम बंदर) हे नवी मुंबईत आहे.</li>
                     </ul>
-                    <h4>तापी नदी</h4>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="accordion-item" data-search="पर्यटन आणि धार्मिक स्थळे अष्टविनायक पाच ज्योतीर्लिंगे साडेतीन शक्तीपीठे थंड हवेची ठिकाणे महाबळेश्वर माथेरान लेणी अजिंठा वेरुळ">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-11')">
+                        <span class="accordion-title">11. पर्यटन आणि धार्मिक स्थळे (Tourism & Religion)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>धार्मिक व ऐतिहासिक महत्त्व</h4>
                     <ul>
-                        <li>महाराष्ट्राच्या उत्तरेकडील भागातून वाहणारी मुख्य <strong>पश्चिमवाहिनी</strong> नदी.</li>
-                        <li><strong>उगम:</strong> मध्य प्रदेशातील बैतुल जिल्ह्यातील मुलताई येथे.</li>
-                        <li>पुढे अरबी समुद्राला मिळते.</li>
-                        <li><strong>महत्त्वाची गोष्ट:</strong> नर्मदा आणि तापी या भारतातील प्रमुख खचदरीतून वाहणाऱ्या पश्चिमवाहिनी नद्या आहेत.</li>
+                        <li><strong>साडेतीन शक्तीपीठे:</strong> तुळजापूर (तुळजाभवानी), कोल्हापूर (महालक्ष्मी), माहूर (रेणुका माता) आणि वणी (सप्तशृंगी - अर्धे पीठ).</li>
+                        <li><strong>पाच ज्योतीर्लिंगे:</strong> भीमाशंकर (पुणे), त्र्यंबकेश्वर (नाशिक), घृष्णेश्वर (छत्रपती संभाजीनगर), औंढा नागनाथ (हिंगोली) व परळी वैजनाथ (बीड).</li>
+                        <li><strong>थंड हवेची ठिकाणे:</strong> महाबळेश्वर, पाचगणी (सातारा), माथेरान (रायगड - देशातील एकमेव वाहनविरहित थंड हवेचे ठिकाण), चिखलदरा (अमरावती).</li>
+                        <li><strong>लेण्या:</strong> अजिंठा व वेरुळ लेणी (छत्रपती संभाजीनगर - युनेस्को जागतिक वारसा स्थळे).</li>
                     </ul>
-                    <h4>कोयना नदी</h4>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="accordion-item" data-search="महाराष्ट्रातील व्यवसाय शेती फलोत्पादन दुग्धव्यवसाय पशुपालन मासेमारी साखर उद्योग कापड गिरण्या आयटी उद्योग पुणे मुंबई">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-12')">
+                        <span class="accordion-title">12. महाराष्ट्रातील व्यवसाय (Economic Occupations)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>प्राथमिक, द्वितीयक व तृतीयक व्यवसाय</h4>
                     <ul>
-                        <li>कृष्णेची महत्त्वाची उपनदी (उगम सह्याद्री घाट परिसर).</li>
-                        <li><strong>कोयना धरण</strong> याच नदीवर बांधलेले असून या जलाशयाला 'शिवसागर' म्हणतात.</li>
-                        <li>याला महाराष्ट्राची <strong>'भाग्यलक्ष्मी'</strong> असे म्हटले जाते (जलविद्युत निर्मितीमुळे).</li>
+                        <li><strong>कृषी आधारित उद्योग:</strong> सहकारी साखर कारखाने व सूत गिरण्या (कापूस उत्पादन क्षेत्र - खानदेश व विदर्भ).</li>
+                        <li><strong>फलोत्पादन:</strong> नागपूरची संत्री, जळगावची केळी, नाशिकची द्राक्षे आणि रत्नागिरी/सिंधुदुर्गचा हापूस आंबा.</li>
+                        <li><strong>माहिती तंत्रज्ञान (IT Industry):</strong> पुणे (हिंजवडी) आणि मुंबई (वांद्रे-कुर्ला संकुल, सीप्झ) हे देशातील मोठे आयटी हब आहेत.</li>
                     </ul>
                 </div>
             </div>
 
             <!-- 13 -->
-            <div class="accordion-item" data-search="महाराष्ट्रातील महत्त्वाची धरणे जायकवाडी गोदावरी उजनी भीमा कोयना भंडारदरा प्रवरा मुळा धोम कृष्णा वारणा पानशेत आंबी">
+            <div class="accordion-item" data-search="भारताचा प्राकृतिक भूगोल हिमालय उत्तर भारतीय मैदान द्वीपकल्पीय पठार किनारपट्टीचे मैदान बेटे पूर्व घाट पश्चिम घाट नद्या गंगा ब्रह्मपुत्रा सिंधू गोदावरी कृष्णा नर्मदा तापी">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
                         <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-13')">
-                        <span class="accordion-title">13. महाराष्ट्रातील महत्त्वाची धरणे (Important Dams)</span>
+                        <span class="accordion-title">13. भारताचा प्राकृतिक भूगोल व नदीप्रणाली (Indian Geography & Rivers)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <table class="syllabus-table">
-                        <thead>
-                            <tr>
-                                <th>धरण (Dam)</th>
-                                <th>नदी (River)</th>
-                                <th>जलाशयाचे नाव (Reservoir)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>जायकवाडी</strong></td>
-                                <td>गोदावरी</td>
-                                <td>नाथसागर</td>
-                            </tr>
-                            <tr>
-                                <td><strong>उजनी</strong></td>
-                                <td>भीमा</td>
-                                <td>यशवंतसागर</td>
-                            </tr>
-                            <tr>
-                                <td><strong>कोयना</strong></td>
-                                <td>कोयना</td>
-                                <td>शिवसागर</td>
-                            </tr>
-                            <tr>
-                                <td><strong>भंडारदरा</strong></td>
-                                <td>प्रवरा</td>
-                                <td>आर्थर लेक (विल्सन डॅम)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>मुळा</strong></td>
-                                <td>मुळा</td>
-                                <td>ज्ञानेश्वर सागर</td>
-                            </tr>
-                            <tr>
-                                <td><strong>धोम</strong></td>
-                                <td>कृष्णा</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td><strong>वारणा</strong></td>
-                                <td>वारणा</td>
-                                <td>वसंतसागर</td>
-                            </tr>
-                            <tr>
-                                <td><strong>पानशेत</strong></td>
-                                <td>आंबी</td>
-                                <td>तानाजीसागर</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="trick-box">
-                        <div class="trick-title">Smart Trick</div>
-                        <p>गोदावरी &rarr; जायकवाडी | भीमा &rarr; उजनी | कोयना &rarr; कोयna | प्रवरा &rarr; भंडारदरा</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 14-15 -->
-            <div class="accordion-item" data-search="महाराष्ट्राचे हवामान पर्जन्यमान पर्जन्यछाया प्रदेश उष्णकटिबंधीय मान्सून उन्हाळा पावसाळा हिवाळा कोकण सह्याद्री पुणे सोलापूर अहमदनगर मराठवाडा">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-14')">
-                        <span class="accordion-title">14 - 15. हवामान व पर्जन्यछाया प्रदेश (Climate & Rain Shadow)</span>
-                    </div>
-                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
-                </div>
-                <div class="accordion-content">
-                    <h4>महाराष्ट्राचे हवामान</h4>
+                    <h4>भारताचे प्राकृतिक विभाग</h4>
                     <ul>
-                        <li>महाराष्ट्राचे हवामान प्रामुख्याने <strong>उष्णकटिबंधीय मान्सून</strong> स्वरूपाचे आहे.</li>
-                        <li><strong>प्रमुख ऋतू:</strong> 1. उन्हाळा (मार्च ते मे), 2. पावसाळा (जून ते सप्टेंबर), 3. हिवाळा (ऑक्टोबर ते फेब्रुवारी).</li>
-                    </ul>
-                    <h4>पर्जन्य वितरण</h4>
-                    <ul>
-                        <li>कोकण व सह्याद्रीच्या पश्चिम भागात अतिशय जास्त पाऊस पडतो (२५० ते ३०० सेमी पेक्षा जास्त).</li>
-                        <li>सह्याद्रीच्या पूर्वेकडे जाताना पावसाचे प्रमाण वेगाने कमी होते.</li>
-                        <li>मराठवाडा व मध्य महाराष्ट्रात पावसाचे प्रमाण खूपच कमी असते (अवर्षण प्रवण क्षेत्र).</li>
-                        <li>पूर्व विदर्भात बंगालच्या उपसागरावरून येणाऱ्या वाऱ्यांमुळे मान्सूनचा चांगला पाऊस पडतो.</li>
-                    </ul>
-                    <h4>पर्जन्यछाया प्रदेश (Rain Shadow Region)</h4>
-                    <ul>
-                        <li>सह्याद्री पर्वताच्या उंचीमुळे बाष्पीभूत वारे अडवले जातात. पश्चिम भागात मुसळधार पाऊस पडल्यानंतर हे वारे जेव्हा पर्वत ओलांडून पूर्वेकडे जातात, तेव्हा त्यांच्यातील आर्द्रता कमी झालेली असते. त्यामुळे सह्याद्रीच्या पूर्वेकडे कोरडा <strong>पर्जन्यछायेचा प्रदेश</strong> तयार होतो.</li>
-                        <li><strong>महत्त्वाचे पर्जन्यछायेचे प्रदेश:</strong> पुणे जिल्ह्यातील पूर्व भाग, सोलापूर, अहमदनगर जिल्हा आणि मराठवाड्याचा बहुतांश भाग.</li>
+                        <li><strong>हिमालय पर्वतरांग:</strong> उत्तरेकडील तरुण व घडीचा पर्वत. सर्वोच्च शिखर <strong>के-२ (गॉडविन ऑस्टिन)</strong> आणि हिमालयातील भारतात स्थित सर्वोच्च शिखर <strong>कांचनगंगा</strong> आहे.</li>
+                        <li><strong>द्वीपकल्पीय पठार:</strong> जुना भूभाग, ज्यामध्ये अरवली, सातपुडा व विंध्य पर्वतरांगा येतात.</li>
+                        <li><strong>नदीप्रणाली:</strong> 
+                            <br>&bull; <strong>हिमालयीन नद्या:</strong> गंगा, सिंधू, ब्रह्मपुत्रा (बारमाही नद्या).
+                            <br>&bull; <strong>द्वीपकल्पीय नद्या:</strong> गोदावरी (दक्षिण गंगा - लांबीनुसार भारतातील २ री मोठी नदी), कृष्णा, महानदी, कावेरी (पूर्व वाहिनी) आणि नर्मदा व तापी (पश्चिम वाहिनी नद्या).
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- 16-17 -->
-            <div class="accordion-item" data-search="महाराष्ट्रातील माती व प्रमुख पिके काळी माती रेगूर कापूस सोयाबीन ज्वारी लाल माती जांभा माती कोकण गाळाची माती ऊस बाजरी तूर कांदा नाशिक द्राक्ष संत्री नागपूर भात">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-16')">
-                        <span class="accordion-title">16 - 17. मातीचे प्रकार व प्रमुख पिके (Soils & Crops)</span>
-                    </div>
-                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
-                </div>
-                <div class="accordion-content">
-                    <h4>मातीचे प्रकार</h4>
-                    <ul>
-                        <li><strong>काळी माती (रेगूर माती):</strong> महाराष्ट्राच्या दख्खन पठारावर सर्वाधिक आढळते. पाणी धरून ठेवण्याची क्षमता जास्त. <strong>कापूस व ज्वारी</strong> पिकांसाठी अत्यंत योग्य.</li>
-                        <li><strong>लाल/तांबडी माती:</strong> सह्याद्रीच्या घाटमाथ्यावर व पूर्व विदर्भातील टेकड्यांमध्ये आढळते. लोहाचे प्रमाण जास्त असल्यामुळे तांबडा रंग येतो.</li>
-                        <li><strong>जांभा माती (Laterite Soil):</strong> दक्षिण कोकणात (रत्नागिरी, सिंधुदुर्ग) जास्त आढळते. अतिपर्जन्याच्या प्रदेशात आढळते, फळबागांसाठी (उदा. हापूस आंबा, काजू) सुयोग्य.</li>
-                        <li><strong>गाळाची माती:</strong> नदीखोऱ्यांमध्ये (गोदावरी, कृष्णा, तापी) आढळते. शेतीसाठी अत्यंत सुपीक.</li>
-                    </ul>
-                    <h4>प्रमुख पिके आणि त्यांचे प्रदेश</h4>
-                    <table class="syllabus-table">
-                        <thead>
-                            <tr>
-                                <th>पीक (Crop)</th>
-                                <th>प्रमुख प्रदेश/भाग (Main Region)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>कापूस</strong></td>
-                                <td>विदर्भ, खानदेश व मराठवाडा (काळी माती)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>ऊस</strong></td>
-                                <td>पश्चिम महाराष्ट्र (सिंचनाखालील क्षेत्र)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>ज्वारी</strong></td>
-                                <td>सोलापूर व मध्य महाराष्ट्र (दुष्काळी/अर्धशुष्क प्रदेश)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>बाजरी</strong></td>
-                                <td>कमी पावसाचे कोरडे प्रदेश (उदा. अहमदनगर, नाशिकचा पूर्व भाग)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>सोयाबीन & तूर</strong></td>
-                                <td>विदर्भ आणि मराठवाडा</td>
-                            </tr>
-                            <tr>
-                                <td><strong>कांदा & द्राक्ष</strong></td>
-                                <td>नाशिक व अहमदनगर परिसर</td>
-                            </tr>
-                            <tr>
-                                <td><strong>संत्री</strong></td>
-                                <td>नागपूर व अमरावती विभाग</td>
-                            </tr>
-                            <tr>
-                                <td><strong>भात (तांदूळ)</strong></td>
-                                <td>कोकण किनारपट्टी व पूर्व विदर्भ (जास्त पावसाचे प्रदेश)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="trick-box">
-                        <div class="trick-title">Super Trick</div>
-                        <p>नाशिक &rarr; कांदा + द्राक्ष | नागपूर &rarr; संत्री | विदर्भ &rarr; कापूस | पश्चिम महाराष्ट्र &rarr; ऊस | कोकण &rarr; भात</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 18-20 -->
-            <div class="accordion-item" data-search="वनसंपत्ती राष्ट्रीय उद्याने अभयारण्ये खनिजे विदर्भ ताडोबा मेळघाट व्याघ्र प्रकल्प पेंच नवेगाव गोंदिया संजय गांधी कोयना कोळसा चंद्रपूर मँगनीज नागपूर लोहखनिज गडचिरोली बॉक्साइट">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-18')">
-                        <span class="accordion-title">18 - 20. वनसंपत्ती, उद्याने व खनिज संपत्ती (Forests, Parks & Minerals)</span>
-                    </div>
-                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
-                </div>
-                <div class="accordion-content">
-                    <h4>वनसंपत्ती (Forest Resources)</h4>
-                    <ul>
-                        <li>महाराष्ट्रात पूर्व विदर्भ, गडचिरोली व सह्याद्रीच्या दुर्गम घाटांमध्ये दाट वने आहेत.</li>
-                        <li>वनांपासून लाकूड, बांबू, तेंदूपत्ता (बिडी उद्योगासाठी) व विविध औषधी वनस्पती मिळतात.</li>
-                    </ul>
-                    <h4>प्रमुख राष्ट्रीय उद्याने व व्याघ्र प्रकल्प</h4>
-                    <ul>
-                        <li><strong>ताडोबा-अंधारी व्याघ्र प्रकल्प:</strong> चंद्रपूर जिल्हा (महाराष्ट्रातील सर्वात पहिले राष्ट्रीय उद्यान, वाघांसाठी प्रसिद्ध).</li>
-                        <li><strong>मेळघाट व्याघ्र प्रकल्प:</strong> अमरावती जिल्हा (सातपुडा रांगेत).</li>
-                        <li><strong>पेंच राष्ट्रीय उद्यान:</strong> नागपूर जिल्हा (महाराष्ट्र-मध्य प्रदेश सीमेवर).</li>
-                        <li><strong>नवेगाव राष्ट्रीय उद्यान:</strong> गोंदिया जिल्हा.</li>
-                        <li><strong>संजय गांधी राष्ट्रीय उद्यान:</strong> बोरीवली, मुंबई.</li>
-                        <li><strong>कोयना अभयारण्य:</strong> सातारा जिल्हा (सह्याद्री परिसर).</li>
-                    </ul>
-                    <h4>खनिज संपत्ती (Mineral Resources)</h4>
-                    <p>महाराष्ट्रात खनिज संपत्ती प्रामुख्याने <strong>पूर्व विदर्भ</strong> आणि <strong>दक्षिण कोकण</strong> या दोन टोकांच्या प्रदेशात एकवटलेली आहे.</p>
-                    <ul>
-                        <li><strong>कोळसा (Coal):</strong> चंद्रपूर, यवतमाळ व नागपूर परिसर (थर्मल पॉवरसाठी वापर).</li>
-                        <li><strong>मँगनीज (Manganese):</strong> नागपूर व भंडारा जिल्ह्यात (देशात सर्वाधिक साठे येथे आहेत).</li>
-                        <li><strong>लोहखनिज (Iron Ore):</strong> गडचिरोली, चंद्रपूर व गोंदिया परिसर (गडचिरोलीतील सुरजागड प्रसिद्ध).</li>
-                        <li><strong>बॉक्साइट (Bauxite):</strong> कोल्हापूर, रत्नागिरी व रायगड जिल्हा (ॲल्युमिनियम उत्पादनासाठी).</li>
-                        <li><strong>चुनखडी (Limestone):</strong> यवतमाळ जिल्हा (सिमेंट उद्योगासाठी).</li>
-                    </ul>
-                    <div class="trick-box">
-                        <div class="trick-title">विशेष लक्षात ठेवा</div>
-                        <p>कोळसा &rarr; चंद्रपूर | मँगनीज &rarr; नागपूर/भंडारा | लोहखनिज &rarr; गडचिरोली | बॉक्साइट &rarr; कोकण/सह्याद्री</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 21-24 -->
-            <div class="accordion-item" data-search="महाराष्ट्रातील उद्योग बंदरे लोकसंख्या नागरीकरण नैसर्गिक आपत्ती साखर कापड वाहन आयटी पुणे मुंबई औषधनिर्मिती बंदर जेएनपीटी बंदर दाभोळ रत्नागिरी जयगड दुष्काळ पूर अतिवृष्टी">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-21')">
-                        <span class="accordion-title">21 - 24. उद्योग, बंदरे, लोकसंख्या व नैसर्गिक आपत्ती</span>
-                    </div>
-                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
-                </div>
-                <div class="accordion-content">
-                    <h4>महाराष्ट्रातील प्रमुख उद्योग (Industries)</h4>
-                    <ul>
-                        <li><strong>साखर उद्योग:</strong> पश्चिम महाराष्ट्र (सहकारी तत्त्वावर मोठा विकास).</li>
-                        <li><strong>कापड उद्योग:</strong> मुंबई (पूर्वीचे 'मँचेस्टर'), इचलकरंजी (कोल्हापूर जिल्हा - 'महाराष्ट्राचे मँचेस्टर'), सोलापूर.</li>
-                        <li><strong>वाहन (Automobile) उद्योग:</strong> पुणे (पिंपरी-चिंचवड परिसर) व छत्रपती संभाजीनगर.</li>
-                        <li><strong>माहिती तंत्रज्ञान (IT) उद्योग:</strong> पुणे (हिंजवडी) व मुंबई.</li>
-                        <li><strong>औषधनिर्मिती (Pharma):</strong> मुंबई-पुणे औद्योगिक पट्टा.</li>
-                    </ul>
-                    <h4>प्रमुख बंदरे (Ports)</h4>
-                    <ul>
-                        <li><strong>मुंबई बंदर:</strong> सर्वात मोठे व प्रमुख नैसर्गिक बंदर.</li>
-                        <li><strong>जवाहरलाल नेहरू बंदर (JNPT), न्हावा शेवा:</strong> रायगड जिल्हा (अतिआधुनिक कंटेनर बंदर, मुंबई बंदराचा ताण कमी करण्यासाठी).</li>
-                        <li>इतर छोटी बंदरे: दाभोळ, रत्नागिरी, जयगड.</li>
-                    </ul>
-                    <h4>लोकसंख्या व नागरीकरण (Population & Urbanization)</h4>
-                    <p><em>परीक्षेच्या दृष्टीने खालील मुद्द्यांवर विशेष लक्ष ठेवावे:</em></p>
-                    <ul>
-                        <li>लोकसंख्येचे वितरण आणि घनता (ठाणे, मुंबई उपनगर, पुणे सर्वाधिक दाट).</li>
-                        <li>ग्रामीण विरुद्ध शहरी लोकसंख्या प्रमाण (महाराष्ट्र देशात सर्वाधिक नागरीकरण झालेल्या राज्यांपैकी एक आहे).</li>
-                        <li>साक्षरता आणि लिंग गुणोत्तर (Sex Ratio) - रत्नागिरी जिल्ह्यात लिंग गुणोत्तर सर्वाधिक आहे.</li>
-                    </ul>
-                    <h4>नैसर्गिक आपत्ती व व्यवस्थापन (Natural Disasters)</h4>
-                    <ul>
-                        <li><strong>दुष्काळ (Drought):</strong> मराठवाडा व पश्चिम महाराष्ट्रातील पर्जन्यछायेचा पट्टा.</li>
-                        <li><strong>पूर (Floods):</strong> कोल्हापूर, सांगली (कृष्णा खोरे) व पूर्व विदर्भातील नद्या.</li>
-                        <li><strong>अतिवृष्टी व गारपीट (Hailstorms):</strong> मध्य महाराष्ट्र व मराठवाड्यात रब्बी पिकांचे नुकसान करणारी वारंवार येणारी आपत्ती.</li>
-                        <li><strong>भूस्खलन (Landslides):</strong> कोकण व सह्याद्री घाटात (उदा. महाड जवळील तळीये गाव दुर्घटना).</li>
-                        <li><strong>प्रतिबंधात्मक उपाय:</strong> जलसंधारण (पाणी अडवा पाणी जिरवा), वृक्षारोपण, आपत्ती व्यवस्थापन प्राधिकरणाची स्थापना.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- MASTER CHARTS -->
-            <div class="accordion-item" data-search="Geography Master Charts नदी गोदावरी त्र्यंबकेश्वर जायकवाडी पूर्ववाहिनी कृष्णा महाबळेश्वर कोयना भीमा भीमाशंकर उजनी तापी मध्य प्रदेश पश्चिमवाहिनी अरबी समुद्र कापूस काळी माती विदर्भ ऊस सिंचन संत्री नागपूर द्राक्ष नाशिक कांदा भात कोकण पर्वत सह्याद्री सातपुडा अजिंठा सातमाळा जिल्हा speciality कोळसा ताडोबा गडचिरोली लोहखनिज कोल्हापूर साखर सोलापूर वस्त्रोद्योग पुणे IT वाहन मुंबई">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'geo-charts')">
-                        <span class="accordion-title"><i class="fas fa-fire" style="color:var(--warning)"></i> Geography Master Charts (Revision Tables)</span>
-                    </div>
-                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
-                </div>
-                <div class="accordion-content">
-                    <h4>Chart 1 — नद्या (उगम, जलाशय, दिशा)</h4>
-                    <p>गोदावरी &rarr; त्र्यंबकेश्वर &rarr; जायकवाडी (नाथसागर) &rarr; पूर्ववाहिनी</p>
-                    <p>कृष्णा &rarr; महाबळेश्वर &rarr; कोयना/भीमा/पंचगंगा &rarr; पूर्ववाहिनी</p>
-                    <p>भीमा &rarr; भीमाशंकर &rarr; उजनी (यशवंतसागर) &rarr; कृष्णेला मिळते</p>
-                    <p>तापी &rarr; मध्य प्रदेश (मुलताई) &rarr; पश्चिमवाहिनी &rarr; अरबी समुद्र</p>
-                    
-                    <h4>Chart 2 — पीक आणि माती / प्रदेश</h4>
-                    <p>कापूस &rarr; काळी माती &rarr; विदर्भ</p>
-                    <p>ऊंस &rarr; सिंचन &rarr; पश्चिम महाराष्ट्र</p>
-                    <p>संत्री &rarr; नागपूर</p>
-                    <p>द्राक्ष &rarr; नाशिक</p>
-                    <p>कांदा &rarr; नाशिक</p>
-                    <p>भात &rarr; कोकण</p>
-
-                    <h4>Chart 3 — पर्वत व त्यांची स्थान</h4>
-                    <p>सह्याद्री &rarr; पश्चिम महाराष्ट्र</p>
-                    <p>सातपुडा &rarr; उत्तर महाराष्ट्र</p>
-                    <p>अजिंठा &rarr; उत्तर महाराष्ट्र/मराठवाडा</p>
-                    <p>सातमाळा &rarr; नाशिक पररसर</p>
-
-                    <h4>Chart 4 — जिल्हा & Speciality</h4>
-                    <p>नाशिक &rarr; द्राक्ष + कांदा</p>
-                    <p>नागपूर &rarr; संत्री</p>
-                    <p>चंद्रपूर &rarr; कोळसा + ताडोबा</p>
-                    <p>गडचिरोली &rarr; वने + लोहखनिज</p>
-                    <p>कोल्हापूर &rarr; साखर उद्योग (इचलकरंजी कापड)</p>
-                    <p>सोलापूर &rarr; चादरी व वस्त्रोद्योग</p>
-                    <p>पुणे &rarr; IT + वाहन उद्योग</p>
-                    <p>मुंबई &rarr; बंदरे + उद्योग + वित्त</p>
-                </div>
-            </div>
-
-        </div>
-
+        </div> <!-- end of #pane-geography -->
         <!-- SUBJECT 2: HISTORY PANE -->
+<!-- SUBJECT 2: HISTORY PANE -->
+        <div id="pane-history" class="syllabus-pane animate-fade-in">
+            
+            <!-- 1 -->
+            <div class="accordion-item" data-search="महाराष्ट्रातील आदिवासी उठाव रामोशी उमाजी नाईक भिल्ल कोळी सातपुडा खानदेश">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-1')">
+                        <span class="accordion-title">1. महाराष्ट्रातील आदिवासी व स्थानिक उठाव</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>रामोशी उठाव</h4>
+                    <ul>
+                        <li><strong>नेते:</strong> <strong>उमाजी नाईक</strong> (आद्य क्रांतिकारक). त्यांनी इंग्रजांविरुद्ध बंड पुकारले आणि जाहीरनामा प्रसिद्ध केला.</li>
+                        <li><strong>क्षेत्र:</strong> पुणे, सातारा व पुरंदर परिसरातील रामोशी बांधवांना एकत्र करून उठाव केला. १८३२ मध्ये त्यांना पुणे येथे फाशी देण्यात आली.</li>
+                    </ul>
+                    <h4>भिल्ल उठाव</h4>
+                    <ul>
+                        <li><strong>क्षेत्र:</strong> खानदेश व सातपुडा पर्वतीय परिसर (धुळे, नंदुरबार).</li>
+                        <li><strong>नेते:</strong> चिल नाईक व काझीसिंग यांच्या नेतृत्वाखाली इंग्रजी राजवटीविरुद्ध तीव्र संघर्ष केला.</li>
+                    </ul>
+                    <h4>कोळी उठाव</h4>
+                    <ul>
+                        <li><strong>नेते:</strong> रामजी भांगडिया व बापू भांगडिया यांच्या नेतृत्वाखाली मुंबई व पुणे परिसरातील सह्याद्रीच्या डोंगररांगांमध्ये उठाव करण्यात आले.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="accordion-item" data-search="ख्रिश्चन मिशनऱ्यांचे आगमन कार्य वर्तमानपत्र ज्ञानोदय रेव्हरंड थॉमस बॅलन्टाईन हेन्री">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-2')">
+                        <span class="accordion-title">2. ख्रिश्चन मिशनऱ्यांचे आगमन व वर्तमानपत्रे</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>मिशनऱ्यांचे आगमन व शैक्षणिक कार्य</h4>
+                    <ul>
+                        <li>ब्रिटिश काळात प्रामुख्याने महाराष्ट्रात अमेरिकन मराठी मिशन आणि चर्च मिशनरी सोसायटीचे आगमन झाले. त्यांनी इंग्रजी व मराठी शाळा सुरू केल्या आणि छपाई तंत्रज्ञान आणले.</li>
+                    </ul>
+                    <h4>ज्ञानोदय वर्तमानपत्र (Dnyanodaya - १८४२)</h4>
+                    <ul>
+                        <li><strong>सुरू करणारे:</strong> रेव्हरंड हेन्री व्हॅलेंटाईन (अहमदनगर येथून).</li>
+                        <li><strong>वैशिष्ट्य:</strong> ज्ञान प्रसार आणि धर्मांतराला प्रोत्साहन देणारे मासिक/साप्ताहिक. यात आशियाचा नकाशा पहिल्यांदा छापण्यात आला होता.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="accordion-item" data-search="१८५७ चा उठाव 1857 झाशी तात्या टोपे नानासाहेब पेशवे महाराष्ट्रातील सातारा चिमासाहेब पेठ कोल्हापूर रंगो बापूजी">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-3')">
+                        <span class="accordion-title">3. १८५७ चा उठाव (भारत आणि महाराष्ट्र)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>भारतातील उठाव</h4>
+                    <ul>
+                        <li><strong>प्रारंभ:</strong> <strong>१० मे १८५७</strong> रोजी मेरठ छावणीतील शिपायांच्या बंडाने सुरू. मंगल पांडे यांनी बराकपूर छावणीत पहिली गोळी झाडली.</li>
+                        <li><strong>प्रमुख नेते:</strong> झाशीची राणी लक्ष्मीबाई, तात्या टोपे, नानासाहेब पेशवे, बहादूर शहा जफर.</li>
+                    </ul>
+                    <h4>महाराष्ट्रातील उठाव व नेतृत्व</h4>
+                    <ul>
+                        <li><strong>सातारा:</strong> <strong>रंगो बापूजी गुप्ते</strong> (प्रतापसिंह महाराजांचे वकील) यांनी गुप्तपणे सैन्य उभारून मोठा उठाव घडवून आणण्याचा प्रयत्न केला.</li>
+                        <li><strong>कोल्हापूर:</strong> चिमासाहेब यांच्या नेतृत्वाखाली बंड.</li>
+                        <li><strong>पेठ (नाशिक):</strong> भगवंतराव कोळी यांच्या नेतृत्वाखाली बंड.</li>
+                        <li><strong>खानदेश:</strong> कजारसिंग यांच्या नेतृत्वाखाली भिल्लांचा उठाव.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="accordion-item" data-search="काँग्रेस स्थापनेपूर्वी महाराष्ट्रातील राजकीय संघटना बॉम्बे असोसिएशन जगन्नाथ नाना शंकरशेट पुणे सार्वजनिक सभा गवा जोशी सार्वजनिक काका">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-4')">
+                        <span class="accordion-title">4. काँग्रेस स्थापनेपूर्वीच्या राजकीय संघटना</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>प्रमुख संघटना व स्थापना</h4>
+                    <ul>
+                        <li><strong>बॉम्बे असोसिएशन (१८५२):</strong> मुंबईतील पहिली राजकीय संघटना. संस्थापक: <strong>जगन्नाथ (नाना) शंकरशेट</strong> व दादाभाई नौरोजी.</li>
+                        <li><strong>पुणे सार्वजनिक सभा (२ एप्रिल १८७०):</strong> संस्थापक: न्यायमूर्ती रानडे, जी. व्ही. जोशी (<strong>सार्वजनिक काका</strong>). उद्देश: जनता व सरकार यांच्यात दुवा म्हणून काम करणे.</li>
+                        <li><strong>बॉम्बे प्रेसिडेन्सी असोसिएशन (१८८५):</strong> संस्थापक: फिरोजशहा मेहता, के. टी. तेलंग व बदरुद्दीन तय्यबजी (यांना 'मुंबईचे त्रिमूर्ती' म्हटले जाई).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="accordion-item" data-search="धर्म सुधारणा समाज सुधारणा संघटना सत्यशोधक समाज प्रार्थना समाज परमहंस सभा रामकृष्ण मिशन आत्माराम पांडुरंग फुले">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-5')">
+                        <span class="accordion-title">5. धर्म सुधारणा व समाज सुधारणा संघटना</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>संघटना, संस्थापक व तत्त्वे</h4>
+                    <ul>
+                        <li><strong>परमहंस सभा (१८४९ - मुंबई):</strong> संस्थापक: दादोबा पांडुरंग तळखडकर. जातिभेद नष्ट करणे हे प्रमुख उद्दिष्ट होते (गुप्त सभा).</li>
+                        <li><strong>प्रार्थना समाज (१८६७ - मुंबई):</strong> संस्थापक: <strong>डॉ. आत्माराम पांडुरंग</strong>, न्या. रानडे. उद्दिष्ट: एकेश्वरवाद, समाजसुधारणा व प्रार्थना.</li>
+                        <li><strong>सत्यशोधक समाज (२४ सप्टेंबर १८७३):</strong> संस्थापक: <strong>महात्मा ज्योतिराव फुले</strong>. घोषवाक्य: "सर्व साक्षी जगत्पती, त्याला नकोच मध्यस्थी". बहुजन समाज व महिलांच्या उद्धारासाठी कार्य.</li>
+                        <li><strong>रामकृष्ण मिशन (१८९७):</strong> संस्थापक: स्वामी विवेकानंद (गुरु रामकृष्ण परमहंस यांच्या स्मरणार्थ).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="accordion-item" data-search="काँग्रेसची स्थापना अधिवेशने 1885 उमेशचंद्र बॅनर्जी तेजपाल संस्कृत पाठशाळा मुंबई पहिले अधिवेशन">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-6')">
+                        <span class="accordion-title">6. राष्ट्रीय काँग्रेसची स्थापना व महत्त्वाची अधिवेशने</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>स्थापना व पहिले अधिवेशन</h4>
+                    <ul>
+                        <li><strong>स्थापना:</strong> <strong>२८ डिसेंबर १८८५</strong> रोजी मुंबईतील गोकुळदास तेजपाल संस्कृत कॉलेजमध्ये झाली.</li>
+                        <li><strong>संस्थापक/पुढाकार:</strong> निवृत्त ब्रिटिश अधिकारी ॲलन ऑक्टाव्हियन ह्यूम (A. O. Hume).</li>
+                        <li><strong>पहिले अध्यक्ष:</strong> <strong>व्योमेशचंद्र बॅनर्जी</strong> (७२ प्रतिनिधी उपस्थित होते).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="accordion-item" data-search="मवाळ आणि जहाल काळ मवाळ युग जहाल युग लोकमान्य टिळक गोखले नौरोजी लाल बाल पाल">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-7')">
+                        <span class="accordion-title">7. मवाळ आणि जहाल काळ</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>मवाळ काळ (१८८५ - १९०५)</h4>
+                    <ul>
+                        <li><strong>वैशिष्ट्य:</strong> इंग्रजांच्या न्यायबुद्धीवर विश्वास, अर्ज-विनंत्यांचे राजकारण.</li>
+                        <li><strong>प्रमुख नेते:</strong> दादाभाई नौरोजी (आर्थिक निसरण सिद्धांत मांडणारे), गोपाळ कृष्ण गोखले (गांधीजींचे राजकीय गुरू), फिरोजशहा मेहता.</li>
+                    </ul>
+                    <h4>जहाल काळ (१९०५ - १९२०)</h4>
+                    <ul>
+                        <li><strong>वैशिष्ट्य:</strong> इंग्रजी सत्येविरुद्ध लढा, स्वराज्य हा जन्मसिद्ध हक्क मानणे.</li>
+                        <li><strong>प्रमुख नेते:</strong> 'लाल-बाल-पाल' &rarr; लाला लजपत राय, बाळ गंगाधर टिळक, बिपिनचंद्र पाल.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="accordion-item" data-search="लोकमान्य टिळक टिळकांचे चरित्र स्वदेशी आंदोलन होमरूल चळवळ केसरी मराठा एनी बेझंट">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-8')">
+                        <span class="accordion-title">8. लोकमान्य टिळक, स्वदेशी आंदोलन व होमरूल</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>बाळ गंगाधर टिळक (लोकमान्य)</h4>
+                    <ul>
+                        <li><strong>वर्तमानपत्रे:</strong> <strong>'केसरी' (मराठी)</strong> आणि <strong>'मराठा' (इंग्रजी)</strong> ची स्थापना (१८८१).</li>
+                        <li><strong>उत्सव:</strong> सार्वजनिक गणेशोत्सव (१८९३) व शिवजयंती (१८९५) यांची सुरुवात करून लोकजागृती केली.</li>
+                    </ul>
+                    <h4>स्वदेशी आंदोलन (बंगालची फाळणी - १९०५)</h4>
+                    <ul>
+                        <li>लॉर्ड कर्झनने केलेल्या बंगालच्या फाळणीविरुद्ध वंगभंग चळवळ सुरू झाली. टिळकांनी <strong>चतुःसूत्री</strong> (स्वराज्य, स्वदेशी, राष्ट्रीय शिक्षण, बहिष्कार) जाहीर केली.</li>
+                    </ul>
+                    <h4>होमरूल चळवळ (१९१६)</h4>
+                    <ul>
+                        <li>टिळकांनी बेळगाव येथून तर डॉ. ॲनी बेझंट यांनी मद्रास येथून 'स्वशासनासाठी' (Home Rule) चळवळ सुरू केली.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="accordion-item" data-search="गांधीजींचे आंदोलने असहकार आंदोलन सविनय कायदेभंग चले जाव महाराष्ट्रातील आंदोलने दांडी यात्रा चिमूर आष्टी वैयक्तिक सत्याग्रह">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-9')">
+                        <span class="accordion-title">9. गांधीजींचे आंदोलने व महाराष्ट्रातील योगदान</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>असहकार आंदोलन (१९२०-२२)</h4>
+                    <ul>
+                        <li>सरकारी संस्था, पदव्या व न्यायालयांवर बहिष्कार. चोरीचौरा घटनेनंतर (१९२२) गांधीजींनी आंदोलन मागे घेतले.</li>
+                    </ul>
+                    <h4>सविनय कायदेभंग (१९३०)</h4>
+                    <ul>
+                        <li><strong>दांडी यात्रा (१२ मार्च ते ६ एप्रिल १९३०):</strong> मिठाचा कायदा मोडण्यासाठी साबरमती ते दांडी यात्रा.</li>
+                        <li><strong>महाराष्ट्रातील योगदान:</strong> <strong>सोलापूरचा सत्याग्रह</strong> (मार्शल लॉ लागू), **वडाळा मिठाचा सत्याग्रह** (मुंबई), आणि **बिळाशी जंगल सत्याग्रह** (सातारा).</li>
+                    </ul>
+                    <h4>चले जाव आंदोलन (१९४२)</h4>
+                    <ul>
+                        <li>८ ऑगस्ट १९४२ रोजी मुंबईच्या गवालिया टँक मैदानावर गांधीजींनी <strong>'करा किंवा मरा' (Do or Die)</strong> चा नारा दिला.</li>
+                        <li><strong>महाराष्ट्रातील बंड:</strong> सातारा येथे क्रांतीसिंह नाना पाटील यांनी <strong>'प्रति सरकार' (Patri Sarkar)</strong> स्थापन केले. चिमूर व आष्टी येथे लष्कराशी संघर्ष झाला.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="accordion-item" data-search="संयुक्त महाराष्ट्र चळवळ फाझल अली आयोग जेव्हीपी समिती द्विभाषिक मुंबई राज्य बेळगाव सीमा प्रश्न सेनापती बापट शाहू महाराज">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-10')">
+                        <span class="accordion-title">10. संयुक्त महाराष्ट्र चळवळ (Unified Maharashtra Movement)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>पार्श्वभूमी व स्थापना</h4>
+                    <ul>
+                        <li>मराठी भाषिक जनतेचे एकत्र राज्य स्थापन करण्यासाठी सुरू झालेली चळवळ. **संयुक्त महाराष्ट्र समितीची स्थापना ६ फेब्रुवारी १९५६ रोजी** बेळगाव येथे झाली.</li>
+                        <li><strong>प्रमुख नेते:</strong> एस. एम. जोशी, श्रीपाद अमृत डांगे, प्र. के. अत्रे (आचार्य अत्रे - 'मराठा' पत्राद्वारे जनजागृती), सेनापती बापट, शाहीर अमर शेख.</li>
+                        <li><strong>स्थापना:</strong> अखेर १०६ हुतात्म्यांच्या बलिदानानंतर <strong>१ मे १९६०</strong> रोजी स्वतंत्र महाराष्ट्र राज्याची स्थापना झाली (पहिले मुख्यमंत्री: यशवंतराव चव्हाण).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="accordion-item" data-search="हैदराबाद मुक्तिसंग्राम स्वामी रामानंद तीर्थ मराठवाडा मुक्ती संग्राम रझाकार कासीम रझवी ऑपरेशन पोलो">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-11')">
+                        <span class="accordion-title">11. हैदराबाद मुक्तिसंग्राम (Marathwada Liberation)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>निजाम राजवटीविरुद्ध संघर्ष</h4>
+                    <ul>
+                        <li>हैदराबादचा निजाम उस्मान अली खान याने भारतात सामील होण्यास नकार दिला होता. निजामाच्या अत्याचारी 'रझाकार' (Razakars) सैन्याविरुद्ध लढा उभारण्यात आला.</li>
+                        <li><strong>नेते:</strong> <strong>स्वामी रामानंद तीर्थ</strong> यांच्या नेतृत्वाखाली आंध्र हिंदू महासभा व महाराष्ट्र परिषदेने संघर्ष केला. मराठवाड्यातील गोविंदभाई श्रॉफ, बाबासाहेब परांजपे यांनी लढा दिला.</li>
+                        <li><strong>पोलीस कारवाई:</strong> भारत सरकारने <strong>'ऑपरेशन पोलो' (Operation Polo)</strong> अंतर्गत लष्करी कारवाई करून <strong>१७ सप्टेंबर १९४८</strong> रोजी हैदराबाद भारतात विलीन केले. हा दिवस मराठवाडा मुक्ती दिन म्हणून साजरा केला जातो.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="accordion-item" data-search="शाहू फुले आंबेडकर राजर्षी शाहू महाराज महात्मा फुले डॉ बाबासाहेब आंबेडकर समाज सुधारक कोल्हापूर आरक्षण">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-12')">
+                        <span class="accordion-title">12. शाहू-फुले-आंबेडकर विचार व कार्य</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>महात्मा ज्योतिराव फुले (१८२७ - १८९०)</h4>
+                    <ul>
+                        <li><strong>शिक्षण:</strong> १८४८ मध्ये पुण्यातील बुधवार पेठेतील भिडे वाड्यात मुलींची पहिली शाळा सुरू केली.</li>
+                        <li><strong>ग्रंथसंपदा:</strong> 'शेतकऱ्याचा आसूड', 'गुलामगिरी', 'तृतीय रत्न', 'सार्वजनिक सत्यधर्म'.</li>
+                    </ul>
+                    <h4>राजर्षी शाहू महाराज (१८७४ - १९२२)</h4>
+                    <ul>
+                        <li><strong>आरक्षण:</strong> २६ जुलै १९०२ रोजी कोल्हापूर संस्थानात बहुजन समाजासाठी <strong>५०% आरक्षणाची ऐतिहासिक घोषणा</strong> केली.</li>
+                        <li><strong>कार्य:</strong> प्राथमिक शिक्षण मोफत व सक्तीचे केले. वसतिगृहांची स्थापना केली. डॉ. आंबेडकरांच्या 'मूकनायक' वृत्तपत्राला आर्थिक मदत केली.</li>
+                    </ul>
+                    <h4>डॉ. बाबासाहेब आंबेडकर (१८९१ - १९५६)</h4>
+                    <ul>
+                        <li><strong>संघटना:</strong> बहिष्कृत हितकारिणी सभा (१९२४), पीपल्स एज्युकेशन सोसायटी.</li>
+                        <li><strong>सत्याग्रह:</strong> **महाडचा चवदार तळे सत्याग्रह** (२० मार्च १९२७) आणि **काळाराम मंदिर सत्याग्रह** (१९३० - नाशिक).</li>
+                        <li><strong>घटना निर्मिती:</strong> भारतीय मसुदा समितीचे अध्यक्ष (भारतीय राज्यघटनेचे शिल्पकार).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="accordion-item" data-search="महाराष्ट्रातील समाज सुधारक जगन्नाथ नाना शंकरशेट दादोबा पांडुरंग लोकहितवादी गोपाळ हरी देशमुख विष्णुशास्त्री चिपळूणकर महर्षी धोंडो केशव कर्वे गोपाळ गणेश आगरकर">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-13')">
+                        <span class="accordion-title">13. महाराष्ट्रातील इतर प्रमुख समाजसुधारक</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>महत्त्वाचे समाजसुधारक व त्यांची योगदान</h4>
+                    <ul>
+                        <li><strong>गोपाळ हरी देशमुख (लोकहितवादी):</strong> प्रभाकर साप्ताहिकात <strong>'शतपत्रे' (१०८ पत्रे)</strong> लिहून अंधश्रद्धा व सामाजिक कुप्रथांवर कडाडून टीका केली.</li>
+                        <li><strong>गोपाळ गणेश आगरकर:</strong> केसरीचे पहिले संपादक. पुढे बुद्धीप्रामाण्यवाद व व्यक्तिस्वातंत्र्याचा पुरस्कार करण्यासाठी <strong>'सुधारक' (१८८८)</strong> हे पत्र सुरू केले.</li>
+                        <li><strong>महर्षी धोंडो केशव कर्वे:</strong> महिला शिक्षणासाठी आयुष्य वाहिलेले समाजसुधारक. त्यांनी पुण्यात हिंगणे येथे महिला विद्यालयाची व पुढे **SNDT महिला विद्यापीठाची (१९१६)** स्थापना केली. १९५८ मध्ये त्यांना भारतरत्न मिळाला.</li>
+                        <li><strong>जगन्नाथ (नाना) शंकरशेट:</strong> मुंबईचे शिल्पकार म्हणून ओळखले जाणारे दानशूर समाजसुधारक. मुंबईत रेल्वे सुरू करणे व शिक्षण प्रसारात मोठा वाटा.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="accordion-item" data-search="दलितोत्तर चळवळ आणि वर्तमानपत्रे मूकनायक बहिष्कृत भारत समता जनता प्रबुद्ध भारत दलित पॅंथर्स नामदेव ढसाळ">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-14')">
+                        <span class="accordion-title">14. दलितोत्तर चळवळ आणि तिची वर्तमानपत्रे</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>डॉ. बाबासाहेब आंबेडकरांची वर्तमानपत्रे</h4>
+                    <ul>
+                        <li><strong>मूकनायक (१९२०):</strong> शाहू महाराजांच्या मदतीने सुरू झालेले पाक्षिक.</li>
+                        <li><strong>बहीष्कृत भारत (१९२७):</strong> महाड सत्याग्रहानंतर अस्पृश्यांच्या हक्कांसाठी सुरू केलेले पत्र.</li>
+                        <li><strong>समता (१९२८) / जनता (१९३०) / प्रबुद्ध भारत (१९५६):</strong> विचारांच्या प्रसारासाठी सुरू केलेली वृत्तपत्रे.</li>
+                    </ul>
+                    <h4>दलित पॅंथर्स चळवळ (१९७२)</h4>
+                    <ul>
+                        <li><strong>संस्थापक:</strong> नामदेव ढसाळ, बाबुराव बागूल, अर्जुन डांगळे. शोषित व दलितांवर होणाऱ्या अन्यायाविरुद्ध साहित्यिक व सामाजिक लढा देणारी लढाऊ संघटना.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="accordion-item" data-search="शेतकरी आणि मजूर चळवळी शेतकरी चळवळ गिरणी कामगार नारायण मेघाजी लोखंडे नील दर्पण बाबा रामचंद्र">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-15')">
+                        <span class="accordion-title">15. महाराष्ट्र व भारतातील शेतकरी आणि मजूर चळवळी</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>मजूर चळवळ (कामगार चळवळ)</h4>
+                    <ul>
+                        <li><strong>नारायण मेघाजी लोखंडे:</strong> भारतातील कामगार चळवळीचे जनक. त्यांनी <strong>'बॉम्बे मिलहँड्स असोसिएशन' (१८९०)</strong> ही पहिली कामगार संघटना स्थापन केली. त्यांनी कामगारांना रविवारची सुट्टी मिळवून दिली. दीनबंधू पत्राचे संपादन केले.</li>
+                    </ul>
+                    <h4>शेतकरी चळवळ</h4>
+                    <ul>
+                        <li><strong>डेक्कन दंगे (१८७५):</strong> पुणे व अहमदनगर जिल्ह्यात सावकारांच्या अन्यायाविरुद्ध आणि जमीन बळकावण्याविरुद्ध शेतकऱ्यांनी केलेले उठाव (सावकारांची दस्तऐवज जाळली).</li>
+                        <li><strong>बारडोली सत्याग्रह (१९२८):</strong> वल्लभभाई पटेल यांच्या नेतृत्वाखाली साराबंदी आंदोलन. याच आंदोलनाने त्यांना 'सरदार' ही पदवी दिली.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="accordion-item" data-search="क्रांतीपर्व क्रांतिकारकांचे योगदान वासुदेव बळवंत फडके चाफेकर बंधू अभिनव भारत वि दा सावरकर सेनापती बापट बॉम्ब बनवणे">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'hist-16')">
+                        <span class="accordion-title">16. महाराष्ट्रातील क्रांतीपर्व (Revolutionary Movements)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>सशस्त्र क्रांतीचे प्रयत्न</h4>
+                    <ul>
+                        <li><strong>वासुदेव बळवंत फडके:</strong> महाराष्ट्रातील सशस्त्र क्रांतीचे जनक. रामोशी बांधवांना एकत्र करून इंग्रजांविरुद्ध बंड केले. त्यांना एडनच्या तुरुंगात ठेवण्यात आले, जिथे १८८३ मध्ये त्यांचा मृत्यू झाला.</li>
+                        <li><strong>चाफेकर बंधू (दामोदर, बाळकृष्ण, वासुदेव):</strong> पुण्यात प्लेग कमिशनर <strong>रँड (Rand)</strong> याच्या अत्याचारामुळे १८९७ मध्ये त्याची हत्या केली व हौतात्म्य पत्करले.</li>
+                        <li><strong>स्वातंत्र्यवीर विनायक दामोदर सावरकर:</strong> १९०४ मध्ये नाशिक येथे <strong>'अभिनव भारत'</strong> या गुप्त क्रांतिकारी संघटनेची स्थापना केली. बाबाराव सावरकर आणि अनंत कान्हेरे (ज्यांनी नाशिकचा कलेक्टर जॅक्सनचा वध केला) यांचे योगदान.</li>
+                        <li><strong>सेनापती बापट (पांडुरंग महादेव बापट):</strong> बॉम्ब बनवण्याची विद्या शिकण्यासाठी पॅरिसला गेले व ती भारतात आणली. पुढे त्यांनी मुळशी सत्याग्रहाचे नेतृत्व केले.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> <!-- end of #pane-history -->
+        <!-- SUBJECT 3: POLITY PANE -->
+
         <div id="pane-history" class="syllabus-pane animate-fade-in">
             
             <!-- 1 -->
@@ -1377,283 +1445,902 @@
 
         </div>
 
-        <!-- SUBJECT 3: POLITY PANE -->
-        <div id="pane-polity" class="syllabus-pane animate-fade-in">
+        <!-- end of #pane-polity -->
+
+        <!-- SUBJECT 4: ECONOMICS PANE -->
+        <div id="pane-economics" class="syllabus-pane animate-fade-in">
             
-            <!-- 1-3 -->
-            <div class="accordion-item" data-search="भारतीय संविधान महत्त्वाच्या तारखा 9 डिसेंबर 1946 29 ऑगस्ट 1947 26 नोव्हेंबर 1949 26 जानेवारी 1950 संविधान सभा सच्चिदानंद सिन्हा राजेंद्र प्रसाद बाबासाहेब आंबेडकर संविधानाची वैशिष्ट्ये संसदीय संघराज्यात्मक स्वतंत्र न्यायपालिका">
+            <!-- 1 -->
+            <div class="accordion-item" data-search="अर्थशास्त्र अर्थव्यवस्था प्रकार क्षेत्रे भांडवलशाही समाजवादी मिश्र प्राथमिक द्वितीयक तृतीयक ऍडम स्मिथ एडम स्मिथ">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'pol-1')">
-                        <span class="accordion-title">1 - 3. संविधान निर्मिती व वैशिष्ट्ये (Making of Constitution)</span>
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-1')">
+                        <span class="accordion-title">1. अर्थशास्त्र आणि अर्थव्यवस्था, प्रकार व क्षेत्रे</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <h4>महत्त्वाच्या तारखा</h4>
+                    <h4>अर्थशास्त्राची व्याख्या</h4>
                     <ul>
-                        <li><strong>9 डिसेंबर 1946:</strong> संविधान सभेची पहिली बैठक (तात्पुरते अध्यक्ष: डॉ. सच्चिदानंद सिन्हा).</li>
-                        <li><strong>11 डिसेंबर 1946:</strong> डॉ. राजेंद्र प्रसाद संविधान सभेचे कायमस्वरूपी अध्यक्ष म्हणून नियुक्त.</li>
-                        <li><strong>29 ऑगस्ट 1947:</strong> मसुदा समितीची (Drafting Committee) स्थापना (अध्यक्ष: डॉ. बाबासाहेब आंबेडकर — घटनेचे शिल्पकार).</li>
-                        <li><strong>26 नोव्हेंबर 1949:</strong> भारताचे संविधान स्वीकारण्यात आले (घटनेवर स्वाक्षऱ्या झाल्या).</li>
-                        <li><strong>26 जानेवारी 1950:</strong> भारताचे संविधान अंमलात आले व भारत एक 'प्रजासत्ताक राष्ट्र' बनला.</li>
+                        <li><strong>व्याख्या:</strong> अर्थशास्त्र हे मर्यादित साधनांचा वापर करून अमर्यादित मानवी गरजा कशा पूर्ण कराव्यात याचे शास्त्र आहे.</li>
+                        <li><strong>जनक:</strong> <strong>अॅडम स्मिथ</strong> (Adam Smith) यांना अर्थशास्त्राचे जनक मानले जाते. त्यांनी १७७६ मध्ये 'वेल्थ ऑफ नेशन्स' हा ग्रंथ लिहिला.</li>
                     </ul>
-                    <h4>संविधानाची प्रमुख वैशिष्ट्ये</h4>
-                    <p>लिखित व जगातील सर्वात मोठे विस्तृत संविधान | संसदीय शासन पद्धती | संघराज्यात्मक व्यवस्था | स्वतंत्र व एकात्मिक न्यायपालिका | मूलभूत हक्क व कर्तव्ये | धर्मनिरपेक्ष लोकशाही प्रजासत्ताक.</p>
+                    <h4>अर्थव्यवस्थेचे प्रकार</h4>
+                    <ul>
+                        <li><strong>भांडवलशाही (Capitalist):</strong> उत्पादनाची साधने खाजगी मालकीची असतात. नफा मिळवणे हा मुख्य हेतू असतो (उदा. अमेरिका).</li>
+                        <li><strong>समाजवादी (Socialist):</strong> उत्पादनाची साधने शासकीय मालकीची असतात. समाजकल्याण हा मुख्य हेतू असतो (उदा. चीन, पूर्वीचा सोव्हिएत युनियन).</li>
+                        <li><strong>मिश्र (Mixed):</strong> सार्वजनिक व खाजगी क्षेत्रांचे सहअस्तित्व असते (उदा. <strong>भारत</strong>).</li>
+                    </ul>
+                    <h4>अर्थव्यवस्थेची क्षेत्रे</h4>
+                    <ul>
+                        <li><strong>प्राथमिक क्षेत्र (Primary Sector):</strong> निसर्गावर आधारित व्यवसाय (उदा. कृषी, पशुपालन, खाणकाम, मासेमारी).</li>
+                        <li><strong>द्वितीयक क्षेत्र (Secondary Sector):</strong> कच्च्या मालावर प्रक्रिया करणारे उद्योग (उदा. कारखाने, बांधकाम, वीज निर्मिती).</li>
+                        <li><strong>तृतीयक क्षेत्र (Tertiary Sector):</strong> सेवा देणारी क्षेत्रे (उदा. बँकिंग, विमा, शिक्षण, वाहतूक, पर्यटन).</li>
+                    </ul>
+                    <div class="trick-box">
+                        <div class="trick-title">Smart Focus</div>
+                        <p>भारतीय अर्थव्यवस्था ही <strong>मिश्र अर्थव्यवस्था</strong> असून सेवा क्षेत्राचे (तृतीयक क्षेत्र) योगदान जीडीपीमध्ये सर्वाधिक आहे.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="accordion-item" data-search="राष्ट्रीय उत्पन्न GDP GNP NDP NNP मोजमाप उत्पादन पद्धती उत्पन्न पद्धती खर्च पद्धती NSO CSO">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-2')">
+                        <span class="accordion-title">2. राष्ट्रीय उत्पन्न (National Income)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>मूलभूत संकल्पना</h4>
+                    <ul>
+                        <li><strong>GDP (स्थूल देशांतर्गत उत्पादन):</strong> एका वर्षात देशाच्या भौगोलिक सीमेच्या आत उत्पादित झालेल्या एकूण अंतिम वस्तू व सेवांचे बाजारमूल्य.</li>
+                        <li><strong>GNP (स्थूल राष्ट्रीय उत्पन्न):</strong> देशाच्या नागरिकांनी (देशात व परदेशात) उत्पादित केलेले एकूण उत्पन्न. (GNP = GDP + परदेशातील निव्वळ उत्पन्न).</li>
+                        <li><strong>NNP (निव्वळ राष्ट्रीय उत्पन्न):</strong> GNP मधून घसारा (Depreciation) वजा केल्यास NNP मिळते. हेच देशाचे खरे राष्ट्रीय उत्पन्न मानले जाते.</li>
+                    </ul>
+                    <h4>मोजमापाच्या पद्धती</h4>
+                    <ul>
+                        <li><strong>उत्पादन पद्धत (Product Method):</strong> वस्तू व सेवांच्या मूल्यांची बेरीज केली जाते (कृषी, उद्योग क्षेत्रासाठी वापर).</li>
+                        <li><strong>उत्पन्न पद्धत (Income Method):</strong> विविध घटकांना मिळणाऱ्या उत्पन्नाची (भाडे + वेतन + व्याज + नफा) बेरीज केली जाते (सेवा क्षेत्रासाठी वापर).</li>
+                        <li><strong>खर्च पद्धत (Expenditure Method):</strong> उपभोग खर्च, गुंतवणूक आणि निव्वळ निर्यात यांची बेरीज केली जाते.</li>
+                    </ul>
+                    <div class="trick-box">
+                        <div class="trick-title">मोजणारी संस्था</div>
+                        <p>भारतात राष्ट्रीय उत्पन्नाचे मोजमाप <strong>NSO (National Statistical Office)</strong> द्वारे केले जाते (पूर्वी CSO व NSSO संस्था कार्यरत होत्या, ज्यांचे २०१९ मध्ये एकत्रीकरण करण्यात आले).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="accordion-item" data-search="चलनवाढ महागाई Inflation मागणीजन्य खर्चजन्य CPI WPI ग्राहक किंमत निर्देशांक घाऊक किंमत निर्देशांक">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-3')">
+                        <span class="accordion-title">3. चलनवाढ (Inflation & Price Rise)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>व्याख्या व प्रकार</h4>
+                    <ul>
+                        <li><strong>व्याख्या:</strong> वस्तू व सेवांच्या सर्वसाधारण किंमत पातळीत होणारी शाश्वत वाढ आणि पैशाच्या खरेदीक्षमतेत होणारी घट म्हणजे चलनवाढ (महागाई).</li>
+                        <li><strong>मागणीजन्य चलनवाढ (Demand-Pull):</strong> लोकांचे उत्पन्न वाढल्यामुळे वस्तूंना मागणी वाढते व किमती वाढतात.</li>
+                        <li><strong>खर्चजन्य चलनवाढ (Cost-Push):</strong> कच्चा माल, इंधन किंवा मजुरी वाढल्यामुळे उत्पादन खर्च वाढतो व किमती वाढतात.</li>
+                    </ul>
+                    <h4>चलनवाढीचे मोजमाप</h4>
+                    <ul>
+                        <li><strong>CPI (Consumer Price Index - ग्राहक किंमत निर्देशांक):</strong> किरकोळ बाजारातील किमतींवर आधारित. हा ग्राहक पातळीवरील महागाई दर्शवतो. आरबीआय आपल्या मौद्रिक धोरणासाठी या निर्देशांकाचा वापर करते.</li>
+                        <li><strong>WPI (Wholesale Price Index - घाऊक किंमत निर्देशांक):</strong> घाऊक बाजारातील किमतींवर आधारित. यात सेवांचा समावेश नसतो (केवळ वस्तू).</li>
+                    </ul>
+                    <div class="trick-box">
+                        <div class="trick-title">चलनवाढीचा परिणाम</div>
+                        <p>चलनवाढीचा फायदा <strong>ऋणको (कर्जदार)</strong> आणि उत्पादकांना होतो, तर नुकसान <strong>धनको (कर्ज देणारे)</strong> आणि स्थिर उत्पन्न असणाऱ्या वर्गाला होते.</p>
+                    </div>
                 </div>
             </div>
 
             <!-- 4 -->
-            <div class="accordion-item" data-search="उद्देशिका सरनामा Preamble सार्वभौम समाजवादी धर्मनिरपेक्ष लोकशाही गणराज्य न्याय स्वातंत्र्य समता बंधुता 42 वी घटनादुरुस्ती 1976 अखंडता संविधानाची ओळख दिशादर्शक">
+            <div class="accordion-item" data-search="दारिद्र्य बेरोजगारी Poverty Unemployment तेंडुलकर रंगराजन समिती छुपी बेरोजगारी प्रच्छन्न बेरोजगारी हंगामी संरचनात्मक">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'pol-4')">
-                        <span class="accordion-title">4. संविधानाची उद्देशिका (Preamble)</span>
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-4')">
+                        <span class="accordion-title">4. दारिद्र्य व बेरोजगारी (Poverty & Unemployment)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
+                    <h4>दारिद्र्य संकल्पना व समित्या</h4>
                     <ul>
-                        <li>उद्देशिका ही आपल्या राज्यघटनेचा <strong>आत्मा, ओळखपत्र व दिशादर्शक</strong> मानली जाते.</li>
-                        <li><strong>भारताचे स्वरूप:</strong> सार्वभौम, समाजवादी, धर्मनिरपेक्ष, लोकशाही, गणराज्य.</li>
-                        <li><strong>नागरिकांना मिळणारे हक्क:</strong> सामाजिक, आर्थिक व राजकीय न्याय | विचार, अभिव्यक्ती, विश्वास, श्रद्धा व उपासनेचे स्वातंत्र्य | दर्जाची आणि संधीची समता | व्यक्तीची प्रतिष्ठा व राष्ट्राची एकता व एकात्मता वाढवणारी बंधुता.</li>
+                        <li><strong>निरपेक्ष दारिद्र्य (Absolute Poverty):</strong> मानवाच्या किमान मूलभूत गरजा (अन्न, वस्त्र, निवारा, शिक्षण, आरोग्य) पूर्ण न करू शकण्याची अवस्था. भारतात याचे मोजमाप केले जाते.</li>
+                        <li><strong>सापेक्ष दारिद्र्य (Relative Poverty):</strong> समाजातील वेगवेगळ्या वर्गांच्या उत्पन्नातील विषमतेवर आधारित तुलनात्मक दारिद्र्य. विकसित देशात हे मोजले जाते.</li>
+                        <li><strong>महत्त्वाच्या समित्या:</strong>
+                            <br>&bull; <strong>तेंडुलकर समिती (२००९):</strong> उष्मांकाऐवजी शिक्षण व आरोग्यावरील खर्चाचा समावेश करून दारिद्र्य रेषा ठरवली.
+                            <br>&bull; <strong>रंगराजन समिती (२०१४):</strong> ग्रामीण भागात रु. ९७२ आणि शहरी भागात रु. १४०७ प्रतिमहिना उपभोग्य खर्च दारिद्र्य मर्यादा निश्चित केली.
+                        </li>
                     </ul>
+                    <h4>बेरोजगारीचे प्रकार</h4>
+                    <ul>
+                        <li><strong>छुपी किंवा प्रच्छन्न बेरोजगारी (Disguised Unemployment):</strong> गरजेपेक्षा जास्त मजूर कामावर असणे (उदा. कृषी क्षेत्रात). यांची सीमांत उत्पादकता शून्य असते.</li>
+                        <li><strong>हंगामी बेरोजगारी (Seasonal):</strong> वर्षातील काही काळच काम मिळणे (उदा. साखर कारखाना कामगार, शेतमजूर).</li>
+                        <li><strong>संरचनात्मक बेरोजगारी (Structural):</strong> देशाच्या आर्थिक रचनेतील बदलांमुळे किंवा कौशल्यांच्या अभावामुळे निर्माण होणारी बेरोजगारी.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="accordion-item" data-search="लोकसंख्याशास्त्र जनगणना 2011 लोकसंख्या घनता साक्षरता लिंगगुणोत्तर महाराष्ट्र भारत">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-5')">
+                        <span class="accordion-title">5. लोकसंख्याशास्त्र (Demography & Census 2011)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>२०११ जनगणनेची महत्त्वाची आकडेवारी</h4>
+                    <table class="syllabus-table">
+                        <thead>
+                            <tr>
+                                <th>घटक / वैशिष्ट्य</th>
+                                <th>भारत</th>
+                                <th>महाराष्ट्र</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>एकूण लोकसंख्या</strong></td>
+                                <td>१२१.०८ कोटी (जगात दुसरा)</td>
+                                <td>११.२४ कोटी (भारतात दुसरा)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>लोकसंख्या घनता</strong></td>
+                                <td>३८२ प्रति चौ. किमी.</td>
+                                <td>३६५ प्रति चौ. किमी.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>लिंगगुणोत्तर (Sex Ratio)</strong></td>
+                                <td>९४३ स्त्रिया / १००० पुरुष</td>
+                                <td>९२९ स्त्रिया / १००० पुरुष</td>
+                            </tr>
+                            <tr>
+                                <td><strong>साक्षरता दर</strong></td>
+                                <td>७४.०४ %</td>
+                                <td>८२.३४ %</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <div class="trick-box">
-                        <div class="trick-title">42 वी घटनादुरुस्ती — 1976</div>
-                        <p>या दुरुस्तीनुसार उद्देशिकेत तीन नवीन शब्दांचा समावेश करण्यात आला:<br><strong>१. समाजवादी, २. धर्मनिरपेक्ष, ३. अखंडता (एकात्मता)</strong>.</p>
+                        <div class="trick-title">महाराष्ट्रातील जिल्हे (२०११)</div>
+                        <p>सर्वाधिक लोकसंख्या &rarr; ठाणे जिल्हा (विभाजनापूर्वी)<br>सर्वाधिक घनता &rarr; मुंबई उपनगर<br>सर्वाधिक लिंगगुणोत्तर &rarr; रत्नागिरी (११२२)<br>सर्वात कमी लिंगगुणोत्तर &rarr; मुंबई शहर (८३२)</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 5-6 -->
-            <div class="accordion-item" data-search="मूलभूत अधिकार कलम 12 ते 35 भाग 3 समानतेचा अधिकार कलम 14 15 16 17 18 कायद्यापुढे समानता अस्पृश्यता निर्मूलन स्वातंत्र्याचा अधिकार कलम 19 21 21A शिक्षणाचा अधिकार शोषणाविरुद्ध कलम 23 24 धार्मिक स्वातंत्र्य 25 28 सांस्कृतिक शैक्षणिक 29 30 घटनात्मक उपाय कलम 32 हृदय आणि आत्मा Writs Habeas Corpus Mandamus Prohibition Certiorari Quo Warranto">
+            <!-- 6 -->
+            <div class="accordion-item" data-search="सार्वजनिक वित्त महसूल अर्थसंकल्प वार्षिक वित्तीय पत्रक कलम 112 महसुली तूट वित्तीय तूट FRBM कायदा">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'pol-5')">
-                        <span class="accordion-title">5 - 6. मूलभूत अधिकार व ५ प्रमुख रिट्स (Rights & Writs)</span>
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-6')">
+                        <span class="accordion-title">6. सार्वजनिक वित्त (Public Finance & Budget)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <h4>मूलभूत अधिकार (भाग 3, कलम 12 ते 35)</h4>
-                    <ol>
-                        <li><strong>समानतेचा अधिकार (कलम 14 ते 18):</strong>
-                            <ul>
-                                <li>कलम १४: कायद्यापुढे समानता.</li>
-                                <li>कलम १५: धर्म, जात, लिंग यावरून भेदभाव करण्यास मनाई.</li>
-                                <li>कलम १६: सार्वजनिक नोकरीत समान संधी.</li>
-                                <li>कलम १७: <strong>अस्पृश्यता निर्मूलन (बंदी)</strong>.</li>
-                                <li>कलम १८: पदव्या रद्द करणे (समानता राखण्यासाठी).</li>
-                            </ul>
-                        </li>
-                        <li><strong>स्वातंत्र्याचा अधिकार (कलम 19 ते 22):</strong>
-                            <ul>
-                                <li>कलम १९: भाषण व अभिव्यक्ती स्वातंत्र्य (एकूण ६ स्वतंत्रतेचे हक्क).</li>
-                                <li>कलम २१: जीवित व वैयक्तिक स्वातंत्र्य संरक्षण (अतिशय महत्त्वाचे कलम).</li>
-                                <li>कलम २१-अ: <strong>६ ते १४ वर्षांच्या बालकांना मोफत व सक्तीच्या शिक्षणाचा हक्क</strong>.</li>
-                            </ul>
-                        </li>
-                        <li><strong>शोषणाविरुद्धचा अधिकार (कलम 23 व 24):</strong>
-                            <ul>
-                                <li>कलम २३: माणसांच्या बेकायदेशीर व्यापारास व वेठबिगारीस बंदी.</li>
-                                <li>कलम २४: बालमजुरीस बंदी (१४ वर्षांखालील मुलांना कारखान्यात कामावर ठेवण्यास बंदी).</li>
-                            </ul>
-                        </li>
-                        <li><strong>धार्मिक स्वातंत्र्याचा अधिकार (कलम 25 ते 28).</strong></li>
-                        <li><strong>सांस्कृतिक व शैक्षणिक अधिकार (कलम 29 व 30 - अल्पसंख्याक हित).</strong></li>
-                        <li><strong>घटनात्मक उपायांचा अधिकार (कलम 32):</strong>
-                            <ul>
-                                <li>हक्कांचे उल्लंघन झाल्यास थेट सर्वोच्च न्यायालयात दाद मागण्याचा अधिकार.</li>
-                                <li>डॉ. बाबासाहेब आंबेडकरांनी या कलमाला <strong>संविधानाचा 'हृदय आणि आत्मा' (Heart and Soul)</strong> म्हटले आहे.</li>
-                            </ul>
-                        </li>
-                    </ol>
-                    
-                    <h4>५ प्रमुख रिट्स (न्यायालयीन आदेश / Writs)</h4>
+                    <h4>अर्थसंकल्प (Budget - कलम ११२)</h4>
                     <ul>
-                        <li><strong>Habeas Corpus (बंदी प्रत्यक्षीकरण):</strong> बेकायदेशीरपणे अटक केलेल्या व्यक्तीला न्यायालयासमोर हजर करण्याचा आदेश.</li>
-                        <li><strong>Mandamus (परमादेश):</strong> सार्वजनिक कर्तव्य पार न पाडणाऱ्या अधिकारी किंवा संस्थेला कर्तव्याचे पालन करण्याचा न्यायालयाचा आदेश.</li>
-                        <li><strong>Prohibition (प्रतिषेध):</strong> कनिष्ठ न्यायालयाने आपल्या अधिकारकक्षेबाहेर जाऊन खटला चालवू नये म्हणून वरिष्ठ न्यायालयाचा मनाई हुकूम.</li>
-                        <li><strong>Certiorari (उत्प्रेषण):</strong> कनिष्ठ न्यायालयाकडील खटला वरिष्ठ न्यायालयाकडे किंवा उच्च प्राधिकरणाकडे हस्तांतरित करण्याचा आदेश.</li>
-                        <li><strong>Quo Warranto (अधिकारपृच्छा):</strong> कोणत्याही व्यक्तीने बेकायदेशीरपणे सार्वजनिक पद धारण केले असल्यास त्याचा अधिकार तपासणे.</li>
+                        <li>राज्यघटनेत 'बजेट' ऐवजी <strong>'वार्षिक वित्तीय विवरणपत्रक' (Annual Financial Statement)</strong> असा उल्लेख आहे.</li>
+                        <li>अर्थसंकल्पाचे दोन प्रमुख भाग असतात: 
+                            <br>&bull; <strong>महसुली अर्थसंकल्प (Revenue Budget):</strong> चालू आर्थिक वर्षातील नेहमीचे उत्पन्न आणि नेहमीचा खर्च (उदा. कर महसूल, पगार व पेन्शन).
+                            <br>&bull; <strong>भांडवलशाही अर्थसंकल्प (Capital Budget):</strong> मालमत्ता आणि उत्तरदायित्वाशी संबंधित व्यवहार (उदा. कर्ज उभारणी, रस्ते/रेल्वे बांधणीवरील खर्च).
+                        </li>
+                    </ul>
+                    <h4>तुटीच्या संकल्पना</h4>
+                    <ul>
+                        <li><strong>महसुली तूट (Revenue Deficit):</strong> महसुली खर्च - महसुली उत्पन्न.</li>
+                        <li><strong>वित्तीय तूट (Fiscal Deficit):</strong> एकूण खर्च - (एकूण महसूल + बिगर कर्ज भांडवली उत्पन्न). ही सरकारचे एकूण कर्ज घेण्याचे प्रमाण दर्शवते.</li>
+                        <li><strong>FRBM कायदा (२००३):</strong> वित्तीय तूट आणि महसुली तूट नियंत्रित ठेवण्यासाठी लागू करण्यात आला.</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- 7-9 -->
-            <div class="accordion-item" data-search="मार्गदर्शक तत्वे DPSP भाग 4 कलम 36 ते 51 कल्याणकारी राज्य कलम 40 ग्रामपंचायत कलम 44 समान नागरी संहिता कलम 48A पर्यावरण संरक्षण मूलभूत कर्तव्ये भाग 4A कलम 51A 42 वी घटनादुरुस्ती 10 कर्तव्ये 86 वी 2002 11 वे कर्तव्य नागरिकत्व">
+            <!-- 7 -->
+            <div class="accordion-item" data-search="कर प्रणाली प्रत्यक्ष कर अप्रत्यक्ष कर GST वस्तू व सेवा कर 101 वी घटनादुरुस्ती 1 जुलै 2017">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'pol-7')">
-                        <span class="accordion-title">7 - 9. मार्गदर्शक तत्त्वे, मूलभूत कर्तव्ये व नागरिकत्व</span>
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-7')">
+                        <span class="accordion-title">7. कर प्रणाली (Taxation System & GST)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <h4>राज्याच्या धोरणाची मार्गदर्शक तत्त्वे (DPSP - भाग 4, कलम 36 ते 51)</h4>
+                    <h4>करांचे प्रकार</h4>
                     <ul>
-                        <li>उद्देश: भारतात <strong>'कल्याणकारी राज्य' (Welfare State)</strong> स्थापन करणे.</li>
-                        <li>ही तत्त्वे न्यायालयाद्वारे थेट अंमलबजावणीसाठी बंधनकारक नाहीत (Non-justiciable).</li>
-                        <li><strong>महत्त्वाची कलमे:</strong>
-                            <ul>
-                                <li>कलम ४०: ग्रामपंचायतींची स्थापना.</li>
-                                <li>कलम ४४: <strong>समान नागरी संहिता (Uniform Civil Code)</strong>.</li>
-                                <li>कलम ४८-अ: पर्यावरण, वने व वन्यजीव यांचे संरक्षण.</li>
-                            </ul>
+                        <li><strong>प्रत्यक्ष कर (Direct Tax):</strong> ज्या कराचा भार इतर कोणावरही वर्ग करता येत नाही (उदा. वैयक्तिक आयकर - Income Tax, कॉर्पोरेशन टॅक्स - महामंडळ कर).</li>
+                        <li><strong>अप्रत्यक्ष कर (Indirect Tax):</strong> ज्या कराचा भार अंतिम ग्राहकावर वर्ग केला जातो (उदा. सीमाशुल्क - Customs Duty, GST).</li>
+                    </ul>
+                    <h4>वस्तू व सेवा कर (GST - Goods and Services Tax)</h4>
+                    <ul>
+                        <li><strong>घटना दुरुस्ती:</strong> <strong>१०१ वी घटनादुरुस्ती कायदा, २०१६</strong> द्वारे लागू.</li>
+                        <li><strong>अंमलबजावणी तारीख:</strong> <strong>१ जुलै २०१७</strong> (भारतात 'एक देश, एक कर' संकल्पना).</li>
+                        <li><strong>दर रचना:</strong> प्रामुख्याने ५ स्तर — ०%, ५%, १२%, १८% आणि २८%.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="accordion-item" data-search="परकीय व्यापार व्यवहारतोल व्यापारतोल BoP BoT आयात निर्यात परकीय चलन साठा चालू खाते">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-8')">
+                        <span class="accordion-title">8. परकीय व्यापार (Foreign Trade & BoP)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>व्यवहारतोल आणि व्यापारतोल</h4>
+                    <ul>
+                        <li><strong>व्यवहारतोल (Balance of Payments - BoP):</strong> एका वर्षाच्या कालावधीत देशातील रहिवासी आणि उर्वरित जग यांच्यात झालेल्या सर्व आर्थिक व्यवहारांची पद्धतशीर नोंद. यात चालू खाते (Current Account) आणि भांडवली खाते (Capital Account) समाविष्ट असते.</li>
+                        <li><strong>व्यापारतोल (Balance of Trade - BoT):</strong> दृश्य (वस्तूंच्या) आयातीचे मूल्य आणि निर्यातीचे मूल्य यांमधील फरक. (BoT = निर्यात मूल्य - आयात मूल्य).</li>
+                    </ul>
+                    <h4>परकीय चलन साठा (Forex Reserve)</h4>
+                    <ul>
+                        <li>आरबीआयद्वारे नियंत्रित केला जातो. यात परदेशी चलने, सोन्याचा साठा, SDR (विशेष उचल हक्क) आणि IMF मधील गंगाजळीचा समावेश होतो.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="accordion-item" data-search="कृषी उद्योग हरितक्रांती स्वामिनाथन खरीप रब्बी एमएसएमई MSME महारत्न नवरत्न">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-9')">
+                        <span class="accordion-title">9. कृषी आणि उद्योग (Agriculture & Industry)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>कृषी क्षेत्र</h4>
+                    <ul>
+                        <li><strong>हरितक्रांती (Green Revolution):</strong> १९६६-६७ मध्ये उच्च उत्पादन देणाऱ्या बियाण्यांच्या (HYV) वापरामुळे अन्नधान्य उत्पादनात (विशेषत: गहू व तांदूळ) मोठी वाढ झाली.
+                            <br>&bull; भारतात जनक: <strong>डॉ. एम. एस. स्वामिनाथन</strong>.
+                        </li>
+                        <li><strong>पिकांचे हंगाम:</strong> 
+                            <br>&bull; <strong>खरीप (Kharif):</strong> पावसाळी पिके (उदा. तांदूळ, ज्वारी, कापूस, सोयाबीन).
+                            <br>&bull; <strong>रब्बी (Rabi):</strong> हिवाळी पिके (उदा. गहू, हरभरा, मोहरी, करडई).
                         </li>
                     </ul>
-                    <h4>मूलभूत कर्तव्ये (भाग 4A, कलम 51A)</h4>
+                    <h4>उद्योग क्षेत्र व सार्वजनिक उपक्रम</h4>
                     <ul>
-                        <li>घटनेमध्ये ही कर्तव्ये मूळ स्वरूपात नव्हती. <strong>४२ व्या घटनादुरुस्तीद्वारे (१९७६)</strong> स्वर्ण सिंग समितीच्या शिफारशीनुसार समाविष्ट केली गेली.</li>
-                        <li>सुरुवातीला १० कर्तव्ये होती. <strong>८६ व्या घटनादुरुस्तीद्वारे (२००२)</strong> ११ वे कर्तव्य जोडण्यात आले (पालकांनी पाल्याला शिक्षणाची संधी देणे).</li>
-                        <li><strong>प्रमुख कर्तव्ये:</strong> संविधानाचा, राष्ट्रध्वजाचा व राष्ट्रगीताचा आदर करणे | देशाचे सार्वभौमत्व व अखंडता टिकवणे | पर्यावरणाचे रक्षण करणे | वैज्ञानिक दृष्टिकोन बाळगणे.</li>
-                    </ul>
-                    <h4>नागरिकत्व (Citizenship - भाग 2, कलम 5 ते 11)</h4>
-                    <p>भारतात 'एकेरी नागरिकत्व' (Single Citizenship) आहे. नागरिकत्व मिळवण्याचे मार्ग: १. जन्म, २. वंश, ३. नोंदणी, ४. नैसर्गिकीकरण, ५. प्रदेश भारताला जोडला गेल्यामुळे.</p>
-                </div>
-            </div>
-
-            <!-- 10-13 (Union Government & Judiciary) -->
-            <div class="accordion-item" data-search="राष्ट्रपती उपराष्ट्रपती घटनात्मक प्रमुख निवड अप्रत्यक्ष कार्यकाल 5 वर्षे किमान वय 35 वर्षे महाभियोग पंतप्रधान मंत्रीपरिषद वास्तविक प्रमुख संसद लोकसभा राज्यसभा धन विधेयक सर्वोच्च न्यायालय नवी दिल्ली उच्च न्यायालय कलम 32 कलम 226">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'pol-10')">
-                        <span class="accordion-title">10 - 13. राष्ट्रपती, पंतप्रधान, संसद व न्यायपालिका</span>
-                    </div>
-                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
-                </div>
-                <div class="accordion-content">
-                    <h4>राष्ट्रपती (President)</h4>
-                    <ul>
-                        <li>भारताचा प्रथम नागरिक व <strong>घटनात्मक प्रमुख</strong> (Constitutional Head).</li>
-                        <li><strong>निवड:</strong> संसदेच्या दोन्ही सभागृहांचे व राज्यांच्या विधानसभेचे निवडून आलेले सदस्य (Electoral College) अप्रत्यक्ष निवडणूक पद्धतीने करतात.</li>
-                        <li>कायद्यानुसार वय पात्रता: <strong>किमान ३५ वर्षे</strong> | कार्यकाळ: <strong>५ वर्षे</strong>.</li>
-                        <li><strong>महासभियोग (कलम ६१):</strong> संविधानाचे उल्लंघन केल्यास राष्ट्रपतींना पदावरून दूर करण्याची प्रक्रिया.</li>
-                    </ul>
-                    <h4>उपराष्ट्रपती (Vice President)</h4>
-                    <ul>
-                        <li>राज्यसभेचे <strong>पदनसिद्ध अध्यक्ष (Ex-officio Chairman)</strong> असतात.</li>
-                        <li>कार्यकाळ: ५ वर्षे | पात्रता वय: किमान ३५ वर्षे.</li>
-                    </ul>
-                    <h4>पंतप्रधान व मंत्रीपरिषद (PM & Cabinet)</h4>
-                    <ul>
-                        <li>पंतप्रधान हे भारताचे <strong>वास्तविक कार्यकारी प्रमुख (Real Executive Head)</strong> असतात.</li>
-                        <li>राष्ट्रपती पंतप्रधानांची नियुक्ती करतात व त्यांच्या सल्ल्याने इतर मंत्र्यांची नियुक्ती करतात.</li>
-                        <li>मंत्रीपरिषद सामूहिकरीत्या लोकसभेला जबाबदार असते.</li>
-                    </ul>
-                    <h4>भारतीय संसद (Parliament)</h4>
-                    <p>संसद = राष्ट्रपती + लोकसभा + राज्यसभा</p>
-                    <ul>
-                        <li><strong>लोकसभा (जनतेचे सभागृह):</strong> कनिष्ठ व तात्पुरते सभागृह (दर ५ वर्षांनी विसर्जित). निवडून आलेले सदस्य थेट जनतेद्वारे निवडले जातात. धन विधेयक केवळ लोकसभेतच मांडले जाऊ शकते.</li>
-                        <li><strong>राज्यसभा (राज्यांचे सभागृह):</strong> वरिष्ठ व कायमस्वरूपी सभागृह (कधीही पूर्ण विसर्जित होत नाही). दर दोन वर्षांनी १/३ सदस्य निवृत्त होतात व त्या जागी नवीन येतात. सदस्यांचा कार्यकाळ <strong>६ वर्षे</strong> असतो.</li>
-                    </ul>
-                    <h4>न्यायपालिका (Judiciary)</h4>
-                    <ul>
-                        <li><strong>सर्वोच्च न्यायालय (Supreme Court):</strong> नवी दिल्ली येथील सर्वोच्च न्यायालय संविधानाचा अंतिम संरक्षक व व्याख्याकार आहे. मूलभूत हक्कांचे संरक्षण करते.</li>
-                        <li><strong>उच्च न्यायालय (High Court):</strong> राज्यांचे सर्वोच्च न्यायालय.</li>
-                        <li><strong>रिट्स जारी करण्याचे अधिकार:</strong> सर्वोच्च न्यायालय &rarr; <strong>कलम ३२</strong> नुसार | उच्च न्यायालय &rarr; <strong>कलम २२६</strong> नुसार.</li>
+                        <li><strong>MSME व्याख्या (२०२० बदल):</strong>
+                            <br>&bull; सूक्ष्म (Micro): गुंतवणूक &le; १ कोटी, उलाढाल &le; ५ कोटी.
+                            <br>&bull; लघु (Small): गुंतवणूक &le; १० कोटी, उलाढाल &le; ५० कोटी.
+                            <br>&bull; मध्यम (Medium): गुंतवणूक &le; ५० कोटी, उलाढाल &le; २५० कोटी.
+                        </li>
+                        <li><strong>सार्वजनिक उद्योग वर्गीकरण:</strong> महारत्न (Maharatna), नवरत्न (Navratna), मिनीरत्न (Miniratna) हे स्वायत्तता देणारे दर्जे आहेत.</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- 14-16 (State Government) -->
-            <div class="accordion-item" data-search="राज्य शासन राज्यपाल मुख्यमंत्री महाराष्ट्र विधानमंडळ विधानसभा विधानपरिषद द्विसदनी जनता थेट 5 वर्षे राज्यपाल नियुक्त मुख्यमंत्री नियुक्त">
+            <!-- 10 -->
+            <div class="accordion-item" data-search="भारतीय नियोजन पंचवार्षिक योजना नीती आयोग नियोजन आयोग पहिली दुसरी महालनोबिस मॉडेल">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'pol-14')">
-                        <span class="accordion-title">14 - 16. राज्य शासन (राज्यपाल, मुख्यमंत्री व विधानमंडळ)</span>
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-10')">
+                        <span class="accordion-title">10. भारतीय नियोजन आणि पंचवार्षिक योजना</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <h4>राज्यपाल (Governor)</h4>
+                    <h4>नियोजन आयोग व पंचवार्षिक योजना</h4>
                     <ul>
-                        <li>राज्याचा घटनात्मक प्रमुख. नियुक्ती भारताचे राष्ट्रपती करतात.</li>
-                        <li>कार्यकाळ: सामान्यतः ५ वर्षे (राष्ट्रपतींची मर्जी असेपर्यंत) | पात्रता वय: किमान ३५ वर्षे.</li>
+                        <li><strong>नियोजन आयोग (Planning Commission):</strong> स्थापना १५ मार्च १९५० ला (अवैधानिक संस्था). देशाच्या पंतप्रधानांच्या अध्यक्षतेखाली कार्यरत होती. आता बरखास्त करण्यात आली आहे.</li>
+                        <li><strong>१ ली पंचवार्षिक योजना (१९५१-५६):</strong> भर: कृषी विकास. मॉडेल: हॅरोड-डोमार.</li>
+                        <li><strong>२ री पंचवार्षिक योजना (१९५६-६१):</strong> भर: जड व पायाभूत उद्योग विकास. मॉडेल: पी. सी. महालनोबिस. (भिलाई, राउरकेला, दुर्गापूर पोलाद कारखाने याच योजनेत स्थापन).</li>
+                        <li><strong>१२ वी पंचवार्षिक योजना (२०१२-१७):</strong> भारताची अंतिम योजना. घोषवाक्य: "अधिक जलद, शाश्वत व अधिक सर्वसमावेशक विकास".</li>
                     </ul>
-                    <h4>मुख्यमंत्री (Chief Minister)</h4>
+                    <h4>नीती आयोग (NITI Aayog - National Institution for Transforming India)</h4>
                     <ul>
-                        <li>राज्याचा वास्तविक कार्यकारी प्रमुख. राज्यपाल मुख्यमंत्र्यांची नियुक्ती करतात.</li>
-                        <li>राज्य मंत्रिमंडळाचे नेतृत्व मुख्यमंत्री करतात.</li>
+                        <li><strong>स्थापना:</strong> <strong>१ जानेवारी २०१५</strong> (नियोजन आयोगाच्या जागी 'थिंक टँक' म्हणून स्थापना).</li>
+                        <li><strong>रचना:</strong> अध्यक्ष - पंतप्रधान, उपाध्यक्ष - पंतप्रधानांद्वारे नियुक्त (सध्या सुमन बेरी), सीईओ. यात बॉटम-अप (तळागाळातून वर) दृष्टिकोनाचा वापर होतो.</li>
                     </ul>
-                    <h4>महाराष्ट्र विधानमंडळ (State Legislature)</h4>
-                    <p>महाराष्ट्रात <strong>द्विसदनी विधानमंडळ (Bicameral Legislature)</strong> आहे.</p>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="accordion-item" data-search="आन्तरराष्ट्रीय नाणेनिधी जागतिक बँक जागतिक व्यापार संघटना IMF World Bank WTO ब्रेटन वूड्स परिषद">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-11')">
+                        <span class="accordion-title">11. आंतरराष्ट्रीय वित्तीय संस्था (IMF, World Bank, WTO)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>IMF (International Monetary Fund - आंतरराष्ट्रीय नाणेनिधी)</h4>
                     <ul>
-                        <li><strong>विधानसभा (कनिष्ठ सभागृह):</strong> जनतेद्वारे थेट निवडून आलेले सदस्य (आमदार). कार्यकाळ ५ वर्षे. विधानसभा अध्यक्ष सभागृहाचे नियंत्रण करतात.</li>
-                        <li><strong>विधानपरिषद (वरिष्ठ सभागृह):</strong> कायमस्वरूपी सभागृह. दर दोन वर्षांनी १/३ सदस्य निवृत्त होतात. सदस्यांचा कार्यकाळ ६ वर्षे असतो. सभापती हे विधानपरिषदेचे प्रमुख असतात.</li>
+                        <li><strong>स्थापना:</strong> १९४५ (१९४४ च्या ब्रेटन वूड्स परिषदेचे फलित). मुख्यालय: <strong>वॉशिंग्टन डी.सी.</strong></li>
+                        <li><strong>कार्य:</strong> देशांच्या व्यवहारतोलातील (BoP) तात्पुरती तूट भरून काढण्यासाठी व परकीय चलनाच्या स्थैर्यासाठी अल्पकालीन कर्ज देणे.</li>
+                        <li><strong>चलन:</strong> SDR (Special Drawing Rights) - विशेष उचल हक्क (कागदी सोने).</li>
                     </ul>
+                    <h4> जागतिक बँक (World Bank Group)</h4>
+                    <ul>
+                        <li><strong>स्थापना:</strong> १९४४. मुख्यालय: वॉशिंग्टन डी.सी.</li>
+                        <li><strong>कार्य:</strong> सदस्य देशांच्या आर्थिक पुनर्रचना आणि दीर्घकालीन विकासासाठी कर्ज पुरवणे.</li>
+                    </ul>
+                    <h4>WTO (World Trade Organization - जागतिक व्यापार संघटना)</h4>
+                    <ul>
+                        <li><strong>स्थापना:</strong> <strong>१ जानेवारी १९९५</strong> (पूर्वीच्या GATT च्या जागी मूरकेस कराराद्वारे स्थापना). मुख्यालय: <strong>जिनेव्हा, स्वित्झर्लंड</strong>.</li>
+                        <li><strong>कार्य:</strong> जागतिक व्यापार सुलभ करणे आणि बहुराष्ट्रीय व्यापारातील तंटे मिटवणे.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="accordion-item" data-search=" उद्योग धोरण LPG मॉडेल 1991 आर्थिक सुधारणा उदारीकरण खाजगीकरण जागतिकीकरण मनमोहन सिंग">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-12')">
+                        <span class="accordion-title">12. औद्योगिक धोरणे व नवीन आर्थिक सुधारणा (LPG)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>आर्थिक सुधारणा व ऐतिहासिक धोरणे</h4>
+                    <ul>
+                        <li><strong>१९४८ व १९५६ धोरणे:</strong> मिश्र अर्थव्यवस्थेची घोषणा व सार्वजनिक उद्योगांचे महत्त्व प्रस्थापित करणारे निर्णय.</li>
+                        <li><strong>१९९१ चे LPG धोरण:</strong> <strong>उदारीकरण (Liberalization)</strong>, <strong>खाजगीकरण (Privatization)</strong> व <strong>जागतिकीकरण (Globalization)</strong>. परवाना राज संपुष्टात आणणे, निर्गुंतवणूक आणि आयात शुल्क कपात ही प्रमुख वैशिष्ट्ये.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="accordion-item" data-search="पायाभूत सुविधा पायाभूत क्षेत्र रस्ते रेल्वे बंदरे ऊर्जा भारतमाला सागरमाला">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-13')">
+                        <span class="accordion-title">13. पायाभूत सुविधा (Infrastructure Development)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>पायाभूत विकासाचे क्षेत्र</h4>
+                    <ul>
+                        <li><strong>आर्थिक पायाभूत सुविधा:</strong> रस्ते, रेल्वे, हवाई वाहतूक, बंदरे, दूरसंचार आणि ऊर्जा.</li>
+                        <li><strong>सामाजिक पायाभूत सुविधा:</strong> शिक्षण, आरोग्य, पेयजल आणि स्वच्छता.</li>
+                        <li><strong>प्रमुख राष्ट्रीय उपक्रम:</strong> <strong>भारतमाला</strong> (महामार्ग जाळे जोडणी), <strong>सागरमाला</strong> (बंदरांचा विकास), आणि <strong>उदय योजना</strong> (DISCOMs चा वित्तीय सुधार).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="accordion-item" data-search="बँकिंग व्यवस्था राष्ट्रीयीकरण एसबीआय SBI वाणिज्य बँका व्यापारी बँका नाबार्ड NABARD">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-14')">
+                        <span class="accordion-title">14. भारतीय बँकिंग व्यवस्था (Banking System in India)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>बँकिंग क्षेत्राचा इतिहास</h4>
+                    <ul>
+                        <li><strong>स्टेट बँक ऑफ इंडिया (SBI):</strong> १ जुलै १९५५ रोजी राष्ट्रीयीकरण (पूर्वीची इम्पेरियल बँक).</li>
+                        <li><strong>बँकांचे राष्ट्रीयीकरण:</strong>
+                            <br>&bull; १९६९ मध्ये <strong>१४ बँकांचे</strong> राष्ट्रीयीकरण.
+                            <br>&bull; १९८० मध्ये <strong>६ बँकांचे</strong> राष्ट्रीयीकरण.
+                        </li>
+                        <li><strong>नाबार्ड (NABARD):</strong> १२ जुलै १९८२ रोजी शिवरामन समितीच्या शिफारशीने स्थापना. ग्रामीण व कृषी क्षेत्रासाठी सर्वोच्च पतसंस्था.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="accordion-item" data-search="Reserve Bank of India RBI आरबीआय मौद्रिक धोरण रेपो रेट रिव्हर्स रेपो बँक रेट CRR SLR">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-15')">
+                        <span class="accordion-title">15. भारतीय रिझर्व्ह बँक (Reserve Bank of India - RBI)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>आरबीआयची पार्श्वभूमी व कार्य</h4>
+                    <ul>
+                        <li><strong>स्थापना:</strong> १ एप्रिल १९३५ (रिझर्व्ह बँक ऑफ इंडिया कायदा, १९३४). हिल्टन यंग कमिशनच्या शिफारशीवर आधारित.</li>
+                        <li><strong>राष्ट्रीयीकरण:</strong> १ जानेवारी १९४९.</li>
+                        <li><strong>कार्ये:</strong> चलनी नोटांची छपाई, बँकांची बँक आणि मौद्रिक धोरणाद्वारे पत नियंत्रण करणे.</li>
+                        <li><strong>मौद्रिक साधने:</strong> रेपो दर (बँकांना अल्पमुदतीचे कर्ज देण्याचा दर), रिव्हर्स रेपो दर, CRR (रोख राखीव प्रमाण) आणि SLR (वैधानिक तरलता प्रमाण).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="accordion-item" data-search="सहकार चळवळ महाराष्ट्र सहकार कायदा १९६० साखर कारखाने दूध डेअरी अमूल वारणा पतसंस्था">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-16')">
+                        <span class="accordion-title">16. महाराष्ट्रातील सहकार चळवळ (Cooperative Movement)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>सहकार चळवळीचा इतिहास व महत्त्व</h4>
+                    <ul>
+                        <li><strong>महाराष्ट्र सहकार कायदा, १९६०:</strong> राज्यात सहकार चळवळीला या कायद्यान्वये शिस्तबद्ध कायदेशीर चौकट मिळाली.</li>
+                        <li><strong>साखर कारखाने:</strong> १९५० मध्ये अहमदनगर जिल्ह्यातील प्रवरा नगर येथे सहकार महर्षी विखे-पाटील यांच्या पुढाकाराने आशियातील पहिला सहकारी साखर कारखाना सुरू झाला.</li>
+                        <li><strong>दुग्ध सहकार:</strong> 'आनंद' (अमूल) च्या धर्तीवर महाराष्ट्रात वारणा व महानंदा सारखे यशस्वी सहकारी दूध प्रकल्प उभे राहिले.</li>
+                        <li><strong>पतसंस्था:</strong> ग्रामीण भागात शेतकऱ्यांना कर्ज उपलब्ध करून देणाऱ्या व सावकारी पाशातून सोडवणाऱ्या पतसंस्थांचा मोठा विकास झाला.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="accordion-item" data-search="मानवी विकास निर्देशांक HDI मानव विकास अहवाल UNDP मोजमाप आयुर्मान ज्ञान राहणीमान">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-17')">
+                        <span class="accordion-title">17. मानवी विकास निर्देशांक (Human Development Index - HDI)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>HDI संकल्पना व निकष</h4>
+                    <ul>
+                        <li><strong>प्रणेते:</strong> पाकिस्तानी अर्थतज्ज्ञ महबूब-उल-हक आणि भारतीय अर्थतज्ज्ञ अमर्त्य सेन यांनी १९९० मध्ये ही संकल्पना मांडली. दरवर्षी **UNDP** द्वारे जागतिक मानवी विकास अहवाल प्रसिद्ध केला जातो.</li>
+                        <li><strong>३ प्रमुख निकष:</strong>
+                            <br>&bull; **दीर्घ व निरोगी आयुष्य** (जन्मावेळची सरासरी आयुर्मान).
+                            <br>&bull; **ज्ञान / शिक्षण** (शालेय शिक्षणाची सरासरी व अपेक्षित वर्षे).
+                            <br>&bull; **चांगले राहणीमान** (दरडोई स्थूल राष्ट्रीय उत्पन्न - GNI per capita - PPP नुसार).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 18 -->
+            <div class="accordion-item" data-search="शासकीय योजना लाडकी बहीण योजना जन धन योजना मुद्रा योजना पीएम किसान आयुष्यमान भारत">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-18')">
+                        <span class="accordion-title">18. महत्त्वाच्या शासकीय आर्थिक कल्याण योजना</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>केंद्र व राज्य सरकारच्या कल्याणकारी योजना</h4>
+                    <ul>
+                        <li><strong>मुख्यमंत्री माझी लाडकी बहीण योजना (महाराष्ट्र):</strong> महिलांना सक्षम करण्यासाठी दरमहा ₹१,५०० चे थेट बँक हस्तांतरण.</li>
+                        <li><strong>प्रधानमंत्री जन धन योजना (२०१४):</strong> सर्वांचे बँक खाते उघडून वित्तीय समावेशनासाठी सुरू झालेली मोहीम.</li>
+                        <li><strong>प्रधानमंत्री मुद्रा योजना (२०१५):</strong> लघू उद्योजकांसाठी ₹१० लाखांपर्यंतचे विनातारण कर्ज (शिशू, किशोर, तरुण).</li>
+                        <li><strong>पीएम किसान सन्मान निधी:</strong> सर्व शेतकरी कुटुंबांना प्रतिवर्ष ₹६,००0 चे थेट हस्तांतरण.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 19 -->
+            <div class="accordion-item" data-search="महाराष्ट्राची आर्थिक पाहणी व बजेट आर्थिक पाहणी अहवाल महसूल भांडवली खर्च तूट">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'eco-19')">
+                        <span class="accordion-title">19. महाराष्ट्राची आर्थिक पाहणी व बजेट (Economic Survey & Budget)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>आर्थिक अहवाल व बजेट</h4>
+                    <ul>
+                        <li><strong>आर्थिक पाहणी अहवाल (Economic Survey):</strong> विधानसभेत अर्थसंकल्प सादर करण्याच्या आदल्या दिवशी मांडला जाणारा अधिकृत दस्तऐवज, जो चालू वर्षातील राज्याच्या आर्थिक विकासाचे चित्र स्पष्ट करतो.</li>
+                        <li><strong>राज्य अर्थसंकल्प:</strong> राज्याच्या महसूल व भांडवली उत्पन्न-खर्चाचा दस्तऐवज. यामध्ये पायाभूत प्रकल्प, शिक्षण व सामाजिक विकासासाठी तरतुदी असतात.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> <!-- end of #pane-economics -->
+
+
+        <!-- SUBJECT 5: GENERAL SCIENCE PANE -->
+        <div id="pane-science" class="syllabus-pane animate-fade-in">
+            
+            <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 1.5rem; border-left: 4px solid var(--primary); padding-left: 0.75rem;"><i class="fas fa-flask"></i> रसायनशास्त्र (Chemistry)</h3>
+            
+            <!-- Chem 1 -->
+            <div class="accordion-item" data-search="अणु अणु रचना प्रोटॉन न्यूट्रॉन इलेक्ट्रॉन डाल्टन रुदरफोर्ड थॉमसन बोहर">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-c1')">
+                        <span class="accordion-title">1. अणु आणि त्याची रचना (Atom & Its Structure)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>अणूचे मूलभूत कण (Subatomic Particles)</h4>
+                    <ul>
+                        <li><strong>प्रोटॉन (Proton - p+):</strong> धन प्रभारित कण, अणूच्या केंद्रकात असतो. शोध: अर्नेस्ट रुदरफोर्ड.</li>
+                        <li><strong>न्यूट्रॉन (Neutron - n0):</strong> प्रभाररहित (तटस्थ) कण, केंद्रकात असतो. शोध: जेम्स चॅडविक.</li>
+                        <li><strong>इलेक्ट्रॉन (Electron - e-):</strong> ऋण प्रभारित कण, केंद्रकाभोवती वेगवेगळ्या कक्षांमध्ये फिरतो. शोध: जे. जे. थॉमसन.</li>
+                    </ul>
+                    <h4>अणू प्रतिकृती व सिद्धांत</h4>
+                    <ul>
+                        <li><strong>डॉल्टनचा सिद्धांत:</strong> अणू हा अविभाज्य आणि अभेद्य गोल आहे.</li>
+                        <li><strong>रुदरफोर्डचे अल्फ़ा कण विकीर्णन:</strong> अणूचे बहुतांश वस्तुमान त्याच्या केंद्रकात एकवटलेले असते.</li>
+                        <li><strong>बोहर मॉडेल:</strong> इलेक्ट्रॉन विशिष्ट ऊर्जा पातळी असणाऱ्या स्थिर कक्षांमध्येच फिरतात.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Chem 2 -->
+            <div class="accordion-item" data-search="मूलद्रव्यांचे वर्गीकरण डोबेरायनर त्रिके न्युलँड्स अष्टके मेन्डेलीव्ह आवर्तसारणी मोस्ले आधुनिक आवर्तसारणी">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-c2')">
+                        <span class="accordion-title">2. मूलद्रव्यांचे आवर्ती वर्गीकरण (Periodic Classification)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>वर्गीकरणाचा इतिहास</h4>
+                    <ul>
+                        <li><strong>डोबेरायनरची त्रिके (Triads):</strong> तीन मूलद्रव्यांच्या गटात मधल्या मूलद्रव्याचे अणुवस्तुमान हे इतर दोन मूलद्रव्यांच्या अणुवस्तुमानाच्या सरासरीइतके असते.</li>
+                        <li><strong>न्यूलँड्सची अष्टके (Octaves):</strong> मूलद्रव्यांची मांडणी अणुवस्तुमानाच्या चढत्या क्रमाने केल्यास पहिल्या आणि आठव्या मूलद्रव्याचे गुणधर्म सारखे आढळतात.</li>
+                        <li><strong>मेन्डेलीव्हची आवर्तसारणी:</strong> मूलद्रव्यांचे गुणधर्म हे त्यांच्या <strong>अणुवस्तुमानाचे (Atomic Mass)</strong> आवर्तीफल असतात.</li>
+                    </ul>
+                    <h4>आधुनिक आवर्तसारणी (Modern Periodic Table - मोस्ले)</h4>
+                    <ul>
+                        <li>मूलद्रव्यांचे गुणधर्म हे त्यांच्या <strong>अणुअंकाचे (Atomic Number - प्रोटॉनची संख्या)</strong> आवर्तीफल असतात.</li>
+                        <li>यात ७ आडव्या ओळी (आवर्त - Periods) आणि १८ उभे स्तंभ (गण - Groups) असतात.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Chem 3 -->
+            <div class="accordion-item" data-search="आम्ल आम्लारी क्षार pH मापनश्रेणी लिटमस पेपर आम्लधर्मी आम्लारीधर्मी उदासीन">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-c3')">
+                        <span class="accordion-title">3. आम्ल, आम्लारी व क्षार (Acids, Bases & Salts)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>आम्ल (Acids)</h4>
+                    <ul>
+                        <li>चवीला आंबट असतात आणि पाण्यात <strong>H+ (हायड्रोजन)</strong> आयन देतात.</li>
+                        <li>निळा लिटमस पेपर <strong>तांबडा (लाल)</strong> करतात. (उदा. HCl, H2SO4, लिंबातील सायट्रिक आम्ल).</li>
+                    </ul>
+                    <h4>आम्लारी (Bases)</h4>
+                    <ul>
+                        <li>चवीला तुरट/कडू आणि स्पर्शाला बुळबुळीत असतात. पाण्यात <strong>OH- (हायड्रॉक्साईड)</strong> आयन देतात.</li>
+                        <li>तांबडा लिटमस पेपर <strong>निळा</strong> करतात. (उदा. NaOH, KOH).</li>
+                    </ul>
+                    <h4>pH मापनश्रेणी (pH Scale)</h4>
+                    <ul>
+                        <li>pH < ७ &rarr; आम्लधर्मी | pH = ७ &rarr; उदासीन (उदा. शुद्ध पाणी) | pH > ७ &rarr; आम्लारीधर्मी.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Chem 4 -->
+            <div class="accordion-item" data-search="धातू अधातू धातूंचे गुणधर्म वर्धनीयता तन्यता सुवाहकता धातूंचे क्षरण संमिश्रे पोलाद पितळ कास्य">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-c4')">
+                        <span class="accordion-title">4. धातू आणि अधातू (Metals & Non-metals)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>भौतिक व रासायनिक गुणधर्म</h4>
+                    <ul>
+                        <li><strong>धातू (Metals):</strong> चकाकी असते, उष्णता व विजेचे सुवाहक असतात.
+                            <br>&bull; <strong>वर्धनीयता (Malleability):</strong> ठोकून पातळ पत्रे बनवता येणे.
+                            <br>&bull; <strong>तन्यता (Ductility):</strong> खेचून बारीक तारा काढता येणे (उदा. सोने, तांबे).
+                            <br>&bull; अपवाद: पारा (Hg) आणि गॅलियम सामान्य तापमानाला द्रव अवस्थेत असतात.
+                        </li>
+                        <li><strong>अधातु (Non-metals):</strong> चकाकी नसते, विजेचे दुर्वाहक असतात (उदा. कार्बन, ऑक्सिजन).
+                            <br>&bull; अपवाद: हिरा हा अधातू असूनही निसर्गातील सर्वात कठीण पदार्थ आहे. ग्रॅफाइट हा विजेचा सुवाहक आहे.
+                        </li>
+                    </ul>
+                    <h4>महत्त्वाची संमिश्रे (Alloys)</h4>
+                    <ul>
+                        <li><strong>पितळ (Brass):</strong> तांबे (Cu) + जस्त (Zn).</li>
+                        <li><strong>कांस्य (Bronze):</strong> तांबे (Cu) + कथीला (Sn).</li>
+                        <li><strong>स्टेनलेस स्टील (Stainless Steel):</strong> लोखंड (Fe) + क्रोमियम (Cr) + कार्बन (C).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Chem 5 -->
+            <div class="accordion-item" data-search="रासायनिक अभिक्रिया प्रकार संयोग अपघटन विस्थापन दुहेरी विस्थापन उष्मादायी उष्माग्राही">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-c5')">
+                        <span class="accordion-title">5. रासायनिक अभिक्रिया व त्यांचे प्रकार</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>प्रमुख प्रकार</h4>
+                    <ul>
+                        <li><strong>संयोग अभिक्रिया (Combination):</strong> दोन किंवा अधिक अभिकारकांपासून एकच उत्पादन मिळते.</li>
+                        <li><strong>अपघटन अभिक्रिया (Decomposition):</strong> एकाच अभिकारकापासून दोन किंवा अधिक उत्पादने मिळतात.</li>
+                        <li><strong>विस्थापन अभिक्रिया (Displacement):</strong> क्रियाशील मूलद्रव्य हे कमी क्रियाशील मूलद्रव्याला त्याच्या संयुगातून विस्थापित करते.</li>
+                        <li><strong>उष्मादायी व उष्माग्राही:</strong> उष्मादायी अभिक्रियेत उष्णता बाहेर टाकली जाते (उदा. चुना पाण्यात टाकणे), तर उष्माग्राही अभिक्रियेत उष्णता शोषली जाते.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1.4rem; color: var(--primary); margin-top: 2rem; margin-bottom: 1.5rem; border-left: 4px solid var(--primary); padding-left: 0.75rem;"><i class="fas fa-bolt"></i> भौतिकशास्त्र (Physics)</h3>
+            
+            <!-- Phys 6 -->
+            <div class="accordion-item" data-search="प्रकाश प्रकाश परावर्तन अपवर्तन अंतर्गोल आरसा बहिर्गोल भिंग मानवी डोळा दृष्टीदोष">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-p1')">
+                        <span class="accordion-title">6. प्रकाश व त्याचे गुणधर्म (Light & Refraction)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>प्रकाश परावर्तन व अपवर्तन</h4>
+                    <ul>
+                        <li><strong>अपवर्तन (Refraction):</strong> प्रकाश एका माध्यमातून दुसऱ्या माध्यमात जाताना आपली दिशा बदलतो (उदा. पाण्यात अंशतः बुडवलेली पेन्सिल वाकडी दिसणे, ताऱ्यांचे लुकलुकणे).</li>
+                        <li><strong>पूर्ण अंतर्गत परावर्तन (Total Internal Reflection):</strong> वाळवंटातील मृगजळ, हिऱ्याची चकाकी आणि <strong>ऑप्टिकल फायबर (Optical Fiber)</strong> चे काम यावर आधारित असते.</li>
+                    </ul>
+                    <h4>दृष्टीदोष व उपाय</h4>
+                    <ul>
+                        <li><strong>निकटदृष्टिता (Myopia - जवळचे दिसते, दूरचे अस्पष्ट):</strong> अंतर्गोल भिंगाचा (Concave Lens) वापर करतात.</li>
+                        <li><strong>दूरदृष्टिता (Hypermetropia - दूरचे दिसते, जवळचे अस्पष्ट):</strong> बहिर्गोल भिंगाचा (Convex Lens) वापर करतात.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phys 7 -->
+            <div class="accordion-item" data-search="ध्वनी तरंगांचे प्रकार अवतरंग अनुतरंग ध्वनीचा वेग श्राव्य अश्राव्य श्राव्यातीत सोनार पद्धती">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-p2')">
+                        <span class="accordion-title">7. ध्वनी व ध्वनी तरंग (Sound Waves)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>तरंगांचे प्रकार व वहन</h4>
+                    <ul>
+                        <li>ध्वनी हे <strong>अनुतरंग (Longitudinal Waves)</strong> असून त्यांच्या वहनासाठी माध्यमाची आवश्यकता असते. (निर्वात पोकळीतून ध्वनी वाहू शकत नाही).</li>
+                        <li>ध्वनीचा वेग <strong>स्थायू मध्ये सर्वाधिक</strong>, त्याहून कमी द्रवात आणि वायूंमध्ये सर्वात कमी असतो.</li>
+                    </ul>
+                    <h4>ध्वनीच्या वारंवारतेनुसार वर्गीकरण</h4>
+                    <ul>
+                        <li><strong>श्राव्य ध्वनी (Audible):</strong> २० Hz ते २०,००० Hz (मानवी कान ऐकू शकतात).</li>
+                        <li><strong>अश्राव्य ध्वनी (Infrasonic):</strong> २० Hz पेक्षा कमी (उदा. भूकंप लहरी, हत्तींचा संवाद).</li>
+                        <li><strong>श्राव्यातीत ध्वनी (Ultrasonic):</strong> २०,००० Hz पेक्षा जास्त (उदा. वटवाघळे, सोनार - SONAR यंत्रणा, सोनोग्राफी).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phys 8 -->
+            <div class="accordion-item" data-search="घनता घनता पाण्याचे तापमान विसंगत आचरण 4 अंश सेल्सिअस आर्किमिडीज">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-p8')">
+                        <span class="accordion-title">8. घनता (Density)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>व्याख्या व सूत्र</h4>
+                    <ul>
+                        <li><strong>व्याख्या:</strong> पदार्थाच्या एकक आकारमानाच्या वस्तुमानाला त्याची घनता म्हणतात.</li>
+                        <li><strong>सूत्र:</strong> घनता = वस्तुमान (Mass) / आकारमान (Volume).</li>
+                        <li><strong>एकक:</strong> kg/m³ किंवा g/cm³.</li>
+                        <li><strong>पाण्याची घनता:</strong> पाण्याचे तापमान वाढवताना किंवा कमी करताना <strong>४ अंश सेल्सिअसला (4°C)</strong> पाण्याची घनता सर्वाधिक असते (पाण्याचे विसंगत आचरण).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phys 9 -->
+            <div class="accordion-item" data-search="प्रकार राशी अदिश राशी सदिश राशी भौतिक मापन एकके">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-p9')">
+                        <span class="accordion-title">9. राशींचे प्रकार व मापन (Physical Quantities & Units)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>अदिश आणि सदिश राशी</h4>
+                    <ul>
+                        <li><strong>अदिश राशी (Scalar Quantity):</strong> ज्या राशी व्यक्त करण्यासाठी केवळ परिमाणाची (Magnitude) आवश्यकता असते, दिशेची नाही (उदा. अंतर, वेळ, वस्तुमान, कार्य, ऊर्जा, तापमान, घनता).</li>
+                        <li><strong>सदिश राशी (Vector Quantity):</strong> ज्या राशी व्यक्त करण्यासाठी परिमाण आणि दिशा (Direction) दोन्हीची आवश्यकता असते (उदा. विस्थापन, वेग, बल, त्वरण, वजन, संवेग).</li>
+                    </ul>
+                    <h4>मूलभूत मापन एकके (SI Units)</h4>
+                    <ul>
+                        <li>लांबी &rarr; मीटर (m) | वेळ &rarr; सेकंद (s) | वस्तुमान &rarr; किलोग्रॅम (kg) | तापमान &rarr; केल्विन (K) | विद्युत प्रवाह &rarr; अँपिअर (A) | प्रकाश तीव्रता &rarr; कॅन्डेला (cd) | पदार्थाचे प्रमाण &rarr; मोल (mol).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phys 10 -->
+            <div class="accordion-item" data-search="विद्युत धारा रोध ओहम नियम अँपिअर विभवांतर व्होल्ट सुवाहक दुर्वाहक">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-p10')">
+                        <span class="accordion-title">10. विद्युत धारा (Electric Current & Ohm's Law)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>विद्युत धारा आणि एकक</h4>
+                    <ul>
+                        <li><strong>व्याख्या:</strong> वाहकामधून वाहणाऱ्या विद्युत प्रभारित कणांच्या (इलेक्ट्रॉन्सच्या) वहनाचा दर म्हणजे विद्युत धारा होय.</li>
+                        <li><strong>सूत्र:</strong> विद्युत धारा (I) = प्रभार (Q) / काळ (t).</li>
+                        <li><strong>एकके:</strong>
+                            <br>&bull; विद्युत धारा &rarr; <strong>अँपिअर (Ampere - A)</strong>.
+                            <br>&bull; विद्युत प्रभार &rarr; <strong>कूलॉम (Coulomb - C)</strong>.
+                        </li>
+                    </ul>
+                    <h4>ओहमचा नियम (Ohm's Law)</h4>
+                    <ul>
+                        <li>वाहकामधून वाहणारी विद्युत धारा ही वाहकाच्या दोन टोकांमधील विभवांतराशी (Voltage) थेट प्रमाणात असते (तापमान स्थिर असताना).
+                            <br>सूत्र: <strong>V = I &times; R</strong> (विभवांतर = विद्युत धारा &times; रोध).
+                        </li>
+                        <li><strong>विद्युत रोध (Resistance - R):</strong> विद्युत प्रवाहाच्या वहनाला विरोध करण्याचा गुणधर्म. याचे एकक <strong>ओहम (Ω)</strong> आहे.</li>
+                    </ul>
+                    <h4>सुवाहक आणि दुर्वाहक</h4>
+                    <ul>
+                        <li><strong>विद्युत सुवाहक (Conductor):</strong> ज्यांमधून वीज सहज वाहते (उदा. तांबे, ॲल्युमिनियम, चांदी — सर्वोत्तम सुवाहक).</li>
+                        <li><strong>विद्युत दुर्वाहक (Insulator):</strong> ज्यांमधून वीज वाहू शकत नाही (उदा. काच, रबर, लाकूड, प्लास्टिक).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1.4rem; color: var(--primary); margin-top: 2rem; margin-bottom: 1.5rem; border-left: 4px solid var(--primary); padding-left: 0.75rem;"><i class="fas fa-dna"></i> जीवशास्त्र (Biology)</h3>
+            
+            <!-- Bio 11 -->
+            <div class="accordion-item" data-search="सजीवांचे वर्गीकरण वनस्पती वर्गीकरण प्राणी वर्गीकरण पाच सृष्टी वर्गीकरण व्हिटाकर थॅलोफायटा ब्रायोफायटा टेरिडोफायटा">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-b1')">
+                        <span class="accordion-title">11. सजीवांचे वर्गीकरण (Classification of Living Organisms)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>पाच सृष्टी वर्गीकरण (Five Kingdom Classification - व्हिटाकर १९६९)</h4>
+                    <ul>
+                        <li><strong>१. मोनेरा (Monera):</strong> एकपेशीय, आदिकेंद्रकी सजीव (उदा. जिवाणू - Bacteria).</li>
+                        <li><strong>२. प्रोटिस्टा (Protista):</strong> एकपेशीय, दृश्यकेंद्रकी सजीव (उदा. अमिबा, पॅरामेशिअम).</li>
+                        <li><strong>३. कवक (Fungi):</strong> परपोषी, बहुपेशीय, मृतोपजीवी (उदा. भूछत्र, बुरशी).</li>
+                        <li><strong>४. वनस्पती (Plantae):</strong> स्वयंपोषी, बहुपेशीय सजीव.</li>
+                        <li><strong>५. प्राणी (Animalia):</strong> परपोषी, भक्षक, बहुपेशीय सजीव.</li>
+                    </ul>
+                    <h4>वनस्पती वर्गीकरण (Plant Classification)</h4>
+                    <ul>
+                        <li><strong>अपुष्प वनस्पती (Cryptogams - फुले न येणाऱ्या):</strong> थॅलोफायटा (उदा. शेवाळ), ब्रायोफायटा (उभयचर वनस्पती, उदा. मॉस), टेरिडोफायटा (उदा. नेचा).</li>
+                        <li><strong>सपुष्प वनस्पती (Phanerogams - फुले व बिया येणाऱ्या):</strong> अनावृतबीजी (Gymnosperms - बिया उघड्या) व आवृतबीजी (Angiosperms - बिया फळांच्या आत).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bio 12 -->
+            <div class="accordion-item" data-search="मानवी संस्था पचन संस्था रक्तअभिसरण संस्था श्वसन संस्था उत्सर्जन संस्था मज्जासंस्था मेंदू हृदय">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-b2')">
+                        <span class="accordion-title">12. प्रमुख मानवी संस्था (Human Organ Systems)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>रक्तअभिसरण संस्था (Circulatory System)</h4>
+                    <ul>
+                        <li>शोध: <strong>विल्यम हार्वे</strong>. मानवी हृदय <strong>४ कप्प्यांचे</strong> बनलेले असते.</li>
+                        <li><strong>रोहिणी (Arteries):</strong> शुद्ध (ऑक्सिजनयुक्त) रक्त हृदयाकडून शरीराकडे वाहून नेतात (अपवाद: फुप्फुस रोहिणी).</li>
+                        <li><strong>नीला (Veins):</strong> अशुद्ध (कार्बन डायऑक्साइडयुक्त) रक्त शरीराकडून हृदयाकडे वाहून आणतात (अपवाद: फुप्फुस नीला).</li>
+                        <li><strong>रक्तदाब (Blood Pressure):</strong> निरोगी व्यक्तीचा रक्तदाब सुमारे १२०/८० mmHg असतो.</li>
+                    </ul>
+                    <h4>पचन संस्था (Digestive System)</h4>
+                    <ul>
+                        <li>अन्नाचे पचन मुखापासून सुरू होते. लाळेमध्ये <strong>अमायलेज / टायलीन</strong> हे विकर (Enzyme) असते, जे पिष्टमय पदार्थांचे पचन करते.</li>
+                        <li>जठरात हायड्रोक्लोरिक आम्ल (HCl) व पेप्सिन असते. अन्नाचे जास्तीत जास्त शोषण <strong>लहान आतड्यात</strong> होते.</li>
+                    </ul>
+                    <h4>उत्सर्जन संस्था (Excretory System)</h4>
+                    <ul>
+                        <li>उत्सर्जक अवयव: <strong>वृक्क (Kidneys)</strong>. वृक्काचे कार्यात्मक एकक <strong>नेफ्रॉन (Nephron)</strong> आहे.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bio 13 -->
+            <div class="accordion-item" data-search="मानवी आहार पोषण जीवनसत्त्वे अ ब क ड इ के अभावामुळे होणारे रोग रातांधळेपणा बेरीबेरी स्कर्वी मुडदूस">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-b3')">
+                        <span class="accordion-title">13. मानवी आहार, पोषण व जीवनसत्त्वे (Vitamins & Nutrition)</span>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <h4>जीवनसत्त्वे आणि त्यांचे अभावात्मक रोग</h4>
+                    <table class="syllabus-table">
+                        <thead>
+                            <tr>
+                                <th>जीवनसत्त्व (शास्त्रीय नाव)</th>
+                                <th>कार्य / स्रोत</th>
+                                <th>अभावामुळे होणारा रोग</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>जीवनसत्त्व अ (Retinol)</strong></td>
+                                <td>डोळे व त्वचा निरोगी ठेवणे (गाजर, दूध)</td>
+                                <td><strong>रातांधळेपणा (Night Blindness)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>जीवनसत्त्व ब१ (Thiamine)</strong></td>
+                                <td>चेतासंस्थेचे कार्य (धान्य, कडधान्य)</td>
+                                <td><strong>बेरीबेरी (Beriberi)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>जीवनसत्त्व क (Ascorbic Acid)</strong></td>
+                                <td>रोगप्रतिकारक शक्ती, हिरड्या (आवळ, संत्री)</td>
+                                <td><strong>स्कर्वी (Scurvy - हिरड्यांमधून रक्त येणे)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>जीवनसत्त्व ड (Calciferol)</strong></td>
+                                <td>हाडांची बळकटी, कॅल्शियम शोषण (सूर्यप्रकाश)</td>
+                                <td><strong>मुडदूस (Rickets - लहान मुलांमध्ये)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>जीवनसत्त्व इ (Tocopherol)</strong></td>
+                                <td>त्वचा, प्रजनन संस्था (अंकुरित कडधान्ये)</td>
+                                <td><strong>वांझपणा / स्नायूंची कमजोरी</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>जीवनसत्त्व के (Phylloquinone)</strong></td>
+                                <td>रक्त गोठण्यास मदत करणे (हिरव्या भाज्या)</td>
+                                <td><strong>रक्तस्त्राव न थांबणे (Hemorrhage)</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <div class="trick-box">
-                        <div class="trick-title">Smart Formula</div>
-                        <p>राष्ट्रपती &rarr; राज्यपाल नियुक्त करतात | राज्यपाल &rarr; मुख्यमंत्री नियुक्त करतात.</p>
+                        <div class="trick-title">पाण्यात विरघळणारी व चरबीत विरघळणारी जीवनसत्त्वे</div>
+                        <p>पाण्यात विरघळणारी (Water Soluble) &rarr; <strong>B आणि C</strong>.<br>चरबीत विरघळणारी (Fat Soluble) &rarr; <strong>A, D, E, K</strong> (लक्षात ठेवा: ADEK).</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 17-18 (Panchayat Raj & Municipalities) -->
-            <div class="accordion-item" data-search="पंचायतराज ग्रामीण स्थानिक स्वराज्य ग्रामसभा ग्रामपंचायत सरपंच ग्रामसेवक पंचायत समिती गटविकास अधिकारी बीडीओ जिल्हा परिषद मुख्य कार्यकारी अधिकारी सीईओ 73 वी घटनादुरुस्ती 1992 74 वी नागरी स्वराज्य नगरपंचायत नगरपालिका महानगरपालिका">
+            <!-- Bio 14 -->
+            <div class="accordion-item" data-search="रोग आणि त्यांचे प्रकार संसर्गजन्य रोग असंसर्गजन्य रोग जिवाणूजन्य विषाणूजन्य कवकजन्य परजीवी मलेरिया क्षयरोग एड्स डेंग्यू">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'pol-17')">
-                        <span class="accordion-title">17 - 18. स्थानिक स्वराज्य संस्था (Panchayat Raj & Urban Bodies)</span>
+                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'sci-b4')">
+                        <span class="accordion-title">14. मानवी रोग व त्यांचे वर्गीकरण (Human Diseases)</span>
                     </div>
                     <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <h4>ग्रामीण स्थानिक स्वराज्य (पंचायतराज - त्रिस्तरीय रचना)</h4>
-                    <p><strong>रचना:</strong> ग्रामपंचायत (गाव पातळी) &rarr; पंचायत समिती (तालुका पातळी) &rarr; जिल्हा परिषद (जिल्हा पातळी).</p>
+                    <h4>कारक सूक्ष्मजीवांनुसार रोगांचे प्रकार</h4>
                     <ul>
-                        <li><strong>ग्रामसभा:</strong> गावातील सर्व प्रौढ मतदारांची मिळून बनलेली आमसभा. लोकशाहीचे सर्वात थेट रूप.</li>
-                        <li><strong>ग्रामपंचायत:</strong> प्रमुख असतो <strong>सरपंच</strong> (जनतेद्वारे किंवा सदस्यांद्वारे निवड). शासकीय सचिव असतो <strong>ग्रामसेवक</strong> (वर्ग-३ कर्मचारी, प्रशासकीय मदत).</li>
-                        <li><strong>पंचायत समिती:</strong> प्रमुख असतो सभापती. प्रशासकीय अधिकारी असतो <strong>गटविकास अधिकारी (BDO - Block Development Officer)</strong>.</li>
-                        <li><strong>जिल्हा परिषद:</strong> प्रमुख असतो जिल्हा परिषद अध्यक्ष. प्रशासकीय अधिकारी असतो <strong>मुख्य कार्यकारी अधिकारी (CEO - Chief Executive Officer)</strong> (IAS दर्जाचा अधिकारी).</li>
-                        <li><strong>७३ वी घटनादुरुस्ती (१९९२):</strong> पंचायतराज संस्थांना संविधानात घटनात्मक दर्जा देण्यात आला.</li>
-                    </ul>
-                    <h4>शहरी स्थानिक स्वराज्य संस्था</h4>
-                    <ul>
-                        <li><strong>७४ वी घटनादुरुस्ती (१९९२):</strong> नागरी स्थानिक स्वराज्य संस्थांना घटनात्मक दर्जा.</li>
-                        <li><strong>रचना:</strong>
-                            <ul>
-                                <li>नगरपंचायत: ग्रामीण भागातून नागरी भागात रूपांतरित होणाऱ्या संक्रमण क्षेत्रासाठी.</li>
-                                <li>नगरपालिका: लहान किंवा मध्यम आकाराच्या शहरी क्षेत्रासाठी.</li>
-                                <li>महानगरपालिका: मोठ्या नागरी क्षेत्रासाठी (प्रशासकीय प्रमुख: मनपा आयुक्त).</li>
-                            </ul>
+                        <li><strong>जिवाणूजन्य रोग (Bacterial Diseases):</strong> 
+                            <br>&bull; <strong>क्षयरोग (Tuberculosis - TB):</strong> जिवाणू - *Mycobacterium tuberculosis*. प्रतिबंधक लस: <strong>BCG</strong>.
+                            <br>&bull; टायफॉईड, पटकी (Cholera), धनुर्वात (Tetanus), कुष्ठरोग.
+                        </li>
+                        <li><strong>विषाणूजन्य रोग (Viral Diseases):</strong>
+                            <br>&bull; <strong>एड्स (AIDS):</strong> विषाणू - *HIV*. चाचणी: ELISA टेस्ट.
+                            <br>&bull; पोलिओ, डेंग्यू, कांजण्या (Chickenpox), रेबीज, गोवर (Measles), इन्फ्लूएंझा.
+                        </li>
+                        <li><strong>परजीवीजन्य रोग (Protozoan Diseases):</strong>
+                            <br>&bull; <strong>मलेरिया (हिवताप):</strong> कारक - प्लास्मोडियम परजीवी. प्रसार - <strong>अॅनोफिलीस डासाची मादी</strong> चावल्यामुळे.
+                            <br>&bull; <strong>हत्तीरोग (Filariasis):</strong> प्रसार - <strong>क्युलेक्स डास</strong> चावल्यामुळे.
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- 19-23 (Constitutional Bodies & Emergency) -->
-            <div class="accordion-item" data-search="घटनात्मक संस्था निवडणूक आयोग कलम 324 वित्त आयोग कलम 280 CAG नियंत्रक व महालेखापरीक्षक UPSC MPSC आपत्कालीन तरतुदी कलम 352 राष्ट्रीय आणीबाणी कलम 356 राष्ट्रपती राजवट कलम 360 आर्थिक आणीबाणी देश राज्य पैसा">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="header-left">
-                        <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'pol-19')">
-                        <span class="accordion-title">19 - 23. घटनात्मक संस्था व आपत्कालीन तरतुदी</span>
-                    </div>
-                    <i class="fas fa-chevron-down accordion-toggle-icon"></i>
-                </div>
-                <div class="accordion-content">
-                    <h4>प्रमुख घटनात्मक संस्था (Constitutional Bodies)</h4>
-                    <ul>
-                        <li><strong>निवडणूक आयोग (कलम ३२४):</strong> देशातील व राज्यातील सार्वत्रिक निवडणुकांचे नियोजन, नियंत्रण व मतदार याद्या तयार करणे.</li>
-                        <li><strong>वित्त आयोग (कलम २८०):</strong> केंद्र व राज्य यांच्यातील कर महसूल वाटपाबाबत शिफारस करण्यासाठी दर ५ वर्षांनी राष्ट्रपती स्थापना करतात.</li>
-                        <li><strong>CAG (कलम १४८ - नियंत्रक व महालेखापरीक्षक):</strong> शासकीय जमा-खर्चाचे (सार्वजनिक तिजोरीचे) ऑडिट व लेखापरीक्षण करणारे सर्वोच्च पद.</li>
-                        <li><strong>UPSC & MPSC (कलम ३१५):</strong> अनुक्रमे केंद्रीय व राज्य शासकीय नागरी सेवा भरती व परीक्षा घेणाऱ्या संस्था.</li>
-                    </ul>
-                    
-                    <h4>आपत्कालीन तरतुदी (Emergency Provisions - भाग 18)</h4>
-                    <ul>
-                        <li><strong>कलम ३५२ &rarr; राष्ट्रीय आणीबाणी (National Emergency):</strong> परकीय आक्रमण, युद्ध किंवा सशस्त्र बंड झाल्यास देशभरात लावली जाते.</li>
-                        <li><strong>कलम ३५६ &rarr; राष्ट्रपती राजवट (President's Rule):</strong> राज्यातील घटनात्मक यंत्रणा कोलमडल्यास राज्यपालांच्या शिफारशीवरून लावली जाते.</li>
-                        <li><strong>कलम ३६० &rarr; आर्थिक आणीबाणी (Financial Emergency):</strong> देशाची आर्थिक पत किंवा स्थैर्य धोक्यात आल्यास लावली जाते (भारतात आजतागायत एकदाही लागलेली नाही).</li>
-                    </ul>
-                    <div class="trick-box">
-                        <div class="trick-title">Smart Trick</div>
-                        <p>352 = देश (राष्ट्रीय आणीबाणी)<br>356 = राज्य (राष्ट्रपती राजवट)<br>360 = पैसा (आर्थिक आणीबाणी)</p>
-                    </div>
-                </div>
-            </div>
+        </div> <!-- end of #pane-science -->
 
-        </div> <!-- end of #pane-polity -->
     </div> <!-- end of #syllabus-prelims-section -->
 
         <!-- MAINS SYLLABUS SECTION -->
@@ -1736,48 +2423,381 @@
 
             <!-- MAINS MARATHI PANE -->
             <div id="pane-mains-marathi" class="syllabus-pane animate-fade-in">
-                <div class="card" style="padding: 3rem; text-align: center; background: rgba(255, 255, 255, 0.02);">
-                    <div style="font-size: 3.5rem; color: var(--secondary); margin-bottom: 1.5rem;">
-                        <i class="fas fa-feather-alt"></i>
+                <!-- 1 -->
+                <div class="accordion-item" data-search="मराठी सर्वसामान्य शब्दसंग्रह समानार्थी शब्द विरुद्धार्थी शब्द लिंग वचन शब्दांचे प्रकार">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-mar-1')">
+                            <span class="accordion-title">1. सर्वसामान्य शब्दसंग्रह (Vocabulary)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                     </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">मराठी अभ्यासक्रम (Mains Marathi)</h3>
-                    <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 1.5rem auto; line-height: 1.6;">
-                        मराठी विषयाचा मुख्य परीक्षेचा अभ्यासक्रम लवकरच येथे जोडला जाईल. तुम्ही सविस्तर अभ्यासक्रम चॅटमध्ये पाठवा, तो त्वरित येथे समाविष्ट केला जाईल.
-                    </p>
-                    <div style="font-size: 0.9rem; color: var(--primary); font-weight: 600;">
-                        <i class="fas fa-spinner fa-spin"></i> Awaiting Syllabus Upload...
+                    <div class="accordion-content">
+                        <h4>शब्दसंग्रह घटक व उदाहरणे</h4>
+                        <ul>
+                            <li><strong>समानार्थी शब्द:</strong> एकाच अर्थाचे भिन्न शब्द (उदा. सूर्य - मित्र, भानू, भास्कर | चंद्र - शशी, सुधाकर).</li>
+                            <li><strong>विरुद्धार्थी शब्द:</strong> परस्पर विरोधी अर्थाचे शब्द (उदा. उदय &times; अस्त | कृश &times; स्थूल).</li>
+                            <li><strong>लिंग व वचन विचार:</strong> पुल्लिंग, स्त्रीलिंग व नपुंसकलिंग नियम; एकवचन व अनेकवचन बदल.</li>
+                            <li><strong>शब्दांचे प्रकार:</strong> तत्सम (उदा. राजा, देव), तद्भव (उदा. घर, दूध - दुग्ध पासून), आणि देशी शब्द (उदा. धोंडा, झाड).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="accordion-item" data-search="मराठी वाक्यरचना वाक्य रूपांतर वाक्याचे प्रकार केवळ मिश्र संयुक्त वाक्य शुद्धीकरण">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-mar-2')">
+                            <span class="accordion-title">2. वाक्यरचना (Sentence Structure)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>वाक्यरचना आणि रूपांतर</h4>
+                        <ul>
+                            <li><strong>वाक्याचे प्रकार:</strong> 
+                                <br>&bull; <strong>केवळ वाक्य:</strong> एकच उद्देश व एकच विधेय असणारे वाक्य.
+                                <br>&bull; <strong>मिश्र वाक्य:</strong> एक मुख्य व एक किंवा अधिक गौण वाक्य जोडलेली असतात (उदा. जर-तर, कारण).
+                                <br>&bull; <strong>संयुक्त वाक्य:</strong> दोन प्रधान वाक्ये समुच्चयबोधक, विकल्पबोधक, इत्यादी उभयान्वयी अव्ययांनी जोडलेली असतात (उदा. आणि, व, पण).
+                            </li>
+                            <li><strong>वाक्य रूपांतर:</strong> प्रश्नार्थी, विधानार्थी, उद्गारार्थी, होकारार्थी व नकारार्थी वाक्यांचे परस्परांमध्ये रूपांतर करणे.</li>
+                            <li><strong>वाक्य शुद्धीकरण:</strong> व्याकरणदृष्ट्या अशुद्ध वाक्य दुरुस्त करणे.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="accordion-item" data-search="मराठी व्याकरण संधी समास अलंकार वृत्त काळ प्रयोग कर्तरी कर्मणी भावे">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-mar-3')">
+                            <span class="accordion-title">3. व्याकरण (Grammar)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>व्याकरण घटक व नियम</h4>
+                        <ul>
+                            <li><strong>संधी:</strong> स्वरसंधी, व्यंजनसंधी व विसर्गसंधी यांचे नियम.</li>
+                            <li><strong>समास:</strong> अव्ययीभाव, तत्पुरुष, द्वंद्व, आणि बहुव्रीही समास यांचे उपप्रकार.</li>
+                            <li><strong>काळ व काळाचे प्रकार:</strong> वर्तमानकाळ, भूतकाळ, भविष्यकाळ आणि त्यांचे उपप्रकार (साधा, अपूर्ण, पूर्ण, रीती).</li>
+                            <li><strong>प्रयोग:</strong> 
+                                <br>&bull; <strong>कर्तरी प्रयोग:</strong> क्रियापद कर्त्याच्या लिंग, वचनानुसार बदलते.
+                                <br>&bull; <strong>कर्मणी प्रयोग:</strong> क्रियापद कर्माच्या लिंग, वचनानुसार बदलते.
+                                <br>&bull; <strong>भावे प्रयोग:</strong> क्रियापद कर्त्याच्या किंवा कर्माच्या लिंग-वचनानुसार बदलत नाही (नेहमी तृतीयपुरुषी नपुंसकलिंगी एकवचनी असते).
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="accordion-item" data-search="मराठी म्हणी वाक्प्रचार अर्थ वाक्यात उपयोग जोडशब्द">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-mar-4')">
+                            <span class="accordion-title">4. म्हणी व वाक्प्रचार (Idioms & Phrases)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>म्हणी व वाक्प्रचार अर्थ आणि उपयोग</h4>
+                        <ul>
+                            <li><strong>म्हणी:</strong> लोकपरंपरेतून चालत आलेली अनुभवाची सुभाषिते (उदा. 'अती तेथे माती' - कोणत्याही गोष्टीचा अतिरेक वाईट असतो).</li>
+                            <li><strong>वाक्प्रचार:</strong> शब्दांचा नेहमीचा अर्थ न राहता विशेष अर्थ प्राप्त झालेला शब्दसमूह (उदा. 'डोळा लागणे' - झोप येणे).</li>
+                            <li><strong>उपयोग:</strong> म्हणी व वाक्प्रचारांचा योग्य वाक्यात वापर ओळखणे किंवा दिलेल्या पर्यायातून योग्य अर्थ निवडणे.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="accordion-item" data-search="मराठी उताऱ्यावरील प्रश्नांची उत्तरे आकलन काळजीपूर्वक वाचन">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-mar-5')">
+                            <span class="accordion-title">5. उताऱ्यावरील प्रश्नांची उत्तरे (Comprehension)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>आकलन व प्रश्न सोडवणे</h4>
+                        <ul>
+                            <li><strong>वाचन कौशल्य:</strong> दिलेल्या मराठी उताऱ्याचे काळजीपूर्वक व जलद वाचन करणे.</li>
+                            <li><strong>मध्यवर्ती कल्पना:</strong> उताऱ्याची मुख्य संकल्पना किंवा विचार ओळखणे.</li>
+                            <li><strong>अचूकता:</strong> उताऱ्यातील माहितीच्या आधारे विचारलेल्या प्रश्नांची थेट आणि तार्किक उत्तरे निवडणे.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
             <!-- MAINS ENGLISH PANE -->
             <div id="pane-mains-english" class="syllabus-pane animate-fade-in">
-                <div class="card" style="padding: 3rem; text-align: center; background: rgba(255, 255, 255, 0.02);">
-                    <div style="font-size: 3.5rem; color: var(--primary); margin-bottom: 1.5rem;">
-                        <i class="fas fa-language"></i>
+                <!-- 1 -->
+                <div class="accordion-item" data-search="english common vocabulary synonyms antonyms one word substitutions spelling rules word formation">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-eng-1')">
+                            <span class="accordion-title">1. Common Vocabulary</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                     </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">इंग्रजी अभ्यासक्रम (Mains English)</h3>
-                    <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 1.5rem auto; line-height: 1.6;">
-                        इंग्रजी विषयाचा मुख्य परीक्षेचा अभ्यासक्रम लवकरच येथे जोडला जाईल. तुम्ही सविस्तर अभ्यासक्रम चॅटमध्ये पाठवा, तो त्वरित येथे समाविष्ट केला जाईल.
-                    </p>
-                    <div style="font-size: 0.9rem; color: var(--primary); font-weight: 600;">
-                        <i class="fas fa-spinner fa-spin"></i> Awaiting Syllabus Upload...
+                    <div class="accordion-content">
+                        <h4>Vocabulary Components</h4>
+                        <ul>
+                            <li><strong>Synonyms:</strong> Words with similar meanings (e.g., Abandon - Forsake | Benevolent - Kind).</li>
+                            <li><strong>Antonyms:</strong> Words with opposite meanings (e.g., Diligent &times; Lazy | Optimist &times; Pessimist).</li>
+                            <li><strong>One-word Substitutions:</strong> Replacing a phrase with a single word (e.g., A person who writes books - Author | A person who does not believe in God - Atheist).</li>
+                            <li><strong>Spelling Rules & Corrections:</strong> Finding correctly or incorrectly spelled words.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="accordion-item" data-search="english sentence structure types transformation active passive voice direct indirect speech">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-eng-2')">
+                            <span class="accordion-title">2. Sentence Structure</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>Structure & Transformation Rules</h4>
+                        <ul>
+                            <li><strong>Types of Sentences:</strong> Assertive, Imperative, Interrogative, and Exclamatory; Simple, Compound, and Complex sentences.</li>
+                            <li><strong>Active & Passive Voice:</strong> Changing sentences from Active voice to Passive voice and vice versa.</li>
+                            <li><strong>Direct & Indirect Speech:</strong> Converting direct quotes into indirect statements, paying attention to changes in tenses, pronouns, and time adverbs.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="accordion-item" data-search="english grammar parts of speech tenses subject verb agreement articles prepositions common errors">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-eng-3')">
+                            <span class="accordion-title">3. Grammar</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>Grammar & Usage rules</h4>
+                        <ul>
+                            <li><strong>Parts of Speech:</strong> Nouns, Pronouns, Verbs, Adjectives, Adverbs, Prepositions, Conjunctions, and Interjections.</li>
+                            <li><strong>Tenses:</strong> Present, Past, and Future Tenses along with their four sub-types.</li>
+                            <li><strong>Articles & Determiners:</strong> Correct usage of A, An, and The.</li>
+                            <li><strong>Subject-Verb Agreement:</strong> Ensuring the verb matches the subject in number and person.</li>
+                            <li><strong>Common Errors:</strong> Identifying grammatical or syntactical errors in a sentence.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="accordion-item" data-search="english idioms phrases meanings usage sentences">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-eng-4')">
+                            <span class="accordion-title">4. Idioms and Phrases</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>Idioms & Phrases Usage</h4>
+                        <ul>
+                            <li><strong>Idiomatic Expressions:</strong> Phrases whose meaning cannot be understood from the individual words (e.g., 'Bite the bullet' - Face a difficult situation courageously | 'Piece of cake' - Very easy task).</li>
+                            <li><strong>Usage:</strong> Identifying the correct meaning or choosing the appropriate idiom to fill in the blanks.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="accordion-item" data-search="english comprehension passage main ideas passage based questions">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-eng-5')">
+                            <span class="accordion-title">5. Comprehension of Passage</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>Reading & Analysis</h4>
+                        <ul>
+                            <li><strong>Comprehension Skills:</strong> Analyzing a given passage to extract factual information, infer meanings, and identify key arguments.</li>
+                            <li><strong>Title Selection:</strong> Suggesting an appropriate title or summary for the passage.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
             <!-- MAINS GS PANE -->
             <div id="pane-mains-gs" class="syllabus-pane animate-fade-in">
-                <div class="card" style="padding: 3rem; text-align: center; background: rgba(255, 255, 255, 0.02);">
-                    <div style="font-size: 3.5rem; color: var(--accent); margin-bottom: 1.5rem;">
-                        <i class="fas fa-university"></i>
+                <!-- 1 -->
+                <div class="accordion-item" data-search="सामान्य बुद्धिमापन आकलन तर्कसंगत प्रश्न कोडी puzzles नातेसंबंध दिशा ज्ञान">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-gs-1')">
+                            <span class="accordion-title">1. सामान्य बुद्धिमापन व आकलन (Reasoning)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
                     </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">सामान्य अध्ययन अभ्यासक्रम (Mains General Studies)</h3>
-                    <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 1.5rem auto; line-height: 1.6;">
-                        सामान्य अध्ययन (GS) विषयाचा मुख्य परीक्षेचा अभ्यासक्रम लवकरच येथे जोडला जाईल. तुम्ही सविस्तर अभ्यासक्रम चॅटमध्ये पाठवा, तो त्वरित येथे समाविष्ट केला जाईल.
-                    </p>
-                    <div style="font-size: 0.9rem; color: var(--primary); font-weight: 600;">
-                        <i class="fas fa-spinner fa-spin"></i> Awaiting Syllabus Upload...
+                    <div class="accordion-content">
+                        <h4>बुद्धिमापन चाचणी घटक</h4>
+                        <ul>
+                            <li><strong>आकलन चाचणी:</strong> उमेदवार किती लवकर आणि अचूक विचार करू शकतो यावर आधारित तर्कशास्त्रीय प्रश्न.</li>
+                            <li><strong>प्रमुख घटक:</strong> 
+                                <br>&bull; सांकेतिक भाषा (Coding-Decoding).
+                                <br>&bull; दिशा ज्ञान चाचणी (Direction Sense).
+                                <br>&bull; नातेसंबंध (Blood Relations).
+                                <br>&bull; बैठक व्यवस्था (Seating Arrangement) व कोडी (Puzzles).
+                                <br>&bull; घड्याळ व कॅलेंडर (Clocks & Calendar).
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="accordion-item" data-search="चालू घडामोडी जागतिक राष्ट्रीय महाराष्ट्र राजकीय आर्थिक सामाजिक क्रीडा वैज्ञानिक">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-gs-2')">
+                            <span class="accordion-title">2. चालू घडामोडी (Current Affairs)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>चालू घडामोडी व्याप्ती</h4>
+                        <ul>
+                            <li><strong>भौगोलिक व्याप्ती:</strong> जागतिक घडामोडी, राष्ट्रीय स्तरावरील आणि प्रामुख्याने महाराष्ट्राशी संबंधित घडामोडी.</li>
+                            <li><strong>महत्त्वाचे क्षेत्र:</strong> 
+                                <br>&bull; राजकीय नियुक्त्या, शासकीय योजना आणि नवे कायदे.
+                                <br>&bull; क्रीडा स्पर्धा, पुरस्कार आणि आंतरराष्ट्रीय करार.
+                                <br>&bull; आर्थिक सुधारणा, महत्त्वाचे निर्देशांक (Indexes) आणि वैज्ञानिक संशोधन/आविष्कार.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="accordion-item" data-search="अंकगणित सांख्यिकी संख्यांचे प्रकार सरासरी नफा तोटा चक्रवाढ व्याज काळ काम वेग गुणोत्तर प्रमाण आलेख मध्य मध्यक बहुलक">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-gs-3')">
+                            <span class="accordion-title">3. अंकगणित व सांख्यिकी (Aptitude & Statistics)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>अंकगणित व सांख्यिकी संकल्पना</h4>
+                        <ul>
+                            <li><strong>अंकगणित (Quantitative Aptitude):</strong> 
+                                <br>&bull; संख्यांचे प्रकार, लसावि (LCM) व मसावि (HCF).
+                                <br>&bull; सरासरी (Average), नफा-तोटा (Profit & Loss), आणि टक्केवारी (Percentage).
+                                <br>&bull; सरळव्याज व चक्रवाढ व्याज (Simple & Compound Interest).
+                                <br>&bull; काळ, काम, वेग व अंतर (Time, Work & Distance).
+                                <br>&bull; गुणोत्तर व प्रमाण (Ratio & Proportion).
+                            </li>
+                            <li><strong>सांख्यिकी (Statistics):</strong> माहितीचे विश्लेषण (Data Interpretation - तक्ते व आलेख), सरासरी मूल्ये (Mean - मध्य, Median - मध्यक, Mode - बहुलक).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="accordion-item" data-search="माहितीचा अधिकार अधिनियम 2005 rti act महाराष्ट्र लोकसेवा हक्क अधिनियम 2015 अपीले दंड नागरिक हक्क">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-gs-4')">
+                            <span class="accordion-title">4. माहितीचा अधिकार व लोकसेवा हक्क अधिनियम (RTI & RTS)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>कायदे व नियमावली</h4>
+                        <ul>
+                            <li><strong>माहितीचा अधिकार अधिनियम, २००५ (RTI Act 2005):</strong> 
+                                <br>&bull; प्रस्तावना, उद्देश व व्याख्या.
+                                <br>&bull; माहिती मिळवण्याचा अधिकार आणि पद्धत; माहिती देण्याची मुदत.
+                                <br>&bull; माहिती उघड करण्यापासून अपवाद (कलम ८).
+                                <br>&bull; केंद्रीय व राज्य माहिती आयोगाची रचना आणि अधिकार; प्रथम व द्वितीय अपील तरतुदी; दंड आणि कायदेशीर संरक्षण.
+                            </li>
+                            <li><strong>महाराष्ट्र लोकसेवा हक्क अधिनियम, २०१५ (RTS Act 2015):</strong>
+                                <br>&bull; उद्देश: नागरिकांना पारदर्शक, कालबद्ध व कार्यक्षम सेवा पुरवणे.
+                                <br>&bull; मुख्य सेवा, सेवा देण्याचा निश्चित कालावधी व जबाबदार अधिकारी.
+                                <br>&bull; अपील पद्धती, दंड आणि महाराष्ट्र राज्य सेवा हक्क आयोगाची रचना.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="accordion-item" data-search="भारतीय संघ राज्यव्यवस्था भारतीय राज्यघटना स्थानिक स्वराज्य संस्था कार्यकारी मंडळ न्यायमंडळ विधीमंडळ प्रस्तावना कलम मार्गदर्शक तत्वे युनिफॉर्म सिव्हिल कोड राज्यपाल मुख्यमंत्री मंत्रीमंडळ">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-gs-5')">
+                            <span class="accordion-title">5. भारतीय राज्यघटना व राज्यव्यवस्था (Polity)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>राज्यघटना व प्रशासन सविस्तर रचना</h4>
+                        <ul>
+                            <li><strong>संविधान निर्मिती:</strong> घटना कशी तयार झाली आणि घटनेच्या प्रस्तावनेमागची (Preamble) भूमिका, मूल्ये व तत्वे.</li>
+                            <li><strong>महत्त्वाची वैशिष्ट्ये:</strong> घटनेची ठळक वैशिष्ट्ये, महत्त्वाची कलमे, केंद्र व राज्य संबंध (Center-State Relations), धर्मनिरपेक्ष राज्य संकल्पना.</li>
+                            <li><strong>मूलभूत हक्क व कर्तव्ये:</strong> नागरिकांचे मूलभूत हक्क (कलम १२ ते ३५) आणि मूलभूत कर्तव्ये (कलम ५१ अ).</li>
+                            <li><strong>मार्गदर्शक तत्वे:</strong> राज्याच्या धोरणाची मार्गदर्शक तत्वे, शिक्षण हक्क, युनिफॉर्म सिव्हिल कोड (समान नागरी कायदा - कलम ४४).</li>
+                            <li><strong>कार्यकारी व कायदेमंडळ:</strong> 
+                                <br>&bull; <strong>केंद्र शासन:</strong> राष्ट्रपती, पंतप्रधान व मंत्रीमंडळ, संसद (लोकसभा व राज्यसभा).
+                                <br>&bull; <strong>राज्य शासन:</strong> राज्यपाल, मुख्यमंत्री व मंत्रीमंडळ, राज्य विधीमंडळ (विधानसभा, विधानपरिषद) व त्यांचे सदस्य, अधिकार, कार्ये व कर्तव्ये; विधी समित्या.
+                            </li>
+                            <li><strong>न्यायव्यवस्था:</strong> स्वतंत्र न्यायपालिका - सर्वोच्च न्यायालय, उच्च न्यायालय आणि दुय्यम न्यायालये.</li>
+                            <li><strong>स्थानिक स्वराज्य संस्था:</strong> ग्रामीण (पंचायतराज - ७३ वी घटनादुरुस्ती) व नागरी (७४ वी घटनादुरुस्ती) स्थानिक स्वराज्य संस्था.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="accordion-item" data-search="आधुनिक भारताचा इतिहास महाराष्ट्र इतिहास सामाजिक आर्थिक जागृती 1885 1947 व्यक्तींचे कार्य समाज सुधारक स्वातंत्र्यपूर्व वर्तमानपत्रे चळवळी राष्ट्रीय चळवळ">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-gs-6')">
+                            <span class="accordion-title">6. आधुनिक भारताचा विशेषतः महाराष्ट्राचा इतिहास (History)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>इतिहास सविस्तर अभ्यासक्रम</h4>
+                        <ul>
+                            <li><strong>सामाजिक व आर्थिक जागृती (१८८५-१९४७):</strong> भारतात राष्ट्रीय सभेची स्थापना व राष्ट्रीय चळवळीचे विविध कालखंड (मवाळ, जहाल, गांधी युग).</li>
+                            <li><strong>समाजसुधारकांचे कार्य:</strong> महाराष्ट्रातील समाजसुधारक - महात्मा ज्योतिराव फुले, छत्रपती शाहू महाराज, डॉ. बाबासाहेब आंबेडकर, महर्षी धोंडो केशव कर्वे, गोपाळ गणेश आगरकर, लोकहितवादी इत्यादी.</li>
+                            <li><strong>वृत्तपत्रांची भूमिका:</strong> स्वातंत्र्यपूर्व काळातील सामाजिक व राजकीय जागृती निर्माण करणारी वर्तमानपत्रे व त्यांचे संपादक.</li>
+                            <li><strong>शिक्षणाचा परिणाम:</strong> पाश्चात्य शिक्षण प्रसार आणि त्यामुळे घडून आलेली जागृती व सुधारणा.</li>
+                            <li><strong>समकालीन चळवळी:</strong> शेतकरी व कामगार चळवळी, क्रांतिकारी चळवळी आणि महाराष्ट्रातील महत्त्वाच्या व्यक्तींचे स्वातंत्र्य चळवळीतील योगदान.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="accordion-item" data-search="भारताचा महाराष्ट्राचा भूगोल प्राकृतिक physical मुख्य प्राकृतिक physiographic विभाग हवामान climate पर्जन्यमान तापमान नद्या पर्वत पठार राजकीय प्रशासकीय विभाग नैसर्गिक संपत्ती वने खनिजे लोकसंख्या लोकसंख्येचे स्थानांतर ग्रामीण वस्त्या झोपडपट्ट्या">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="header-left">
+                            <input type="checkbox" class="header-checkbox" onclick="event.stopPropagation(); toggleCheckbox(this, 'mains-gs-7')">
+                            <span class="accordion-title">7. भारत व महाराष्ट्राचा भूगोल (Geography)</span>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <h4>भूगोल सविस्तर अभ्यासक्रम</h4>
+                        <ul>
+                            <li><strong>प्राकृतिक भूगोल (Physical Geography):</strong> भारत व महाराष्ट्राचा प्राकृतिक भूगोल, मुख्य प्राकृतिक विभाग (कोकण, सह्याद्री, दख्खन पठार).</li>
+                            <li><strong>हवामान शास्त्र (Climate):</strong> हवामान बदल, पर्जन्यमान व तापमान; नैऋत्य मान्सून वारे आणि पर्जन्यातील प्रादेशिक/विभागवार बदल.</li>
+                            <li><strong>नदीप्रणाली, पर्वत व पठार:</strong> भारत व महाराष्ट्रातील नद्या (गोदावरी, कृष्णा, नर्मदा, तापी, गंगा इ.), पर्वतश्रेणी आणि पठारी भाग.</li>
+                            <li><strong>राजकीय व प्रशासकीय विभाग:</strong> महाराष्ट्रातील ३६ जिल्हे, ३५५ तालुके आणि ६ प्रशासकीय विभाग.</li>
+                            <li><strong>नैसर्गिक संपत्ती:</strong> वने व वन्यजीव; विविध खनिजे व त्यांचे प्रादेशिक वितरण (कोळसा, लोह, मँगनीज, बॉक्साइट).</li>
+                            <li><strong>मानवी व सामाजिक भूगोल:</strong> 
+                                <br>&bull; <strong>लोकसंख्या:</strong> जनगणना २०११ आकडेवारी, साक्षरता, लिंगगुणोत्तर व लोकसंख्या वाढ.
+                                <br>&bull; <strong>लोकसंख्येचे स्थानांतर (Migration of Population):</strong> स्थलांतराची कारणे, त्याचे उगम (Source) आणि इष्टस्थानावरील (Destination) परिणाम.
+                                <br>&bull; <strong>rural-urban settlements:</strong> ग्रामीण वसाहतींचे प्रकार व स्वरूप.
+                                <br>&bull; <strong>slums problems:</strong> शहरी भागातील झोपडपट्ट्यांच्या समस्या आणि उपाययोजना.
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -179,6 +179,218 @@
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 1.5px;
         }
+
+        /* Syllabus Checklist Accordions */
+        .syllabus-accordion {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+        .syllabus-accordion:hover {
+            border-color: var(--border-glow);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.05);
+        }
+        .syllabus-accordion-header {
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            background: rgba(255, 255, 255, 0.01);
+            transition: var(--transition-smooth);
+        }
+        .syllabus-accordion-header:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .syllabus-accordion-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .syllabus-accordion-title i {
+            color: var(--primary);
+        }
+        .syllabus-accordion-icon {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            transition: transform 0.3s ease;
+        }
+        .syllabus-accordion.open .syllabus-accordion-icon {
+            transform: rotate(180deg);
+            color: var(--primary);
+        }
+        .syllabus-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        .syllabus-accordion.open .syllabus-accordion-content {
+            border-top: 1px solid var(--border-color);
+        }
+        .syllabus-inner-content {
+            padding: 1.5rem;
+        }
+        .topic-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        @media (min-width: 768px) {
+            .topic-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .topic-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 0.85rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: var(--border-radius-sm);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+        .topic-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: var(--border-glow);
+            color: var(--text-main);
+        }
+        .topic-item i {
+            color: var(--secondary);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        .sub-category-title {
+            grid-column: 1 / -1;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sub-category-title:first-child {
+            margin-top: 0;
+        }
+
+        /* Exam Pattern Table Styles */
+        .pattern-container {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            padding: 1.75rem;
+            margin-bottom: 2.5rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: var(--transition-smooth);
+        }
+        .pattern-container:hover {
+            border-color: var(--border-glow);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.06);
+        }
+        .pattern-table-wrapper {
+            overflow-x: auto;
+            margin-top: 1.25rem;
+        }
+        .pattern-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            min-width: 450px;
+        }
+        .pattern-table th, .pattern-table td {
+            padding: 0.85rem 1.25rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .pattern-table th {
+            font-weight: 700;
+            color: var(--secondary);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.75px;
+            background: rgba(255, 255, 255, 0.01);
+        }
+        .pattern-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-main);
+        }
+        .pattern-table td {
+            color: var(--text-muted);
+            transition: var(--transition-smooth);
+        }
+        .pattern-table td strong {
+            color: var(--text-main);
+        }
+        .pattern-table td i {
+            font-size: 1rem;
+            width: 20px;
+            text-align: center;
+        }
+        .pattern-table .highlight-row {
+            background: rgba(99, 102, 241, 0.05);
+            font-weight: 700;
+        }
+        .pattern-table .highlight-row td {
+            color: var(--primary);
+            border-top: 1.5px solid var(--border-glow);
+            border-bottom: 1.5px solid var(--border-glow);
+        }
+        .pattern-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.75rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed var(--border-color);
+        }
+        @media (min-width: 576px) {
+            .pattern-meta-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .pattern-meta-card {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: var(--border-radius-sm);
+            padding: 0.85rem;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+        .pattern-meta-card:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: var(--border-glow);
+        }
+        .pattern-meta-icon {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 0.4rem;
+        }
+        .pattern-meta-value {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 0.15rem;
+        }
+        .pattern-meta-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
@@ -191,7 +403,6 @@
             <a href="/current-affairs" class="nav-item">Current Affairs</a>
             <a href="/mcq" class="nav-item">AI MCQs</a>
             <a href="/mock-test" class="nav-item">Mock Tests</a>
-            <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
             <a href="/syllabus" class="nav-item">Syllabus</a>
             <a href="/study-materials" class="nav-item active">Study Notes</a>
             <a href="/revision" class="nav-item">Smart Revision</a>
@@ -212,7 +423,6 @@
         <a href="/current-affairs" class="nav-item">Current Affairs</a>
         <a href="/mcq" class="nav-item">AI MCQs</a>
         <a href="/mock-test" class="nav-item">Mock Tests</a>
-        <a href="/pyq-papers" class="nav-item">PYQ Papers</a>
         <a href="/syllabus" class="nav-item">Syllabus</a>
         <a href="/study-materials" class="nav-item active">Study Notes</a>
         <a href="/revision" class="nav-item">Smart Revision</a>
@@ -235,6 +445,18 @@
             <p>Download subject-wise, exam-oriented study materials compiled by top educators to power up your preparation.</p>
         </section>
 
+        <!-- Exam Stage Switcher (Prelims vs Mains) -->
+        <div style="display: flex; justify-content: center; margin-bottom: 2.5rem;">
+            <div class="stage-toggle-container animate-fade-in" style="margin-bottom: 0;">
+                <a href="/study-materials?stage=Prelims&tab=prajakta" class="stage-toggle-btn {% if active_stage == 'Prelims' %}active{% endif %}" id="notesPrelimsBtn" style="text-decoration: none;">
+                    <i class="fas fa-graduation-cap"></i> Prelims Notes
+                </a>
+                <a href="/study-materials?stage=Mains&tab=pyq" class="stage-toggle-btn {% if active_stage == 'Mains' %}active{% endif %}" id="notesMainsBtn" style="text-decoration: none;">
+                    <i class="fas fa-award"></i> Mains Notes
+                </a>
+            </div>
+        </div>
+
         <!-- Main Layout Split -->
         <div class="materials-layout animate-fade-in" style="animation-delay: 0.1s;">
             
@@ -242,8 +464,15 @@
             <section class="materials-section">
                 <!-- Tabs Header -->
                 <div class="materials-tabs" style="display:flex; gap:2rem; border-bottom:1px solid var(--border-color); padding-bottom:1rem; margin-bottom:2.5rem;">
-                    <button class="tab-btn active" onclick="switchNotesTab('prajakta')" style="background:transparent; color:var(--text-main); font-family:var(--font-sans); font-size:1.25rem; font-weight:700; border:none; outline:none; cursor:pointer; padding-bottom:0.5rem; position:relative; transition:var(--transition-smooth);">Prajakta Lotake Notes</button>
-                    <button class="tab-btn" onclick="switchNotesTab('other')" style="background:transparent; color:var(--text-muted); font-family:var(--font-sans); font-size:1.25rem; font-weight:700; border:none; outline:none; cursor:pointer; padding-bottom:0.5rem; position:relative; transition:var(--transition-smooth);">Other Notes</button>
+                    {% if active_stage == 'Mains' %}
+                        <button class="tab-btn active" onclick="switchNotesTab('pyq')" style="background:transparent; color:var(--text-main); font-family:var(--font-sans); font-size:1.25rem; font-weight:700; border:none; outline:none; cursor:pointer; padding-bottom:0.5rem; position:relative; transition:var(--transition-smooth);">PYQs (मागील वर्षाच्या प्रश्नपत्रिका)</button>
+                    {% else %}
+                        <button class="tab-btn active" onclick="switchNotesTab('prajakta')" style="background:transparent; color:var(--text-main); font-family:var(--font-sans); font-size:1.25rem; font-weight:700; border:none; outline:none; cursor:pointer; padding-bottom:0.5rem; position:relative; transition:var(--transition-smooth);">Prajakta Lotake Notes</button>
+                        <button class="tab-btn" onclick="switchNotesTab('ignite')" style="background:transparent; color:var(--text-muted); font-family:var(--font-sans); font-size:1.25rem; font-weight:700; border:none; outline:none; cursor:pointer; padding-bottom:0.5rem; position:relative; transition:var(--transition-smooth);">Ignite Academy Notes</button>
+                        <button class="tab-btn" onclick="switchNotesTab('other')" style="background:transparent; color:var(--text-muted); font-family:var(--font-sans); font-size:1.25rem; font-weight:700; border:none; outline:none; cursor:pointer; padding-bottom:0.5rem; position:relative; transition:var(--transition-smooth);">Other Notes</button>
+                        <button class="tab-btn" onclick="switchNotesTab('pyq')" style="background:transparent; color:var(--text-muted); font-family:var(--font-sans); font-size:1.25rem; font-weight:700; border:none; outline:none; cursor:pointer; padding-bottom:0.5rem; position:relative; transition:var(--transition-smooth);">PYQs (मागील वर्षाच्या प्रश्नपत्रिका)</button>
+                        <button class="tab-btn" onclick="switchNotesTab('imp')" style="background:transparent; color:var(--text-muted); font-family:var(--font-sans); font-size:1.25rem; font-weight:700; border:none; outline:none; cursor:pointer; padding-bottom:0.5rem; position:relative; transition:var(--transition-smooth);">Important Topics (IMP)</button>
+                    {% endif %}
                 </div>
 
                 <!-- 1. Prajakta Lotake Notes Section -->
@@ -252,7 +481,48 @@
                         {% for subject, items in prajakta_notes.items() %}
                             <div class="subject-block">
                                 <h2 class="subject-title">
-                                    <i class="fas fa-folder-open"></i> {{ subject }} (प्राजक्ता लोटाके)
+                                    <i class="fas fa-folder-open"></i> {{ subject }}
+                                </h2>
+                                <div class="materials-grid">
+                                    {% for item in items %}
+                                        <div class="pdf-card">
+                                            <div class="pdf-header">
+                                                <div class="pdf-icon">
+                                                    <i class="fas fa-file-pdf"></i>
+                                                </div>
+                                                <div class="pdf-title-container">
+                                                    <h3 class="pdf-title">{{ item.title }}</h3>
+                                                    <div class="pdf-filename">{{ item.file_name }}</div>
+                                                    <div class="pdf-source" style="font-size: 0.85rem; color: var(--secondary); font-weight: 600; margin-top: 0.25rem;"><i class="fas fa-university"></i> {{ item.academy or 'Standard Academy' }}</div>
+                                                </div>
+                                            </div>
+                                            <div class="pdf-meta">
+                                                <span><i class="far fa-calendar-alt"></i> {{ item.uploaded_at.split(' ')[0] if item.uploaded_at else 'Recent' }}</span>
+                                                <a href="/download-pdf/{{ item.id }}" target="_blank" class="btn btn-secondary download-prajakta-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem; background: rgba(6, 182, 212, 0.1); border-color: var(--secondary); color: var(--secondary);">
+                                                    <i class="far fa-eye"></i> View PDF
+                                                </a>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="empty-state">
+                            <i class="fas fa-book-open"></i>
+                            <h3>No Prajakta Lotake Notes Found</h3>
+                            <p>Upload Geography, Economics, History, or Polity notes using the admin panel to view them here.</p>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <!-- 5. Ignite Notes Section -->
+                <div id="igniteNotesSection" style="display: none;">
+                    {% if ignite_notes %}
+                        {% for subject, items in ignite_notes.items() %}
+                            <div class="subject-block">
+                                <h2 class="subject-title">
+                                    <i class="fas fa-folder-open"></i> {{ subject }}
                                 </h2>
                                 <div class="materials-grid">
                                     {% for item in items %}
@@ -280,9 +550,9 @@
                         {% endfor %}
                     {% else %}
                         <div class="empty-state">
-                            <i class="fas fa-book-open"></i>
-                            <h3>No Prajakta Lotake Notes Found</h3>
-                            <p>Upload Geography, Economics, History, or Polity notes using the admin panel to view them here.</p>
+                            <i class="fas fa-file-alt"></i>
+                            <h3>No Ignite Academy Notes Found</h3>
+                            <p>Upload Ignite Academy notes using the admin panel to view them here.</p>
                         </div>
                     {% endif %}
                 </div>
@@ -322,10 +592,379 @@
                     {% else %}
                         <div class="empty-state">
                             <i class="fas fa-file-alt"></i>
-                            <h3>No Other Study Notes Found</h3>
-                            <p>Upload General Science, Marathi Grammar, or Mathematics notes using the admin panel to view them here.</p>
+                            {% if active_stage == 'Mains' %}
+                                <h3>No Mains PYQ Notes Found</h3>
+                                <p>Upload Mains PYQ papers using the admin panel to view them here.</p>
+                            {% else %}
+                                <h3>No Other Study Notes Found</h3>
+                                <p>Upload General Science, Marathi Grammar, or Mathematics notes using the admin panel to view them here.</p>
+                            {% endif %}
                         </div>
                     {% endif %}
+                </div>
+
+                <!-- 4. PYQ Notes Section -->
+                <div id="pyqNotesSection" style="display: none;">
+                    {% if pyq_notes %}
+                        {% for subject, items in pyq_notes.items() %}
+                            <div class="subject-block">
+                                <h2 class="subject-title">
+                                    <i class="fas fa-folder-open"></i> {{ subject }}
+                                </h2>
+                                <div class="materials-grid">
+                                    {% for item in items %}
+                                        <div class="pdf-card">
+                                            <div class="pdf-header">
+                                                <div class="pdf-icon">
+                                                    <i class="fas fa-file-pdf"></i>
+                                                </div>
+                                                <div class="pdf-title-container">
+                                                    <h3 class="pdf-title">{{ item.title }}</h3>
+                                                    <div class="pdf-filename">{{ item.file_name }}</div>
+                                                    <div class="pdf-source" style="font-size: 0.85rem; color: var(--secondary); font-weight: 600; margin-top: 0.25rem;"><i class="fas fa-university"></i> {{ item.academy or 'Standard Academy' }}</div>
+                                                </div>
+                                            </div>
+                                            <div class="pdf-meta">
+                                                <span><i class="far fa-calendar-alt"></i> {{ item.uploaded_at.split(' ')[0] if item.uploaded_at else 'Recent' }}</span>
+                                                <a href="/download-pdf/{{ item.id }}" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+                                                    <i class="fas fa-download"></i> Download
+                                                </a>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="empty-state">
+                            <i class="fas fa-file-alt"></i>
+                            <h3>No PYQ Notes Found</h3>
+                            <p>Upload PYQ papers using the admin panel to view them here.</p>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <!-- 3. Important Topics (IMP) Section -->
+                <div id="impNotesSection" style="display: none;">
+                    
+                    <!-- Syllabus Checklist Accordions -->
+                    <div class="syllabus-checklist-container" style="margin-bottom: 3rem;">
+                        <h2 class="syllabus-section-title" style="font-size: 1.5rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-tasks" style="color: var(--secondary);"></i> अभ्यासक्रमातील महत्त्वाचे घटक (Syllabus Topic Checklist)
+                        </h2>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.5;">
+                            तलाठी भरती परीक्षेसाठी खालील विषयांचे घटक अत्यंत महत्त्वाचे आहेत. त्यांचा अभ्यास पूर्ण झाला असल्याची खात्री करा:
+                        </p>
+
+                        <!-- Exam Pattern Table -->
+                        <div class="pattern-container">
+                            <h3 style="font-size: 1.2rem; font-weight: 600; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <i class="fas fa-chart-pie" style="color: var(--primary);"></i> तलाठी भरती पूर्व परीक्षा पॅटर्न (Exam Pattern & Marks Distribution)
+                            </h3>
+                            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">खालील तक्त्यामध्ये तलाठी भरती पूर्व परीक्षेची विषयनिहाय गुणविभागणी दर्शवली आहे:</p>
+                            
+                            <div class="pattern-table-wrapper">
+                                <table class="pattern-table">
+                                    <thead>
+                                        <tr>
+                                            <th>विषय (Subject)</th>
+                                            <th>प्रश्न (Questions)</th>
+                                            <th>गुण (Marks)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong><i class="fas fa-university" style="color: #6366f1; margin-right: 0.5rem;"></i> भारतीय राज्यव्यवस्था</strong></td>
+                                            <td>१५</td>
+                                            <td>१५</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fas fa-coins" style="color: #10b981; margin-right: 0.5rem;"></i> अर्थव्यवस्था</strong></td>
+                                            <td>१५</td>
+                                            <td>१५</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fas fa-microscope" style="color: #3b82f6; margin-right: 0.5rem;"></i> सामान्य विज्ञान</strong></td>
+                                            <td>१५</td>
+                                            <td>१५</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fas fa-newspaper" style="color: #f59e0b; margin-right: 0.5rem;"></i> चालू घडामोडी</strong></td>
+                                            <td>१५</td>
+                                            <td>१५</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fas fa-history" style="color: #ec4899; margin-right: 0.5rem;"></i> इतिहास</strong></td>
+                                            <td>१०</td>
+                                            <td>१०</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fas fa-globe-asia" style="color: #8b5cf6; margin-right: 0.5rem;"></i> भूगोल</strong></td>
+                                            <td>१०</td>
+                                            <td>१०</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fas fa-brain" style="color: #ef4444; margin-right: 0.5rem;"></i> गणित व बुद्धिमत्ता चाचणी (Maths + Reasoning)</strong></td>
+                                            <td>२०</td>
+                                            <td>२०</td>
+                                        </tr>
+                                        <tr class="highlight-row">
+                                            <td><strong>एकूण (Total)</strong></td>
+                                            <td><strong>१००</strong></td>
+                                            <td><strong>१००</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="pattern-meta-grid">
+                                <div class="pattern-meta-card">
+                                    <div class="pattern-meta-icon"><i class="fas fa-list-ol"></i></div>
+                                    <div class="pattern-meta-value">१००</div>
+                                    <div class="pattern-meta-label">एकूण प्रश्न</div>
+                                </div>
+                                <div class="pattern-meta-card">
+                                    <div class="pattern-meta-icon"><i class="fas fa-award"></i></div>
+                                    <div class="pattern-meta-value">१००</div>
+                                    <div class="pattern-meta-label">एकूण गुण</div>
+                                </div>
+                                <div class="pattern-meta-card">
+                                    <div class="pattern-meta-icon"><i class="fas fa-check-double"></i></div>
+                                    <div class="pattern-meta-value">१ गुण</div>
+                                    <div class="pattern-meta-label">प्रत्येक प्रश्न</div>
+                                </div>
+                                <div class="pattern-meta-card">
+                                    <div class="pattern-meta-icon"><i class="far fa-clock"></i></div>
+                                    <div class="pattern-meta-value">१ तास</div>
+                                    <div class="pattern-meta-label">कालावधी</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 1. Geography Accordion -->
+                        <div class="syllabus-accordion">
+                            <div class="syllabus-accordion-header" onclick="toggleSyllabusAccordion(this)">
+                                <div class="syllabus-accordion-title">
+                                    <i class="fas fa-globe-asia"></i> १. महाराष्ट्र आणि भारताचा भूगोल
+                                </div>
+                                <i class="fas fa-chevron-down syllabus-accordion-icon"></i>
+                            </div>
+                            <div class="syllabus-accordion-content">
+                                <div class="syllabus-inner-content">
+                                    <div class="topic-list">
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्राचा प्राकृतिक भूगोल</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील हवामान</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील खडक प्रणाली.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील खनिज संपत्ती.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील मृदा संपत्ती.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील वन संपत्ती</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्राची लोकसंख्या.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील आदिवासी जमाती.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील स्थलांतर.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> वाहतूक व दळणवळण.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> पर्यटन आणि धार्मिक स्थळे.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील व्यवसाय</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> भारताचा प्राकृतिक भूगोल</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. History Accordion -->
+                        <div class="syllabus-accordion">
+                            <div class="syllabus-accordion-header" onclick="toggleSyllabusAccordion(this)">
+                                <div class="syllabus-accordion-title">
+                                    <i class="fas fa-history"></i> २. इतिहास (History) चे महत्त्वाचे घटक
+                                </div>
+                                <i class="fas fa-chevron-down syllabus-accordion-icon"></i>
+                            </div>
+                            <div class="syllabus-accordion-content">
+                                <div class="syllabus-inner-content">
+                                    <div class="topic-list">
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील आदिवासी उठाव – रामोशी, भिल्ल आणि कोळी.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रात ख्रिश्चन मिशनऱ्यांच्या आगमन, कार्य आणि वर्तमानपत्र.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> भारत आणि महाराष्ट्रातील 1857 चा उठाव.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> काँग्रेस स्थापनेपूर्वी महाराष्ट्रातील राजकीय संघटना.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> धर्म सुधारणा व समाज सुधारणा संघटना.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> काँग्रेसची स्थापना आणि अधिवेशने.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> मवाळ आणि जहाल काळ.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> लोकमान्य टिळकांचे चरित्र, स्वदेशी आंदोलन व होमरूल चळवळ.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> गांधीजींचे आंदोलने – असहकार आंदोलन, सविनय कायदेभंग आणि चले जाव, सोबतच महाराष्ट्रातील आंदोलने.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> संयुक्त महाराष्ट्र चळवळ</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> हैदराबाद मुक्तिसंग्राम</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> शाहू-फुले-आंबेडकर</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील समाज सुधारक</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> दाटमणोत्तर चळवळ आणि त्याची वर्तमानपत्रे.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्र आणि भारतातील शेतकरी आणि मजूर चळवळी.</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील क्रांतीपर्व</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Polity Accordion -->
+                        <div class="syllabus-accordion">
+                            <div class="syllabus-accordion-header" onclick="toggleSyllabusAccordion(this)">
+                                <div class="syllabus-accordion-title">
+                                    <i class="fas fa-balance-scale"></i> ३. राज्यशास्त्र (Polity) चे महत्त्वाचे घटक
+                                </div>
+                                <i class="fas fa-chevron-down syllabus-accordion-icon"></i>
+                            </div>
+                            <div class="syllabus-accordion-content">
+                                <div class="syllabus-inner-content">
+                                    <div class="topic-list">
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> राज्यघटना निर्मिती</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> राज्यघटनेतील भाग, परिशिष्ट आणि विविध देशांकडून घेतलेल्या तरतुदी</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> घटनेचा सरनामा किंवा उद्देशिका</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> संघ व त्याची राज्यक्षेत्रे</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> मूलभूत हक्क, राज्य धोरणाची मार्गदर्शक तत्त्वे आणि मूलभूत कर्तव्ये</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> घटना दुरुस्ती आणि संविधानाची मूलभूत संरचना</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> संघराज्य शासन प्रणाली व केंद्र-राज्य संबंध</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> राष्ट्रपती, उपराष्ट्रपती, पंतप्रधान व त्यांचे मंत्रिमंडळ</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> संसद आणि राज्य विधिमंडळ</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> सर्वोच्च न्यायालय, उच्च न्यायालय आणि जिल्हा न्यायालय</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> घटनात्मक आयोग</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> पंचायतराज</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Economics Accordion -->
+                        <div class="syllabus-accordion">
+                            <div class="syllabus-accordion-header" onclick="toggleSyllabusAccordion(this)">
+                                <div class="syllabus-accordion-title">
+                                    <i class="fas fa-coins"></i> ४. अर्थशास्त्र (Economics) चे महत्त्वाचे घटक
+                                </div>
+                                <i class="fas fa-chevron-down syllabus-accordion-icon"></i>
+                            </div>
+                            <div class="syllabus-accordion-content">
+                                <div class="syllabus-inner-content">
+                                    <div class="topic-list">
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> अर्थशास्त्र आणि अर्थव्यवस्था, प्रकार व क्षेत्रे</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> राष्ट्रीय उत्पन्न (National Income)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> चलनवाढ (Inflation & Price Rise)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> दारिद्र्य व बेरोजगारी (Poverty & Unemployment)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> लोकसंख्याशास्त्र (Demography & Census 2011)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> सार्वजनिक वित्त (Public Finance & Budget)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> कर प्रणाली (Taxation System & GST)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> परकीय व्यापार (Foreign Trade & BoP)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> कृषी आणि उद्योग (Agriculture & Industry)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> भारतीय नियोजन आणि पंचवार्षिक योजना</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> आंतरराष्ट्रीय वित्तीय संस्था (IMF, World Bank, WTO)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> औद्योगिक धोरणे व नवीन आर्थिक सुधारणा (LPG)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> पायाभूत सुविधा (Infrastructure Development)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> भारतीय बँकिंग व्यवस्था (Banking System in India)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> भारतीय रिझर्व्ह बँक (Reserve Bank of India - RBI)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रातील सहकार चळवळ (Cooperative Movement)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> मानवी विकास निर्देशांक (Human Development Index - HDI)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महत्त्वाच्या शासकीय आर्थिक कल्याण योजना</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्राची आर्थिक पाहणी व बजेट (Economic Survey & Budget)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Science Accordion -->
+                        <div class="syllabus-accordion">
+                            <div class="syllabus-accordion-header" onclick="toggleSyllabusAccordion(this)">
+                                <div class="syllabus-accordion-title">
+                                    <i class="fas fa-microscope"></i> ५. विज्ञानातील महत्त्वाचे घटक
+                                </div>
+                                <i class="fas fa-chevron-down syllabus-accordion-icon"></i>
+                            </div>
+                            <div class="syllabus-accordion-content">
+                                <div class="syllabus-inner-content">
+                                    <div class="topic-list">
+                                        <div class="sub-category-title"><i class="fas fa-dna"></i> जीवशास्त्र (Biology)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> पेशी आणि उती</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> DNA-RNA</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> सजीव सृष्टीचे वर्गीकरण</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> मोनेरासृष्टी</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> प्रोटिस्टासृष्टी</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> कवक सृष्टी</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> प्रजनन — लैंगिक व अलैंगिक</div>
+
+                                        <div class="sub-category-title"><i class="fas fa-paw"></i> प्राणीशास्त्र (Zoology)</div>
+                                        <div class="topic-item" style="grid-column: 1 / -1; justify-content: center; font-style: italic; color: var(--text-dark);"><i class="fas fa-check-circle"></i> विविध प्राणी संघ व त्यांचे वर्गीकरण, प्राण्यांमधील उती व अवयव संस्था.</div>
+
+                                        <div class="sub-category-title"><i class="fas fa-seedling"></i> वनस्पतीशास्त्र (Botany)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> वनस्पती सृष्टीचे वर्गीकरण</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> वनस्पतीमधील संवहनी संस्था</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> प्रजनन संस्था</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> वनस्पतींचे श्वसन आणि प्रकाश संश्लेषण</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> वनस्पती संप्रेरके</div>
+
+                                        <div class="sub-category-title"><i class="fas fa-heartbeat"></i> आरोग्यशास्त्र (Health Science)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> कर्बोदके, प्रथिने व मेद</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> जीवनसत्त्वे आणि खनिजे</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> जिवाणू, विषाणू, आदिजीव, कृमी आणि कवकांमुळे पसरणारे रोग</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> असंसर्गजन्य आजार</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Chemistry & Physics Accordion -->
+                        <div class="syllabus-accordion">
+                            <div class="syllabus-accordion-header" onclick="toggleSyllabusAccordion(this)">
+                                <div class="syllabus-accordion-title">
+                                    <i class="fas fa-atom"></i> ६. रसायनशास्त्र व भौतिकशास्त्र
+                                </div>
+                                <i class="fas fa-chevron-down syllabus-accordion-icon"></i>
+                            </div>
+                            <div class="syllabus-accordion-content">
+                                <div class="syllabus-inner-content">
+                                    <div class="topic-list">
+                                        <div class="sub-category-title"><i class="fas fa-flask"></i> रसायनशास्त्र (Chemistry)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> अणु आणि त्याची रचना</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> द्रव्याचे वर्गीकरण</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> थर्मोडायनामिक्स</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> आवर्तसरणी</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> खनिजे आणि धातुके</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> रासायनिक अभिक्रिया</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> आम्ल-अल्कली आणि क्षार</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> कार्बनचे जग</div>
+
+                                        <div class="sub-category-title"><i class="fas fa-bolt"></i> भौतिकशास्त्र (Physics)</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> गती आणि गतीचे प्रकार</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> बल — कार्य — ऊर्जा — शक्ती</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> दाब</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> गुरुत्व बल</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> ध्वनी</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> प्रकाश</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> विद्युत प्रवाह</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Current Affairs Accordion -->
+                        <div class="syllabus-accordion">
+                            <div class="syllabus-accordion-header" onclick="toggleSyllabusAccordion(this)">
+                                <div class="syllabus-accordion-title">
+                                    <i class="fas fa-newspaper"></i> ७. चालू घडामोडींमधील महत्त्वाचे घटक
+                                </div>
+                                <i class="fas fa-chevron-down syllabus-accordion-icon"></i>
+                            </div>
+                            <div class="syllabus-accordion-content">
+                                <div class="syllabus-inner-content">
+                                    <div class="topic-list">
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महत्त्वाचे पुरस्कार</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> चर्चेतील व्यक्ती, नियुक्ती, महत्त्वाच्या नियुक्ती</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> आंतरराष्ट्रीय संघटना आणि त्यांचे अधिवेशन/शिखर/परिषद</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> चर्चेतील पुस्तके आणि त्यांचे लेखक</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> खेळा संबंधित असणारे खेळाडू आणि त्यांना मिळालेले पुरस्कार, ब्रँड अॅम्बेसेडर</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महाराष्ट्रासंदर्भात विशेष घडामोडी</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> सरकारी योजना</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> महत्त्वाचे निर्देशांक</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> विज्ञान व पर्यावरण विषयक घडामोडी</div>
+                                        <div class="topic-item"><i class="fas fa-check-circle"></i> नुकतेच गठीत झालेले महत्त्वाचे आयोग व समित्या (राज्यशास्त्र आणि अर्थशास्त्र दृष्टिकोनातून)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -339,17 +978,17 @@
                 </p>
                 
                 <form action="/admin/upload-pdf" method="POST" enctype="multipart/form-data">
-                                    <div class="form-group">
-                                        <label class="form-label" for="title">Document Title</label>
-                                        <input type="text" id="title" name="title" class="form-input" placeholder="e.g. जीवशास्त्र (Biology) Notes" required>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label class="form-label" for="academy">Academy / Source Name</label>
-                                        <input type="text" id="academy" name="academy" class="form-input" placeholder="e.g. Chanakya Academy, Self, etc.">
-                                    </div>
-                                    
-                                    <div class="form-group">
+                    <div class="form-group">
+                        <label class="form-label" for="title">Document Title</label>
+                        <input type="text" id="title" name="title" class="form-input" placeholder="e.g. जीवशास्त्र (Biology) Notes" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="academy">Academy / Source Name</label>
+                        <input type="text" id="academy" name="academy" class="form-input" placeholder="e.g. Chanakya Academy, Self, etc.">
+                    </div>
+                    
+                    <div class="form-group">
                         <label class="form-label" for="subject">Subject Category</label>
                         <select id="subject" name="subject" class="form-select" required>
                             <option value="General Science">General Science (सामान्य विज्ञान)</option>
@@ -363,6 +1002,14 @@
                             <option value="Mathematics">Mathematics & Reasoning (अंकगणित व बुद्धिमत्ता)</option>
                             <option value="Current Affairs">Current Affairs (चालू घडामोडी)</option>
                             <option value="Any Other Material">Any Other Material (इतर साहित्य)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="stage">Exam Stage (परीक्षा टप्पा)</label>
+                        <select id="stage" name="stage" class="form-select" required>
+                            <option value="Prelims">Prelims (पूर्व परीक्षा)</option>
+                            <option value="Mains">Mains (मुख्य परीक्षा)</option>
                         </select>
                     </div>
                     
@@ -432,6 +1079,38 @@
 
     </main>
 
+    <!-- User Info Modal for Download Gate -->
+    <div id="infoModal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 450px;">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fas fa-lock"></i> माहिती प्रविष्ट करा (Enter Details)</h3>
+                <button id="infoClose" class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" style="padding-top: 0.5rem;">
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.4;">
+                    Prajakta Lotake Notes डाउनलोड करण्यासाठी कृपया आपली अचूक माहिती भरा.
+                </p>
+                <form id="infoForm" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                        <label for="infoName" style="font-size: 0.85rem; color: var(--text-main); font-weight: 600;">पूर्ण नाव (Full Name)</label>
+                        <input type="text" id="infoName" required placeholder="उदा. प्राजक्ता लोटाके" style="padding: 0.65rem 0.85rem; border-radius: var(--border-radius-sm); border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-main); font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                        <label for="infoMobile" style="font-size: 0.85rem; color: var(--text-main); font-weight: 600;">मोबाईल क्रमांक (Mobile Number)</label>
+                        <input type="tel" id="infoMobile" required pattern="[0-9]{10}" placeholder="उदा. 9876543210" style="padding: 0.65rem 0.85rem; border-radius: var(--border-radius-sm); border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-main); font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                        <label for="infoDistrict" style="font-size: 0.85rem; color: var(--text-main); font-weight: 600;">जिल्हा (District)</label>
+                        <input type="text" id="infoDistrict" required placeholder="उदा. पुणे" style="padding: 0.65rem 0.85rem; border-radius: var(--border-radius-sm); border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-main); font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; padding: 0.75rem; width: 100%; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: linear-gradient(135deg, var(--secondary), var(--primary)); border: none; border-radius: var(--border-radius-sm); color: white; cursor: pointer;">
+                        <i class="fas fa-check-circle"></i> माहिती जतन करा आणि नोट्स पहा
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p class="tagline">TalathiIQ - Smart Preparation. Smarter Results.</p>
@@ -445,6 +1124,11 @@
 
         // Switch Tabs in Study Notes
         function switchNotesTab(tab) {
+            const activeStage = new URLSearchParams(window.location.search).get('stage') || 'Prelims';
+            if (activeStage === 'Mains') {
+                tab = 'pyq';
+            }
+
             const btns = document.querySelectorAll('.tab-btn');
             btns.forEach(btn => {
                 btn.classList.remove('active');
@@ -452,22 +1136,172 @@
             });
             
             const prajaktaSection = document.getElementById('prajaktaNotesSection');
+            const igniteSection = document.getElementById('igniteNotesSection');
             const otherSection = document.getElementById('otherNotesSection');
+            const pyqSection = document.getElementById('pyqNotesSection');
+            const impSection = document.getElementById('impNotesSection');
             
             if (tab === 'prajakta') {
-                prajaktaSection.style.display = 'block';
-                otherSection.style.display = 'none';
+                if (prajaktaSection) prajaktaSection.style.display = 'block';
+                if (igniteSection) igniteSection.style.display = 'none';
+                if (otherSection) otherSection.style.display = 'none';
+                if (pyqSection) pyqSection.style.display = 'none';
+                if (impSection) impSection.style.display = 'none';
                 const activeBtn = document.querySelector('.tab-btn[onclick*="prajakta"]');
-                activeBtn.classList.add('active');
-                activeBtn.style.color = 'var(--text-main)';
-            } else {
-                prajaktaSection.style.display = 'none';
-                otherSection.style.display = 'block';
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                    activeBtn.style.color = 'var(--text-main)';
+                }
+            } else if (tab === 'ignite') {
+                if (prajaktaSection) prajaktaSection.style.display = 'none';
+                if (igniteSection) igniteSection.style.display = 'block';
+                if (otherSection) otherSection.style.display = 'none';
+                if (pyqSection) pyqSection.style.display = 'none';
+                if (impSection) impSection.style.display = 'none';
+                const activeBtn = document.querySelector('.tab-btn[onclick*="ignite"]');
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                    activeBtn.style.color = 'var(--text-main)';
+                }
+            } else if (tab === 'other') {
+                if (prajaktaSection) prajaktaSection.style.display = 'none';
+                if (igniteSection) igniteSection.style.display = 'none';
+                if (otherSection) otherSection.style.display = 'block';
+                if (pyqSection) pyqSection.style.display = 'none';
+                if (impSection) impSection.style.display = 'none';
                 const activeBtn = document.querySelector('.tab-btn[onclick*="other"]');
-                activeBtn.classList.add('active');
-                activeBtn.style.color = 'var(--text-main)';
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                    activeBtn.style.color = 'var(--text-main)';
+                }
+            } else if (tab === 'pyq') {
+                if (prajaktaSection) prajaktaSection.style.display = 'none';
+                if (igniteSection) igniteSection.style.display = 'none';
+                if (otherSection) otherSection.style.display = 'none';
+                if (pyqSection) pyqSection.style.display = 'block';
+                if (impSection) impSection.style.display = 'none';
+                const activeBtn = document.querySelector('.tab-btn[onclick*="pyq"]');
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                    activeBtn.style.color = 'var(--text-main)';
+                }
+            } else if (tab === 'imp') {
+                if (prajaktaSection) prajaktaSection.style.display = 'none';
+                if (igniteSection) igniteSection.style.display = 'none';
+                if (otherSection) otherSection.style.display = 'none';
+                if (pyqSection) pyqSection.style.display = 'none';
+                if (impSection) impSection.style.display = 'block';
+                const activeBtn = document.querySelector('.tab-btn[onclick*="imp"]');
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                    activeBtn.style.color = 'var(--text-main)';
+                }
+            }
+
+            // Update stage toggle links to preserve active tab
+            const prelBtn = document.getElementById('notesPrelimsBtn');
+            const mainsBtn = document.getElementById('notesMainsBtn');
+            if (prelBtn) prelBtn.href = `/study-materials?stage=Prelims&tab=${activeStage === 'Mains' ? 'prajakta' : tab}`;
+            if (mainsBtn) mainsBtn.href = `/study-materials?stage=Mains&tab=pyq`;
+        }
+
+        // Toggle Syllabus Accordion
+        function toggleSyllabusAccordion(header) {
+            const accordion = header.parentElement;
+            const content = header.nextElementSibling;
+            
+            // Toggle open class on accordion wrapper
+            accordion.classList.toggle('open');
+            
+            if (accordion.classList.contains('open')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = '0px';
             }
         }
+
+        // Restore tab on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const activeStage = urlParams.get('stage') || 'Prelims';
+            let activeTab = urlParams.get('tab') || 'prajakta';
+            
+            if (activeStage === 'Mains') {
+                activeTab = 'pyq';
+            }
+            switchNotesTab(activeTab);
+
+            // Handle Prajakta Lotake notes download restriction
+            let pendingDownloadUrl = null;
+            
+            const infoModal = document.getElementById('infoModal');
+            const infoClose = document.getElementById('infoClose');
+            const infoForm = document.getElementById('infoForm');
+            
+            document.querySelectorAll('.download-prajakta-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    if (!localStorage.getItem('talathi_user_info')) {
+                        e.preventDefault();
+                        pendingDownloadUrl = this.href;
+                        if (infoModal) {
+                            infoModal.classList.add('active');
+                        }
+                    }
+                });
+            });
+            
+            if (infoClose && infoModal) {
+                infoClose.addEventListener('click', () => {
+                    infoModal.classList.remove('active');
+                });
+                
+                infoModal.addEventListener('click', (e) => {
+                    if (e.target === infoModal) {
+                        infoModal.classList.remove('active');
+                    }
+                });
+            }
+            
+            if (infoForm) {
+                infoForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('infoName').value.trim();
+                    const mobile = document.getElementById('infoMobile').value.trim();
+                    const district = document.getElementById('infoDistrict').value.trim();
+                    
+                    fetch('/submit-download-info', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ name, mobile, district })
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.success) {
+                            localStorage.setItem('talathi_user_info', JSON.stringify({ name, mobile, district }));
+                            infoModal.classList.remove('active');
+                            if (pendingDownloadUrl) {
+                                window.open(pendingDownloadUrl, '_blank');
+                                pendingDownloadUrl = null;
+                            }
+                        } else {
+                            alert("माहिती जतन करताना त्रुटी आली. कृपया पुन्हा प्रयत्न करा.");
+                        }
+                    })
+                    .catch(err => {
+                        console.error("Error submitting details:", err);
+                        localStorage.setItem('talathi_user_info', JSON.stringify({ name, mobile, district }));
+                        infoModal.classList.remove('active');
+                        if (pendingDownloadUrl) {
+                            window.open(pendingDownloadUrl, '_blank');
+                            pendingDownloadUrl = null;
+                        }
+                    });
+                });
+            }
+        });
     </script>
 </body>
 </html>
