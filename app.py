@@ -227,7 +227,7 @@ def seed_pdf_notes():
                         subject = "General Knowledge"
                         
                     # Determine Stage
-                    if "mains" in fn_lower or "मुख्य" in fn_lower:
+                    if "mains" in fn_lower or "मुख्य" in fn_lower or "2022-16 marathi" in fn_lower or "talathi_sample pdf_1" in fn_lower:
                         stage = "Mains"
                     else:
                         stage = "Prelims"
