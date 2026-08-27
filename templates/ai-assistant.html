@@ -141,12 +141,12 @@
             const input = document.getElementById('chatInput');
             if (input) {
                 input.value = text;
-                input.focus();
+                handleChatSubmit();
             }
         }
 
-        function handleChatSubmit(e) {
-            e.preventDefault();
+        async function handleChatSubmit(e) {
+            if (e) e.preventDefault();
             const input = document.getElementById('chatInput');
             const history = document.getElementById('chatHistory');
             
@@ -157,20 +157,53 @@
 
             // 1. Append User Bubble
             appendMessage('user', userText);
-
-            // Scroll to bottom
             history.scrollTop = history.scrollHeight;
 
-            // 2. Append Bot Response (Demo API integration warning/notice)
-            // Prepare for future python API integration
-            setTimeout(() => {
-                const botText = `<strong>TalathiIQ AI Mentor Note:</strong><br><br>
-                Thank you for asking! The backend API integration for the AI Mentor is currently in development. <br><br>
-                In the next development phase, this prompt will be sent directly to our <em>Python Flask AI endpoint</em> (integrating Gemini / LLM models) to generate a fully customized explanation, revision notes, or practice sheets.`;
-                
-                appendMessage('bot', botText);
-                history.scrollTop = history.scrollHeight;
-            }, 1000);
+            // 2. Append typing indicator
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'chat-msg bot typing-indicator-msg';
+            typingDiv.innerHTML = `
+                <div class="chat-msg-bubble" style="display:flex; align-items:center; gap:5px; padding: 0.5rem 1rem;">
+                    <span style="animation: bounce 1s infinite alternate; font-weight: bold;">●</span>
+                    <span style="animation: bounce 1s infinite alternate 0.2s; font-weight: bold;">●</span>
+                    <span style="animation: bounce 1s infinite alternate 0.4s; font-weight: bold;">●</span>
+                </div>
+            `;
+            history.appendChild(typingDiv);
+            history.scrollTop = history.scrollHeight;
+
+            // Define style for typing animation if not present
+            if (!document.getElementById('typingAnimationStyle')) {
+                const style = document.createElement('style');
+                style.id = 'typingAnimationStyle';
+                style.textContent = `@keyframes bounce { from { transform: translateY(0); opacity: 0.4; } to { transform: translateY(-4px); opacity: 1; } }`;
+                document.head.appendChild(style);
+            }
+
+            try {
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: userText })
+                });
+
+                // Remove typing indicator
+                typingDiv.remove();
+
+                if (response.ok) {
+                    const data = await response.json();
+                    appendMessage('bot', data.response);
+                } else {
+                    appendMessage('bot', 'क्षमस्व, सर्व्हरशी कनेक्ट करताना समस्या आली. (Sorry, there was an issue connecting to the server.)');
+                }
+            } catch (error) {
+                typingDiv.remove();
+                console.error("Error in AI Mentor chat:", error);
+                appendMessage('bot', 'नेटवर्क एरर. कृपया पुन्हा प्रयत्न करा. (Network error. Please try again.)');
+            }
+            history.scrollTop = history.scrollHeight;
         }
 
         function appendMessage(sender, text) {

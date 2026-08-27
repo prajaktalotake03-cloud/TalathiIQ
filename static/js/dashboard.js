@@ -222,7 +222,7 @@ function initMotivationWidget() {
         { text: "हे फक्त माझं स्वप्न नाही, हे माझ्या आई-बाबांचे स्वप्न आहे! लक्षात ठेवा आणि अभ्यासाला लागा. ❤️", author: "एमपीएससी प्रेरणा" },
         { text: "तुमचा आजचा संघर्ष तुमचे उद्याचे सामर्थ्य निर्माण करतो. लढत राहा! 🔥", author: "स्वामी विवेकानंद" },
         { text: "स्वप्न ते नसतात जे आपण झोपेत पाहतो, स्वप्न ते असतात जे आपल्याला झोपू देत नाहीत. 🌟", author: "डॉ. ए. पी. जे. अब्दुल कलाम" },
-        { text: "यशाचा कोणताही शॉर्टकट नसतो, त्यासाठी सातत्यपूर्ण कष्टाचीच गरज असते. 📖", author: "मार्गदर्शक" }
+        { text: "यशाचा कोणताही शॉर्टकट नसतो,\nत्यासाठी सातत्यपूर्ण कष्ट, संयम आणि स्वतःवरचा विश्वास आवश्यक असतो. 📖✨\nआजचा प्रत्येक संघर्ष तुम्हाला तुमच्या ध्येयाच्या आणखी जवळ घेऊन जातो. 🎯\nथांबू नका… प्रयत्न करत राहा, कारण तुमचं स्वप्न तुमची वाट पाहत आहे! ❤️🔥", author: "मार्गदर्शक Prajakta Lotake (MPSC Aspirant)" }
     ];
 
     // Get today's quote based on date
@@ -233,7 +233,7 @@ function initMotivationWidget() {
     const quoteAuthorEl = document.querySelector('.motivation-section cite');
     
     if (quoteTextEl) quoteTextEl.textContent = `"${selectedQuote.text}"`;
-    if (quoteAuthorEl) quoteAuthorEl.textContent = "— मार्गदर्शक Prajakta Lotake(MPSC Aspirant)";
+    if (quoteAuthorEl) quoteAuthorEl.textContent = `— ${selectedQuote.author}`;
 
     // Read streak from stats
     const stats = JSON.parse(localStorage.getItem('talathi_stats')) || { streak: 5 };

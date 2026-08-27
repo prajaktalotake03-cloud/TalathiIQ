@@ -177,28 +177,49 @@ def seed_pdf_notes():
                         file_data = f.read()
                         
                     title = filename.replace('_', ' ').replace('.pdf', '')
-                    academy = "Prajakta Lotake"
-                    subject = "Polity"
-                    
                     fn_lower = filename.lower()
-                    if "constitution" in fn_lower or "polity" in fn_lower:
-                        subject = "Polity"
-                    elif "history" in fn_lower:
-                        subject = "History"
-                    elif "geography" in fn_lower:
-                        subject = "Geography"
-                    elif "science" in fn_lower:
+                    
+                    # Determine Academy
+                    if "ignite" in fn_lower:
+                        academy = "Ignite Academy Notes"
+                    elif "prajakta" in fn_lower:
+                        academy = "Prajakta Lotake Notes"
+                    elif "pyq" in fn_lower or "analysis" in fn_lower:
+                        academy = "PYQ"
+                    else:
+                        academy = "Standard Academy"
+                        
+                    # Determine Subject
+                    if "science" in fn_lower or "विज्ञान" in fn_lower or "biology" in fn_lower or "physics" in fn_lower or "chemistry" in fn_lower or "phy" in fn_lower or "che" in fn_lower:
                         subject = "General Science"
-                    elif "economics" in fn_lower:
+                    elif "economics" in fn_lower or "अर्थशास्त्र" in fn_lower or "eco" in fn_lower:
                         subject = "Economics"
-                    elif "marathi" in fn_lower:
+                    elif "geography" in fn_lower or "भूगोल" in fn_lower or "geo" in fn_lower:
+                        subject = "Geography"
+                    elif "constitution" in fn_lower or "polity" in fn_lower or "संविधान" in fn_lower or "राज्यशास्त्र" in fn_lower:
+                        subject = "Polity"
+                    elif "marathi" in fn_lower or "मराठी" in fn_lower:
                         subject = "Marathi"
-                    elif "english" in fn_lower:
+                    elif "english" in fn_lower or "eng" in fn_lower or "इंग्रजी" in fn_lower:
                         subject = "English"
+                    elif "history" in fn_lower or "इतिहास" in fn_lower or "प्राचीन" in fn_lower:
+                        subject = "History"
+                    elif "math" in fn_lower or "reasoning" in fn_lower or "बुद्धिमत्ता" in fn_lower or "गणित" in fn_lower:
+                        subject = "Mathematics"
+                    elif "current" in fn_lower or "चालू घडामोडी" in fn_lower or "ca" in fn_lower:
+                        subject = "Current Affairs"
+                    else:
+                        subject = "General Knowledge"
+                        
+                    # Determine Stage
+                    if "mains" in fn_lower or "मुख्य" in fn_lower:
+                        stage = "Mains"
+                    else:
+                        stage = "Prelims"
                         
                     conn.execute(
                         'INSERT INTO study_materials (title, subject, file_name, file_data, academy, stage) VALUES (?, ?, ?, ?, ?, ?)',
-                        (title, subject, filename, file_data, academy, 'Prelims')
+                        (title, subject, filename, file_data, academy, stage)
                     )
                     conn.commit()
                     print(f"Successfully seeded note: {filename}")
@@ -1111,7 +1132,7 @@ def current_affairs_book_download():
     
     story = []
     story.append(Paragraph("चालू घडामोडी २०२६ ई-बुक", title_style))
-    story.append(Paragraph("TalathiIQ Premium Current Affairs Booklet<br/>संकलन: प्राजक्ता लोटाके व संघ", meta_style))
+    story.append(Paragraph("TalathiIQ Premium Current Affairs Booklet<br/>संकलन: Prajakta Lotake", meta_style))
     story.append(Spacer(1, 10))
     
     for article in NEWS_ARTICLES:
@@ -1129,6 +1150,104 @@ def current_affairs_book_download():
         as_attachment=False,
         download_name='TalathiIQ_Current_Affairs_Booklet.pdf'
     )
+
+
+@app.route('/api/chat', methods=['POST'])
+def api_chat():
+    data = request.get_json() or {}
+    message = data.get('message', '').strip()
+    if not message:
+        return jsonify({"response": "कृपया तुमचा प्रश्न टाईप करा! (Please type your question!)"})
+        
+    response_text = get_chat_response(message)
+    return jsonify({"response": response_text})
+
+def get_chat_response(message):
+    msg = message.lower()
+    
+    # 1. Fundamental Rights
+    if "fundamental" in msg or "حق" in msg or "हक्क" in msg or "right" in msg:
+        return """<strong>भारतीय संविधानातील मूलभूत हक्क (Fundamental Rights - Part III):</strong><br><br>
+        भारतीय राज्यघटनेच्या <strong>भाग ३ (कलम १२ ते ३५)</strong> मध्ये नागरिकांना ६ मूलभूत हक्क देण्यात आले आहेत:<br>
+        1. <strong>समानतेचा हक्क (Right to Equality)</strong> - कलम १४ ते १८<br>
+        2. <strong>स्वातंत्र्याचा हक्क (Right to Freedom)</strong> - कलम १९ ते २२<br>
+        3. <strong>शोषणाविरुद्धचा हक्क (Right against Exploitation)</strong> - कलम २३ व २४<br>
+        4. <strong>धार्मिक स्वातंत्र्याचा हक्क (Right to Freedom of Religion)</strong> - कलम २५ ते २८<br>
+        5. <strong>सांस्कृतिक आणि शैक्षणिक हक्क (Cultural & Educational Rights)</strong> - कलम २९ व ३०<br>
+        6. <strong>घटनात्मक उपाययोजनांचा हक्क (Right to Constitutional Remedies)</strong> - कलम ३२ (डॉ. आंबेडकरांनी या कलमाला 'घटनेचा आत्मा' म्हटले आहे).<br><br>
+        <em>💡 टिप: मालमत्तेचा हक्क (कलम ३१) ४४ व्या घटनादुरुस्तीने (१९७८) मूलभूत हक्कांमधून वगळण्यात आला असून तो आता कलम ३००A नुसार कायदेशीर हक्क आहे.</em>"""
+
+    # 2. Geography MCQs
+    elif "geography" in msg or "भूगोल" in msg or "mcq" in msg or "प्रश्न" in msg:
+        return """<strong>भूगोल सराव प्रश्न (Geography Practice Questions):</strong><br><br>
+        <strong>Q1. महाराष्ट्रातील सर्वात उंच शिखर कोणते आहे?</strong><br>
+        A) साल्हेर &nbsp;&nbsp; B) महाबळेश्वर &nbsp;&nbsp; C) कळसूबाई &nbsp;&nbsp; D) हरिश्चंद्रगड<br>
+        👉 <em>उत्तर: C) कळसूबाई (उंची: १६४६ मीटर)</em><br><br>
+        <strong>Q2. गोदावरी नदीचा उगम महाराष्ट्रात कोठे होतो?</strong><br>
+        A) भीमाशंकर &nbsp;&nbsp; B) त्र्यंबकेश्वर &nbsp;&nbsp; C) महाबळेश्वर &nbsp;&nbsp; D) मुलताई<br>
+        👉 <em>उत्तर: B) त्र्यंबकेश्वर (नाशिक जिल्हा)</em><br><br>
+        <strong>Q3. क्षेत्रफळाच्या दृष्टीने महाराष्ट्रातील सर्वात मोठा जिल्हा कोणता आहे?</strong><br>
+        A) पुणे &nbsp;&nbsp; B) अहिल्यानगर (अहमदनगर) &nbsp;&nbsp; C) नाशिक &nbsp;&nbsp; D) सोलापूर<br>
+        👉 <em>उत्तर: B) अहिल्यानगर</em><br><br>
+        💡 <em>अधिक सराव करण्यासाठी, आपल्या मुख्य मेनू मधील <strong>AI MCQs</strong> किंवा <strong>Mock Tests</strong> विभाग वापरा!</em>"""
+
+    # 3. Maharashtra History
+    elif "history" in msg or "इतिहास" in msg or "maharashtra" in msg:
+        return """<strong>महाराष्ट्राचा इतिहास - महत्वाचे मुद्दे (Maharashtra History Revision):</strong><br><br>
+        1. <strong>प्राचीन काळ:</strong> सातवाहनांचे राज्य (राजधानी: पैठण), वाकाटक घराणे, राष्ट्रकूट आणि यादव घराणे (राजधानी: देवगिरी).<br>
+        2. <strong>मध्ययुगीन काळ:</strong> छत्रपती शिवाजी महाराज यांनी १६७४ मध्ये हिंदवी स्वराज्याची स्थापना केली आणि रायगडावर राज्याभिषेक केला.<br>
+        3. <strong>आधुनिक समाजसुधारक:</strong><br>
+        &nbsp;&nbsp; • <strong>महात्मा ज्योतिराव फुले:</strong> १८७३ मध्ये सत्यशोधक समाजाची स्थापना केली. मुलींची पहिली शाळा पुण्यात सुरू केली.<br>
+        &nbsp;&nbsp; • <strong>राजर्षी छत्रपती शाहू महाराज:</strong> कोल्हापूर संस्थानात मागासवर्गीयांना ५०% आरक्षण दिले, प्राथमिक शिक्षण मोफत केले.<br>
+        &nbsp;&nbsp; • <strong>भारतरत्न डॉ. बाबासाहेब आंबेडकर:</strong> महाडचा चवदार तळे सत्याग्रह (१९२७) आणि काळाराम मंदिर सत्याग्रह केला. मूकनायक व बहिष्कृत भारत वृत्तपत्रे सुरू केली.<br><br>
+        🎯 <em>या समाजसुधारकांच्या कार्यावर तलाठी परीक्षेत नक्की ३-४ प्रश्न विचारले जातात!</em>"""
+
+    # 4. Wrong Answer
+    elif "wrong" in msg or "चुकलेले" in msg or "चूक" in msg or "explain" in msg:
+        return """<strong>चुकलेल्या प्रश्नांचे विश्लेषण व स्मार्ट रिव्हिजन (Analyzing Mistakes):</strong><br><br>
+        * <strong>रिव्हिजन ट्रॅकर:</strong> तुम्ही सोडवलेल्या सराव चाचण्यांमध्ये जे प्रश्न चुकतात, ते आमचे सिस्टम आपोआप रेकॉर्ड करते.<br>
+        * <strong>कसे तपासायचे?</strong>: मुख्य नेव्हिगेशन बार मधील <strong>Smart Revision</strong> (स्मार्ट रिव्हिजन) या पेजवर जा.<br>
+        * तिथे तुम्हाला तुमचे सर्व चुकलेले प्रश्न एकत्र मिळतील. तुम्ही ते पुन्हा सोडवू शकता आणि कन्सेप्ट क्लिअर झाल्यावर यादीतून काढून टाकू (Clear) करू शकता.<br>
+        * <strong>महत्त्वाची टीप:</strong> परीक्षेच्या शेवटच्या दिवसांत नवीन वाचण्यापेक्षा स्वतःच्या चुका सुधारणे जास्त महत्त्वाचे असते! 📖🎯"""
+
+    # 5. Study Plan
+    elif "plan" in msg or "नियोजन" in msg or "time" in msg or "शेड्युल" in msg:
+        return """<strong>७ दिवसांचे तलाठी भरती सराव नियोजन (7-Day Study Plan):</strong><br><br>
+        * <strong>Day 1 (मराठी व्याकरण):</strong> समानार्थी, विरुद्धार्थी शब्द, संधी आणि प्रयोग सराव.<br>
+        * <strong>Day 2 (English Grammar):</strong> Tenses, Change the Voice, Direct-Indirect, Spot the Error.<br>
+        * <strong>Day 3 (अंकगणित):</strong> शेकडेवारी, नफा-तोटा, काळ-काम-वेग आणि सरळव्याज.<br>
+        * <strong>Day 4 (बुद्धिमत्ता चाचणी):</strong> नातेसंबंध, दिशा ज्ञान, अक्षरमाला व संख्यामाला.<br>
+        * <strong>Day 5 (सामान्य ज्ञान):</strong> महाराष्ट्राचा भूगोल, इतिहास आणि राज्यघटना प्रमुख कलमे.<br>
+        * <strong>Day 6 (चालू घडामोडी):</strong> मागील ६ महिन्यांतील प्रमुख चालू घडामोडी आणि सरकारी योजना.<br>
+        * <strong>Day 7 (मॉक टेस्ट):</strong> २ पूर्ण मॉक टेस्ट (१०० प्रश्न) सोडवून वेळेचे नियोजन तपासा.<br><br>
+        🔥 <em>सातत्य ठेवा, दररोज किमान ६-८ तास अभ्यास आणि सराव चाचण्या आवश्यक आहेत!</em>"""
+
+    # 6. Syllabus
+    elif "syllabus" in msg or "अभ्यासक्रम" in msg or "format" in msg:
+        return """<strong>तलाठी भरती परीक्षा अभ्यासक्रम (Talathi Bharti Exam Syllabus):</strong><br><br>
+        एकूण प्रश्न: <strong>१००</strong> | एकूण गुण: <strong>२००</strong> (प्रत्येक प्रश्नाला २ गुण, नकारात्मक गुणपद्धती नसते)<br><br>
+        1. <strong>मराठी व्याकरण व शब्दसंग्रह</strong> (२५ प्रश्न - ५० गुण)<br>
+        2. <strong>English Grammar & Vocabulary</strong> (२५ प्रश्न - ५० गुण)<br>
+        3. <strong>अंकगणित व बुद्धिमत्ता चाचणी</strong> (२५ प्रश्न - ५० गुण)<br>
+        4. <strong>सामान्य ज्ञान (GK)</strong> (२५ प्रश्न - ५० गुण - इतिहास, भूगोल, विज्ञान, राज्यघटना व चालू घडामोडी)<br><br>
+        ⏱️ <em>वेळ मर्यादा: २ तास (१२० मिनिटे). सराव करण्यासाठी <strong>Mock Tests</strong> चा वापर करा!</em>"""
+
+    # 7. Greetings
+    elif "hello" in msg or "hi" in msg or "hey" in msg or "नमस्कार" in msg or "welcome" in msg:
+        return """नमस्कार! मी तुमचा <strong>TalathiIQ AI Mentor</strong> आहे. <br><br>
+        मी तुम्हाला तलाठी भरती परीक्षेची तयारी, अभ्यासक्रम (Syllabus), ७ दिवसांचे नियोजन (Study Plan) किंवा विषयांचे स्पष्टीकरण मिळवण्यात मदत करू शकतो. <br><br>
+        कृपया तुमचा अभ्यासविषयक प्रश्न विचारा किंवा डाव्या बाजूला दिलेल्या पर्यायांपैकी एकावर क्लिक करा! 😊🎯"""
+
+    # Default Fallback
+    else:
+        return f"""<strong>TalathiIQ AI Mentor Response:</strong><br><br>
+        तुम्ही विचारलेला प्रश्न: <em>"{message}"</em><br><br>
+        या प्रश्नाचे उत्तर मिळवण्यासाठी तुम्ही आमच्या <strong>Syllabus</strong> आणि <strong>Study Notes</strong> या विभागांना भेट देऊ शकता. <br><br>
+        तलाठी परीक्षेमध्ये उत्तम यश मिळवण्यासाठी तुम्ही खालील सराव सुरू ठेवा:<br>
+        1. <strong>AI MCQs</strong> मध्ये जाऊन रोज १०-२० प्रश्नांचा सराव करा.<br>
+        2. <strong>Mock Tests</strong> सोडवून वेळेचे नियोजन सुधारा.<br>
+        3. <strong>Performance</strong> मध्ये जाऊन तुमच्या प्रगतीचा आलेख तपासा.<br><br>
+        <em>प्रयत्न करत राहा, यश तुमचेच आहे! 🎯💪</em>"""
 
 
 if __name__ == '__main__':
