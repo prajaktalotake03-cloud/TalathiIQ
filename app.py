@@ -29,6 +29,17 @@ try:
 except Exception as e:
     print(f"Error registering Nirmala font: {e}")
 
+HAS_NOTO = False
+try:
+    noto_font_path = os.path.join(app.root_path, 'static', 'fonts', 'NotoSansDevanagari-Regular.ttf')
+    if os.path.exists(noto_font_path):
+        pdfmetrics.registerFont(TTFont('NotoSansDevanagari', noto_font_path))
+        HAS_NOTO = True
+except Exception as e:
+    print(f"Error registering NotoSansDevanagari font: {e}")
+
+FONT_NAME = 'NotoSansDevanagari' if HAS_NOTO else ('Nirmala' if HAS_NIRMALA else 'Helvetica')
+
 PYQ_PAPERS = [
     {
         "id": "talathi_2023_s1",
@@ -976,7 +987,7 @@ def generate_paper_pdf(paper_title, questions):
     doc = SimpleDocTemplate(buffer, pagesize=letter, rightMargin=54, leftMargin=54, topMargin=54, bottomMargin=54)
     
     styles = getSampleStyleSheet()
-    font_name = 'Nirmala' if HAS_NIRMALA else 'Helvetica'
+    font_name = FONT_NAME
     
     title_style = ParagraphStyle(
         'PaperTitle',
@@ -1101,7 +1112,7 @@ def current_affairs_book_download():
     doc = SimpleDocTemplate(buffer, pagesize=letter, rightMargin=54, leftMargin=54, topMargin=54, bottomMargin=54)
     
     styles = getSampleStyleSheet()
-    font_name = 'Nirmala' if HAS_NIRMALA else 'Helvetica'
+    font_name = FONT_NAME
     
     title_style = ParagraphStyle(
         'BookTitle',

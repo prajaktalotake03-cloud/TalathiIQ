@@ -498,8 +498,8 @@
                                             </div>
                                             <div class="pdf-meta">
                                                 <span><i class="far fa-calendar-alt"></i> {{ item.uploaded_at.split(' ')[0] if item.uploaded_at else 'Recent' }}</span>
-                                                <a href="/download-pdf/{{ item.id }}" target="_blank" class="btn btn-secondary download-prajakta-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem; background: rgba(6, 182, 212, 0.1); border-color: var(--secondary); color: var(--secondary);">
-                                                    <i class="far fa-eye"></i> View PDF
+                                                <a href="/download-pdf/{{ item.id }}" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; background: rgba(6, 182, 212, 0.1); border-color: var(--secondary); color: var(--secondary);">
+                                                    <i class="fas fa-download"></i> Download
                                                 </a>
                                             </div>
                                         </div>
@@ -1079,37 +1079,7 @@
 
     </main>
 
-    <!-- User Info Modal for Download Gate -->
-    <div id="infoModal" class="modal-overlay">
-        <div class="modal-container" style="max-width: 450px;">
-            <div class="modal-header">
-                <h3 class="modal-title"><i class="fas fa-lock"></i> माहिती प्रविष्ट करा (Enter Details)</h3>
-                <button id="infoClose" class="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body" style="padding-top: 0.5rem;">
-                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.4;">
-                    Prajakta Lotake Notes डाउनलोड करण्यासाठी कृपया आपली अचूक माहिती भरा.
-                </p>
-                <form id="infoForm" style="display: flex; flex-direction: column; gap: 1.25rem;">
-                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
-                        <label for="infoName" style="font-size: 0.85rem; color: var(--text-main); font-weight: 600;">पूर्ण नाव (Full Name)</label>
-                        <input type="text" id="infoName" required placeholder="उदा. प्राजक्ता लोटाके" style="padding: 0.65rem 0.85rem; border-radius: var(--border-radius-sm); border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-main); font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
-                        <label for="infoMobile" style="font-size: 0.85rem; color: var(--text-main); font-weight: 600;">मोबाईल क्रमांक (Mobile Number)</label>
-                        <input type="tel" id="infoMobile" required pattern="[0-9]{10}" placeholder="उदा. 9876543210" style="padding: 0.65rem 0.85rem; border-radius: var(--border-radius-sm); border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-main); font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
-                        <label for="infoDistrict" style="font-size: 0.85rem; color: var(--text-main); font-weight: 600;">जिल्हा (District)</label>
-                        <input type="text" id="infoDistrict" required placeholder="उदा. पुणे" style="padding: 0.65rem 0.85rem; border-radius: var(--border-radius-sm); border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-main); font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; padding: 0.75rem; width: 100%; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: linear-gradient(135deg, var(--secondary), var(--primary)); border: none; border-radius: var(--border-radius-sm); color: white; cursor: pointer;">
-                        <i class="fas fa-check-circle"></i> माहिती जतन करा आणि नोट्स पहा
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Footer -->
     <footer>
@@ -1230,77 +1200,6 @@
                 activeTab = 'pyq';
             }
             switchNotesTab(activeTab);
-
-            // Handle Prajakta Lotake notes download restriction
-            let pendingDownloadUrl = null;
-            
-            const infoModal = document.getElementById('infoModal');
-            const infoClose = document.getElementById('infoClose');
-            const infoForm = document.getElementById('infoForm');
-            
-            document.querySelectorAll('.download-prajakta-btn').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    if (!localStorage.getItem('talathi_user_info')) {
-                        e.preventDefault();
-                        pendingDownloadUrl = this.href;
-                        if (infoModal) {
-                            infoModal.classList.add('active');
-                        }
-                    }
-                });
-            });
-            
-            if (infoClose && infoModal) {
-                infoClose.addEventListener('click', () => {
-                    infoModal.classList.remove('active');
-                });
-                
-                infoModal.addEventListener('click', (e) => {
-                    if (e.target === infoModal) {
-                        infoModal.classList.remove('active');
-                    }
-                });
-            }
-            
-            if (infoForm) {
-                infoForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const name = document.getElementById('infoName').value.trim();
-                    const mobile = document.getElementById('infoMobile').value.trim();
-                    const district = document.getElementById('infoDistrict').value.trim();
-                    
-                    fetch('/submit-download-info', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ name, mobile, district })
-                    })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.success) {
-                            localStorage.setItem('talathi_user_info', JSON.stringify({ name, mobile, district }));
-                            infoModal.classList.remove('active');
-                            if (pendingDownloadUrl) {
-                                window.open(pendingDownloadUrl, '_blank');
-                                pendingDownloadUrl = null;
-                            }
-                        } else {
-                            alert("माहिती जतन करताना त्रुटी आली. कृपया पुन्हा प्रयत्न करा.");
-                        }
-                    })
-                    .catch(err => {
-                        console.error("Error submitting details:", err);
-                        localStorage.setItem('talathi_user_info', JSON.stringify({ name, mobile, district }));
-                        infoModal.classList.remove('active');
-                        if (pendingDownloadUrl) {
-                            window.open(pendingDownloadUrl, '_blank');
-                            pendingDownloadUrl = null;
-                        }
-                    });
-                });
-            }
         });
     </script>
 </body>
